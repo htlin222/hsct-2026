@@ -1,4 +1,5 @@
 import { splitNegations } from "../lib/stemHighlight";
+import { splitLinks } from "../lib/stemLinks";
 
 /**
  * 題幹,否定詞標紅加粗(#149)。
@@ -19,6 +20,36 @@ import { splitNegations } from "../lib/stemHighlight";
  * 要換一個維度重講」。
  */
 export function StemText({ text }: { text: string }) {
+	// 先切網址(113-41 / 114-47 那種「流程圖只能給連結」的題幹),再在非網址的
+	// 片段裡標否定詞 —— 網址裡面的字不該被標。
+	const links = splitLinks(text);
+	if (links.some((l) => l.href)) {
+		return (
+			<>
+				{links.map((l, i) =>
+					l.href ? (
+						<a
+							// eslint-disable-next-line react/no-array-index-key
+							key={i}
+							href={l.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline decoration-accent/60 underline-offset-2 break-all text-accent dark:text-accent-light"
+						>
+							{l.text}
+						</a>
+					) : (
+						// eslint-disable-next-line react/no-array-index-key
+						<Negations key={i} text={l.text} />
+					),
+				)}
+			</>
+		);
+	}
+	return <Negations text={text} />;
+}
+
+function Negations({ text }: { text: string }) {
 	const parts = splitNegations(text);
 	// 沒有命中就不要多包一層 —— 絕大多數題目走這條。
 	if (parts.length === 1 && !parts[0].hit) return <>{text}</>;
