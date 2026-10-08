@@ -18,6 +18,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { unzipSync, strFromU8 } from 'fflate';
 import { startServer } from './server.mjs';
+import { cfg } from '../../scripts/lib/cfg.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(HERE, '..', 'dist');
@@ -87,7 +88,7 @@ test('個人頁按下「下載備份」,拿到一個結構正確的 zip', async 
     ]);
 
     const name = download.suggestedFilename();
-    assert.match(name, /^hema-2026-backup-\d{4}-\d{2}-\d{2}\.zip$/, `檔名不對:${name}`);
+    assert.match(name, new RegExp(`^${cfg("project.slug")}-backup-\\d{4}-\\d{2}-\\d{2}\\.zip$`), `檔名不對:${name}`);
 
     const out = path.join(os.tmpdir(), `hema-backup-e2e-${process.pid}.zip`);
     await download.saveAs(out);

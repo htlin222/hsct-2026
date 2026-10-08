@@ -2,12 +2,13 @@
 
 Multiple-choice question bank + collaborative wiki-style explanations,
 **full-stack on Cloudflare free tier**. Designed for small invite-only
-study groups (5–50 users). This repo is the 2026 Taiwan hematology
-subspecialty exam ("hema-2026") instance, but every per-fork identifier
+study groups (5–50 users). This repo is the 2026 Taiwan hematopoietic
+stem cell transplantation board exam ("hsct-2026", 移專衝衝衝) instance, forked from
+[htlin222/mcq-bank](https://github.com/htlin222/mcq-bank), but every per-fork identifier
 lives in `config.toml` — read **[Forking this codebase](#forking-this-codebase)**
 to spin up your own deployment.
 
-- ~1000 questions, organised by year + category
+- 民國 108–114 年「血液及骨髓移植專科醫師」筆試考古題, organised by year
 - Two study modes: review (single question, collaborative explanation, threads)
   and full mock exam (timed, scored, error review)
 - 5–50 user small group (CF Access whitelist, email OTP, no passwords)
@@ -70,10 +71,10 @@ Reference deployment (this fork):
 
 | Resource | Value |
 |---|---|
-| URL | https://hema-2026.hsiehting.com |
-| Worker | `hema-2026-api` |
-| D1 | `hema-2026-db` |
-| R2 | `hema-2026-uploads` |
+| URL | https://hsct.hsiehting.com |
+| Worker | `hsct-2026-api` |
+| D1 | `hsct-2026-db` |
+| R2 | `hsct-2026-uploads` |
 | Access team | `htlin.cloudflareaccess.com` |
 
 ## 本地開發
@@ -121,7 +122,7 @@ node scripts/import-questions.ts ./questions.csv --local  # 上本地測試
 匯入前可選擇清除範例:
 
 ```bash
-wrangler d1 execute hema-2026-db --remote --command 'DELETE FROM questions WHERE year = 100;'
+wrangler d1 execute hsct-2026-db --remote --command 'DELETE FROM questions WHERE year = 100;'
 ```
 
 ## 資料結構

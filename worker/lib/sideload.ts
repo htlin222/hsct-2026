@@ -62,7 +62,7 @@ export async function sideloadImageToR2(
   let resp: Response;
   try {
     resp = await fetch(url, {
-      headers: { 'User-Agent': 'hema-2026-image-sideload/1.0' },
+      headers: { 'User-Agent': 'hsct-2026-image-sideload/1.0' },
       redirect: 'follow',
     });
   } catch {

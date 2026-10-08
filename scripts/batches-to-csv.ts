@@ -36,7 +36,7 @@ type Q = {
 	oe_consulted: boolean;
 };
 
-const ROOT = "/Users/htlin/hema-2026";
+const ROOT = "/Users/htlin/hsct-2026";
 
 /**
  * 有 batches/ 的年份就算 —— **不要用硬編碼的清單**。

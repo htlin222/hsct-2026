@@ -1,14 +1,14 @@
 ---
 name: verdict-by-oe
 description: >
-  Use when auditing or fixing hema-2026 question answers with OpenEvidence MCP:
+  Use when auditing or fixing hsct-2026 question answers with OpenEvidence MCP:
   read the question from D1, ask OpenEvidence for a verdict, report pending
   answer/explanation changes for user approval, then update D1 with history.
 ---
 
 # Verdict By OE
 
-Use this skill in the `hema-2026` repo when the user asks to audit, re-check,
+Use this skill in the `hsct-2026` repo when the user asks to audit, re-check,
 verdict, or fix a question answer using OpenEvidence.
 
 ## Guardrails
@@ -19,7 +19,7 @@ verdict, or fix a question answer using OpenEvidence.
   explanation change.
 - Use `ppoiu87@gmail.com` as `changed_by` / `updated_by` for approved admin
   corrections unless the user provides another identity.
-- Prefer the production D1 database: `wrangler d1 execute hema-2026-db --remote`.
+- Prefer the production D1 database: `wrangler d1 execute hsct-2026-db --remote`.
   Use local D1 only when the user asks for local work.
 - Treat medical conclusions as evidence-supported verdicts, not blind MCP output.
   If OE misses a NOT/EXCEPT stem, contradicts itself, lacks the needed option
@@ -32,7 +32,7 @@ verdict, or fix a question answer using OpenEvidence.
 1. Read the question and current explanation from D1.
 
    ```sh
-   wrangler d1 execute hema-2026-db --remote --json --command \
+   wrangler d1 execute hsct-2026-db --remote --json --command \
      "SELECT q.id, q.year, q.answer, q.stem, q.options_json,
              e.version AS explanation_version, e.content_json AS explanation_json
       FROM questions q
@@ -168,7 +168,7 @@ verdict, or fix a question answer using OpenEvidence.
    Query the changed row, answer history, and explanation history:
 
    ```sh
-   wrangler d1 execute hema-2026-db --remote --json --command \
+   wrangler d1 execute hsct-2026-db --remote --json --command \
       "SELECT id, answer FROM questions WHERE id = '<QID>';
       SELECT question_id, previous_answer, new_answer, source, challenge_id, changed_by, changed_at
       FROM answer_history WHERE question_id = '<QID>' ORDER BY changed_at;

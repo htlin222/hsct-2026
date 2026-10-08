@@ -23,11 +23,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { startServer } from './server.mjs';
+import { cfg } from '../../scripts/lib/cfg.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(HERE, '..', 'dist');
 const REQUIRE = process.env.E2E_REQUIRE === '1';
-const THEME_KEY = 'hema-2026:theme';
+// 從 config.toml 讀,不寫死 —— fork 改 slug 時這三支才不會一起紅。
+const THEME_KEY = cfg('storage.theme_storage_key');
 
 // 期望值跟 App.tsx 最外層的 `bg-ink-50 dark:bg-ink-900` 對齊 —— 回彈區與頁面
 // 同色才看不出接縫。

@@ -7,6 +7,7 @@ import {
 	type BackupManifest,
 } from "../../lib/backupApi";
 import { buildBackupFiles } from "../../lib/backupLayout";
+import { config } from "../../config";
 
 // 「備份我的紀錄」(#123)—— 把這個帳號的全部紀錄倒成一份巢狀 JSON 的 zip,
 // 附一份 CLAUDE.md 讓 Claude 打開就看得懂。
@@ -52,7 +53,7 @@ export function BackupCard() {
 			const input: Record<string, Uint8Array> = {};
 			const enc = new TextEncoder();
 			const stamp = new Date(m.generated_at).toISOString().slice(0, 10);
-			const root = `hema-2026-backup-${stamp}`;
+			const root = `${config.project.slug}-backup-${stamp}`;
 			for (const [name, content] of Object.entries(files)) {
 				input[`${root}/${name}`] = enc.encode(content);
 			}

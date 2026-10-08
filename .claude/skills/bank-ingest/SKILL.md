@@ -1,7 +1,7 @@
 ---
 name: bank-ingest
 version: 1.0.0
-description: 把官方專科醫師考題 PDF 解析成題庫,推進 hema-2026 的匯入暫存區,供管理員在網站上審閱後發布新年份。當使用者說「加入新年份」「匯入 115 年」「/bank-ingest」或帶著考題 PDF 要建題庫時使用。
+description: 把官方專科醫師考題 PDF 解析成題庫,推進 hsct-2026 的匯入暫存區,供管理員在網站上審閱後發布新年份。當使用者說「加入新年份」「匯入 115 年」「/bank-ingest」或帶著考題 PDF 要建題庫時使用。
 ---
 
 # bank-ingest — 新增一個年份的題庫

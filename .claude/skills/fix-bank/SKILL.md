@@ -1,13 +1,13 @@
 ---
 name: fix-bank
-description: Fix typos / garbled text in a hema-2026 exam question reported through the in-app feedback button (a GitHub issue). Use when the user says "fix issue N", "fix the feedback", or points at a mcq-bank issue about a question having 錯字 / wrong text. This corrects wording only — for wrong ANSWERS use the verdict-by-oe skill instead.
+description: Fix typos / garbled text in a hsct-2026 exam question reported through the in-app feedback button (a GitHub issue). Use when the user says "fix issue N", "fix the feedback", or points at a mcq-bank issue about a question having 錯字 / wrong text. This corrects wording only — for wrong ANSWERS use the verdict-by-oe skill instead.
 ---
 
 # fix-bank
 
 Repeatable process for fixing a question's **text** (typos, OCR garble, wording)
 reported via the in-app 回報 button, which files a GitHub issue in the repo set by
-`GH_FEEDBACK_REPO` in `wrangler.toml` (currently `htlin222/mcq-bank`).
+`GH_FEEDBACK_REPO` in `wrangler.toml` (currently `htlin222/hsct-2026`).
 
 **Scope guard:** this skill only rewrites `stem` / `options_json`. It does **not**
 change `answer`. If the report disputes the correct answer, stop and use the
@@ -16,7 +16,7 @@ change `answer`. If the report disputes the correct answer, stop and use the
 ## Key facts
 
 - **D1 database name:** read it, never hardcode — `grep database_name wrangler.toml`
-  (currently `hema-2026-db`). Binding is `DB`.
+  (currently `hsct-2026-db`). Binding is `DB`.
 - **Questions table columns:** `id` (e.g. `114-022`), `year`, `number`, `stem`,
   `options_json`, `answer`, `group`.
 - **options_json shape:** `[{"key":"A","text":"..."},{"key":"B","text":"..."}, ...]`.
@@ -31,7 +31,7 @@ change `answer`. If the report disputes the correct answer, stop and use the
 ### 1 — Read the issue
 
 ```bash
-gh issue view <N> --repo htlin222/mcq-bank --json title,body,labels,comments
+gh issue view <N> --repo htlin222/hsct-2026 --json title,body,labels,comments
 ```
 
 Extract the **question id** from the URL in the body (segment after `/q/`).
@@ -90,7 +90,7 @@ wrangler d1 execute "$DB" --local --file <scratchpad>/fix-<ID>.sql 2>/dev/null
 ### 6 — Close the issue with a changelog
 
 ```bash
-gh issue close <N> --repo htlin222/mcq-bank --comment "已修正 <ID> 的錯字。
+gh issue close <N> --repo htlin222/hsct-2026 --comment "已修正 <ID> 的錯字。
 <one line on the root cause, e.g. OCR 亂碼 / 個別錯字>
 主要修正：
 - \`old\` → \`new\`

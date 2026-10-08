@@ -127,7 +127,7 @@ export function renderPlanIcs(plan: PlanResult, opts: IcsOpts): string {
 	const lines: string[] = [
 		"BEGIN:VCALENDAR",
 		"VERSION:2.0",
-		"PRODID:-//hema-2026//study-plan//ZH-TW",
+		"PRODID:-//hsct-2026//study-plan//ZH-TW",
 		"CALSCALE:GREGORIAN",
 		"METHOD:PUBLISH",
 		`X-WR-CALNAME:${esc(opts.title ?? "血液腫瘤讀書計畫")}`,

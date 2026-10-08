@@ -233,7 +233,7 @@ function readmeFor(meta: BackupMeta, rows: BackupRows): string {
   const d = new Date(meta.generated_at).toISOString().slice(0, 10);
   return `# 這份備份是什麼
 
-\`${meta.email}\` 在 ${d} 從「2026 台灣血專衝衝衝」匯出的個人紀錄。
+\`${meta.email}\` 在 ${d} 從「2026 台灣移專衝衝衝」匯出的個人紀錄。
 格式版本 \`schema_version: ${meta.schema_version}\`(欄位形狀變更時會 +1)。
 
 **這裡面只有這個帳號自己的紀錄。** 站上的個人筆記標示「僅你可見」,所以備份

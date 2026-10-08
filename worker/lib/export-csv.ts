@@ -12,7 +12,7 @@
 // KNOWN CAVEAT (must stay in the UI copy): no `#guid column:` is emitted, so
 // imported notes are distinct from the ones in anki-deck/*.apkg — the same
 // question can end up as two cards. Merging would mean porting genanki's
-// guid_for("hema-2026", id) hash. Also, Anki does not fetch remote images:
+// guid_for("hsct-2026", id) hash. Also, Anki does not fetch remote images:
 // the absolute URLs below need an authenticated browser session to render.
 
 import { docToHtml, escapeHtml, type RenderOpts } from "./tiptap-render.ts";
@@ -20,8 +20,8 @@ import type { ExportItem } from "./export-doc.ts";
 
 // Mirrors scripts/build-anki.py's deck/model naming so both paths land in the
 // same tree of the user's collection.
-const NOTETYPE = "血專";
-const DECK = "血專::匯出";
+const NOTETYPE = "移專";
+const DECK = "移專::匯出";
 
 const HEADER = [
 	"#separator:Comma",

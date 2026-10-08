@@ -98,7 +98,7 @@ export async function deliverCard(
 	return "download";
 }
 
-/** `血專-114-032-2026-08-21-1132.png` */
+/** `移專-114-032-2026-08-21-1132.png` */
 export function cardFilename(source: string, stamp: string): string {
 	const slug = source.replace(/[^\w一-鿿-]+/g, "-").replace(/^-+|-+$/g, "");
 	const time = stamp.replace(/[-: ]/g, "");

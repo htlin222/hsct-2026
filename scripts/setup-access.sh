@@ -21,7 +21,7 @@ prompt() {
 
 prompt CF_API_TOKEN "Cloudflare API token (with Access:Edit scope)"
 prompt CF_ACCOUNT_ID "Cloudflare account ID"
-prompt PAGES_DOMAIN "Pages domain to protect (e.g. hema-2026.pages.dev)"
+prompt PAGES_DOMAIN "Pages domain to protect (e.g. hsct-2026.pages.dev)"
 prompt ALLOWED_EMAILS "Comma-separated user emails (e.g. a@x.com,b@x.com)"
 
 echo ""

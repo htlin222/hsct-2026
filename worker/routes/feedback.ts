@@ -54,7 +54,7 @@ feedbackRoutes.post("/", async (c) => {
 				Accept: "application/vnd.github+json",
 				Authorization: `Bearer ${GH_FEEDBACK_TOKEN}`,
 				"X-GitHub-Api-Version": "2022-11-28",
-				"User-Agent": "hema-2026-feedback",
+				"User-Agent": "hsct-2026-feedback",
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({

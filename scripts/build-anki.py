@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Export the D1 question bank to per-year Anki decks (血專-xxx年.apkg).
+"""Export the D1 question bank to per-year Anki decks (移專-xxx年.apkg).
 
 Front = 題幹 + 選項;Back = 正解 + 詳解(TipTap JSON → HTML, images bundled).
 Output lands in ./anki-deck/ (gitignored). Intermediate exports go to a temp
 dir that is discarded on exit.
 
 Note type modes:
-  default        A dedicated note type named "血專" (Front/Back). No name
+  default        A dedicated note type named "移專" (Front/Back). No name
                  collision with Anki's stock Basic, so it never becomes
                  "Basic+", keeps the scholarly CSS, and imports identically
                  for everyone. Correct for sharing the deck.
@@ -22,7 +22,7 @@ types by a private 64-bit id minted at profile-creation time, not by name.
 No distributable file can carry an id that matches every recipient's Basic.
 
 Usage:
-  uv run --with genanki scripts/build-anki.py                 # dedicated 血專 type
+  uv run --with genanki scripts/build-anki.py                 # dedicated 移專 type
   uv run --with genanki scripts/build-anki.py --merge-basic   # merge into local Basic
   uv run --with genanki scripts/build-anki.py --local --years 113 114
 """
@@ -493,7 +493,7 @@ img {
 def make_model(basic: dict | None) -> tuple[genanki.Model, list[str]]:
     """Return (model, ordered field names).
 
-    basic is None  -> dedicated "血專" note type (shareable, keeps CSS).
+    basic is None  -> dedicated "移專" note type (shareable, keeps CSS).
     basic is a dict -> replicate the local Basic's id + fields so import
                        merges into it (no "Basic+"). On merge Anki keeps the
                        destination note type's own CSS, so ours is ignored.
@@ -502,7 +502,7 @@ def make_model(basic: dict | None) -> tuple[genanki.Model, list[str]]:
         fields = ["Front", "Back"]
         model = genanki.Model(
             DEDICATED_MODEL_ID,
-            "血專",
+            "移專",
             fields=[{"name": f} for f in fields],
             templates=[{"name": "Card 1", "qfmt": QFMT, "afmt": AFMT}],
             css=CSS,
@@ -642,7 +642,7 @@ def build_year(
     model: genanki.Model,
     field_names: list[str],
 ) -> tuple[Path, int, int]:
-    deck = genanki.Deck(DECK_ID_BASE + year, f"血專::{year}年")
+    deck = genanki.Deck(DECK_ID_BASE + year, f"移專::{year}年")
     media: dict[str, Path] = {}
     n_expl = 0
     for r in rows:
@@ -671,11 +671,11 @@ def build_year(
             genanki.Note(
                 model=model,
                 fields=field_values(field_names, front, back),
-                guid=genanki.guid_for("hema-2026", r["id"]),
+                guid=genanki.guid_for("hsct-2026", r["id"]),
             )
         )
 
-    out = OUT_DIR / f"血專-{year}年.apkg"
+    out = OUT_DIR / f"移專-{year}年.apkg"
     pkg = genanki.Package(deck)
     # genanki keys media by basename; our refs use flattened names, so stage copies.
     staged = stage_root / str(year)
@@ -691,7 +691,7 @@ def build_year(
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Build per-year 血專 Anki decks from D1")
+    ap = argparse.ArgumentParser(description="Build per-year 移專 Anki decks from D1")
     ap.add_argument(
         "--local", action="store_true", help="query local D1 instead of --remote"
     )
@@ -715,7 +715,7 @@ def main():
         if basic is None:
             sys.exit(
                 "--merge-basic: no local Anki 'Basic' note type found "
-                "(checked ~/Library/Application Support/Anki2). Run without the flag for the 血專 type."
+                "(checked ~/Library/Application Support/Anki2). Run without the flag for the 移專 type."
             )
         model, field_names = make_model(basic)
         print(
@@ -727,7 +727,7 @@ def main():
         )
     else:
         model, field_names = make_model(None)
-        print("note type: 血專(專屬型別,可分享、不產生 Basic+)")
+        print("note type: 移專(專屬型別,可分享、不產生 Basic+)")
 
     OUT_DIR.mkdir(exist_ok=True)
     db = db_name()

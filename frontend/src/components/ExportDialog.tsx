@@ -10,7 +10,7 @@ import type { ExportScope, ExportFormat, ExportPreview } from '../lib/export-sco
 
 const FORMATS: { id: ExportFormat; name: string; blurb: string }[] = [
   { id: 'md', name: 'Markdown', blurb: '離線閱讀、丟進 Obsidian / VS Code,或再轉成別的格式。' },
-  { id: 'csv', name: 'Anki CSV', blurb: '直接拖進 Anki 匯入,notetype 血專、deck 血專::匯出。' },
+  { id: 'csv', name: 'Anki CSV', blurb: '直接拖進 Anki 匯入,notetype 移專、deck 移專::匯出。' },
   { id: 'html', name: '單檔 HTML', blurb: '瀏覽器直接開;要 PDF 就用瀏覽器「列印 → 儲存成 PDF」。' },
 ];
 

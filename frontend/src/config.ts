@@ -14,6 +14,8 @@ export type AppConfig = {
   };
   exam: { date_iso: string; date_label: string; countdown_label: string };
   public: { host: string; og_invite_line: string };
+  // 只用 slug(備份檔名前綴);其餘 [project] 欄位是部署用的,前端不讀。
+  project: { slug: string };
   storage: { theme_storage_key: string; viewport_storage_key: string };
   // Telegram 出題機器人的 bot username(不含 @)。空字串 = 隱藏綁定卡片。
   telegram?: { bot_username: string };

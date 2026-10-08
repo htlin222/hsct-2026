@@ -58,8 +58,8 @@ test("首行起輸出 Anki 匯入指令標頭", () => {
 	assert.deepEqual(lines.slice(0, 6), [
 		"#separator:Comma",
 		"#html:true",
-		"#notetype:血專",
-		"#deck:血專::匯出",
+		"#notetype:移專",
+		"#deck:移專::匯出",
 		"#columns:Front,Back,Tags",
 		"#tags column:3",
 	]);

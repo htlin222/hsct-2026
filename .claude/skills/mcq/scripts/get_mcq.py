@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch one exam question from the hema-2026 read-only API for the /mcq skill.
+"""Fetch one exam question from the hsct-2026 read-only API for the /mcq skill.
 
 Reads config from .claude/skills/mcq/.env (MCQ_API_BASE / MCQ_API_KEY /
 MCQ_USER_EMAIL), sends the per-user key + member email, prints the question.

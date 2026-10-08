@@ -254,7 +254,7 @@ async function main() {
 		`-- Seeds initial 詳解 (TipTap doc JSON) for民國 ${YEAR} imports.`,
 		"-- Idempotent: re-applying overwrites system seed rows but leaves human edits alone.",
 		"",
-		`DELETE FROM explanation_history WHERE question_id LIKE '${YEAR}-%' AND version = 1 AND updated_by = 'system@hema-2026';`,
+		`DELETE FROM explanation_history WHERE question_id LIKE '${YEAR}-%' AND version = 1 AND updated_by = 'system@hsct-2026';`,
 		"",
 	];
 	for (const r of all) {
@@ -265,14 +265,14 @@ async function main() {
 			`UPDATE explanations
          SET content_json = '${json}',
              version = 1,
-             updated_by = 'system@hema-2026',
+             updated_by = 'system@hsct-2026',
              updated_at = ${now}
-       WHERE question_id = '${id}' AND version = 1 AND updated_by = 'system@hema-2026';`,
+       WHERE question_id = '${id}' AND version = 1 AND updated_by = 'system@hsct-2026';`,
 		);
 		// Also write a history row for traceability
 		stmts.push(
 			`INSERT INTO explanation_history (question_id, version, content_json, updated_by, updated_at)
-       VALUES ('${id}', 1, '${json}', 'system@hema-2026', ${now});`,
+       VALUES ('${id}', 1, '${json}', 'system@hsct-2026', ${now});`,
 		);
 	}
 	await writeFile(SQL_OUT, stmts.join("\n") + "\n", "utf-8");

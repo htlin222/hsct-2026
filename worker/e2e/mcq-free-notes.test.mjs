@@ -58,7 +58,7 @@ function mintKey(secret, email, version) {
 function d1(sql) {
   return execFileSync(
     "npx",
-    ["wrangler", "d1", "execute", "hema-2026-db", "--local", "--command", sql],
+    ["wrangler", "d1", "execute", "hsct-2026-db", "--local", "--command", sql],
     { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] },
   );
 }

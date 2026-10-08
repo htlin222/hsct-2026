@@ -25,7 +25,7 @@ const DESIGN = {
   background_color: '#F5EFE3',
   text_color: '#1F1B16',
   header_text: '請用已登記的 email 登入',
-  footer_text: 'hema-2026 · 國考共筆讀書會',
+  footer_text: 'hsct-2026 · 移植專科共筆讀書會',
   logo_path: '',
 } as const;
 
