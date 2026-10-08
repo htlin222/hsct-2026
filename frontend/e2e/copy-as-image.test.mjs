@@ -88,8 +88,16 @@ const NESTED_NOTE = {
 };
 
 const CMP_ITEMS = ['甲乙丙丁戊己庚辛', '壬癸甲乙丙丁', '戊己庚辛壬癸甲乙丙丁'];
-/** `.tiptap` 直接子節點的索引 —— 用位置定位比 CSS 選擇器精確(li 裡也有 p)。 */
-const CHILD = { LIST: 3, CMP_PARA: 7, CMP_LIST: 8 };
+/**
+ * 要選的區塊,用**文字**定位。詳解現在跟筆記一樣走 NoteContent,每個章節是各自
+ * 一個 `.tiptap`,「第一個 `.tiptap` 的第 N 個子節點」這種位置定位已經不成立。
+ * 只認最外層區塊(不在 li 裡),否則清單項目裡的 p 也會命中。
+ */
+const CHILD = {
+  LIST: { tag: 'UL', text: '慢性溶血性貧血的證據' },
+  CMP_PARA: { tag: 'P', text: CMP_ITEMS.join('') },
+  CMP_LIST: { tag: 'UL', text: CMP_ITEMS[0] },
+};
 
 /** 有標題階層、巢狀清單與有序清單的詳解 —— 圖卡要保留的東西都在裡面。 */
 const EXPLANATION = {
@@ -217,6 +225,18 @@ async function openQuestion(withClipboard = true) {
     await reveal.first().click();
     await page.waitForTimeout(400);
   }
+  // 詳解的章節是手風琴(同個人筆記),## 以下預設收合 —— 收合的區段不渲染子節點。
+  for (let i = 0; i < 4; i++) {
+    const n = await page.evaluate(() => {
+      const shut = [...document.querySelectorAll('[data-note-heading]')].filter(
+        (b) => b.getAttribute('aria-expanded') === 'false' && b.getClientRects().length > 0,
+      );
+      for (const b of shut) b.click();
+      return shut.length;
+    });
+    if (!n) break;
+    await page.waitForTimeout(250);
+  }
   return { ctx, page, errors };
 }
 
@@ -226,12 +246,15 @@ async function openQuestion(withClipboard = true) {
  * `mouseup` 必須從**元素**派發:從 document 派發時 `onSettle` 的
  * `e.target.closest` 會炸(document 沒有 closest)。
  */
-async function selectChild(page, index) {
-  return page.evaluate((index) => {
-    const root = document.querySelector('.tiptap');
-    if (!root) return { ok: false, reason: '找不到 .tiptap' };
-    const el = root.children[index];
-    if (!el) return { ok: false, reason: `.tiptap 沒有第 ${index} 個子節點` };
+async function selectChild(page, which) {
+  return page.evaluate((which) => {
+    const el = [...document.querySelectorAll('.tiptap > *')].find(
+      (e) =>
+        e.tagName === which.tag &&
+        e.getClientRects().length > 0 &&
+        (which.tag === 'P' ? e.textContent === which.text : e.textContent.includes(which.text)),
+    );
+    if (!el) return { ok: false, reason: `找不到 ${which.tag}「${which.text}」(手風琴沒展開?)` };
     const r = document.createRange();
     r.selectNodeContents(el);
     const sel = window.getSelection();
@@ -239,14 +262,14 @@ async function selectChild(page, index) {
     sel.addRange(r);
     el.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
     return { ok: true, tag: el.tagName, text: sel.toString().slice(0, 30) };
-  }, index);
+  }, which);
 }
 
 /** 選一段 → 按按鈕 → 回傳剪貼簿收到的 PNG 資訊。 */
 async function cardFor(page, index) {
   const sel = await selectChild(page, index);
   assert.ok(sel.ok, sel.reason);
-  assert.ok(sel.text.length > 0, `第 ${index} 個子節點選不到文字(防劇透還蓋著?)`);
+  assert.ok(sel.text.length > 0, `${index.text} 選不到文字(防劇透還蓋著?)`);
   await page.evaluate(() => {
     window.__card.calls = 0;
   });

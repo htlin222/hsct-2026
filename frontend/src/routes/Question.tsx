@@ -51,7 +51,6 @@ import { GamepadFab, type GamepadHint } from "../components/GamepadFab";
 import { useGamepad, useGamepadScroll } from "../hooks/useGamepad";
 import { useSwipeNav } from "../hooks/useSwipeNav";
 import { RichEditor } from "../components/RichEditor";
-import { AnnotatableContent } from "../components/AnnotatableContent";
 import { NoteContent } from "../components/NoteContent";
 import { NoteLinkList, type NoteLinkItem } from "../components/NoteLinkList";
 import { CommentThread } from "../components/CommentThread";
@@ -2004,11 +2003,13 @@ export function Question() {
 												}
 												aria-hidden={!revealedExp}
 											>
-												<AnnotatableContent
+												{/* 同個人筆記:標題變手風琴(# 展開、## 以下收合)。 */}
+												<NoteContent
 													content={explanationJson}
-													storeKey={`anno:exp:${data.id}`}
+													annotateKeyPrefix={`anno:exp:${data.id}`}
 													cloze={expCloze}
 													autoTerms={autoClozeTerms ?? undefined}
+													openLevels={1}
 												/>
 											</div>
 											{!revealedExp && (

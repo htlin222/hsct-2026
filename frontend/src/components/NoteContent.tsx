@@ -17,7 +17,12 @@ const AnnotationCtx = createContext<AnnoCtx>(null);
 // 章節手風琴預設開或關。題目頁的個人筆記面板是次要內容,收合著才不會把題目
 // 擠下去;其他筆記的專屬頁整頁只有這一則,收合著等於打開自己的筆記只看得到
 // 幾個標題。所以做成參數而不是改預設值 —— 兩個位置要的行為本來就不同。
-const DefaultOpenCtx = createContext(false);
+// openLevels:標題層級 ≤ 這個數字的手風琴預設展開。共筆詳解只有一個 `#`,
+// 整份收合等於打開只看得到一行,所以它傳 1(# 展開、## 以下收合)。
+const DefaultOpenCtx = createContext<{ all: boolean; openLevels: number }>({
+	all: false,
+	openLevels: 0,
+});
 
 // Read-only renderer for 個人筆記 with two view-only affordances:
 //   • a paragraph that is just ---/***/___ renders as a real <hr>
@@ -102,6 +107,7 @@ export function NoteContent({
 	cloze = false,
 	autoTerms,
 	defaultSectionsOpen = false,
+	openLevels = 0,
 }: {
 	content: any;
 	/** When set, section bodies become annotatable, keyed under this prefix. */
@@ -109,6 +115,8 @@ export function NoteContent({
 	cloze?: boolean;
 	/** 章節手風琴是否預設展開(其他筆記的專屬頁用 true)。 */
 	defaultSectionsOpen?: boolean;
+	/** 層級 ≤ 此值的章節預設展開(0 = 不特別展開)。 */
+	openLevels?: number;
 	/**
 	 * 自動挖空 terms for the whole note. Every section body gets the same list and
 	 * marks whichever terms appear in it — a term from another section simply
@@ -122,7 +130,9 @@ export function NoteContent({
 		: null;
 	return (
 		<AnnotationCtx.Provider value={ctx}>
-			<DefaultOpenCtx.Provider value={defaultSectionsOpen}>
+			<DefaultOpenCtx.Provider
+				value={{ all: defaultSectionsOpen, openLevels }}
+			>
 				<div className="tiptap-note">
 					<ItemList items={items} />
 				</div>
@@ -180,8 +190,10 @@ const TITLE_CLS: Record<number, string> = {
 };
 
 function NoteAccordion({ section }: { section: Section }) {
-	const defaultOpen = useContext(DefaultOpenCtx);
-	const [open, setOpen] = useState(defaultOpen);
+	const def = useContext(DefaultOpenCtx);
+	const [open, setOpen] = useState(
+		def.all || section.level <= def.openLevels,
+	);
 	const title = headingText(section.heading);
 	const hasChildren = section.children.length > 0;
 
