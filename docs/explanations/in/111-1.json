@@ -1,0 +1,236 @@
+[
+ {
+  "id": "111-001",
+  "number": 1,
+  "stem": "Which of the following statements of HLA(Human leukocyte antigen) genes is incorrect?",
+  "options": {
+   "A": "Codominantly expressed",
+   "B": "Inherited following Mendelian rules",
+   "C": "Random association of alleles at different HLA loci",
+   "D": "Main polymorphism of HLA class II is clustered in the beta-chain Ig-like domain"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "HLA/MHC 基礎",
+   "HLA 分型",
+   "HLA 配對"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ },
+ {
+  "id": "111-002",
+  "number": 2,
+  "stem": "關於HSC (hematopoietic stem cell) gene therapy 的敘述，何者有誤?",
+  "options": {
+   "A": "Use of γ-retroviral vectors is associated with risks of insertional mutagenesis",
+   "B": "The main effect of lentiviral vector is gene modification.",
+   "C": "Primitive human bone marrow-derived HSC are very resistant to ex vivo gene manipulation",
+   "D": "CRISPR/Cas9 system has the risk of off-target effect."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "HSC 歸巢",
+   "T-cell depletion",
+   "次發腫瘤"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch7 Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation (PDF p91–100)",
+   "Ch80 Hemoglobinopathies (Sickle Cell Disease and Thalassemia) (PDF p712–726)"
+  ]
+ },
+ {
+  "id": "111-003",
+  "number": 3,
+  "stem": "Immune repertoire reconstitution after HSCT depends on many factors. Which of the following statements is wrong?",
+  "options": {
+   "A": "Conditioning regimen influences both short-term and long-term immune reconstitution.",
+   "B": "The pharmacokinetics of ATG is highly dependent on receptor load represented by absolute lymphocyte count. Therefore, some studies adopt to dose ATC on lymphocyte count rather than body weight.",
+   "C": "Higher numbers of NKT and αβT cells in the graft have been reported to associate with favorable immune reconstitution, most likely due to their impact on controlling GVHD and acting on CMV and on leukemia.",
+   "D": "Measuring the production of cytokines, chemokines, and growth factors represents an integral part of immunomonitoring after HSCT."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "免疫重建",
+   "ATG",
+   "T 細胞亞群",
+   "Conditioning 原理"
+  ],
+  "ebmt_chapters": [
+   "Ch10 Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization (PDF p118–130)",
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch26 GVHD Prophylaxis (PDF p242–250)"
+  ]
+ },
+ {
+  "id": "111-004",
+  "number": 4,
+  "stem": "Which of the following statement regarding conditioning regimens in allotransplant is NOT true?",
+  "options": {
+   "A": "The dose intensity of the pre-HSCT conditioning varied between MAC, NMA, reduced toxicity conditioning (RTC), and RIC in decreasing intensity order.",
+   "B": "The NMA and RIC significantly reduced transplant-related organ toxicity and mortality enabling transplant in elderly and medically infirm patients.",
+   "C": "The development of the IV bulsufan significantly reduced BU-mediated SOS/VOD and TRM compared to oral bulsufan.",
+   "D": "RTC regimens are typically with more intensive antileukemic activity but limited toxicity and thus better tolerated by patients not eligible for myeloablative conditioning"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "Conditioning 原理",
+   "RIC",
+   "MAC",
+   "Busulfan",
+   "SOS/VOD"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "111-005",
+  "number": 5,
+  "stem": "Which of the following statement regarding GVHD prophylaxis in allotransplant is NOT true?",
+  "options": {
+   "A": "The main risk factor for developing chronic GVHD is the previous development of the acute GVHD.",
+   "B": "Regarding GVHD prophylaxis, tacrolimus/methotrexate improved survival rate significantly as compared to cyclosporine/methotrexate",
+   "C": "ATG has been demonstrated to decrease acute GVHD after URD transplant and of chronic GVHD.",
+   "D": "Sirloins, an mTOR inhibitor, is a more potent suppressor of the expansion of conventional T cells than regulatory T cells."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "GVHD 預防",
+   "GVHD 風險因子",
+   "CNI",
+   "ATG",
+   "Sirolimus",
+   "Treg"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "111-006",
+  "number": 6,
+  "stem": "Which of the following statement regarding GVHD prophylaxis in allotransplant is NOT true?",
+  "options": {
+   "A": "The toxicity of mycophenolate (MMF) mainly relies on sometimes unpredictable hematological toxicity.",
+   "B": "Vorinostat is a histone deacetylase inhibitor that has anti-inflammatory and immunoregulatory effect.",
+   "C": "Tocilizumab is a humanized anti-IL-15 receptor monoclonal antibody",
+   "D": "All above are correct"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "GVHD 預防",
+   "MMF",
+   "CRS"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)"
+  ]
+ },
+ {
+  "id": "111-007",
+  "number": 7,
+  "stem": "Which of the following statements on the recommended cell dose in the graft is wrong?",
+  "options": {
+   "A": "2-3 x 106/kg of CD34 positive cells for bone marrow",
+   "B": "250 x 106/kg of CD3 positive cell for peripheral blood",
+   "C": "More CD34 positive cells are needed in umbilical cord blood than bone marrow because the cells are younger",
+   "D": ">3 x 107 /kg of total nucleated cells for umbilical cord blood",
+   "E": "All of the above are correct"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "CD34 劑量",
+   "臍帶血",
+   "骨髓 vs 周邊血"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)",
+   "Ch18 Procurement and Management of Cord Blood Unit for Allogeneic Transplantation (PDF p193–198)"
+  ]
+ },
+ {
+  "id": "111-008",
+  "number": 8,
+  "stem": "Which of the following statement is wrong regarding the comparison of donor cell source?",
+  "options": {
+   "A": "There is increased risk of chronic GVHD after PBSC transplantation compared to BM.",
+   "B": "There is increased risk of treatment-related mortality (TRM) after BM transplantation compared to PBSC.",
+   "C": "There is no better graft-versus-leukemia (GVL) effect after PBSC than BM transplantation in pediatric population.",
+   "D": "The overall survival is similar for BM and PBSC transplantation.",
+   "E": "No benefit of double cord blood than single cord blood in pediatric patients transplanted for malignant diseases."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "骨髓 vs 周邊血",
+   "臍帶血",
+   "GVL",
+   "兒童移植",
+   "GVHD 風險因子"
+  ],
+  "ebmt_chapters": [
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)",
+   "Ch64 Role of Umbilical Cord Blood Transplantation (PDF p568–573)"
+  ]
+ },
+ {
+  "id": "111-009",
+  "number": 9,
+  "stem": "Which of the following statement about donor-recipient-related factors is wrong?",
+  "options": {
+   "A": "CMV serological status of positive donor in case of positive recipient",
+   "B": "For unrelated donor transplantation, donor age is probably the most relevant non-HLA donor factor",
+   "C": "ABO matching is usually preferred",
+   "D": "A female donor is preferred for a male recipient",
+   "E": "All of the above are correct"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "CMV 血清狀態",
+   "捐贈者年齡/性別",
+   "ABO 不合",
+   "MUD",
+   "捐贈者評估"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ },
+ {
+  "id": "111-010",
+  "number": 10,
+  "stem": "CXCR-4 antagonist is proven to help poor mobilization in autologous peripheral stem cell collection. What is its proposed mechanism?",
+  "options": {
+   "A": "To interact with G-CSF and augment stem cells production",
+   "B": "To stimulate secretion of CFU (colony-forming unit)",
+   "C": "To block CXCR4/SDF-1α interaction, releasing stem cells from bone marrow into circulation",
+   "D": "To increase amount of SCF (stem cell factor)"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "Plerixafor",
+   "Poor mobilizer",
+   "動員",
+   "HSC 歸巢"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ }
+]

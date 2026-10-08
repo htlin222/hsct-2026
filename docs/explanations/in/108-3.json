@@ -1,0 +1,231 @@
+[
+ {
+  "id": "108-021",
+  "number": 21,
+  "stem": "High-dose therapy and autologous stem cell transplant are generally not recommended in which of the following clinical conditions in lymphoma?",
+  "options": {
+   "A": "45 years-old, newly diagnosed mantle cell lymphoma, MIPI score high-risk, Ki67 index 75%, ECOG performance status 1.",
+   "B": "70 years-old, follicular B-cell lymphoma, grade 1, stage 3A, FLIPI intermediate-risk, after R-Benda for 6 cycles, PET scan negative",
+   "C": "65 years-old, first relapse diffuse large B-cell lymphoma, chemo-sensitive to R-ESHAP for 4 cycles, ECOG performance status 0",
+   "D": "30 years-old, anaplastic large cell lymphoma, ALK negative, stage 4, PR after CHOEP for 4 cycles"
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "FL",
+   "MCL",
+   "DLBCL 二線",
+   "T 細胞淋巴瘤",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch84 Indolent Lymphoma (PDF p746–752)",
+   "Ch87 Mantle Cell Lymphoma (PDF p767–770)",
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "108-022",
+  "number": 22,
+  "stem": "Which of the following patients could NOT have prolonged overall survival after receiving myeloablative autologous hematopoietic stem cells transplantation ( auto-HSCT ):",
+  "options": {
+   "A": "Systemic light chain amyloidosis",
+   "B": "Chemotherapy refractory germ cell tumors",
+   "C": "Diffuse large B cell lymphoma in the second complete remission",
+   "D": "Severe scleroderma"
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "AL amyloidosis",
+   "實體腫瘤",
+   "DLBCL 二線",
+   "自體免疫疾病",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch94 Solid Tumours (PDF p827–840)",
+   "Ch82 Systemic Light Chain Amyloidosis (PDF p736–740)",
+   "Ch92 Autoimmune Disease (PDF p803–814)"
+  ]
+ },
+ {
+  "id": "108-023",
+  "number": 23,
+  "stem": "Auto-HSCT remains one of the standard of cares for young newly diagnosed myeloma patients. Which of the following description is incorrect:",
+  "options": {
+   "A": "Generally, auto-HSCT is reserved for patients younger than 65 years old with no severe comorbidities.",
+   "B": "Renal impairment is not an absolute contraindication to receiving HDT/ASCT.",
+   "C": "Auto-HSCT remains one of the first line treatments even in the era of novel agents.",
+   "D": "When dealing with myeloma patients with unfavorable cytogenetics and poor prognostic factors, tandem transplantation did not appear to be an encouraging strategy due to no survival benefit compared with single transplantation."
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "MM 自體移植",
+   "Tandem 移植",
+   "高齡移植"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "108-024",
+  "number": 24,
+  "stem": "Engraftment syndrome (ES) encompasses a continuum of peri-engraftment complications after hematopoietic stem cell transplantation. Which of the following description about engraftment syndrome is not correct:",
+  "options": {
+   "A": "The incidence of ES is higher in haplo-identical allo-genetic transplantation than HLA-identical sibling SCT, and very rare in auto-HSCT.",
+   "B": "The symptoms of ES includes non-infectious fever, skin rashes, pulmonary edema.",
+   "C": "Weight gain, diarrhea, hepatic dysfunction, renal dysfunction, or transient encephalopathy may also be seen in ES.",
+   "D": "Although no definitive biomarkers of ES have been identified, elevated CRP has been associated with ES."
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "植入症候群",
+   "植入",
+   "aGVHD 診斷"
+  ],
+  "ebmt_chapters": [
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)",
+   "Ch35 Neutropenic Fever (PDF p321–327)"
+  ]
+ },
+ {
+  "id": "108-025",
+  "number": 25,
+  "stem": "About post-transplantation lymphoproliferative disease, which statements is wrong?",
+  "options": {
+   "A": "If EBV viral load increased rapidly, pre-emptive rituximab is a therapeutic choice",
+   "B": "Once suspecting, the most important first step to do is augmenting patient’s immunosuppression dose",
+   "C": "almost develops during the first 6 months after transplant",
+   "D": "T-cell-depleted stem-cell source is a risk factor"
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "EBV/PTLD",
+   "Pre-emptive RTX",
+   "免疫抑制劑減量",
+   "T-cell depletion"
+  ],
+  "ebmt_chapters": [
+   "Ch45 Posttransplant Lymphoproliferative Syndromes (PDF p422–428)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "108-026",
+  "number": 26,
+  "stem": "Which of the following is the least likely management of oral mucositis for the patients after hematopoietic cell transplantation?",
+  "options": {
+   "A": "Opioid drugs",
+   "B": "Topical steroids",
+   "C": "Topical lidocaine",
+   "D": "(0.9% saline solution + sodium bicarbonate solution) bland rinses"
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "Mucositis",
+   "Conditioning 毒性",
+   "MAC"
+  ],
+  "ebmt_chapters": [
+   "Ch48 Ocular and Oral Complications (PDF p443–448)",
+   "Ch50 Gastrointestinal Complications (PDF p467–472)"
+  ]
+ },
+ {
+  "id": "108-027",
+  "number": 27,
+  "stem": "As above case, what is NOT your expected findings?",
+  "options": {
+   "A": "Hepatomegaly, ascites, periportal edema, and attenuated hepatic venous flow in Doppler ultrasound.",
+   "B": "Portal vein engorgement with or without thrombosis in abdomen CT.",
+   "C": "Trans-venous catheter to perform liver biopsy is more safe then trans-abdominal approach.",
+   "D": "Trans-venous catheter hepatic venous pressure gradient showed less then 10mmHg.",
+   "E": "Increased resistive index to hepatic artery flow and slow or reverse flow of portal vein."
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "SOS/VOD",
+   "Conditioning 毒性",
+   "Defibrotide"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ },
+ {
+  "id": "108-028",
+  "number": 28,
+  "stem": "Which of the following statements regarding EB virus viremia post HSCT was right?",
+  "options": {
+   "A": "Only occurred in allogeneic HSCT recipients",
+   "B": "Pre-emptive antiCD20 treatment was recommended in all patients with EBV viremia",
+   "C": "Patients received unrelated donor HSCT possessed high risk for development of EBV related lymphoproliferative disorder",
+   "D": "Method of EBV viremia monitoring has well standardized"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "EBV/PTLD",
+   "Pre-emptive RTX",
+   "MUD"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)",
+   "Ch45 Posttransplant Lymphoproliferative Syndromes (PDF p422–428)"
+  ]
+ },
+ {
+  "id": "108-029",
+  "number": 29,
+  "stem": "Which of the following statement is wrong?",
+  "options": {
+   "A": "Patients with chronic GVHD should receive antibiotic prophylaxis targeting encapsulated organisms given for at least as long as immunosuppressive therapy is administered",
+   "B": "After HSCT, antifungal prophylaxis should be considered in patients at high risk for viral and fungal infections (e.g., patients with grade 3-4 GVHD)",
+   "C": "Allogeneic HCT recipients should receive PCP prophylaxis from engraftment until at least 6 months after transplantation or as long as immunosuppressive therapy is given (e.g., for the treatment or prevention of chronic GVHD).",
+   "D": "Anti-HSV prophylaxis was recommended from D+1 to engraftment in auto-HSCT recipients receiving myeloablative conditioning"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "Encapsulated 細菌",
+   "抗黴菌預防",
+   "PJP 預防",
+   "HSV/VZV"
+  ],
+  "ebmt_chapters": [
+   "Ch28 General Management of the Patient: Specific Aspects of Infectious Disease Supportive Care in Children (PDF p258–269)",
+   "Ch37 Invasive Fungal Diseases (PDF p337–345)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "108-030",
+  "number": 30,
+  "stem": "Which one is the most common cause of viral pneumonia in patients receiving hematopoietic stem cell transplantation?",
+  "options": {
+   "A": "CMV,",
+   "B": "HSV,",
+   "C": "EBV,",
+   "D": "RSV"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "CMV",
+   "呼吸道病毒",
+   "HSV/VZV"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)",
+   "Ch52 Noninfectious Pulmonary Complications (PDF p478–487)"
+  ]
+ }
+]

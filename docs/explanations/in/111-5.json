@@ -1,0 +1,245 @@
+[
+ {
+  "id": "111-041",
+  "number": 41,
+  "stem": "Which of the following statements is (are) correct about engraftment syndrome?\n(1) Intensity of the conditioning is the risk of engraftment syndrome\n(2) Use of G-CSF is the risk of engraftment syndrome\n(3) Fever, skin rash and pulmonary edema is the classical manifestations of engraftment syndrome\n(4) Engraftment syndrome is observed more in allogeneic HSCT than autologous HSCT",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "植入症候群",
+   "G-CSF",
+   "植入"
+  ],
+  "ebmt_chapters": [
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ },
+ {
+  "id": "111-042",
+  "number": 42,
+  "stem": "Beside adoptive cell-based options such as DLI, the availability of novel effective pharmacological compounds has opened new avenues in clinical research. Which of the following compounds are investigated to prevent relapse after allogeneic stem cell transplantation?\n(1) TKI targeting FLT3-ITD (sorafenib, midostaurin, quizartinib, gliteritinib, crenolanib)\n(2) Histone deacetylase inhibition (panobinostat)\n(3) Hypomethylating agents (azacytidine, decitabine)\n(4) Checkpoint inhibitors (pidilizumab, nivolumab, ipilimumab)",
+  "options": {
+   "A": "(1)(3)",
+   "B": "(2)(4)",
+   "C": "(1)(2)(3)",
+   "D": "(1)(2)(3)(4)"
+  },
+  "answer": "D",
+  "tags": "複選",
+  "keyword_tags": [
+   "維持治療",
+   "FLT3 抑制劑",
+   "HMA 維持",
+   "PD-1 抑制劑",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)",
+   "Ch70 AML in Adults (PDF p611–625)"
+  ]
+ },
+ {
+  "id": "111-043",
+  "number": 43,
+  "stem": "Which of the following statements on Hodgkin lymphoma (HL) is (are) correct?\n(1) Autologous HSCT is indicated in chemo-sensitive relapsed HL\n(2) Brentuximab vedotin (BV) is currently the only drug approved for consolidation treatment after autologous HSCT in patients at risk of relapse or progression.\n(3) Use of PD-1 blockade before or after allogeneic HSCT in HL may be associated with higher incidence of hepatic veno-occlusive disease (sinusoidal obstruction syndrome, VOD/SOS) and grade 3-4 GvHD\n(4) EBMT and CIBMTR studies show that outcomes of PTCy-based haplo-HSCT are similar to those receiving matched related donor (MRD) or matched unrelated donor (MUD) allogeneic HSCT (Martínez et al. 2017).",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "HL",
+   "PD-1 抑制劑",
+   "SOS/VOD",
+   "Haplo",
+   "PTCy"
+  ],
+  "ebmt_chapters": [
+   "Ch89 Classical Hodgkin’s Lymphoma (PDF p778–787)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ },
+ {
+  "id": "111-044",
+  "number": 44,
+  "stem": "下列有關各種血液惡性病，目前使用CAR-T 細胞治療療效成果的描述，請選出所有正確的答案?\n(1) For relapsed and refractory ALL, the response rate is around 80%, while long-term remission rate is around 40%.\n(2) For relapsed and refractory DLBCL, the response rate is around 60% while long-term remission rate is around 30-40%.\n(3) For relapsed and refractory myeloma, the response rate is around 80% while long-term remission rate is only around 10%.\n(4) For relapsed and refractory CLL, the response rate was around 40% in previous trials of CAR T therapy and long-term remission rate was only around 10-20%. However, use of bruton kinase inhibitor (BTKi) prior to and after CAR-T cell therapy significantly improved the response to CAR-T therapy .",
+  "options": {
+   "A": "(1)(2)",
+   "B": "(1)(2)(3)",
+   "C": "(1)(2)(3)(4)",
+   "D": "(1)(3)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "CAR-T",
+   "BCMA CAR-T",
+   "ALL",
+   "DLBCL 二線"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)",
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)"
+  ]
+ },
+ {
+  "id": "111-045",
+  "number": 45,
+  "stem": "The following statements describe use of G-CSF in hematopoietic stem cell transplantation. Please select all the CORRECT answer(s).\n(1) G-CSF use is recommended after autologous HCT\n(2) G-CSF use is NOT routinely recommended after allogeneic HCT\n(3) G-CSF is used for PB stem cell mobilization based on its direct stimulatory effect on bone marrow stem cells.\n(4) Retrospective studies show increased risk of GVHD after G-CSF use in allogeneic HSCT\n(5) G-CSF use provides obvious survival benefit.",
+  "options": {
+   "A": "(1)(2)",
+   "B": "(1)(2)(3)",
+   "C": "(1)(2)(4)",
+   "D": "(1)(2)(3)(4)",
+   "E": "(1)(2)(3)(4)(5)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "G-CSF",
+   "動員",
+   "植入",
+   "GVHD 風險因子"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)",
+   "Ch41 Graft Failure (PDF p378–385)",
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ },
+ {
+  "id": "111-046",
+  "number": 46,
+  "stem": "For patients with acute leukemia in CR1, select those who should plan allogeneic HSCT as soon as possible.\n(1) AML with WBC count 100,000/ul at presentation, normal karyotype and concomitant NPM1 mutation and FLT3-ITD mutation with allele ratio of 0.5, in CR1\n(2) Acute promyelocytic leukemia in CR1 with WBC count 25,000/ul at presentation without detectable molecular residual disease [log MRD (PML/RARA) around -5.0]\n(3) Pre-B ALL with t(9;22) in CR1 with dasatinib maintenance with molecular residual disease [log MRD (Bcr/Abl) around -2.2]\n(4) AML with TP53 mutation in CR1",
+  "options": {
+   "A": "(1)(2)(3)(4)",
+   "B": "(1)(3)(4)",
+   "C": "(1)(3)",
+   "D": "(2)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "AML",
+   "FLT3-ITD",
+   "NPM1",
+   "APL",
+   "Ph+ ALL",
+   "TP53"
+  ],
+  "ebmt_chapters": [
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)"
+  ]
+ },
+ {
+  "id": "111-047",
+  "number": 47,
+  "stem": "For a 45 year-old, IST-failed SAA patient with no HLA-matched sibling, what should we do to minimize the complication of salvage allogeneic HSCT with unrelated/haploidentical donor?\n(1) Consider bone marrow-sourced stem cells instead of peripheral blood stem cells\n(2) Avoid ATG for GVHD prophylaxis\n(3) No standard conditioning regimen for older patient without matched sibling donor, but the conditioning regimen generally includes the combination of Cyclophosphamide, Fludarabine, TBI to minimize graft failure.\n(4) Upfront haploidentical HSCT is better than matched unrelated donor as stem cell source.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "SAA",
+   "IST",
+   "骨髓 vs 周邊血",
+   "Haplo",
+   "MUD",
+   "Graft failure"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)",
+   "Ch65 Haploidentical HCT (PDF p574–582)",
+   "Ch41 Graft Failure (PDF p378–385)"
+  ]
+ },
+ {
+  "id": "111-048",
+  "number": 48,
+  "stem": "關於natural killer cells(NK cells)的敘述，以下何者有誤？\n(1) In HLA-mismatched transplantation, NK cells can contribute to GvL effect.\n(2) Killer immunoglobulin-like receptor (KIR) mainly recognizes HLA class II peptide complexes.\n(3) The “missing self” hypothesis predicted that NK cells are inhibited by self-MHC and can explain how NK cells might be tolerant of normal tissues.\n(4) NK-cell- inhibitory receptor NKG2D can bind to MICA and MICB, which are expressed during cell division, radiation-induced genotoxic stress and malignant transformation.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "KIR/NK",
+   "mHAg/MICA",
+   "GVL",
+   "HLA mismatch"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch8 Biological Properties of Cells Other Than HSCs (PDF p101–105)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "111-049",
+  "number": 49,
+  "stem": "Choose the correct statement(s) for post-transplant cyclophosphamide (PTCy):\n(1) PTCy eliminates alloreactive T-cell clones of both donor and host origin in the early posttransplantation period.\n(2) PTCy also eliminates regulatory T cells.\n(3) PTCy is usually administrated on day+3 and +4 after alloHSCT.\n(4) PTCy is only indicated in haploidentical allotransplant setting but not in matched siblings or unrelated allotransplants.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "PTCy",
+   "Treg",
+   "GVHD 預防",
+   "Haplo"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ },
+ {
+  "id": "111-050",
+  "number": 50,
+  "stem": "Which following statement with regard to donor lymphocytes infusion ( DLI ) is correct ?\n(1) Patients with slowly progressing disease do benefit greatly from the graft versus tumor ( GvT ) response after allo-HSCT and DLI.\n(2) The induction of effective GvT response by DLI is only 10-40% of the non-CML patients.\n(3) Rapid progression of the disease will significantly lower the therapeutic capacity of DLI.\n(4) Malignancies consisting of cells with an intrinsic antigen presenting cell phenotype have poor response to DLI.",
+  "options": {
+   "A": "(1)(3)",
+   "B": "(2)(4)",
+   "C": "(1)(2)(3)",
+   "D": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "DLI",
+   "GVL",
+   "CML",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)"
+  ]
+ }
+]

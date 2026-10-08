@@ -1,0 +1,242 @@
+[
+ {
+  "id": "112-031",
+  "number": 31,
+  "stem": "Which of the following statement about transplantation in relapsed MM is wrong?",
+  "options": {
+   "A": "In transplantation‐eligible patients relapsing after primary therapy that did NOT include an autologous HCT, high‐dose therapy with autologous HCT as part of salvage therapy should be considered standard",
+   "B": "A rescue or salvage auto‐HSCT could be tried when the response duration to the first transplant in less than 6 months",
+   "C": "Allogeneic HCT should be considered appropriate therapy for any eligible patient with early relapse (less than 24 months) after primary therapy that included an autologous HCT or with high‐risk features.",
+   "D": "If the rescue auto‐HSCT is performed, post transplant maintenance should be considered.",
+   "E": "Clinical trials in patients with relapsed MM have demonstrated that more intense therapy (triplets versus doublets) is associated with improvements in depth of response, and that depth of response is associated with improvements in PFS"
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "MM 復發",
+   "MM 自體移植",
+   "二次移植",
+   "MM 維持"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "112-032",
+  "number": 32,
+  "stem": "Which of the following statement about transplantation in severe aplastic anemia is wrong?",
+  "options": {
+   "A": "In patients older than 40 years, and for patients without a matched sibling donor, antithymocyte globulin + cyclosporine A + eltrombopeg should be the first‐line therapy",
+   "B": "If an HLA‐matched family donor is identified, bone marrow transplantation should be the first‐line therapy in patients younger than 40 years.",
+   "C": "The standard conditioning regimen for matched sibling transplants is cyclophosphamide 200 mg/kg (CY 200) and ATG(antithymocyte globulin).",
+   "D": "Peripheral blood has been shown to be superior to bone marrow, as a stem cell source, in matched sibling transplants because of less acute and chronic GVHD",
+   "E": "Patients with SAA undergoing alternative donor transplants, especially with an ATG‐based regimen, are at high risk of developing EBV‐related lymphoproliferative disorders."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "SAA",
+   "IST",
+   "骨髓 vs 周邊血",
+   "ATG",
+   "Eltrombopag",
+   "EBV/PTLD"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)",
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "112-033",
+  "number": 33,
+  "stem": "Autologous HSCT is most beneficial and indicated for what kind of patients with AL amyloidosis?",
+  "options": {
+   "A": "Low-risk group",
+   "B": "Intermediate-risk group",
+   "C": "High-risk group",
+   "D": "All patients with AL amyloidosis"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "AL amyloidosis",
+   "MM 自體移植",
+   "HCT-CI",
+   "自體移植"
+  ],
+  "ebmt_chapters": [
+   "Ch82 Systemic Light Chain Amyloidosis (PDF p736–740)"
+  ]
+ },
+ {
+  "id": "112-034",
+  "number": 34,
+  "stem": "在預定為CAR-T (Chimeric antigen receptor T-cells) 細胞製備所進行的Leukaphresis 前，下列哪一個藥物不需要超過14 天的washout period？",
+  "options": {
+   "A": "Ibrutinib",
+   "B": "Dasatinib",
+   "C": "Blinatumumab",
+   "D": "Clofarabine"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "CAR-T 橋接/washout",
+   "CAR-T",
+   "Leukapheresis",
+   "Blinatumomab"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ },
+ {
+  "id": "112-035",
+  "number": 35,
+  "stem": "下列有關 CAR-T (Chimeric antigen receptor T-cells) 治療後的併發症處理與長期追蹤的敘述，下列何者為正確的敘述？",
+  "options": {
+   "A": "在接受lymphodepleting chemotherapy 後給予routine G‐CSF 以預防neutropenia，已被證明是安全有效的處理方式",
+   "B": "Secondary haemophagocytic lymphohistiocytosis (sHLH) 是 CAR‐T 治療後罕見的併發症，但一般來說經過適當的支持治療均可緩解。",
+   "C": "臨床試驗已經證明，在CAR‐T 治療後發生 Long‐term B‐cell aplasia 且 IgG level 長期低下的情形，給予IVIG 補充至physiological level 可以降低發生嚴重感染的機會。",
+   "D": "以上皆不正確"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "CAR-T",
+   "低免疫球蛋白",
+   "IVIG",
+   "G-CSF"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)"
+  ]
+ },
+ {
+  "id": "112-036",
+  "number": 36,
+  "stem": "Which of the following statement(s) is(are) the feature(s) of immune reconstitution following hematopoietic stem cell transplantation (HSCT)?\n(1) Plasma cells/dendritic cells decrease less after conditioning chemotherapy\n(2) CD4+ cells/NKT cells recovered in few weeks after HSCT\n(3) Deficiencies of B‐cell and T‐cell reconstitutation are associated with decreased responses to vaccines and the development of secondary malignancy\n(4) In the patients with chronic myelogenous leukemia, T‐cell depletion HSCT is associated with a decreased risk of relapse",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "免疫重建",
+   "T-cell depletion",
+   "GVL",
+   "次發腫瘤",
+   "CML"
+  ],
+  "ebmt_chapters": [
+   "Ch10 Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization (PDF p118–130)",
+   "Ch29 Vaccinations (PDF p270–285)",
+   "Ch19 Graft Manipulation (PDF p199–205)"
+  ]
+ },
+ {
+  "id": "112-037",
+  "number": 37,
+  "stem": "Which of the following statements about HLA matching in unrelated donors is/are correct?\n(1) The outcomes of transplantation with MSD and with HLA‐matched MUD are comparable.\n(2) Disparities in HLA‐DQB1 have been reported to be permissive with no negative effects on outcomes.\n(3) Nonpermissive mismatches in DPB1 are associated with poorer outcome compared to full matches.\n(4) The more disparities in donor‐recipient HLA‐A, B, C, and DRB1 matching status, the poorer the survival outcome would be.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "HLA 配對",
+   "DPB1 permissive",
+   "MUD",
+   "HLA mismatch",
+   "MSD"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "112-038",
+  "number": 38,
+  "stem": "Choose the correct statement(s) for post-transplant cyclophosphamide (PTCy):\n(1) PTCy eliminates alloreactive T‐cell clones of both donor and host origin in the early posttransplantation period.\n(2) PTCy also eliminates regulatory T cells.\n(3) PTCy is usually administrated on day+3 and +4 after alloHSCT.\n(4) PTCy is only indicated in haploidentical allotransplant setting but not in matched siblings or unrelated allotransplants.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "PTCy",
+   "Treg",
+   "GVHD 預防",
+   "Haplo"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ },
+ {
+  "id": "112-039",
+  "number": 39,
+  "stem": "Choose the correct statement(s) for HSC cryopreservation:\n(1) Cryopreservation within 48h or less is recommended following collection to maintain an optimal viability.\n(2) The final product includes 15‐20% dimethyl sulfoxide (DMSO) as a cryoprotectant.\n(3) The maximum nuclear cell concentration in the cryostored transplant should be ≤ 4 x 108/mL.\n(4) Freezing at a controlled rate of 2‐5℃ per minute is recommended.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "冷凍保存",
+   "Leukapheresis",
+   "動員"
+  ],
+  "ebmt_chapters": [
+   "Ch20 Processing, Cryopreserving, and Controlling the Quality of HSC (PDF p206–209)"
+  ]
+ },
+ {
+  "id": "112-040",
+  "number": 40,
+  "stem": "Which one is risk factors for acute GVHD have been identified?\n(1) Degree of HLA disparity (unrelated donor or HLA‐mismatched donor).\n(2) Stem cell source (higher risk of acute GVHD with peripheral blood and bone marrow graft versus umbilical cord blood).\n(3) Donor and recipient sex disparity (female donor to male patient).\n(4) Higher intensity of alloHCT conditioning regimen.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "GVHD 風險因子",
+   "HLA mismatch",
+   "捐贈者年齡/性別",
+   "骨髓 vs 周邊血",
+   "臍帶血",
+   "Conditioning 原理"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)"
+  ]
+ }
+]

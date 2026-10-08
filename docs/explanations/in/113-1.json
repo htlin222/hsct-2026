@@ -1,0 +1,230 @@
+[
+ {
+  "id": "113-001",
+  "number": 1,
+  "stem": "Which of the following statement regarding acute GVHD is NOT true?",
+  "options": {
+   "A": "The histopathological feature of gastrointestinal aGvHD is exploding crypts.",
+   "B": "The precise incidence of moderate to severe aGvHD varies considerably depending predominantly on the nature of donor and the methods of GVHD prophylaxis.",
+   "C": "Grade III-IV aGvHD, especially if it turns out to be resistant to first-line treatment, has extremely poor prognosis..",
+   "D": "The most consistent histological feature of liver aGvHD is small bile duct damage.",
+   "E": "Pyoderma should be classified as stage 4 skin aGvHD"
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "aGVHD 診斷",
+   "aGVHD 分級",
+   "GVHD 風險因子",
+   "SR-aGVHD"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)"
+  ]
+ },
+ {
+  "id": "113-002",
+  "number": 2,
+  "stem": "The pathogenetic process in the induction of acute GVHD is modulated in part by the presence of cells capable of inhibiting immune response, EXCEPT:",
+  "options": {
+   "A": "T-regulatory cells (Tregs)",
+   "B": "Invariant NKT cells",
+   "C": "Myeloid-derived suppressor cells (MDSCs)",
+   "D": "B cells",
+   "E": "All of the above are correct"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "GVHD 機轉",
+   "Treg",
+   "T 細胞亞群"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch8 Biological Properties of Cells Other Than HSCs (PDF p101–105)",
+   "Ch61 Mechanisms of Immune Resistance (PDF p550–553)"
+  ]
+ },
+ {
+  "id": "113-003",
+  "number": 3,
+  "stem": "Which of the following is NOT diagnostic features of NIH-defined skin manifestations of chronic GVHD?",
+  "options": {
+   "A": "Active erythematous skin lesions",
+   "B": "Lichen-planus-like features",
+   "C": "Papulosquamous lesions",
+   "D": "Lichen-sclerosus-like features",
+   "E": "Poikiloderma"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "cGVHD 診斷",
+   "aGVHD 診斷",
+   "GVHD 機轉"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "113-004",
+  "number": 4,
+  "stem": "Which of the following statements regarding conditioning regimens in allotransplant is NOT true?",
+  "options": {
+   "A": "Historically, pre-HSCT conditioning aimed to eradicate the hematological malignancy, provide sufficient immune suppression (IS) to ensure engraftment, and provide stem cell niches in the host bone marrow for the incoming stem cells.",
+   "B": "A conditioning regimen consists of myelodepletion and lymphodepletion.",
+   "C": "Melphalan or busulfan are more lymphodepletion in nature, whereas fludarabine or cyclophosphamide are more myelodepletion.",
+   "D": "Total body irradiation (TBI) provides both myelosuppression and immune suppression."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "Conditioning 原理",
+   "TBI",
+   "Busulfan",
+   "Fludarabine",
+   "Melphalan",
+   "Cyclophosphamide"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "113-005",
+  "number": 5,
+  "stem": "Which of the following statements regarding conditioning regimens in allotransplant is NOT true?",
+  "options": {
+   "A": "The dose intensity of pre-HSCT conditioning regimens in MAC (myeloablative conditioning), RTC (reduced toxicity conditioning), RIC (reduced intensity conditioning), and NMA (non-MA) is decreased in order.",
+   "B": "RTC regimens cause profound cytopenia and should be administered with stem cells, but cytopenia may not be irreversible.",
+   "C": "TBI (total body irradiation) provides a homogenous dose distribution in the whole body, including sanctuaries not easily reached by systemic chemotherapy.",
+   "D": "TBI provides a different mechanism of tumor cell killing against chemotherapy-resistant cell clones."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "Conditioning 原理",
+   "MAC",
+   "RIC",
+   "TBI"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "113-006",
+  "number": 6,
+  "stem": "Which of the following statements regarding GVHD prophylaxis is NOT true?",
+  "options": {
+   "A": "Standard GVHD prophylaxis relies on calcineurin inhibitor and short-term MTX (methotrexate) after MAC and of CSA (cyclosporin A) and/or MMF (mycophenolate mofetil) after RIC.",
+   "B": "ATG significantly reduces the rate and severity of acute GVHD in most randomized clinical trials.",
+   "C": "The target trough plasma level of CSA in allotransplant with MUD (matched unrelated donor) is 380 ng/ml.",
+   "D": "The starting dosage of CSA in allotransplant with MUD is 3 mg/kg/day intravenously."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "GVHD 預防",
+   "CNI",
+   "MTX",
+   "MMF",
+   "ATG",
+   "MUD"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)"
+  ]
+ },
+ {
+  "id": "113-007",
+  "number": 7,
+  "stem": "Regarding steady-state mobilization, which of the followings is NOT true?",
+  "options": {
+   "A": "The approved doses are filgrastim 5 μg/kg/day SC for 5-7 days or lenograstim 5 μg/kg/day SC for 4-6 days",
+   "B": "Leukapheresis usually is performed on day 5 independent whether filgrastim or lenograstim was used",
+   "C": "If the number of cells is inadequate, mobilization with G-CSF may be continued for 1-2 days",
+   "D": "If the collection goal is not reached after the third leukapheresis, a successful mobilization is unlikely."
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "動員",
+   "G-CSF",
+   "Leukapheresis",
+   "Poor mobilizer"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ },
+ {
+  "id": "113-008",
+  "number": 8,
+  "stem": "What is the proposed mechanism of plerixafor for HSC mobilization?",
+  "options": {
+   "A": "Stimulates secretion of CFU (colony-forming unit)",
+   "B": "Blocks chemokine receptor-4 (CXCR-4) thereby inhibiting binding with stroma-cell-derived factor-1 (SDF-1)",
+   "C": "Interacts with G-CSF and augment stem cells production",
+   "D": "Increase amount of SCF (stem cell factor)."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "Plerixafor",
+   "動員",
+   "HSC 歸巢"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)",
+   "Ch7 Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation (PDF p91–100)"
+  ]
+ },
+ {
+  "id": "113-009",
+  "number": 9,
+  "stem": "Regarding the use of plerixafor for mobilization, which of the followings is NOT true?",
+  "options": {
+   "A": "The recommended dose is 0.24 mg/kg/day SC in adult patients up to 83 kg",
+   "B": "Plerixafor is recommended when CD34+ is < 30/μL on days 4-5 of mobilization with G-CSF alone",
+   "C": "If CD34+ is < 10/μL in patients with chemo-mobilization after 12-14 days, plerixafor is recommended if the leukocyte count is increasing",
+   "D": "if not possible to collect at least one-third of the collection goal with the first apheresis session, plerixafor may be applied as a rescue strategy."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "Plerixafor",
+   "動員",
+   "Poor mobilizer",
+   "Leukapheresis"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ },
+ {
+  "id": "113-010",
+  "number": 10,
+  "stem": "Which one isn’t unmodifiable SOS/VOD risk factors (adults)?",
+  "options": {
+   "A": "Older patient age,",
+   "B": "Serum bilirubin > 1.5 mg/L(>26 μmol/L),",
+   "C": "Preexisting liver disease: hepatic fibrosis, cirrhosis, and active viral hepatitis,",
+   "D": "Previous use of gemtuzumab ozogamicin or inotuzumab ozogamicin,",
+   "E": "High-dose (myeloablative) regimens"
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "SOS/VOD",
+   "Inotuzumab",
+   "MAC"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ }
+]

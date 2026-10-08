@@ -1,0 +1,223 @@
+[
+ {
+  "id": "111-021",
+  "number": 21,
+  "stem": "High-dose chemotherapy with BEAM followed by autologous HSCT is the standard of care for patients with sensitive-relapse diffuse large B cell lymphoma. Which of the following statements is wrong?",
+  "options": {
+   "A": "Randomized studies confirmed significant differences in terms of efficacy or toxicity with different salvage regimens prior to autologous HSCT",
+   "B": "The objective of salvage chemotherapy is to induce a complete or partial response indicating that the tumor remains chemosensitive, this having a major impact on outcome after transplantation",
+   "C": "PET negativity after salvage therapy is a surrogate marker of chemosensitivity and predicts patient outcome after autologous HSCT",
+   "D": "Allogeneic HSCT should be considered in younger patients without comorbidities especially in patients with refractory disease or early relapse"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "DLBCL 二線",
+   "BEAM",
+   "DLBCL 預後因子"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "111-022",
+  "number": 22,
+  "stem": "Which of the following statements about HSCT is wrong for patients with mantle cell lymphoma (MCL)?",
+  "options": {
+   "A": "The benefit of high-dose Methotrexate for young and fit, newly diagnosed MCL patients is proved in prospective clinical trials.",
+   "B": "Autologous HSCT consolidation is superior to interferon maintenance after primary chemotherapy for MCL.",
+   "C": "A second autologous HSCT does not appear to be a promising option in patients with MCL failing a first autologous HSCT. For these patients allogeneic HSCT should be considered.",
+   "D": "Autologous HSCT with Rituximab maintenance is recommended as the standard treatment for transplant eligible patients with MCL and showed improving progression-free survival (PFS) and overall survival (OS) in phase III trial."
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "MCL",
+   "Rituximab 維持",
+   "二次移植"
+  ],
+  "ebmt_chapters": [
+   "Ch87 Mantle Cell Lymphoma (PDF p767–770)"
+  ]
+ },
+ {
+  "id": "111-023",
+  "number": 23,
+  "stem": "Which statement about HSCT for patients with follicular lymphoma is wrong?",
+  "options": {
+   "A": "A MAC (myeloablative conditioning) regimen offers better outcomes than a RIC (reduced-intensity) regimen in patients with follicular lymphoma",
+   "B": "Autologous HSCT achieves a 5-year PFS of approximately 50%.",
+   "C": "The superiority of either autologous HSCT or allogeneic HSCT has not been established.",
+   "D": "Autologous HSCT may cure some patients and is associated with lower toxicity compared to allogeneic HSCT."
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "FL",
+   "RIC",
+   "MAC"
+  ],
+  "ebmt_chapters": [
+   "Ch84 Indolent Lymphoma (PDF p746–752)",
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "111-024",
+  "number": 24,
+  "stem": "當下醫界的共識，下列有關病人接受CAR-T 細胞治療選擇條件的描述，何者最不適當?",
+  "options": {
+   "A": "心肺功能良好能夠承受 cytokine release syndrome 的併發症。",
+   "B": "肝腎功能良好能夠承受 lymphodepletion chemotherapy。",
+   "C": "年齡須在70 歲以下。",
+   "D": "一般而言，如果能夠承受自體造血幹細胞移植的病人，應該都可以承受CAR-T 細胞治療。"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "CAR-T",
+   "CRS",
+   "CAR-T 橋接/washout",
+   "高齡移植"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch11 Evaluation and Counseling of Candidates (PDF p131–142)"
+  ]
+ },
+ {
+  "id": "111-025",
+  "number": 25,
+  "stem": "下列有關 CAR-T 細胞治療輸注 (D0) 後可能出現的併發症的描述，何者錯誤?",
+  "options": {
+   "A": "Cytokine release syndrome (CRS) 最常發作時間為D+2 - D+4",
+   "B": "神經毒性 (neurotoxicity, ICANS) 最常發作時間為 D+6 - D+8",
+   "C": "免疫球蛋白降低 (hypoglobulinemia) 可以持續很久，甚至超過一年。",
+   "D": "在CAR-T 細胞輸注後發燒，頭痛，意識不清，通常就是 neurotoxicity (ICANS)，而非CRS，要用 steroid 而不是 tocilizumab 治療。"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "CAR-T",
+   "CRS",
+   "ICANS",
+   "低免疫球蛋白"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch53 Neurological Complications (PDF p488–494)"
+  ]
+ },
+ {
+  "id": "111-026",
+  "number": 26,
+  "stem": "下列有關血液惡性病(如淋巴瘤與急性淋巴白血病) 在造血幹細胞移植 (allo-HSCT and auto-HSCT) 後進行CAR-T 細胞治療的描述，何者正確?",
+  "options": {
+   "A": "Auto-HSCT 後復發，進行CAR-T 細胞治療雖然會有反應，但已無法根治。",
+   "B": "Allo-HSCT 後復發，只能取病人身體中殘存的recipient lymphocyte 以製造 CAR T 細胞，否則會發生嚴重 GVHD。",
+   "C": "Allo-HSCT 後復發，可以取得病人身上的 allogeneic donor lymphocyte 以製造 CAR T 細胞。",
+   "D": "Auto- 及 HSCT 後如果骨髓與血液中仍有殘存的 malignant cells 即無法進行CAR-T 細胞的產製。"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "CAR-T 與移植順序",
+   "CAR-T",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)"
+  ]
+ },
+ {
+  "id": "111-027",
+  "number": 27,
+  "stem": "Which one is can be the infectious cause of late onset hemorrhagic cystitis in patients receiving hematopoietic stem cell transplantation, except?",
+  "options": {
+   "A": "Cytomegalovirus",
+   "B": "Adenovirus",
+   "C": "Respiratory syncytial virus",
+   "D": "BK virus/JC virus"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "出血性膀胱炎",
+   "CMV",
+   "呼吸道病毒"
+  ],
+  "ebmt_chapters": [
+   "Ch51 Haemorrhagic Cystitis and Renal Dysfunction (PDF p473–477)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "111-028",
+  "number": 28,
+  "stem": "Which of the following statements regarding EB virus viremia post HSCT was wrong?",
+  "options": {
+   "A": "Only occurred in allogeneic HSCT recipients",
+   "B": "Pre-emptive antiCD20 treatment was recommended in unrelated donor HSCT recipients with EBV viremia",
+   "C": "Patients received unrelated donor HSCT possessed high risk for development of EBV related lymphoproliferative disorder",
+   "D": "Method of EBV viremia monitoring has not well standardized yet"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "EBV/PTLD",
+   "Pre-emptive RTX",
+   "MUD"
+  ],
+  "ebmt_chapters": [
+   "Ch45 Posttransplant Lymphoproliferative Syndromes (PDF p422–428)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "111-029",
+  "number": 29,
+  "stem": "Which of the following statement is wrong?",
+  "options": {
+   "A": "Patients with chronic GVHD should receive antibiotic prophylaxis targeting encapsulated organisms given for at least as long as immunosuppressive therapy is administered",
+   "B": "After HSCT, antifungal prophylaxis should be considered in patients with severe GVHD.",
+   "C": "PCP prophylaxis was indicated in allo-HSCT recipients from D+1 till D+100 or as long as immunosuppressive therapy is given (e.g., for the treatment or prevention of chronic GVHD).",
+   "D": "HSV prophylaxis was recommended from D+1 to engraftment in Allo-HSCT recipients receiving myeloablative conditioning"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "Encapsulated 細菌",
+   "抗黴菌預防",
+   "PJP 預防",
+   "HSV/VZV"
+  ],
+  "ebmt_chapters": [
+   "Ch37 Invasive Fungal Diseases (PDF p337–345)",
+   "Ch36 Bacterial Infections (PDF p328–336)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "111-030",
+  "number": 30,
+  "stem": "Allogeneic stem cell transplantation is indicated in chronic myeloid leukemia patient at age 35, in",
+  "options": {
+   "A": "chronic phase failed imatinib but got major molecular response after nilotinib",
+   "B": "accelerated phase initially, get deep molecular response after dasatinib",
+   "C": "chronic phase, got T315I mutation after imatinib, regain deep molecular response after ponatinib",
+   "D": "chronic phase, with evolution to accelerated phase after nilotinib, no molecular response after dasatinib nor ponatinib treatment"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "CML",
+   "MRD",
+   "TKI 維持"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)"
+  ]
+ }
+]

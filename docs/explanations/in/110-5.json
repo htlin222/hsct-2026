@@ -1,0 +1,239 @@
+[
+ {
+  "id": "110-041",
+  "number": 41,
+  "stem": "About transfusion support in HSCT, which is correct?\n(1) Cellular blood components (RBC, platelet concentrates) transfusions) must be irradiated in both allogeneic and autologous HSCT.\n(2) A restrictive RBC transfusion threshold of 7–8 g/dL hemoglobin is recommended for adult patients who are hemodynamically stable.\n(3) Prophylactic platelet transfusion is suggested for thrombocytopenic patients undergoing allogeneic HSCT.\n(4) In case of minor ABO incompatibility and a high donor anti-recipient isoagglutinin titer (≥1:256), plasma depletion of both PBSC and BM grafts should be performed.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "ABO 不合",
+   "植入",
+   "骨髓 vs 周邊血"
+  ],
+  "ebmt_chapters": [
+   "Ch24 Transfusion Support (PDF p227–234)"
+  ]
+ },
+ {
+  "id": "110-042",
+  "number": 42,
+  "stem": "Which following statement with regard to donor lymphocytes infusion ( DLI ) is correct ?\n(1) Patients with slowly progressing disease do benefit greatly from the graft versus tumor ( GvT ) response after allo-HSCT and DLI.\n(2) Rapid progression of the disease will significantly lower the therapeutic capacity of DLI.\n(3) The induction of effective GvT response by DLI is only 10-40% of the non-CML patients\n(4) Malignancies consisting of cells with an intrinsic antigen presenting cell phenotype have poor response to DLI..",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "DLI",
+   "GVL",
+   "CML",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)"
+  ]
+ },
+ {
+  "id": "110-043",
+  "number": 43,
+  "stem": "For a generally fit transplant-eligible 50-year-old patient of AML with high allele ratio of FLT3-ITD, select CORRECT answer(s) from the following statements about allogeneic transplant.\n(1) To do HLA typing early and try to find a suitable donor as early as possible.\n(2) Sorafenib use provide survival benefit when given as maintenance after transplant.\n(3) The disease often relapses soon after remission and try to perform myeloablative transplant as early as possible.\n(4) To use midostaurin early with bridging to transplant after at least 3 cycles of consolidation with high dose araC after induction",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "AML",
+   "FLT3-ITD",
+   "FLT3 抑制劑",
+   "維持治療",
+   "HLA 分型"
+  ],
+  "ebmt_chapters": [
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)"
+  ]
+ },
+ {
+  "id": "110-044",
+  "number": 44,
+  "stem": "Which of the following statements on Hodgkin lymphoma (HL) is (are) correct?\n(1) Autologous HSCT is indicated in chemo-sensitive relapsed HL\n(2) Brentuximab vedotin (BV) is currently the only drug approved for consolidation treatment after autologous HSCT in patients at risk of relapse or progression.\n(3) Use of PD-1 blockade before or after allogeneic HSCT in HL may be associated with higher incidence of hepatic veno-occlusive disease (sinusoidal obstruction syndrome, VOD/SOS) and grade 3-4 GvHD\n(4) EBMT and CIBMTR studies show that outcomes of PTCy-based haplo-HSCT are similar to those receiving matched related donor (MRD) or matched unrelated donor (MUD) allogeneic HSCT (Martínez et al. 2017).",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "HL",
+   "PD-1 抑制劑",
+   "Haplo",
+   "PTCy",
+   "SOS/VOD"
+  ],
+  "ebmt_chapters": [
+   "Ch89 Classical Hodgkin’s Lymphoma (PDF p778–787)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ },
+ {
+  "id": "110-045",
+  "number": 45,
+  "stem": "Regarding the current management of CMV infection in allo-HSCT recipients, which followings were true?\n(1) Patients with CMV pneumonitis can be treated with ganciclovir plus intravenous immunoglobulin or CMV specific immunoglobulin.\n(2) Letermovir can be used for post HSCT CMV disease prophylaxis\n(3) pp65 CMV antigen as well as real-time PCR assay for CMV DNA can be used for demonstration of CMV viremia in allo-HSCT recipient\n(4) CMV viremia can a treatment guide in HSCT recipient who developed CMV gastroenteritis.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "CMV",
+   "Ganciclovir",
+   "IVIG",
+   "Letermovir"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "110-046",
+  "number": 46,
+  "stem": "Which of the following statements regarding to the autologous HSCT for follicular lymphoma is (are) correct?\n(1) Autologous HSCT could be employed in first response.\n(2) Autologous HSCT should be considered in patients with relapsed disease responding to induction therapy.\n(3) Autologous HCT achieves a 5-year PFS of approximately 80% and may be curative in a significant portion of patients.\n(4) There is no proven role for purging strategies prior to autologous HSCT",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "D",
+  "tags": "複選",
+  "keyword_tags": [
+   "FL",
+   "DLBCL 二線",
+   "T-cell depletion"
+  ],
+  "ebmt_chapters": [
+   "Ch84 Indolent Lymphoma (PDF p746–752)"
+  ]
+ },
+ {
+  "id": "110-047",
+  "number": 47,
+  "stem": "根據Bacigalupo et al. 利用EBMT 資料分析年輕的頑抗或復發的severe aplastic anemia 病患異體移植成績，發現以MUD 為幹細胞來源的病患整體存活，不亞於使用MSD 的病患，下列何者是作者發現的原因?\n(1) better donor selection through allele matching,\n(2) incorporation of FLU in conditioning regimens,\n(3) prophylaxis of GVHD,\n(4) addition of low-dose TBI",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "SAA",
+   "MUD",
+   "MSD",
+   "Fludarabine",
+   "TBI",
+   "HLA 配對"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "110-048",
+  "number": 48,
+  "stem": "Regarding the current management of HBV infection in HSCT donors and recipients, which followings were true\n(1) Ani-HBV treatment is recommended in allo-HSCT recipients who had remote HBV infection before HSCT.\n(2) Long-term regularly monitoring HBV status is recommended in allo-HSCT recipients who had remote HBV infection before HSCT.\n(3) HBV reactivation is an important differential diagnosis in allo-HSCT recipients who had remote HBV infection before HSCT who developed grade 2 AST/ALT elevation in D+180 post allo-HSCT\n(4) Anti-HBV treatment is not indicated in HBsAg(+) allo-HSCT donor if the BMT recipients is also HBsAg(+).",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "HBV",
+   "捐贈者評估",
+   "晚期效應"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch38 Viral Infections (PDF p346–358)",
+   "Ch11 Evaluation and Counseling of Candidates (PDF p131–142)"
+  ]
+ },
+ {
+  "id": "110-049",
+  "number": 49,
+  "stem": "Which of the following conditioning regimens is not commonly used for myeloablative conditioning (MAC)?\n(1) TBI 2 Gy bid x 3 days, Cyclophosphamide 60mg/kgBW/day x 2 days;\n(2) Fludarabine 30 mg/m2/day x 5 days, Cyclophosphamide 14.5 mg/kgBW/day x 2 days, TBI 2Gy x 1 day;\n(3) Busulfex iv 3.2 mg/kgBW/day x 4 days, Cyclophosphamide 60mg/kgBW/day x 2 days\n(4) Fludarabine 30 mg/m2/day x 5 days, Busulfex iv 3.2 mg/kgBW/day x 2 days.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "MAC",
+   "RIC",
+   "TBI",
+   "Busulfan",
+   "Cyclophosphamide",
+   "Fludarabine"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "110-050",
+  "number": 50,
+  "stem": "Choose the correct statement(s) for HSC cryopreservation:\n(1) Cryopreservation within 48h or less is recommended following collection to maintain an optimal viability.\n(2) The final product includes 15-20% dimethyl sulfoxide (DMSO) as a cryoprotectant.\n(3) The maximum nuclear cell concentration in the cryostored transplant should be ≤ 4 x 108/mL.\n(4) Freezing at a controlled rate of 2-5℃ per minute is recommended.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "冷凍保存",
+   "Leukapheresis",
+   "CD34 劑量"
+  ],
+  "ebmt_chapters": [
+   "Ch20 Processing, Cryopreserving, and Controlling the Quality of HSC (PDF p206–209)"
+  ]
+ }
+]

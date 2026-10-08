@@ -1,0 +1,230 @@
+[
+ {
+  "id": "113-021",
+  "number": 21,
+  "stem": "在預定為CAR-T (Chimeric antigen receptor T-cells) 細胞製備所進行的Leukaphresis 前，下列哪一個藥物需要超過28 天的washout period？",
+  "options": {
+   "A": "Lenalidomide",
+   "B": "Imatinib",
+   "C": "Clofarabine",
+   "D": "Blinatumomab"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "CAR-T 橋接/washout",
+   "Leukapheresis",
+   "CAR-T",
+   "Blinatumomab"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)",
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)"
+  ]
+ },
+ {
+  "id": "113-022",
+  "number": 22,
+  "stem": "Which of the following description about the monitoring minimal residual disease in ALL and AML is wrong?",
+  "options": {
+   "A": "Apart from t(15;17) and RUNX1–RUNX1T1 and CBFB–MYH11, currently RUNX1 is the best-validated molecular marker for MRD assessment in AML.",
+   "B": "There are several studies showing that FLT3-ITD is a highly prognostic biomarkers while measured after induction chemotherapy.",
+   "C": "Regarding the NGS MRD for patients with AML, germline mutations (ex. ANKRD26, CEBPA, DDX41, RUNX1, and TP53) are noninformative as NGS-MRD markers.",
+   "D": "Most frequent recurrent reciprocal translocations are in ALL t(9;22)(q34;q11) (BCR-ABL1), t(12;21)(p13;q23) (ETV6-RUNX1), and t(4;11)(q21;q22) (MLL-AFF1) with age stage associated preponderance in adults, childhood, and infant ALL, respectively."
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "MRD",
+   "AML",
+   "ALL",
+   "FLT3-ITD"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)"
+  ]
+ },
+ {
+  "id": "113-023",
+  "number": 23,
+  "stem": "Which of the following statement about prevention and treatment of relapse is Correct?",
+  "options": {
+   "A": "Midostaurin, a FLT3 inhibitor, has been shown in a randomized trial to have a survival benefit as post-HSCT maintenance.",
+   "B": "PD-1 blockade for patients with Hodgkin lymphoma relapsed after allo-HSCT has high remission rate (>90%) and low GvHD rate (<10%).",
+   "C": "IMiD, such as Lenalidomide, are potent agents for preventing relapse after auto-HSCT, but their use post-allo-HSCT remains to be defined primarily due to the increased risk of GvHD.",
+   "D": "Brentuximab vedotin as maintenance after auto-HSCT for Hodgkin lymphoma did improve both PFS and OS."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "維持治療",
+   "FLT3 抑制劑",
+   "PD-1 抑制劑",
+   "HL",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)",
+   "Ch89 Classical Hodgkin’s Lymphoma (PDF p778–787)",
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "113-024",
+  "number": 24,
+  "stem": "Which following statements regarding monitoring minimal residual disease (MRD) after allogeneic HSCT is correct ?",
+  "options": {
+   "A": "The use of PCR-based method to detect fusion genes can be applied to detect MRD in all the AML cases but not in patients of ALL.",
+   "B": "The method of short tandem repeat (STR) used for determining the chimerism after allogeneic HSCT can sensitively detect the MRD in either AML or ALL.",
+   "C": "In t(8;21) AML, the detection of RUNX1/RUNXITI transcripts may persist after allogeneic transplant without subsequent relapse.",
+   "D": "In AML with chromosomal anomalies, conventional metaphase cytogenetics can detect residual leukemic cells with sensitivity equal to PCR method."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "MRD",
+   "Chimerism",
+   "AML",
+   "ALL"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)",
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)"
+  ]
+ },
+ {
+  "id": "113-025",
+  "number": 25,
+  "stem": "Choose the wrong one",
+  "options": {
+   "A": "Post-transplant cyclophosphamide (PTCy) can result in reduction in the proliferation of alloreactive CD4+ effector T cells, and the preferential recovery of CD4+ regulatory T cells (Tregs).",
+   "B": "Post-transplant virus-specific immunological recovery can be measured by various methods, including IFN-𝛾 ELISpot.",
+   "C": "CD4-reconstitution, defined as CD4+ >100/μl at two consecutive time points before day 100, is a reliable outcome predictor after allogeneic HSCT.",
+   "D": "Interleukin (IL)-6, granulocyte-macrophage colony-stimulating factor (GM-CSF), hepatocyte growth factor (HGF), ST2 (suppressor of tumorgenicity 2), and soluble IL-2a have shown to be biomarkers of GvHD."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "PTCy",
+   "Treg",
+   "免疫重建",
+   "病毒專一T細胞",
+   "aGVHD 診斷"
+  ],
+  "ebmt_chapters": [
+   "Ch10 Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization (PDF p118–130)",
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ },
+ {
+  "id": "113-026",
+  "number": 26,
+  "stem": "Each mismatch at HLA-A, HLA-B, HLA-C, and HLA-DRB1 for unrelated donor-HSCT increases the risk of mortality by:",
+  "options": {
+   "A": "5%",
+   "B": "10%",
+   "C": "15%",
+   "D": "25%"
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "HLA 配對",
+   "HLA mismatch",
+   "MUD"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "113-027",
+  "number": 27,
+  "stem": "Which of the following statements for cellular players involved in HSCT is wrong?",
+  "options": {
+   "A": "The majority of mature T cells is characterized by the expression of the αβ TCR.",
+   "B": "Tγδ cells have a more prolonged antileukemia effect and are also helpful in controlling viral infections, such as CMV reactivation",
+   "C": "Memorial T cells are more alloreactive than naïve T cells.",
+   "D": "Mesenchymal stromal cells are thought to have immunomodulatory properties and trophic influence on tissue repair and regeneration."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "T 細胞亞群",
+   "MSC",
+   "GVHD 機轉"
+  ],
+  "ebmt_chapters": [
+   "Ch8 Biological Properties of Cells Other Than HSCs (PDF p101–105)",
+   "Ch10 Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization (PDF p118–130)"
+  ]
+ },
+ {
+  "id": "113-028",
+  "number": 28,
+  "stem": "Which of the following statement is WRONG about hemorrhagic cystitis (HC)?",
+  "options": {
+   "A": "Early-onset HC is the result of a direct toxic effect of drug metabolites on bladder mucosa",
+   "B": "Late-onset HC usually starts around 3 months after HCT",
+   "C": "The main risk factor for late-onset HC is infection by BK virus",
+   "D": "Haploidentical donor HCT has higher risk than URD and MRD HCT"
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "出血性膀胱炎",
+   "Cyclophosphamide",
+   "Haplo"
+  ],
+  "ebmt_chapters": [
+   "Ch51 Haemorrhagic Cystitis and Renal Dysfunction (PDF p473–477)"
+  ]
+ },
+ {
+  "id": "113-029",
+  "number": 29,
+  "stem": "Which of the following statement is wrong?",
+  "options": {
+   "A": "CMV viremia can occurred in autologous HSCT recipient.",
+   "B": "Pre-emptive anti-CMV therapy was recommended in allo-HSCT recipients with CMV viremia and grade 2 acute GvHD.",
+   "C": "Foscarnet is an alternative for ganciclovir in the anti-CMV treatment because no myelosuppression adverse effect reported in its AE profiles.",
+   "D": "Prophylactic mold-active azoles, and probably echinocandins, are proven to be effective in preventing invasive fungal diseases in allogeneic HSCT."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "CMV",
+   "Ganciclovir",
+   "抗黴菌預防"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)",
+   "Ch37 Invasive Fungal Diseases (PDF p337–345)"
+  ]
+ },
+ {
+  "id": "113-030",
+  "number": 30,
+  "stem": "Which of the following statements regarding EB virus viremia post HSCT was wrong?",
+  "options": {
+   "A": "Only occurred in allogeneic HSCT recipients",
+   "B": "Pre-emptive antiCD20 treatment was recommended in unrelated donor HSCT recipients with EBV viremia",
+   "C": "Patients received unrelated donor HSCT possessed high risk for development of EBV related lymphoproliferative disorder",
+   "D": "There are standardized methods of EBV viremia molecular monitoring"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "EBV/PTLD",
+   "Pre-emptive RTX",
+   "MUD"
+  ],
+  "ebmt_chapters": [
+   "Ch45 Posttransplant Lymphoproliferative Syndromes (PDF p422–428)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ }
+]

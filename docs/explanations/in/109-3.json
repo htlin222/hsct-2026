@@ -1,0 +1,231 @@
+[
+ {
+  "id": "109-021",
+  "number": 21,
+  "stem": "Which of the following statement about T cell and graft versus host disease(GVHD) is incorrect?",
+  "options": {
+   "A": "Acute GVHD may be caused by activation of donor CD8 and CD4+ T cell which is driven initially by recipient antigen presenting cells.",
+   "B": "The frequency of T cells that respond to any given Minor histocompatibility antigens has be estimated at 0.01%-0.10%",
+   "C": "The frequency of T cells that respond to any given Major histocompatibility complex (MHC) has be estimated at 20%-30%",
+   "D": "T cell receptors on CD4 cells are activated only by MHC class II+ cells",
+   "E": "Giving cyclophosphamide after transplantation may eliminate T cells that are activated after they recognize recipient alloantigens."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "GVHD 機轉",
+   "mHAg/MICA",
+   "HLA/MHC 基礎",
+   "PTCy",
+   "T 細胞亞群"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch26 GVHD Prophylaxis (PDF p242–250)"
+  ]
+ },
+ {
+  "id": "109-022",
+  "number": 22,
+  "stem": "High-dose therapy with BEAM followed by auto-HSCT is the standard of care for patients with sensitive relapse DLBCL. Which of the following statements is wrong?",
+  "options": {
+   "A": "The BEAM regimen in EBMT centers typically consisted of BCNU (400 mg/m2 × 1, day-6).",
+   "B": "BEAC (CY) and TEAM (TT) regimens show efficacy and toxicity similar to BEAM in recent publications.",
+   "C": "Pulmonary late complications such as chronic interstitial fibrosis and decrease in lung diffusion capacity are seen in up to 21% of patients.",
+   "D": "The most frequent cause of non-relapse mortality is secondary malignancy."
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "BEAM",
+   "DLBCL 二線",
+   "Conditioning 毒性",
+   "Thiotepa",
+   "次發腫瘤"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)",
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch52 Noninfectious Pulmonary Complications (PDF p478–487)"
+  ]
+ },
+ {
+  "id": "109-023",
+  "number": 23,
+  "stem": "Which factor is the most important adverse prognostic factor that impacts long-term outcome of DLBCL patients being treated with allo-HSCT?",
+  "options": {
+   "A": "Early relapse within 12 months of induction therapy",
+   "B": "Poor performance status",
+   "C": "Involvement of two or more extranodal sites at relapse",
+   "D": "Disease status before allo-HSCT"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "DLBCL 預後因子",
+   "DLBCL 二線",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "109-024",
+  "number": 24,
+  "stem": "Which statement about HSCT for patients with follicular lymphoma is wrong?",
+  "options": {
+   "A": "Auto-HSCT possibly cure some patients and is associated with lower toxicity compared to allo-HSCT.",
+   "B": "RIC allo-HSCT possibly cure patients that relapse after an auto-HSCT.",
+   "C": "Patients with grade 3B histology should be considered for auto-HSCT consolidation.",
+   "D": "Maintenance rituximab for four infusions should be considered post auto-HSCT."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "FL",
+   "RIC",
+   "Rituximab 維持",
+   "二次移植"
+  ],
+  "ebmt_chapters": [
+   "Ch84 Indolent Lymphoma (PDF p746–752)"
+  ]
+ },
+ {
+  "id": "109-025",
+  "number": 25,
+  "stem": "Which following conditioning regimens is the most optimal regimens for the auto-HSCT for Hodgkin’s lymphoma?",
+  "options": {
+   "A": "BEAM",
+   "B": "BEAC",
+   "C": "CBV",
+   "D": "BuCy"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "BEAM",
+   "HL",
+   "MAC"
+  ],
+  "ebmt_chapters": [
+   "Ch89 Classical Hodgkin’s Lymphoma (PDF p778–787)",
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "109-026",
+  "number": 26,
+  "stem": "In auto-HSCT, how many CD34+ cells/kg recipient weight is suggested as the minimum target dose for acceptable engraftment kinetics?",
+  "options": {
+   "A": "10 x 106 CD34+ cells/kg recipient",
+   "B": "5 x 106 CD34+ cells/kg recipient",
+   "C": "2 x 106 CD34+ cells/kg recipient",
+   "D": "1 x 106 CD34+ cells/kg recipient"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "CD34 劑量",
+   "植入",
+   "動員"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)",
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)"
+  ]
+ },
+ {
+  "id": "109-027",
+  "number": 27,
+  "stem": "Which of the following statements in regarding to myelodysplastic syndrome (MDS) is INCORRECT?",
+  "options": {
+   "A": "Allogeneic HSCT remains the treatment of choice for patients with advanced stage MDS.",
+   "B": "Reduced-Intensity conditioning (RIC) regimens have extended the use of allogeneic HSCT to patients up to the age of 70 years.",
+   "C": "MDS patients who received bone marrow stem cells had a faster engraftment and a lower relapse rate compare to blood stem cells.",
+   "D": "MDS patients with intermediate 2 and higher risk will have best survival if transplantation is performed early after diagnosis."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "MDS",
+   "RIC",
+   "骨髓 vs 周邊血",
+   "高齡移植"
+  ],
+  "ebmt_chapters": [
+   "Ch74 Myelodysplastic Neoplasms/Syndromes (MDS) (PDF p660–668)",
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)"
+  ]
+ },
+ {
+  "id": "109-028",
+  "number": 28,
+  "stem": "Which of the following statements in regarding to myeloproliferative neoplasm (MPN) is INCORRECT?",
+  "options": {
+   "A": "Allo-HSCT remains the only curative treatment for myelofibrosis.",
+   "B": "Patients with JAK2V617F positive myelofibrosis have better overall survivals than patients with wild type JAK2 sequence.",
+   "C": "RQ-PCR for the JAK2 mutation has now been successfully applied to the identification of remission and disease recurrence post-transplant.",
+   "D": "Pre-transplant splenectomy is recommended for all patients with spleen exceeding 20cm on ultrasound examination."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "MF",
+   "脾臟處理",
+   "MRD"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)"
+  ]
+ },
+ {
+  "id": "109-029",
+  "number": 29,
+  "stem": "Which of the following statements for the indication of HSCT in solid tumor is INCORRECT?",
+  "options": {
+   "A": "The graft-versus-tumor effect of allografiting in epithelial solid tumors has been offset by high transplant-related mortality, even with reduced-intensity conditioning.",
+   "B": "Autologous HSCT is currently utilized for several solid tumors, and considered the standard indication for relapsed germ cell tumors.",
+   "C": "Allografting have been a standard indication for relapsed renal cancer and ovarian cancers",
+   "D": "Standard indications for HSCT in solid tumors include first-line high-risk neuroblastoma >18 months at diagnosis with widespread metastatic diseases"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "實體腫瘤",
+   "GVL",
+   "兒童移植"
+  ],
+  "ebmt_chapters": [
+   "Ch94 Solid Tumours (PDF p827–840)"
+  ]
+ },
+ {
+  "id": "109-030",
+  "number": 30,
+  "stem": "Regarding potential risk of infections at various phases after HSCT, please select the INCORRECT answer from following statements:",
+  "options": {
+   "A": "Aspergilosis in early recovery phase (day 0- +30)",
+   "B": "Pneumocystis jiroveci in early recovery phase(day 0 – day +30)",
+   "C": "Cytomegalovirus in post-engraftment phase (day +30 - +100)",
+   "D": "Varicella zoster in late phase (after day +100)",
+   "E": "Gram(-) infections in early recovery phase"
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "嗜中性球低下發燒",
+   "黴菌感染",
+   "PJP 預防",
+   "CMV",
+   "HSV/VZV"
+  ],
+  "ebmt_chapters": [
+   "Ch36 Bacterial Infections (PDF p328–336)",
+   "Ch37 Invasive Fungal Diseases (PDF p337–345)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ }
+]

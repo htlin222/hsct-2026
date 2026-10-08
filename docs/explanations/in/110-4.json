@@ -1,0 +1,229 @@
+[
+ {
+  "id": "110-031",
+  "number": 31,
+  "stem": "Which of the following statements in regarding to myeloproliferative neoplasm (MPN) is INCORRECT?",
+  "options": {
+   "A": "Allo-HSCT remains the only curative treatment for myelofibrosis.",
+   "B": "Patients with JAK2V617F positive myelofibrosis have better overall survivals than patients with wild type JAK2 sequence.",
+   "C": "RQ-PCR for the JAK2 mutation has now been successfully applied to the identification of remission and disease recurrence post-transplant.",
+   "D": "Pre-transplant splenectomy is recommended for all patients with spleen exceeding 20cm on ultrasound examination."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "MF",
+   "脾臟處理",
+   "MRD"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)"
+  ]
+ },
+ {
+  "id": "110-032",
+  "number": 32,
+  "stem": "Which of the following statements regarding to the value of treatment prior to allo-HSCT in myelodysplastic syndrome is INCORRECT?",
+  "options": {
+   "A": "No randomized studies had compared pre-graft cytoreduction versus upfront transplants in MDS patients.",
+   "B": "International guidelines generally recommend that patients with more than 10% marrow blasts should receive cytoreductive treatment prior to HSCT.",
+   "C": "Pre-transplant treatments can be provided either intensive chemotherapy or hypomethylating agents.",
+   "D": "The EBMT group reported that the response prior to HSCT will not have impact on the transplant outcome."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "MDS 前處置",
+   "MDS",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch74 Myelodysplastic Neoplasms/Syndromes (MDS) (PDF p660–668)"
+  ]
+ },
+ {
+  "id": "110-033",
+  "number": 33,
+  "stem": "根據Townsley et al. 於NEJM 報告新診斷的severe aplastic anemia 病患接受horse ATG, CsA 及 Eltrombopag 的三合一療法的研究，以下敘述何者為非?",
+  "options": {
+   "A": "研究中成人Eltrombopag (25mg/Tab)的劑量是每天150mg，",
+   "B": "主要療效評估是在6 個月時達完全緩解(complete response)的比率，",
+   "C": "完全緩解(complete response)的定義包括ANC 至少1000/ul, Hb 至少10g/dl, Platelet counts 至少100k/ul，",
+   "D": "研究顯示6 個月時達完全緩解(complete response)率可達20%。"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "SAA",
+   "Eltrombopag",
+   "IST"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)"
+  ]
+ },
+ {
+  "id": "110-034",
+  "number": 34,
+  "stem": "有關multiple myeloma 病患的stem cell transplantation，以下敘述何者為非?",
+  "options": {
+   "A": "Melphalan 200 mg/m2 is currently the standard high-dose regimen for autologous HSCT;",
+   "B": "The addition of bortezomib peritransplant did not result in better outcome;",
+   "C": "A rescue or salvage auto-HSCT could be tried when the response duration to the first transplant in less than 18–24 months;",
+   "D": "Double auto-HSCT can be considered for high risk myeloma (e.g., patients with a del17p cytogenetic abnormality)."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "MM 自體移植",
+   "Melphalan",
+   "MM 復發",
+   "Tandem 移植",
+   "TP53"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "110-035",
+  "number": 35,
+  "stem": "Which of the following statements for HSCT in patients with autoimmune diseases is wrong?",
+  "options": {
+   "A": "Autoimmune disease has a fast-growing indication for HSCT.",
+   "B": "Major indications for HSCT in autoimmune diseases include multiple sclerosis, systemic sclerosis, and Crohn’s disease.",
+   "C": "Autologous HSCT is the predominant method currently.",
+   "D": "Autologous HSCT is considered to be most effective for patient with relapsing multiple sclerosis, who are not older than 45 years, and have had the illness for more than 10 yeas"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "自體免疫疾病",
+   "實體腫瘤",
+   "Conditioning 原理"
+  ],
+  "ebmt_chapters": [
+   "Ch92 Autoimmune Disease (PDF p803–814)"
+  ]
+ },
+ {
+  "id": "110-036",
+  "number": 36,
+  "stem": "Which of the following statements of HLA is (are) correct?\n(1) The genes for human major histocompatibility antigens (MHC) are located on the short arm of chromosome 6.\n(2) Direct T cell alloreactivity is targeted to intact mismatched HLA peptide complexes expressed on the cell surface of allogeneic cells and can be mediated by both naïve and memory T cells.\n(3) There is a relatively high recombination rate of over 1% in the MHC (crossing over).\n(4) HLA class II molecules are heterodimers of an α- and a β-chain of similar molecular weight. Most of the polymorphism is clustered in the α-chain Ig-like domain.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "HLA/MHC 基礎",
+   "GVHD 機轉",
+   "T 細胞亞群"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ },
+ {
+  "id": "110-037",
+  "number": 37,
+  "stem": "About the COVID-19 in HSCT, which of the following statement is correct?\n(1) Patients planned to be admitted for a transplant should try to minimize the risk by home isolation 14 days before the start of the transplant conditioning\n(2) Pre-transplant cryopreservation is recommended since it will allow patient conditioning to be withheld until successful donation and delivery are confirmed\n(3) Donors are tested for COVID-19 and that results are available prior to starting the collection procedure.\n(4) All patients should be tested for SARS-CoV-2 by PCR and the test results should be negative before start of the conditioning regardless of whether any symptoms are present.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "呼吸道病毒",
+   "捐贈者評估",
+   "冷凍保存",
+   "感染管制"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)",
+   "Ch27 Infection Control and Isolation Procedures (PDF p251–257)",
+   "Ch20 Processing, Cryopreserving, and Controlling the Quality of HSC (PDF p206–209)"
+  ]
+ },
+ {
+  "id": "110-038",
+  "number": 38,
+  "stem": "Choose the correct statement(s) for post-transplant cyclophosphamide (PTCy):\n(1) PTCy eliminates alloreactive T-cell clones of both donor and host origin in the early posttransplantation period.\n(2) PTCy also eliminates regulatory T cells.\n(3) PTCy is usually administrated on day+3 and +4 after alloHSCT.\n(4) PTCy is only indicated in haploidentical allotransplant setting but not in matched siblings or unrelated allotransplants.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "PTCy",
+   "Treg",
+   "GVHD 預防",
+   "Haplo"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ },
+ {
+  "id": "110-039",
+  "number": 39,
+  "stem": "About CMV infection management in HSCT, which are indicated?\n(1) Acyclovir\n(2) Ganciclovir\n(3) Foscarnet\n(4) Letermovir",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "CMV",
+   "Ganciclovir",
+   "Letermovir",
+   "HSV/VZV"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "110-040",
+  "number": 40,
+  "stem": "Which of the following statements are correct about GVHD prophylaxis?\n(1) Current GVHD prophylaxis relies on CNI + short-term MTX after MAC transplantation.\n(2) Current GVHD prophylaxis after RIC is CNI + MMF\n(3) ATG has been demonstrated to decrease chronic GVHD in randomized trials.\n(4) PY-CY is standard GHVD prophylaxis in transplantation from haploidentical donors",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "GVHD 預防",
+   "CNI",
+   "MTX",
+   "MMF",
+   "ATG",
+   "PTCy"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ }
+]

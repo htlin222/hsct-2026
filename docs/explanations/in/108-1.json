@@ -1,0 +1,228 @@
+[
+ {
+  "id": "108-001",
+  "number": 1,
+  "stem": "The following statements describe the term of “chimerism” after allogeneic HSCT. Select the CORRECT answer.",
+  "options": {
+   "A": "Although rare, some cases of hematological malignancies may have long-term survival despite persistent presence of mixed chimerism.",
+   "B": "Mixed chimerism indicates the human body has 100% hematopoietic cells of donor origin within bone marrow, mixed with cells of recipient origin at other organs.",
+   "C": "For patients of severe aplastic anemia receiving allogeneic HSCT, persistence of mixed chimerism usually indicates inevitable graft failure in the near future.",
+   "D": "Chimerism can be readily determined using short tandem repeat (STR) test based on PCR method for a single locus of genomic DNA sequence."
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "Chimerism",
+   "Graft failure",
+   "SAA",
+   "植入"
+  ],
+  "ebmt_chapters": [
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)",
+   "Ch41 Graft Failure (PDF p378–385)",
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)"
+  ]
+ },
+ {
+  "id": "108-002",
+  "number": 2,
+  "stem": "Select the CORRECT answer from following statements regarding monitoring minimal residual disease (MRD) after allogeneic HSCT",
+  "options": {
+   "A": "The use of PCR-based method to detect fusion genes can be applied to detect MRD in all the AML cases but not in patients of ALL.",
+   "B": "The method of short tandem repeat (STR) used for determining the chimerism after allogeneic HSCT can sensitively detect the MRD in either AML or ALL.",
+   "C": "In t(8;21) AML, the detection of RUNX1/RUNXITI transcripts may persist after allogeneic transplant without subsequent relapse.",
+   "D": "In AML with chromosomal anomalies, conventional metaphase cytogenetics can detect residual leukemic cells with sensitivity equal to PCR method."
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "MRD",
+   "AML",
+   "ALL",
+   "Chimerism",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)",
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)"
+  ]
+ },
+ {
+  "id": "108-003",
+  "number": 3,
+  "stem": "Select the CORRECT answer from the following statements describing use of donor lymphocyte infusion to treat the hematological malignancies relapsing after allo-HSCT.",
+  "options": {
+   "A": "Donor lymphocyte infusion (DLI) can induce acute GVHD and marrow aplasia and carries a mortality rate around 5-10%.",
+   "B": "The initial cell dose of DLI should be as large as possible to exert its GVL effect.",
+   "C": "Repeated administration of DLI is prohibited in concern of the risk of severe GVHD.",
+   "D": "DLI targets the malignant cells originating from recipient while sparing engrafted hematopoietic cells of donor origin, hence, severe cytopenia is rarely seen after the procedure."
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "DLI",
+   "復發",
+   "GVL"
+  ],
+  "ebmt_chapters": [
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)",
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)"
+  ]
+ },
+ {
+  "id": "108-004",
+  "number": 4,
+  "stem": "Which of the following statements on hematopoietic stem cells (HSC) is incorrect?",
+  "options": {
+   "A": "HSC belongs to multipotent stem cells",
+   "B": "HSC can be collected from bone marrow and peripheral blood in human adults for clinical uses",
+   "C": "The key molecules regulating homing of HSC is CXCL12 chemokine and its receptor CXCR4",
+   "D": "Commitment of HSC to one or several lineages of differentiated stages is irreversible and can't be converted"
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "HSC 歸巢",
+   "骨髓 vs 周邊血",
+   "動員"
+  ],
+  "ebmt_chapters": [
+   "Ch7 Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation (PDF p91–100)"
+  ]
+ },
+ {
+  "id": "108-005",
+  "number": 5,
+  "stem": "Which of the following chemokines is most responsible for hematopoietic stem cell homing into the niche?",
+  "options": {
+   "A": "CCL5",
+   "B": "CCL6",
+   "C": "CXCL4",
+   "D": "CXCL12",
+   "E": "CXCL5"
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "HSC 歸巢",
+   "Plerixafor",
+   "動員"
+  ],
+  "ebmt_chapters": [
+   "Ch7 Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation (PDF p91–100)"
+  ]
+ },
+ {
+  "id": "108-006",
+  "number": 6,
+  "stem": "Which cell component is retained after alpha-beta T-cell depletion of peripheral blood leukapheresis product after G-CSF mobilization from normal healthy donors?",
+  "options": {
+   "A": "CD34+HSC, CD19+ B cells, NK-T cells, gamma-delta T-cells",
+   "B": "CD34+HSC, CD19+ B cells, NK-T cells",
+   "C": "CD34+HSC, CD19+ B cells",
+   "D": "CD34+HSC only",
+   "E": "CD4+ allo-reactive T cells"
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "T-cell depletion",
+   "T 細胞亞群",
+   "Leukapheresis",
+   "動員"
+  ],
+  "ebmt_chapters": [
+   "Ch19 Graft Manipulation (PDF p199–205)",
+   "Ch65 Haploidentical HCT (PDF p574–582)",
+   "Ch8 Biological Properties of Cells Other Than HSCs (PDF p101–105)"
+  ]
+ },
+ {
+  "id": "108-007",
+  "number": 7,
+  "stem": "What is the frequency of chronic graft-versus-host disease ( GVHD ) among all patients following allo-HSCT ?",
+  "options": {
+   "A": "20%.",
+   "B": "30%.",
+   "C": "40%.",
+   "D": "50%."
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "cGVHD 診斷",
+   "GVHD 風險因子",
+   "晚期效應"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "108-008",
+  "number": 8,
+  "stem": "Which is the most frequently involved organ of chronic GVHD ?",
+  "options": {
+   "A": "Skin",
+   "B": "Eyes",
+   "C": "Oral mucosa",
+   "D": "Lung"
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "cGVHD 診斷",
+   "aGVHD 診斷",
+   "cGVHD 治療"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "108-009",
+  "number": 9,
+  "stem": "Which of the following is not a feature of acute GvHD?",
+  "options": {
+   "A": "Nausea",
+   "B": "Raised alkaline phosphatase",
+   "C": "Lichen planus",
+   "D": "Bullae"
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "aGVHD 診斷",
+   "cGVHD 診斷",
+   "aGVHD 分級"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "108-010",
+  "number": 10,
+  "stem": "Which statements about GVHD prophylaxis by the recommendation of EBMT working group 2019 is correct?",
+  "options": {
+   "A": "Current GVHD prophylaxis relies on calcineurin inhibitor + short-term MTX after MAC",
+   "B": "ATG has been demonstrated to decrease acute GVHD after URD transplant and of chronic GVHD",
+   "C": "CSA dose for standard GVHD prophylaxis is 3mg/Kg/day i.v. till engraftment then orally",
+   "D": "The trough level of CSA should be 250-300 ng/mL"
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "GVHD 預防",
+   "CNI",
+   "MTX",
+   "ATG",
+   "MAC"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)"
+  ]
+ }
+]

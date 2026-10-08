@@ -1,0 +1,249 @@
+[
+ {
+  "id": "114-001",
+  "number": 1,
+  "stem": "Choose a wrong one.",
+  "options": {
+   "A": "CD8+ T cells recognize intracellular peptides while CD4+ T cells recognize extracellular pathogen derived peptides.",
+   "B": "Type I invariant NKT cells can recognize lipids presented by broadly distributed CD1d and early NKT cells reconstitution may be linked with reduced GVHD incidence.",
+   "C": "Natural killer cells belong to adaptive immune system and the cytotoxicity is balanced between several receptors such as killer immunoglobulin-like receptors(KIR).",
+   "D": "Mucosal associated invariant T cells are abundant in mucosa tissues and the constitution may be positively correlated with gut microbiota."
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "T 細胞亞群",
+   "KIR/NK",
+   "免疫重建",
+   "GVHD 機轉"
+  ],
+  "ebmt_chapters": [
+   "Ch8 Biological Properties of Cells Other Than HSCs (PDF p101–105)",
+   "Ch10 Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization (PDF p118–130)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:NK 細胞屬於**先天性（innate）**免疫系統，不是 adaptive —— 手冊原文「Natural killer (NK) cells belong to the innate immune system」，而其細胞毒性確實由 KIR 等 germ-line encoded 抑制/活化受體平衡決定（後半句對，前半句錯）。A（CD8 認細胞內胜肽、CD4 認細胞外病原胜肽）、B（Type I iNKT 認 CD1d 呈現的脂質；早期 iNKT 重建與較低 GVHD 相關）、D（MAIT 富含於黏膜，重建與腸道菌相多樣性正相關）三者皆與手冊逐字相符。"
+ },
+ {
+  "id": "114-002",
+  "number": 2,
+  "stem": "Choose the wrong one",
+  "options": {
+   "A": "8/8 matched unrelated donors are usually 10/10 matched due to strong linkage disequilibrium between HLA-DR and HLA-DQ.",
+   "B": "Permissive HLA-DP mismatches are thought to protect against relapse arising from HLA-DP disparity.",
+   "C": "Post transplant cyclophosphamide (PTCy) appears to reduce the clinical risks of single or multiple HLA mismatches in unrelated donor transplants.",
+   "D": "Haploidentical donors are usually mismatched at 6 of 12 HLA alleles and additional identical alleles on the unshared haplotype can provide clinical advantage."
+  },
+  "answer": "D",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "HLA 配對",
+   "HLA/MHC 基礎",
+   "DPB1 permissive",
+   "HLA mismatch",
+   "PTCy",
+   "Haplo"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:手冊明確寫 haploidentical donor 一般在 12 個 HLA alleles 中有 6 個不合，但「偶然在 unshared haplotype 上多相合 1 個以上 alleles」的這種 less-than-haploidentical donor **至今找不到任何臨床優勢**（Lorentino 2017），故 D 後半句為非。A 正確（DRB1–DQB1 強 LD，8/8 通常即 10/10）；B 正確（permissive DPB1 mismatch 與較低復發率相關，Ruggeri 2023 大型回溯研究已證實）；C 正確（PTCy 使 UD 單一或多重 HLA mismatch 的臨床風險大幅下降）。"
+ },
+ {
+  "id": "114-003",
+  "number": 3,
+  "stem": "Choose a wrong one:",
+  "options": {
+   "A": "In adults with non-myeloablative conditioning, ATG is Absolute-lymphocyte-count (ALC)-adjusted to achieve a target AUC of 20-30 AU/mL.",
+   "B": "BSA-based fludarabine dosing shows highly variable exposure, and patients with higher exposure experience delayed immune reconstitution, increased viral reactivation, and higher non-relapse mortality.",
+   "C": "PTCy reduces GVHD by limiting alloreactive effector T cell proliferation while promoting recovery of regulatory T cells.",
+   "D": "Immune reconstitution differs between ATG and PTCy, with ATG accelerating CD8+, NK, NKT, and γδT cells, while PTCy favors faster CD4+ T and B cell recovery."
+  },
+  "answer": "A",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "ATG",
+   "Fludarabine",
+   "PTCy",
+   "免疫重建",
+   "Treg"
+  ],
+  "ebmt_chapters": [
+   "Ch10 Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization (PDF p118–130)",
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch26 GVHD Prophylaxis (PDF p242–250)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:Table 10.1 的成人 non-myeloablative 設定是以 ALC 調整 ATG（Thymoglobuline），目標移植後 AUC 為 **60–90 AU/mL**（週邊血動員幹細胞），不是 20–30；AUC <20 是兒童臍帶血與 ex vivo T-cell depletion 的目標值，故 A 把族群與數字對錯了。B 正確（BSA-based fludarabine 暴露量 10–66 mg*h/L 高度變異，>25 mg*h/L 者免疫重建延遲、病毒再活化與 NRM 上升）；C 正確（PT-Cy 抑制 alloreactive CD4+ effector T 增生並優先回復 Treg）；D 正確（Massoud 2022：ATG 組 CD8+、NK、NKT、γδT 較快，PT-Cy 組 CD4+ T 與 B 細胞較快）。"
+ },
+ {
+  "id": "114-004",
+  "number": 4,
+  "stem": "在異體造血幹細胞的捐贈者選擇上最重要的是",
+  "options": {
+   "A": "HLA. class I 和 class II 的high resolution typing 的相合度",
+   "B": "Donor 與recipient RBC ABO 血型的相合度",
+   "C": "Donor 與recipient CMV 感染程度的關係",
+   "D": "Donor 與recipient HBV 感染程度的關係",
+   "E": "Donor 與recipient 的性別關係"
+  },
+  "answer": "A",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "HLA 配對",
+   "HLA 分型",
+   "捐贈者年齡/性別",
+   "ABO 不合",
+   "CMV 血清狀態"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:捐贈者選擇的首要變項是 donor–recipient 組織相容性：手冊要求 HLA-A/B/C/DRB1（歐洲常加 DQB1）以 **high-resolution** 比對，每多一個 A/B/C/DRB1 mismatch 死亡風險約增 10%。ABO 血型不合（B）只需調整輸血與紅血球去除，不影響存活；CMV（C）、HBV（D）血清狀態與性別（E）屬 non-HLA 因素，手冊明言除「捐贈者年齡」外，捐贈者性別、血型、CMV 狀態皆未與結果有確定關聯，重要性遠低於 HLA。"
+ },
+ {
+  "id": "114-005",
+  "number": 5,
+  "stem": "以下對不同的幹細胞來源的敘述何者為非？",
+  "options": {
+   "A": "周邊造血幹細胞移植後的血球恢復時間要比骨髓移植來得快",
+   "B": "周邊造血幹細胞移植後產生慢性移植物抗宿主排斥的機會比骨髓移植來得高",
+   "C": "周邊造血幹細胞移植後產生嚴重程度的慢性移植物抗宿主排斥的機會比骨髓移植來得高",
+   "D": "最開始操作作以PTCy 為核心設計的半相合造血幹細胞移植的造血幹細胞的來源是周邊造血幹細胞而不是骨髓細胞",
+   "E": "由於使用親屬半相合捐贈者的造血幹細胞移植數越來越多，臍帶血移植的數目也越來越少。"
+  },
+  "answer": "D",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "骨髓 vs 周邊血",
+   "Haplo",
+   "PTCy",
+   "臍帶血",
+   "植入"
+  ],
+  "ebmt_chapters": [
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)",
+   "Ch65 Haploidentical HCT (PDF p574–582)",
+   "Ch64 Role of Umbilical Cord Blood Transplantation (PDF p568–573)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:最初由 Baltimore（Johns Hopkins）團隊設計的 PTCy 半相合平台用的是 **unmanipulated haplo 骨髓（BM）**（Flu/Cy/TBI 2 Gy + day +3/+4 高劑量 Cy，Luznik 2008）；改用 G-PB（Bashey 2017）是後來的變型，故 D 為非。A、B、C 皆對（SCTCG meta：嗜中性球 14 vs 21 天、血小板 14 vs 22 天；慢性 GVHD 73% vs 56%；extensive 51% vs 35%）。E 亦對 —— 手冊 Ch64 開頭即寫「UCBT activity has sharply decreased in favor of haplo-HCT using posttransplant cyclophosphamide」。"
+ },
+ {
+  "id": "114-006",
+  "number": 6,
+  "stem": "Which of the following is the myeloablative intensity conditioning regimen used for allogeneic stem cell transplant?",
+  "options": {
+   "A": "Cyclophosphamide 200 mg/kg + ATG 6.0 mg/kg",
+   "B": "Fludarabine 150 mg/m2 + Busulfan 6.4 mg/m2 (iv)",
+   "C": "Cyclophosphamide 120 mg/kg + TBI 8 Gy",
+   "D": "Cyclophosphamide 29 mg/kg + Busulfan 6.4 mg/kg (iv)",
+   "E": "Fludarabine 150 mg/m2 + Busulfan 8 mg/kg (po)"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "MAC",
+   "RIC",
+   "Busulfan",
+   "Cyclophosphamide",
+   "TBI",
+   "Fludarabine"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:手冊引 Bacigalupo 2009：**單次 TBI ≥5 Gy 或分次 TBI ≥8 Gy 即算 MAC**，故 Cy 120 mg/kg + TBI 8 Gy 是 myeloablative。A（Cy 200 mg/kg + ATG）是再生不良性貧血用的非骨髓摧毀性方案；B、E（Flu 150 + iv Bu 6.4 mg/kg 或 po Bu 8 mg/kg，即 Flu/Bu2 兩天劑量）屬 RIC；D（Cy 29 mg/kg + Bu 6.4 mg/kg）劑量更低，亦非 MAC。註：B 選項單位寫成 mg/m2 應為題目誤植。"
+ },
+ {
+  "id": "114-007",
+  "number": 7,
+  "stem": "Which of the following is the best description of total body irradiation in the context of allogeneic stem cell transplantation?",
+  "options": {
+   "A": "It is rarely used due to very high incidence of severe toxicity.",
+   "B": "It selectively targets leukemic cells in the central nervous system.",
+   "C": "It is used in some regimens to eradicate malignant cells and immunosuppress the host.",
+   "D": "It replaces the need for immunosuppressive drugs after allogeneic stem cell transplantation.",
+   "E": "It is frequently used in combination with fludarabine and etoposide"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "TBI",
+   "Conditioning 原理",
+   "MAC",
+   "Conditioning 毒性"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:手冊：TBI 在 HCT 有**雙重目的** —— 殺滅惡性細胞（並可達 CNS、睪丸等化療難及之 sanctuary）以及提供免疫抑制以利 engraftment，正是 C。A 錯：TBI 仍是 MAC 的主要成分、成人 ALL 多數中心的首選。B 錯：它提供的是全身均勻劑量，並非「選擇性」針對 CNS 白血病細胞。D 錯：移植後仍需 CNI 等免疫抑制劑。E 錯：經典搭配是 Cy/TBI（兒童 ALL 為 TBI/VP16），不是 fludarabine + etoposide。"
+ },
+ {
+  "id": "114-008",
+  "number": 8,
+  "stem": "A patient receives G-CSF 10 µg/kg/day as steady-state mobilization. Which laboratory threshold most accurately defines poor mobilization after adequate stimulation?",
+  "options": {
+   "A": "Peripheral CD34⁺ <10 cells/µL on day 3",
+   "B": "Peripheral CD34⁺ <15 cells/µL on day 4",
+   "C": "Peripheral CD34⁺ <20 cells/µL at peak count",
+   "D": "Total leukocyte count <20 × 10⁹/L at peak count"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "Poor mobilizer",
+   "動員",
+   "G-CSF",
+   "CD34 劑量"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:手冊定義：poor mobilizer 為「採集到 <2 × 10⁶ CD34+/kg」或「週邊血 CD34+ 動員 **<20 cells/µL**」；且 leukapheresis 的啟動門檻正是 PB CD34+ >20/µL（Mohty 2014），<20/µL 即應考慮 plerixafor。故 C 最符合。A、B 的 10/µL 與 15/µL 搭配固定天數並非手冊定義（<10/µL 是「明確該用 plerixafor」的更低門檻，10–20/µL 為灰色地帶）；D 的總白血球數不是動員品質指標。"
+ },
+ {
+  "id": "114-009",
+  "number": 9,
+  "stem": "During cryopreservation of peripheral blood stem-cell (PBSC) products for auto-HSCT, the standard final concentration of dimethyl-sulfoxide (DMSO) recommended by EBMT laboratories is:",
+  "options": {
+   "A": "2.5% (v/v)",
+   "B": "5% (v/v)",
+   "C": "10% (v/v)",
+   "D": "20% (v/v)"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "冷凍保存",
+   "Leukapheresis",
+   "動員"
+  ],
+  "ebmt_chapters": [
+   "Ch20 Processing, Cryopreserving, and Controlling the Quality of HSC (PDF p206–209)"
+  ],
+  "answer_note": "AI 暫定答案(信心 medium),理由:冷凍保存的經典標準是最終 **10% (v/v) DMSO**（控制降溫 1–2 °C/min、氣相液態氮 ≤−140 °C 保存），也是 auto-HSCT 產品最常用的濃度。分歧點要誠實講：手冊的敘述其實是區間「The final product includes **5–10%** DMSO as a cryoprotectant」，部分中心為降低 DMSO 毒性採 5%；但單選題下 10% 是唯一能代表「standard」的選項，2.5% 與 20% 皆不被使用（20% 細胞毒性過高）。"
+ },
+ {
+  "id": "114-010",
+  "number": 10,
+  "stem": "Regarding plerixafor's mechanism of action at the molecular level, which statement is MOST accurate?",
+  "options": {
+   "A": "It acts as an unbiased CXCR4 antagonist blocking both G-protein and β-arrestin signaling",
+   "B": "It demonstrates biased agonism with β-arrestin recruitment while antagonizing G-protein signaling",
+   "C": "Peak CD34+ mobilization occurs 2-4 hours after subcutaneous administration",
+   "D": "It directly competes with CXCL12 for the same binding site on CXCR4"
+  },
+  "answer": "B",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "Plerixafor",
+   "動員",
+   "HSC 歸巢"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ],
+  "answer_note": "AI 暫定答案(信心 low),理由:手冊未涵蓋分子層級藥理，只寫 plerixafor（AMD3100，bicyclam）可逆阻斷 CXCR4、抑制 SDF-1/CXCL12 結合。依受體藥理學文獻，AMD3100 並非「乾淨」的中性拮抗劑：它阻斷 G-protein（Gαi/鈣流、趨化）訊號，卻仍能部分徵召 β-arrestin，屬 weak partial / biased agonist（Zhang 2002 已證其為 weak partial agonist；對 ACKR3/CXCR7 更呈 allosteric agonist），故 A「unbiased、兩條路徑全阻斷」為非、B 最貼近。C 明確錯誤：皮下給藥後 CD34+ 高峰在約 6–11 小時（臨床上在採集前 11 小時給藥），不是 2–4 小時。**分歧點**：D 是教科書式說法，若出題者採「競爭性抑制 CXCL12 結合」的簡化定義，答案會是 D；但嚴格說 AMD3100 結合在 TM 口袋的 Asp171/Asp262 次口袋，與 CXCL12 的主要辨識位（N 端／ECL2）僅部分重疊，並非「same binding site」，故我選 B。"
+ }
+]

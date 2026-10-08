@@ -1,0 +1,246 @@
+[
+ {
+  "id": "109-011",
+  "number": 11,
+  "stem": "About transplantation in chronic myeloid leukemia (CML), which statement is wrong?",
+  "options": {
+   "A": "Donor lymphocyte infusion is an option when molecular relapse detected after transplantation",
+   "B": "Patients with persistent positive BCR-ABL 2 months post-transplantation carried higher relapse risk than those with BCR-ABL turning detectable 8 month post-transplantation",
+   "C": "For elderly patients, reduced intensity conditioning (RIC) regimen offers less toxicity but still has the graft-versus leukemia effect",
+   "D": "Although lack of definite evidence, maintaining tyrosin kinase inhibitor (TKI) use after transplantation is suggested in those who transplanted in accelerated phase"
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "CML",
+   "DLI",
+   "TKI 維持",
+   "RIC",
+   "MRD"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)",
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)",
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)"
+  ]
+ },
+ {
+  "id": "109-012",
+  "number": 12,
+  "stem": "Which one is wrong?",
+  "options": {
+   "A": "The total body irradiation-based regimens seem to have better anti-leukaemic activity than busulfan-based preparative regimens",
+   "B": "RIC regimens are increasingly considered as an option for elderly HR patients or patients with contraindications for MAC-SCT",
+   "C": "Regarding allogeneic SCT, there is increasing evidence that sibling and very well-matched, unrelated donors (MUD) SCT can be considered equivalent options in terms of results",
+   "D": "TKI/chemotherapy combination can replace allogeneic SCT in first complete remission Ph+ ALL patients"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "TBI",
+   "RIC",
+   "MUD",
+   "MSD",
+   "Ph+ ALL"
+  ],
+  "ebmt_chapters": [
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)",
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "109-013",
+  "number": 13,
+  "stem": "Which of the following statement regarding myeloablative conditioning (MAC) in allotransplant is NOT true?",
+  "options": {
+   "A": "MAC is generally recommended for younger and fit patients, while RIC is considered for elder population.",
+   "B": "Intravenous busulfan has better bioavailability and safety profile, and lower risks of SOS/VOD compared with oral busulfan.",
+   "C": "Busulfan/cyclophosphamide and total body irradiation (TBI) /cyclophosphamide lead to similar long-term outcomes in patients with AML.",
+   "D": "TBI-based MAC was preferred for ALL in fit patients with low comorbidities.",
+   "E": "All of the above are correct."
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "MAC",
+   "Busulfan",
+   "TBI",
+   "AML",
+   "ALL"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)"
+  ]
+ },
+ {
+  "id": "109-014",
+  "number": 14,
+  "stem": "Which of the following statement regarding reduced intensity conditioning (RIC) or nonmyeloablative conditioning (NMA) in allotransplant is NOT true?",
+  "options": {
+   "A": "RIC significantly reduced transplant-related organ toxicity and enabling transplant in elderly patients.",
+   "B": "Fludarabine has been one of the key components of RIC/NMA regimens.",
+   "C": "RIC resulted in lower TRM but higher relapse rate compared with MAC in patients with AML and MDS.",
+   "D": "Outcomes are usually better in RIC than MAC in patients with advanced disease.",
+   "E": "All of the above are correct."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "RIC",
+   "MAC",
+   "Fludarabine",
+   "高齡移植",
+   "復發",
+   "AML"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch68 HCT in Elderly Patients (PDF p596–601)"
+  ]
+ },
+ {
+  "id": "109-015",
+  "number": 15,
+  "stem": "Which of the following statement is NOT true regarding the use of ATG in allotransplant?",
+  "options": {
+   "A": "ATG has been demonstrated to decrease acute GVHD after unrelated transplant and of chronic GVHD.",
+   "B": "ATG is recommended for prophylaxis of GVHD in patients receiving MUD transplant.",
+   "C": "ATG is not recommended in patients receiving MRD allotransplant who are at high risk of GVHD.",
+   "D": "CMV reactivation is frequently seen after the use of ATG.",
+   "E": "All of the above are correct."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "ATG",
+   "GVHD 預防",
+   "MUD",
+   "MSD",
+   "CMV"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "109-016",
+  "number": 16,
+  "stem": "Which of the following statement about Human leukocyte antigen (HLA) and Major histocompatibility complex (MHC) is wrong?",
+  "options": {
+   "A": "The HLA gene is located on the short arm of chromosome 9",
+   "B": "MHC class I antigens are present on all cells",
+   "C": "MHC class II antigens are generally restricted to cells of the immune system",
+   "D": "HLA-matched sibling donor cells usually cause less GVHD and therefore less morbidity and mortality",
+   "E": "The likelihood that a sibling pair is HLA identical would be 25%"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "HLA/MHC 基礎",
+   "MSD",
+   "GVHD 風險因子"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "109-017",
+  "number": 17,
+  "stem": "According to the current algorithm of unrelated donor selection for adult patients with Haematologica malignancy, which of the following non-HLA factors is most important?",
+  "options": {
+   "A": "Sex mismatch with female pregnant donor to male patient",
+   "B": "ABO mismatch with A+ type donor to B+ type recipient",
+   "C": "Presence of donor-specific anti-HLA antibodies in the recipient",
+   "D": "CMV serostatus with positive CMV-IgG donor to CMV-IgG negative patient",
+   "E": "Donor age with younger is better"
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "捐贈者年齡/性別",
+   "MUD",
+   "DSA",
+   "CMV 血清狀態",
+   "ABO 不合"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ },
+ {
+  "id": "109-018",
+  "number": 18,
+  "stem": "Which of the following is the risk factor for predicting poor-mobilizer for auto-PBSC harvest?",
+  "options": {
+   "A": "Heavily pretreated",
+   "B": "Older age > 60 years",
+   "C": "Prior radiotherapy to the pelvis",
+   "D": "Low CD34+ or HPCP counts on the day of PBSC collection",
+   "E": "All of the above"
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "Poor mobilizer",
+   "動員",
+   "Leukapheresis"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ },
+ {
+  "id": "109-019",
+  "number": 19,
+  "stem": "Which of the following statements on histocompatibility testing of donors for allogeneic hematopoietic stem cell transplantation is incorrect?",
+  "options": {
+   "A": "The method allowing the identification of a serologically defined HLA antigen-equivalent is termed low resolution.",
+   "B": "The methods that generate nucleotide sequence information allowing the precise identification of an HLA allele are termed high resolutuion.",
+   "C": "High resolution molecular typing has replaced low resolution serotyping.",
+   "D": "Formal high resolution molecular typing for donor selection includes HLA-A, HLA-B, HLA-C, HLA-DRA and HLA-DQA loci."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "HLA 分型",
+   "HLA 配對",
+   "HLA/MHC 基礎"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "109-020",
+  "number": 20,
+  "stem": "Which of the following statements on donor selection in allogeneic hematopoietic stem cell transplantation is incorrect?",
+  "options": {
+   "A": "The presence of donor antigens or alleles not shared by the recipient provides host-versus-graft allorecognition, for example patient A*02:01, *02:01 versus donor A*02:01, *02:05.",
+   "B": "NIPA (non-inherited paternal antigens)-mismatched donor is preferred over NIMA-mismatched donor, especially when Peking protocol is used for haploidentical transplantation.",
+   "C": "In addition to HLA antigens, availability of high-resolution typing of HLA class I alleles provides the information of whether there is mismatched or missing HLA KIR ligands.",
+   "D": "Screening donor-specific anti-HLA antibodies is suggested for partially HLA-mismathed allogeneic hematopoietic stem cell transplantation."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "Haplo",
+   "KIR/NK",
+   "DSA",
+   "HLA mismatch",
+   "HLA 分型"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ }
+]

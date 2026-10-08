@@ -1,0 +1,248 @@
+[
+ {
+  "id": "113-041",
+  "number": 41,
+  "stem": "Which of the following numbers of arrows in the algorithm is considered as standard of care in Taiwan as of 2024?\n流程圖:https://img-hosting.hsieh-ting-lin.workers.dev/i/orwLp0O.png\n(正解依官方答案欄為 C。)",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "台灣本土",
+   "DLBCL 二線",
+   "CAR-T",
+   "CAR-T 與移植順序"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)",
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)"
+  ]
+ },
+ {
+  "id": "113-042",
+  "number": 42,
+  "stem": "Which of the following statements are correct?\n(1) The graft-versus-host allo-reactivity is defined as presence of recipient alleles or antigens not present in the donor.\n(2) For matching of patient/recipient CMV serostatus, the best outcome was seen in seronegative patients receiving seronegative grafts.\n(3) The donor selection begins with a full evaluation of available family members of the recipient, including the father, mother, and full siblings.\n(4) A strong positive linkage disequilibrium is found between HLA-B and -C and between HLA-DR and -DQ.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "HLA/MHC 基礎",
+   "CMV 血清狀態",
+   "MSD",
+   "HLA 配對"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch24 Transfusion Support (PDF p227–234)"
+  ]
+ },
+ {
+  "id": "113-043",
+  "number": 43,
+  "stem": "關於急性淋巴性白血病患者之CAR-T (Chimeric antigen receptor T-cells) 細胞治療前 bridging therapy 之敘述，下列何者正確？\n(1) 低腫瘤負擔(disease burden)之患者可考慮低強度之化療如vincristine, 6MP, MTX 作為 bridging therapy\n(2) Blinatumomab 抗腫瘤細胞效果顯著，是個很好的bridging therapy 藥物選擇\n(3) Inotuzumab ozogamicin 不建議在anti-CD22 CAR-T 細胞做為bridging therapy\n(4) Bridging therapy 的目的是為了在CAR T 治療前完全清除腫瘤細胞，以促進CAR T 細胞的擴增及持續性",
+  "options": {
+   "A": "(1)(2)",
+   "B": "(1)(2)(3)",
+   "C": "(1)(2)(3)(4)",
+   "D": "(1)(3)"
+  },
+  "answer": "D",
+  "tags": "複選",
+  "keyword_tags": [
+   "CAR-T 橋接/washout",
+   "ALL",
+   "CAR-T",
+   "Blinatumomab",
+   "Inotuzumab",
+   "免疫逃脫"
+  ],
+  "ebmt_chapters": [
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)",
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)"
+  ]
+ },
+ {
+  "id": "113-044",
+  "number": 44,
+  "stem": "Which of the following are appropriate strategies for preventing relapse after allo-HSCT in a patient with AML who has achieved CR2 and has pre-HSCT FLT3-ITD molecular MRD?\n(1) Administration of second-generation FLT3 inhibitors, such as gilteritinib, after engraftment.\n(2) Use of a hypomethylating agent after engraftment.\n(3) Early tapering of immunosuppressants.\n(4) Prophylactic donor leukocyte infusion (DLI) starting from day +90 or +100, provided the patient is off immunosuppression and has been free of GvHD for about one month.",
+  "options": {
+   "A": "(1)(3)",
+   "B": "(2)(4)",
+   "C": "(1)(2)(3)",
+   "D": "(1)(2)(3)(4)"
+  },
+  "answer": "D",
+  "tags": "複選",
+  "keyword_tags": [
+   "FLT3-ITD",
+   "FLT3 抑制劑",
+   "HMA 維持",
+   "DLI",
+   "免疫抑制劑減量",
+   "維持治療"
+  ],
+  "ebmt_chapters": [
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)",
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)",
+   "Ch70 AML in Adults (PDF p611–625)"
+  ]
+ },
+ {
+  "id": "113-045",
+  "number": 45,
+  "stem": "In HLA-matched HSCT, what is (are) the target molecule(s) for T-cell allo-reactivity?\n(1) NOD-like receptors (NOD2/CARD15) and toll-like receptors (TLRs)\n(2) Killer immunoglobulin-like receptor (KIR) ligands\n(3) MHC class I-related chain (MICs).\n(4) Minor histocompatibility antigens (mHAgs)",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "D",
+  "tags": "複選",
+  "keyword_tags": [
+   "mHAg/MICA",
+   "KIR/NK",
+   "GVHD 機轉"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ },
+ {
+  "id": "113-046",
+  "number": 46,
+  "stem": "Regarding the current management of CMV infection in allo-HSCT recipients, which followings were true?\n(1) Patients with CMV pneumonitis can be treated with ganciclovir plus intravenous immunoglobulin or CMV specific immunoglobulin.\n(2) Letermovir can be used for post HSCT CMV disease prophylaxis\n(3) Standardized Real-time PCR assay for CMV DNA is available and routinely used for CMV viremia monitoring in post transplant patients\n(4) CMV viremia can a treatment guide in HSCT recipient who developed CMV gastroenteritis.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "CMV",
+   "Ganciclovir",
+   "IVIG",
+   "Letermovir"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "113-047",
+  "number": 47,
+  "stem": "Which of the following statements about induction regimens and treatment outcomes for multiple myeloma patients is/are correct?\n(1) The three phase 3 trials, including CASSIOPEIA – Dara-VTD; PERSEUS – Dara-VRD; IMROZ – Isatuximab-VRD, shows clear PFS benefit of four-drug combination in transplant-eligible patients.\n(2) Four-drug regimen (Daratumumab combined with bortezomib, lenalidomide, and dexamethasone) has demonstrated overall survival benefit in PERSEUS trial.\n(3) Prolonging the VTD induction regimen from 4 cycles to 6 cycles does not increase side effects such as neuropathy.\n(4) MRD negativity is a significant predictor of outcomes, also for patients with high-risk cytogenetics.",
+  "options": {
+   "A": "(1)(2)(3)(4)",
+   "B": "(1)(2)(4)",
+   "C": "(3)(4)",
+   "D": "(1)(2)",
+   "E": "(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "MM 誘導",
+   "MM 自體移植",
+   "MRD"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "113-048",
+  "number": 48,
+  "stem": "Which of the following statements in regarding to myelodysplastic syndrome (MDS) are correct?\n(1) Relapse of disease is the leading cause of death after allogeneic transplantation for MDS.\n(2) TP53, TET2, ASXL1, RUNX1, and RAS pathways mutations have been reported to be prognostic independent factors.\n(3) To prevent disease relapse, allogeneic transplantation for low-risk MDS had shown a gain in life expectancy comparing to high-risk MDS\n(4) Due to the increase in patient age, transplant results in MDS patients are highly impacted by performance status and HCT-CI.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(1)(3)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "MDS",
+   "復發",
+   "TP53",
+   "HCT-CI",
+   "高齡移植",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch74 Myelodysplastic Neoplasms/Syndromes (MDS) (PDF p660–668)",
+   "Ch11 Evaluation and Counseling of Candidates (PDF p131–142)"
+  ]
+ },
+ {
+  "id": "113-049",
+  "number": 49,
+  "stem": "Which of the following SAA patients are indicated for bone marrow transplantation?\n(1) A 60-year-old male with SAA relapsed 3 years after immunosuppressive therapy(IST) and has a haploidentical family donor.\n(2) An 18-year-old female with newly diagnosed SAA has a 10/10 matched unrelated donor(MUD)\n(3) A 50-year-old female with newly diagnosed SAA has a matched sibling donor(MSD)\n(4) A 23-year-old male with refractory SAA (no response to IST + Eltrombopag) has a haploidentical family donor.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(2)(3)(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "SAA",
+   "MSD",
+   "MUD",
+   "Haplo",
+   "IST",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ },
+ {
+  "id": "113-050",
+  "number": 50,
+  "stem": "Which of the following statements of SAA treatments are correct?\n(1) Outcomes of up-front matched unrelated donor hematopoietic cell transplantation(HCT) were similar to matched related donor HCT and were superior to 2nd line unrelated donor HCT after IST failure.\n(2) ATG included in the preparative regimen may prevent both GVHD and graft failure in HCT for immune-mediated SAA\n(3) Low-dose TBI (200 cGy) may also help reducing the risk of graft failure after HST in older patients of SAA.\n(4) 4With so many effective novel therapies, HST is no longer indicated for most of the patients with paroxysmal nocturnal hemoglobinuria",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(2)",
+   "C": "(3)(4)",
+   "D": "(1)(3)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "SAA",
+   "MUD",
+   "ATG",
+   "Graft failure",
+   "TBI",
+   "PNH"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)",
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ }
+]

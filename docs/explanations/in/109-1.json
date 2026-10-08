@@ -1,0 +1,233 @@
+[
+ {
+  "id": "109-001",
+  "number": 1,
+  "stem": "Impending relapse of leukemia after allogeneic HSCT may be revealed by the monitoring of chimerism. Which of the following findings is not suggestive of relapse?",
+  "options": {
+   "A": "Reappearance of recipient cells displaying the immunophenotype of original leukemia",
+   "B": "Increasing recipient chimerism within total leukocytes",
+   "C": "Chimerism finding indicative of graft rejection.",
+   "D": "Increasing donor chimerism within total leukocytes"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "Chimerism",
+   "復發",
+   "MRD",
+   "Graft failure"
+  ],
+  "ebmt_chapters": [
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)",
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)",
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)"
+  ]
+ },
+ {
+  "id": "109-002",
+  "number": 2,
+  "stem": "The optimal cell product for immunotherapy post-transplant contains a cell population with:",
+  "options": {
+   "A": "Short in vivo persistence",
+   "B": "A broad reactivity against cells of the patient",
+   "C": "Short telomeres",
+   "D": "Defined antigen specificity"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "DLI",
+   "病毒專一T細胞",
+   "CAR-T",
+   "T 細胞亞群"
+  ],
+  "ebmt_chapters": [
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)",
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch8 Biological Properties of Cells Other Than HSCs (PDF p101–105)"
+  ]
+ },
+ {
+  "id": "109-003",
+  "number": 3,
+  "stem": "Select the CORRECT answer from following statements regarding monitoring minimal residual disease (MRD) after allogeneic HSCT",
+  "options": {
+   "A": "The use of flow cytometry to detect immunophenotype aberrant expressed leukemic cell can be applied to detect MRD in all the AML cases but not in patients of ALL.",
+   "B": "The method of short tandem repeat (STR) used for determining the chimerism after allogeneic HSCT can sensitively detect the MRD in either AML or ALL.",
+   "C": "In t(8;21) AML, the detection of RUNX1/RUNXITI transcripts may persist after allogeneic transplant without subsequent relapse.",
+   "D": "In AML with chromosomal anomalies, conventional metaphase cytogenetics can detect residual leukemic cells with sensitivity equal to PCR method."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "MRD",
+   "Chimerism",
+   "AML",
+   "ALL"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)",
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)"
+  ]
+ },
+ {
+  "id": "109-004",
+  "number": 4,
+  "stem": "A 36 y/o male patient with ALL, pre-B cell type in first complete remission had undergone allogenic PBSCT from an HLA mismatched unrelated donor and received FluBu4 as conditioning regimens and PTCy, Cyclosporine and MMF as GVHD prophylaxis. He developed painful voiding and gross hematuria at one month after transplantation. Which is the most probable diagnosis for the patient ?",
+  "options": {
+   "A": "Cytomegalovirus reactivation",
+   "B": "Cyclophosphamide induced cystitis",
+   "C": "BK virus reaction with hemorrhagic cystitis.",
+   "D": "Acute GVHD"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "出血性膀胱炎",
+   "PTCy",
+   "Cyclophosphamide"
+  ],
+  "ebmt_chapters": [
+   "Ch51 Haemorrhagic Cystitis and Renal Dysfunction (PDF p473–477)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "109-005",
+  "number": 5,
+  "stem": "Which is the main criteria of engrafement syndrome, Except ?",
+  "options": {
+   "A": "Body weight gain ( > 2.5% )",
+   "B": "Fever ≥38.3 °C well tolerated",
+   "C": "Skin rashes (>25% of body surface)",
+   "D": "Pulmonary edema (non-cardiogenic)/ hypoxia",
+   "E": "Sudden increase in CRP values"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "植入症候群",
+   "植入",
+   "aGVHD 診斷"
+  ],
+  "ebmt_chapters": [
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)",
+   "Ch41 Graft Failure (PDF p378–385)"
+  ]
+ },
+ {
+  "id": "109-006",
+  "number": 6,
+  "stem": "Which of the following statement is incorrect for the osteonecrosis (avascular necrosis, AVN) of the hip joint happened after hematopoietic cell transplantation?",
+  "options": {
+   "A": "Magnetic resonance imaging (MRI) is the gold standard test to diagnose early AVN",
+   "B": "The major risk factors of AVN include glucocorticoid use and higher-dose total body irradiation",
+   "C": "Joint replacement is not required for most advanced AVN",
+   "D": "The hip is the most frequently AVN-affected joint with frequent bilateral involvement"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "晚期效應",
+   "TBI",
+   "Conditioning 毒性",
+   "類固醇"
+  ],
+  "ebmt_chapters": [
+   "Ch54 Skin, Hair, and Musculoskeletal Complications (PDF p495–499)",
+   "Ch22 Short- and Long-Term Controls After HCT (PDF p216–221)"
+  ]
+ },
+ {
+  "id": "109-007",
+  "number": 7,
+  "stem": "Grade III–IV acute graft versus host disease (aGvHD), especially if it turns out to be resistant to first-line treatment, has an extremely poor prognosis despite therapeutic intervention, and consequently considerable efforts are made to try and prevent its occurrence. Which of the following agents was not used routinely for aGvHD prophylaxis?",
+  "options": {
+   "A": "Cyclosporin(CSA).",
+   "B": "Tacrolimus(TAC).",
+   "C": "Methotrexate(MTX).",
+   "D": "Ruxolitinib (JAKAVI)."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "GVHD 預防",
+   "CNI",
+   "MTX",
+   "Ruxolitinib"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)"
+  ]
+ },
+ {
+  "id": "109-008",
+  "number": 8,
+  "stem": "For severe aGvHD resistant to first-line treatment, which of following of following therapeutic modality has not been reported as salvage treatments of aGvHD?",
+  "options": {
+   "A": "Use of mesenchymal stromal cells (MSC).",
+   "B": "Infusion of alpha-1 anti-trypsin.",
+   "C": "Donor fecal microbiota transplantation.",
+   "D": "All of the above have been reported as salvage treatments of aGvHD"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "SR-aGVHD",
+   "MSC",
+   "aGVHD 分級"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch8 Biological Properties of Cells Other Than HSCs (PDF p101–105)"
+  ]
+ },
+ {
+  "id": "109-009",
+  "number": 9,
+  "stem": "Which of the following agents have not been used for treatment of cGvHD?",
+  "options": {
+   "A": "Rituximab (anti-CD20 antibody).",
+   "B": "Pembrolizumab (PD-1 inhibitor).",
+   "C": "Ibrutinib (BTK antagonist).",
+   "D": "Everolimus (mTOR-inhibitors)."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "cGVHD 治療",
+   "Sirolimus",
+   "PD-1 抑制劑"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "109-010",
+  "number": 10,
+  "stem": "About transplantation in acute lymphoblastic leukemia (ALL), which statement is wrong?",
+  "options": {
+   "A": "Regarding to adult patients, chance of long-term survival is much higher if the patients are transplanted after first complete remission than those transplantation after relapse.",
+   "B": "Generally speaking, peripherally-harvested hematopoietic stem cells had a better graft-against-leukemia effect than bone marrow-derived hematopoietic stem cells.",
+   "C": "Chimeric antigen receptor T-Cell immunotherapy (CAR-T) therapy seems like as an optimal bridging therapy to transplantation in relapsed/refractory ALL patients.",
+   "D": "Despite the introduction of dasatinib, transplantation after first complete remission in pediatric B-ALL w/ BCR-ABL1 translocation is still the gold standard."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "ALL",
+   "Ph+ ALL",
+   "兒童移植",
+   "CAR-T 與移植順序",
+   "骨髓 vs 周邊血",
+   "GVL"
+  ],
+  "ebmt_chapters": [
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)",
+   "Ch73 Acute Lymphoblastic Leukaemia in Children and Adolescents (PDF p651–659)",
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)"
+  ]
+ }
+]

@@ -1,0 +1,242 @@
+[
+ {
+  "id": "108-011",
+  "number": 11,
+  "stem": "Please choose the correct statement about conditioning for allo-HSCT.",
+  "options": {
+   "A": "BU-based conditioning is inferior to TBI-based conditioning in patients with ALL",
+   "B": "BU/FLU showed less toxicity and is not inferior to BU/CY as a myeloablative preparative regimen",
+   "C": "BU-based regimens are considered for patients with myeloid malignancies with relatively low tumor burden.",
+   "D": "MAC is generally recommended for younger patients, while RIC is suitable or elder population.",
+   "E": "All of the above"
+  },
+  "answer": "E",
+  "tags": "共同",
+  "keyword_tags": [
+   "Conditioning 原理",
+   "Busulfan",
+   "TBI",
+   "MAC",
+   "RIC",
+   "ALL"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)"
+  ]
+ },
+ {
+  "id": "108-012",
+  "number": 12,
+  "stem": "Which of the following statements about reduced-intensity conditioning (RIC) transplant would be the most appropriate?",
+  "options": {
+   "A": "Most transplant types for severe aplastic anemia is not belonging to the notion of RIC.",
+   "B": "RIC itself alone may not eradicate leukemic cells efficiently, that graft-versus-leukemia effect is generally needed in this setting of transplant.",
+   "C": "RIC is also very suitable in the treatment of advanced hematological alignancies.",
+   "D": "Cyclophosphamide is a common chemotherapeutic agent in the designation of RIC transplant."
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "RIC",
+   "GVL",
+   "SAA",
+   "Cyclophosphamide",
+   "Conditioning 原理"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)"
+  ]
+ },
+ {
+  "id": "108-013",
+  "number": 13,
+  "stem": "In the context of reduced intensity conditioning (RIC) for acute myeloid leukemia (AML) prior to allogeneic HSCT, which one of the following statements is correct?",
+  "options": {
+   "A": "RIC allogeneic HSCT is never indicated for AML patients.",
+   "B": "Non-relapse mortality incidence ranges from 50-80%.",
+   "C": "Relapse after RIC-allogeneic HSCT is the most common cause of death.",
+   "D": "Relapse incidence is lower than after standard myeloablative conditioning allogeneic HSCT."
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "RIC",
+   "AML",
+   "復發",
+   "MAC"
+  ],
+  "ebmt_chapters": [
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch68 HCT in Elderly Patients (PDF p596–601)"
+  ]
+ },
+ {
+  "id": "108-014",
+  "number": 14,
+  "stem": "Which of the following statements is (are) correct?",
+  "options": {
+   "A": "MRD positivity is an independent predictor of relapse after chemotherapy or allogeneic HSCT in AML patients and a negative predictor for ALL patients.",
+   "B": "Pretransplant MRD positivity is highly indicative for high relapse rate after transplant.",
+   "C": "MRD assessment should be implemented in every AML/ALL clinical trials.",
+   "D": "All of the above"
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "MRD",
+   "AML",
+   "ALL",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)",
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)"
+  ]
+ },
+ {
+  "id": "108-015",
+  "number": 15,
+  "stem": "The indications of allogeneic HSCT for chronic myeloid leukemia (CML) in the era of potent tyrosine kinase inhibitors (TKIs) include the followings except:",
+  "options": {
+   "A": "For Patient with blastic crisis (BC) after their return to chronic phase (CP).",
+   "B": "For those progressing from CP to accelerated phase (AP).",
+   "C": "For patients in CP after failure of Imatinib 600 mg daily therapy.",
+   "D": "For patients with T315I mutation."
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "CML",
+   "復發",
+   "TKI 維持",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)"
+  ]
+ },
+ {
+  "id": "108-016",
+  "number": 16,
+  "stem": "Which of the following statement regarding donor specific antibodies (DSA) in haploidentical stem cell transplantation is NOT true?",
+  "options": {
+   "A": "It will cause GVHD after transplantation",
+   "B": "It should be checked in every potential donor",
+   "C": "Higher incidence was found in female donor",
+   "D": "Could be affected by infection"
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "DSA",
+   "Haplo",
+   "Graft failure",
+   "捐贈者評估"
+  ],
+  "ebmt_chapters": [
+   "Ch65 Haploidentical HCT (PDF p574–582)",
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch41 Graft Failure (PDF p378–385)"
+  ]
+ },
+ {
+  "id": "108-017",
+  "number": 17,
+  "stem": "Which of the following is NOT true regarding the donor-recipient HLA histocompatibility?",
+  "options": {
+   "A": "Increase in donor-recipient HLA disparity in HLA-A, HLA-B, HLA-C or HLA-DRB1 is associated with poorer outcome after unrelated HSCT",
+   "B": "Outcomes after MSD and fully-matched MUD HSCT are generally comparable",
+   "C": "There is an increasing evidence supporting the relevance of DPB1 matching",
+   "D": "Nonpermissive mismatches in DPB1 are associated with better outcome compared to full matches or permissive mismatches."
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "HLA 配對",
+   "DPB1 permissive",
+   "HLA mismatch",
+   "MUD",
+   "MSD"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "108-018",
+  "number": 18,
+  "stem": "The following statements about donor selection in unrelated transplant setting are correct EXCEPT ?",
+  "options": {
+   "A": "Expanding unrelated donor search to other Asian countries once a full HLA-matched unrelated donor cannot be identified in Taiwan",
+   "B": "HLA-A, B, & DR loci are already adequate in HLA typing and HLA-C locus is not important",
+   "C": "Major mismatch in ABO blood type carries potential risk of poor erythroid lineage engraftment",
+   "D": "Pair of female donor to male recipient still carries more risk of acute GVHD."
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "MUD",
+   "HLA 配對",
+   "ABO 不合",
+   "捐贈者年齡/性別",
+   "台灣本土",
+   "GVHD 風險因子"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch24 Transfusion Support (PDF p227–234)"
+  ]
+ },
+ {
+  "id": "108-019",
+  "number": 19,
+  "stem": "Which of the following statements about HSCT is wrong for patients with mantle cell lymphoma (MCL)?",
+  "options": {
+   "A": "The benefit of high-dose cytarabine for young and fit, newly diagnosed MCL patients is proved in prospective clinical trials.",
+   "B": "Auto-PBSC consolidation is superior to inferferon maintenance after primary chemotherapy.",
+   "C": "Rituximab maintenance after auto-PBSC improves progression-free survival (PFS) but not overall survival (OS) in phase III LyMa trial.",
+   "D": "A second auto-HSCT is not better than allo-HSCT for patients failing a first auto-PBSC."
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "MCL",
+   "Rituximab 維持",
+   "二次移植",
+   "維持治療"
+  ],
+  "ebmt_chapters": [
+   "Ch87 Mantle Cell Lymphoma (PDF p767–770)"
+  ]
+ },
+ {
+  "id": "108-020",
+  "number": 20,
+  "stem": "Which statement about HSCT for patients with follicular lymphoma is wrong?",
+  "options": {
+   "A": "Auto-HSCT should not be used in first response",
+   "B": "A MAC (myeloablative conditioning) regimen offers better outcomes than a RIC (reduced-intensity) regimen in patients with follicular lymphoma who undergoes auto-HSCT",
+   "C": "Auto-HSCT achieves a 5-year PFS of approximately 50%.",
+   "D": "The superiority of either auto-HSCT or allo-HSCT as not been established.",
+   "E": "Auto-HSCT may cure some patients and is associated with lower toxicity compared to allo-HSCT."
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "FL",
+   "MAC",
+   "RIC",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch84 Indolent Lymphoma (PDF p746–752)"
+  ]
+ }
+]

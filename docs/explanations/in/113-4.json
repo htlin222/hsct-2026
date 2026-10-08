@@ -1,0 +1,238 @@
+[
+ {
+  "id": "113-031",
+  "number": 31,
+  "stem": "For a 25-year old man with severe aplastic anemia had disease relapse 8 months after immunosuppressive therapy (IST) using rabbit ATG + Cyclosporine. The patient does not have HLA-matched sibling donor but have a 10/10 matched unrelated donor (MUD). Which of the following is the treatment of choice for his condition?",
+  "options": {
+   "A": "Repeat IST with Horse ATG + Cyclosporin",
+   "B": "Repeat IST with Eltrombopag + horse ATG + Cyclosporin",
+   "C": "Romiplostim monotherapy",
+   "D": "Allogenec hematopoietic stem cell transplant using MUD"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "SAA",
+   "IST",
+   "MUD",
+   "Eltrombopag",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "113-032",
+  "number": 32,
+  "stem": "Which of the following statement about severe aplastic anemia(SAA) is wrong?",
+  "options": {
+   "A": "Incidences of relapse and clonal evolution of SAA patient treated with immunosuppressive therapy(IST) plus Eltrombopag were similar to historical experience with IST alone.",
+   "B": "The SAA patients receive early bone marrow HCT with conditioning regimen of ATG plus Cyclophosphamide, and GVHD prophylaxis combining Cyclosporine and MTX have a high risk of secondary malignancy.",
+   "C": "Adding Eltrombopag to IST for SAA patients increases the overall response rate.",
+   "D": "Adding Eltrombopag to IST for SAA patients increases transfusion independency and provides similar safety."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "SAA",
+   "Eltrombopag",
+   "IST",
+   "次發腫瘤"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)"
+  ]
+ },
+ {
+  "id": "113-033",
+  "number": 33,
+  "stem": "Which of the following statements for paroxysmal nocturnal hemoglobinuria is wrong?",
+  "options": {
+   "A": "Eculizumab has proven to be effective in inhibiting intravascular hemolysis of PNH, leading to hemoglobin stabilization and transfusion independency in about half of patients.",
+   "B": "Ravulizumab was shown to be non-inferior to Eculizumab in terms of LDH normalization, transfusion avoidance, breakthrough hemolysis, hemoglobin stabilization and patient-reported outcome.",
+   "C": "In adult PNH patients with baseline hemoglobin < 10.5 g/dl after 3-month Eculizumab treatment and receiving 4-week Pegcetacoplan plus Eculizumab, subsequent Pegacetacoplan monotherapy was superior to Eculizumab monotherapy in terms of hemoglobin change from baseline.",
+   "D": "Eculizumab treatment has no improvement of overall survival in PNH patients"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "PNH",
+   "SAA",
+   "IST"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)"
+  ]
+ },
+ {
+  "id": "113-034",
+  "number": 34,
+  "stem": "Which of the following statements in regarding to transplantation for myelofibrosis is wrong?",
+  "options": {
+   "A": "Allogeneic HSCT remains the treatment of choice for patients with advanced stage myelofibrosis.",
+   "B": "For patients younger than 60 years ago, allogeneic transplantation is also recommended for patients with low-risk disease (IPSS/DIPSS low/Int-1)",
+   "C": "The transplant outcome after RIC is comparable to MAC.",
+   "D": "Spleen irradiation is feasible before transplantation."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "MF",
+   "RIC",
+   "MAC",
+   "脾臟處理",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)",
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "113-035",
+  "number": 35,
+  "stem": "Which of the following indication of transplantation for CML is wrong?",
+  "options": {
+   "A": "After 3rd generation TKI + chemotherapy for CML in blast crisis",
+   "B": "Patient intolerance to all the TKI (severe neutropenia for example)",
+   "C": "Patient progresses to accelerating phase and has T315I mutation",
+   "D": "Patient failed to achieve MMR after two kinds of 2nd generation TKI (Nilotinib and Dasatinib)"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "CML",
+   "Ph+ ALL",
+   "TKI 維持",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)",
+   "Ch11 Evaluation and Counseling of Candidates (PDF p131–142)"
+  ]
+ },
+ {
+  "id": "113-036",
+  "number": 36,
+  "stem": "Which of the following statement about HSCT for acute lymphoblastic leukemia (ALL) is wrong?",
+  "options": {
+   "A": "Fractionated total body irradiation (TBI) in combination with cyclophosphamide as the conditioning therapy is only recommended in patients with ALL younger than 45 years of age, not in those elder than 45.",
+   "B": "For patients with Ph+ ALL, maintenance with the tyrosine kinase inhibitor after allo-HSCT should be applied as a prophylactic or preemptive therapy.",
+   "C": "For haplo-HSCT, using T cell replete allografts combined with post-transplant cyclophosphamide is an established option for patients with ALL.",
+   "D": "Auto-HSCT is optional for patients with MRD-negative high-risk ALL, not eligible for allo-HSCT.",
+   "E": "Before the advent of CAR-T therapy, allo-HSCT is the only potentially curative treatment option for adults with relapsed or refractory (R/R) B-cell ALL."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "ALL",
+   "Ph+ ALL",
+   "TBI",
+   "TKI 維持",
+   "PTCy",
+   "MRD",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)",
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ },
+ {
+  "id": "113-037",
+  "number": 37,
+  "stem": "Which of the following statements about cGVHD is correct?\n(1) Regular evaluations of pulmonary function test are required in asymptomatic patients.\n(2) No skin biopsy is needed if patients present diagnostic skin features of NIH-defined cGVHD\n(3) CMV gastroenteritis should not be regarded as intestinal cGVHD..\n(4) The pathophysiology of cGVHD is the same as aGVHD.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "cGVHD 診斷",
+   "CMV",
+   "GVHD 機轉",
+   "aGVHD 診斷"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)",
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)"
+  ]
+ },
+ {
+  "id": "113-038",
+  "number": 38,
+  "stem": "Please choose the correct statement(s) regarding haploidentical HSCT with post-transplant cyclophosphamide (PTCy):\n(1) PTCy eliminates alloreactive T cells from donor and host origin in the early post-transplant period.\n(2) PTCy enhances the function of regulatory T cells (Treg).\n(3) PTCy is usually administrated on day+3 and +4 after alloHSCT.\n(4) The mechanism of PTCy-associated cardiotoxicity is coronary arterial disease.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "PTCy",
+   "Haplo",
+   "Treg",
+   "心臟毒性"
+  ],
+  "ebmt_chapters": [
+   "Ch65 Haploidentical HCT (PDF p574–582)",
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch55 Cardiovascular Diseases and Metabolic Syndrome (PDF p500–505)"
+  ]
+ },
+ {
+  "id": "113-039",
+  "number": 39,
+  "stem": "Regarding the HSC harvest and cryopreservation, which of the followings is correct?\n(1) Determination of cell subsets other than CD34+ cells is not routinely performed\n(2) Cryopreservation needs to be performed within 72 h, preferably < 48 h\n(3) The maximum accepted nucleated cell concentration is usually ≤ 4 × 108/mL\n(4) The final product includes 15-20% dimethyl sulfoxide (DMSO) as a cryoprotectant and 0.05-0.25 mL of ACD-A stabilizer solution per mL of transplant.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "冷凍保存",
+   "Leukapheresis",
+   "CD34 劑量"
+  ],
+  "ebmt_chapters": [
+   "Ch20 Processing, Cryopreserving, and Controlling the Quality of HSC (PDF p206–209)",
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ },
+ {
+  "id": "113-040",
+  "number": 40,
+  "stem": "Regarding SOS/VOD prophylaxis and treatment which statement are correct?\n(1) Defibrotide remains the only agent for the treatment of severe SOS/VOD and should be initiated as soon as possible in those patients,\n(2) Given that early treatment initiation is associated with a higher day +100 OS,\n(3) Regarding prophylaxis, for the pharmacologic measures, ursodeoxycholic acid administered from initiation of conditioning until day +90 after transplantation is recommended in adults.\n(4) Regarding the use of prophylactic defibrotide, a prospective randomized phase III clinical trial compared defibrotide versus best supportive care for prevention of SOS/VOD in 372 pediatric and adult patients at high risk of SOS/VOD after transplantation (NCT02851407). Significant difference was observed between defibrotide and best supportive care groups in the primary end point.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(2)(3)(4)",
+   "C": "(1)(2)(3)(4)",
+   "D": "(1)(2)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "SOS/VOD",
+   "Defibrotide",
+   "UDCA"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ }
+]

@@ -1,0 +1,224 @@
+[
+ {
+  "id": "110-011",
+  "number": 11,
+  "stem": "Which of the following is NOT described as predictive of poor mobilization or mobilization failure?",
+  "options": {
+   "A": "High number of prior treatment lines",
+   "B": "Age more than 60 years",
+   "C": "Advanced stage of underlying disease",
+   "D": "Low CD34+ cell count before apheresis",
+   "E": "All of the above are correct"
+  },
+  "answer": "E",
+  "tags": "共同",
+  "keyword_tags": [
+   "Poor mobilizer",
+   "動員",
+   "Leukapheresis"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ },
+ {
+  "id": "110-012",
+  "number": 12,
+  "stem": "Which of the following statement regarding HSC harvest and cryopreservation is NOT true?",
+  "options": {
+   "A": "Cells need to be stored in vapour phase nitrogen at a temperature of ≤ -140℃",
+   "B": "Nuclear cell viability should be > 80% after freezing and thawing",
+   "C": "Determination of cell subsets other than CD34+ is not routinely required",
+   "D": "Cryopreserved bag must be thawed and reinfused within a maximum of 10-20 min of thawing",
+   "E": "All of the above are correct"
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "冷凍保存",
+   "CD34 劑量",
+   "Leukapheresis"
+  ],
+  "ebmt_chapters": [
+   "Ch20 Processing, Cryopreserving, and Controlling the Quality of HSC (PDF p206–209)",
+   "Ch15 Bone Marrow Harvesting for HCT (PDF p173–179)"
+  ]
+ },
+ {
+  "id": "110-013",
+  "number": 13,
+  "stem": "Which of the following statements is untrue?",
+  "options": {
+   "A": "Keratoconjunctivitis sicca is a feature of chronic GVHD",
+   "B": "The most frequent cause of mortality is patients with chronic GVHD is infection",
+   "C": "The organ demonstrating the best response to ibrutinib is the liver",
+   "D": "Imatinib is effective mainly in sclerodermoid cGVHD"
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "cGVHD 診斷",
+   "cGVHD 治療",
+   "Encapsulated 細菌"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "110-014",
+  "number": 14,
+  "stem": "For severe aGvHD resistant to first-line treatment, which of following of following therapeutic modality has not been reported as salvage treatments of aGvHD?",
+  "options": {
+   "A": "Mesenchymal stromal cells (MSC).",
+   "B": "Ruxolitinib",
+   "C": "Donor fecal microbiota transplantation.",
+   "D": "All of the above have been reported as salvage treatments of aGvHD"
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "SR-aGVHD",
+   "Ruxolitinib",
+   "MSC"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch8 Biological Properties of Cells Other Than HSCs (PDF p101–105)"
+  ]
+ },
+ {
+  "id": "110-015",
+  "number": 15,
+  "stem": "Which is the most frequently involved organ of chronic GVHD?",
+  "options": {
+   "A": "Oral mucosa.",
+   "B": "Gastrointestinal tract.",
+   "C": "Skin.",
+   "D": "Eyes."
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "cGVHD 診斷",
+   "cGVHD 治療",
+   "晚期效應"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "110-016",
+  "number": 16,
+  "stem": "Which of the following description of post transplant lymphoproliferative disorders (PTLDs) after HSCT is wrong?",
+  "options": {
+   "A": "Probable EBV disease is diagnosed in case of significant lymphadenopathy, hepatosplenomegaly, or other end-organ manifestations together with high EBV-DNA-emia.",
+   "B": "The median time of PTLD after HSCT is 2~4 months",
+   "C": "Patients who receive haplo-PTCy-HSCT is a high risk group of developing PTLD",
+   "D": "EBV-CTL has a good result in the preemptive treatment of PTLD",
+   "E": "Reduction of immunosuppression (RIS) alone is not promised in the treatment of PTLD after HSCT"
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "EBV/PTLD",
+   "病毒專一T細胞",
+   "免疫抑制劑減量",
+   "Haplo",
+   "PTCy"
+  ],
+  "ebmt_chapters": [
+   "Ch45 Posttransplant Lymphoproliferative Syndromes (PDF p422–428)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "110-017",
+  "number": 17,
+  "stem": "About engraftment syndrome, which is wrong?",
+  "options": {
+   "A": "Engraftment syndrome is observed more in allogeneic HSCT than autologous HSCT",
+   "B": "Intensity of the conditioning is the risk of engraftment syndrome",
+   "C": "Engraftment syndrome has good response to steroids",
+   "D": "Fever, skin rash and pulmonary edema is the classical manifestations of engraftment syndrome"
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "植入症候群",
+   "植入",
+   "aGVHD 診斷"
+  ],
+  "ebmt_chapters": [
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ },
+ {
+  "id": "110-018",
+  "number": 18,
+  "stem": "About hemorrhagic cystitis (HC), which statement is wrong?",
+  "options": {
+   "A": "BK polyomavirus infection is the common cause of early-onset HC",
+   "B": "Hyperhydration and diuresis is the first line treatment option",
+   "C": "Fluoroquinolones are not recommended in the prophylaxis of HC",
+   "D": "Cidofovir can be used in the treatment of HC"
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "出血性膀胱炎",
+   "Cyclophosphamide",
+   "Conditioning 毒性"
+  ],
+  "ebmt_chapters": [
+   "Ch51 Haemorrhagic Cystitis and Renal Dysfunction (PDF p473–477)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "110-019",
+  "number": 19,
+  "stem": "Impending relapse of leukemia after allogeneic HSCT may be revealed by the monitoring of chimerism. Which following finding is not suggestive of relapse?",
+  "options": {
+   "A": "Increasing recipient chimerism within total leukocytes",
+   "B": "Increasing donor chimerism within total leukocytes",
+   "C": "Reappearance of recipient cells displaying the immunophenotype of original leukemia",
+   "D": "Chimerism finding indicative of graft rejection."
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "Chimerism",
+   "復發",
+   "Graft failure",
+   "MRD"
+  ],
+  "ebmt_chapters": [
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)",
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)"
+  ]
+ },
+ {
+  "id": "110-020",
+  "number": 20,
+  "stem": "Early analysis of cell lineage-specific chimerism after allogeneic stem cell transplantation patient risk assessment of graft rejection. Which following leukocyte lineage is of major importance in this context.",
+  "options": {
+   "A": "B lymphocytes and plasma cells.",
+   "B": "Granulocytes and monocytes.",
+   "C": "Donor- and recipient- derived hematopoietic stem cells.",
+   "D": "T lymphocytes and natural killer cells."
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "Chimerism",
+   "Graft failure",
+   "植入"
+  ],
+  "ebmt_chapters": [
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)",
+   "Ch41 Graft Failure (PDF p378–385)"
+  ]
+ }
+]

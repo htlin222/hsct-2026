@@ -1,0 +1,229 @@
+[
+ {
+  "id": "110-021",
+  "number": 21,
+  "stem": "The following statements describe the term of “chimerism” after allogeneic HSCT. Select the CORRECT answer.",
+  "options": {
+   "A": "Although rare, some cases of hematological malignancies may have long-term survival despite persistent presence of mixed chimerism.",
+   "B": "Mixed chimerism indicates the human body has 100% hematopoietic cells of donor origin within bone marrow, mixed with cells of recipient origin at other organs.",
+   "C": "For patients of severe aplastic anemia receiving allogeneic HSCT, persistence of mixed chimerism usually indicates inevitable graft failure in the near future.",
+   "D": "Chimerism can be readily determined using short tandem repeat (STR) test based on PCR method for a single locus of genomic DNA sequence."
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "Chimerism",
+   "SAA",
+   "Graft failure",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)",
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)"
+  ]
+ },
+ {
+  "id": "110-022",
+  "number": 22,
+  "stem": "Which of the following cases is least likely to be cured after allogeneic HSCT ?",
+  "options": {
+   "A": "Primary induction failure after 2 cycles of standard 7+3 inductions.",
+   "B": "AML in 2nd remission.",
+   "C": "Early relapse after achieving CR1",
+   "D": "Relapsed AML refractory to salvage chemotherapy"
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "AML",
+   "復發",
+   "MRD"
+  ],
+  "ebmt_chapters": [
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch11 Evaluation and Counseling of Candidates (PDF p131–142)"
+  ]
+ },
+ {
+  "id": "110-023",
+  "number": 23,
+  "stem": "Select CORRECT answer from the following statements about minimal residual disease (MRD) assessment in adult ALL.",
+  "options": {
+   "A": "The commonly used techniques of MRD assessment include short-tandem repeat (STR) analysis, fusion gene transcript detection, NGS, and flow cytometry.",
+   "B": "For a young adult ALL of standard risk with significant reduction of MRD after induction and undetectable MRD after consolidation, subsequent transplantation would provide further survival benefit.",
+   "C": "When MRD assessment is not available, transplantation for a young adult in CR1 with suitable donor may provide survival benefit.",
+   "D": "For an adult ALL harboring t(9;22) with MRD being undetectable by RQ-PCR after consolidation, transplantation is generally not indicated."
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "MRD",
+   "ALL",
+   "Ph+ ALL"
+  ],
+  "ebmt_chapters": [
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)",
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)"
+  ]
+ },
+ {
+  "id": "110-024",
+  "number": 24,
+  "stem": "About transplantation in chronic myeloid leukemia (CML), which statement is wrong?",
+  "options": {
+   "A": "Donor lymphocyte infusion is an option when molecular relapse detected after transplantation",
+   "B": "Patients with persistent positive BCR-ABL 2 months post-transplantation carried higher relapse risk than those with BCR-ABL turning detectable 8 month post-transplantation",
+   "C": "For elderly patients, reduced intensity conditioning (RIC) regimen offers less toxicity but still has the graft-versus leukemia effect",
+   "D": "Although lack of definite evidence, maintaining tyrosin kinase inhibitor (TKI) use after transplantation is suggested in those who transplanted in accelerated phase"
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "CML",
+   "DLI",
+   "MRD",
+   "RIC",
+   "TKI 維持",
+   "GVL"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)",
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)",
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)"
+  ]
+ },
+ {
+  "id": "110-025",
+  "number": 25,
+  "stem": "High-dose chemotherapy with BEAM followed by autologous HSCT is the standard of care for patients with chemo-sensitive relapse diffuse large B cell lymphoma. Which of the following statements is wrong?",
+  "options": {
+   "A": "Randomized studies confirmed significant differences in terms of efficacy or toxicity with different salvage regimens prior to autologous HSCT",
+   "B": "The objective of salvage chemotherapy is to induce a complete or partial response indicating that the tumor remains chemosensitive, this having a major impact on outcome after transplantation",
+   "C": "PET negativity after salvage therapy is a surrogate marker of chemosensitivity and predicts patient outcome after autologous HSCT",
+   "D": "Allogeneic HSCT should be considered in younger patients without comorbidities especially in patients with refractory disease or early relapse"
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "DLBCL 二線",
+   "BEAM",
+   "DLBCL 預後因子"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "110-026",
+  "number": 26,
+  "stem": "Which is the most important adverse prognostic factor that impacts long-term outcome of diffuse large B cell lymphoma patients being treated with allogeneic HSCT?",
+  "options": {
+   "A": "Early relapse within 12 months of induction therapy",
+   "B": "Poor ECOG performance status",
+   "C": "Involvement of two or more extranodal sites at relapse",
+   "D": "Disease status before allogeneic HSCT",
+   "E": "Patients relapsing after autologous HSCT"
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "DLBCL 預後因子",
+   "DLBCL 二線",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "110-027",
+  "number": 27,
+  "stem": "Which one can be the infectious cause of late onset hemorrhagic cystitis in patients receiving hematopoietic stem cell transplantation, except?",
+  "options": {
+   "A": "Cytomegalovirus",
+   "B": "Adenovirus",
+   "C": "Respiratory syncytial virus",
+   "D": "BK virus/JC virus"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "出血性膀胱炎",
+   "呼吸道病毒",
+   "CMV"
+  ],
+  "ebmt_chapters": [
+   "Ch51 Haemorrhagic Cystitis and Renal Dysfunction (PDF p473–477)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "110-028",
+  "number": 28,
+  "stem": "Which of the following statements regarding EB virus viremia post HSCT was wrong?",
+  "options": {
+   "A": "Only occurred in allogeneic HSCT recipients",
+   "B": "Pre-emptive antiCD20 treatment was recommended in unrelated donor HSCT recipients with EBV viremia",
+   "C": "Patients received unrelated donor HSCT possessed high risk for development of EBV related lymphoproliferative disorder",
+   "D": "Method of EBV viremia monitoring has not well standardized yet"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "EBV/PTLD",
+   "Pre-emptive RTX",
+   "MUD"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)",
+   "Ch45 Posttransplant Lymphoproliferative Syndromes (PDF p422–428)"
+  ]
+ },
+ {
+  "id": "110-029",
+  "number": 29,
+  "stem": "Which of the following statement is wrong?",
+  "options": {
+   "A": "Patients with chronic GVHD should receive antibiotic prophylaxis targeting encapsulated organisms given for at least as long as immunosuppressive therapy is administered",
+   "B": "After HSCT, antifungal prophylaxis should be considered in patients with severe GVHD.",
+   "C": "PCP prophylaxis was indicated in allo-HSCT recipients from D+1 till D+100 or as long as immunosuppressive therapy is given (e.g., for the treatment or prevention of chronic GVHD).",
+   "D": "HSV prophylaxis was recommended from D+1 to engraftment in Allo-HSCT recipients receiving myeloablative conditioning"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "Encapsulated 細菌",
+   "抗黴菌預防",
+   "PJP 預防",
+   "HSV/VZV"
+  ],
+  "ebmt_chapters": [
+   "Ch37 Invasive Fungal Diseases (PDF p337–345)",
+   "Ch36 Bacterial Infections (PDF p328–336)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "110-030",
+  "number": 30,
+  "stem": "Which of the following statements in regarding to myelodysplastic syndrome (MDS) is INCORRECT?",
+  "options": {
+   "A": "Allogeneic HSCT remains the treatment of choice for patients with advanced stage MDS.",
+   "B": "Reduced-Intensity conditioning (RIC) regimens have extended the use of allogeneic HSCT to patients up to the age of 70 years.",
+   "C": "MDS patients who received bone marrow stem cells had a faster engraftment and a lower relapse rate compare to blood stem cells.",
+   "D": "MDS patients with intermediate 2 and higher risk will have best survival if transplantation is performed early after diagnosis."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "MDS",
+   "RIC",
+   "高齡移植",
+   "骨髓 vs 周邊血"
+  ],
+  "ebmt_chapters": [
+   "Ch74 Myelodysplastic Neoplasms/Syndromes (MDS) (PDF p660–668)",
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)"
+  ]
+ }
+]

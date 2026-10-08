@@ -1,0 +1,235 @@
+[
+ {
+  "id": "113-011",
+  "number": 11,
+  "stem": "It has always been thought that engraftment syndrome (ES) may be related to below risk factors, except?",
+  "options": {
+   "A": "Infused cellularity (higher incidence with PB)",
+   "B": "Concomitant administration of G-CSF/GM-CSF (potent endothelial toxicants),",
+   "C": "The use of DMSO (in auto-HCT or CBT)",
+   "D": "All above are related"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "植入症候群",
+   "G-CSF",
+   "骨髓 vs 周邊血",
+   "冷凍保存"
+  ],
+  "ebmt_chapters": [
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ },
+ {
+  "id": "113-012",
+  "number": 12,
+  "stem": "BKPyV viruria develops in more than 50% of allogeneic HCT, but overt hemorrhagic cystitis occurs in about 20% of patients because several patient- or transplant-related factors affect its occurrence, except?",
+  "options": {
+   "A": "The type of graft (CB and PB > BM);",
+   "B": "The type of donor (Haplo > URD > MRD);",
+   "C": "The type of conditioning regimen (MAC > RIC);",
+   "D": "The use in the conditioning regimen of ATG, CY, or BU;",
+   "E": "The occurrence of chronic GVHD grade 2–4"
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "出血性膀胱炎",
+   "Haplo",
+   "MAC",
+   "Cyclophosphamide",
+   "ATG"
+  ],
+  "ebmt_chapters": [
+   "Ch51 Haemorrhagic Cystitis and Renal Dysfunction (PDF p473–477)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "113-013",
+  "number": 13,
+  "stem": "Which of the following is the most popular conditioning regimen in autologous HCT for patients with lymphoma?",
+  "options": {
+   "A": "High dose melphalan",
+   "B": "BuCy (busulfan, cyclophosphamide)",
+   "C": "BEAM (BCNU, etoposide, cytarabine, melphalan)",
+   "D": "BeEAM (bendamustine, etoposide, cytarabine, melphalan)",
+   "E": "GBM (gemcitabine, busulfan, melphalan)"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "BEAM",
+   "MAC",
+   "DLBCL 二線"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "113-014",
+  "number": 14,
+  "stem": "Which of the descriptions about HCT is CORRECT for patients with follicular lymphoma?",
+  "options": {
+   "A": "Auto-HCT should be considered when the recurrent disease responds to the second line reinduction chemotherapy.",
+   "B": "Auto-HCT should be considered even when the recurrent disease does not respond to the second line reinduction chemotherapy.",
+   "C": "Auto-HCT should not be considered after the third line chemotherapy.",
+   "D": "Auto-HCT is not a curative procedure for patients with follicular lymphoma",
+   "E": "Auto-HCT increases the incidence of MDS/AML, but not solid malignancies, in patients with follicular lymphoma"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "FL",
+   "DLBCL 二線",
+   "次發腫瘤",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch84 Indolent Lymphoma (PDF p746–752)"
+  ]
+ },
+ {
+  "id": "113-015",
+  "number": 15,
+  "stem": "Which of the descriptions about HCT for patients with mantle cell lymphoma is TRUE?",
+  "options": {
+   "A": "Auto-HCT has contributed significantly to the improvement of prognosis of mantle cell lymphoma (MCL).",
+   "B": "The benefit of high dose cytarabine for MCL patients before auto-HCT has not been confirmed in the prospective clinical trial.",
+   "C": "The majority of MCL patients who received a second HCT underwent the tandem auto-HCT, not allo-HCT.",
+   "D": "Auto-HCT in first remission could also be considered in low-risk MCL patients.",
+   "E": "It is very likely that TP53-mutated MCL patients would benefit from high-dose chemotherapy and auto-HCT."
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "MCL",
+   "TP53",
+   "二次移植",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch87 Mantle Cell Lymphoma (PDF p767–770)"
+  ]
+ },
+ {
+  "id": "113-016",
+  "number": 16,
+  "stem": "Which one of the followings is the most relevant non-HLA donor characteristic in unrelated hematopoietic stem cell transplantation?",
+  "options": {
+   "A": "Donor age",
+   "B": "Matched patient and donor CMV serostatus",
+   "C": "Donor body weight",
+   "D": "Matched patient and donor gender",
+   "E": "ABO blood type matched donor"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "捐贈者年齡/性別",
+   "MUD",
+   "CMV 血清狀態",
+   "ABO 不合"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "113-017",
+  "number": 17,
+  "stem": "Which one of the followings is the best donor for allogeneic hematopoietic stem cell transplantation?",
+  "options": {
+   "A": "CMV seronegative donor",
+   "B": "Fully matched sibling donor",
+   "C": "Haplo-identical family donor",
+   "D": "Fully matched unrelated donor",
+   "E": "One-locus mismatched unrelated donor"
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "MSD",
+   "MUD",
+   "Haplo",
+   "HLA mismatch"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ },
+ {
+  "id": "113-018",
+  "number": 18,
+  "stem": "Which one of the following statements about hematopoietic donors is wrong?",
+  "options": {
+   "A": "Hematopoietic stem cell donors should complete a written questionnaire that has been specifically designed to elicit medical history and identify behaviors or activities that may increase the risk of infectious disease transmission.",
+   "B": "A sample of the donor’s blood must be tested within 90 days prior to donation for some infectious diseases, including HIV, HTLV, hepatitis B and C viruses.",
+   "C": "The psychological condition of the donor should be assessed and a written consent should be provided before donation.",
+   "D": "Adverse events of stem cell donation include bone pain, hypocalcemia, hypotension, syncope, and infections.",
+   "E": "Filgrastim administration may result in spontaneous splenic rupture in rare peripheral blood stem cell donors."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "捐贈者評估",
+   "G-CSF",
+   "Leukapheresis"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)",
+   "Ch15 Bone Marrow Harvesting for HCT (PDF p173–179)"
+  ]
+ },
+ {
+  "id": "113-019",
+  "number": 19,
+  "stem": "關於CAR-T(Chimeric antigen receptor T-cells) 細胞治療後的cytokine release syndrome (CRS)，下列敘述何者正確？",
+  "options": {
+   "A": "Grade 2 CRS 應優先使用dexamethasone，無效再考慮Tocilizumab",
+   "B": "在高風險large B cell lymphoma 二線治療setting，使用Liso cel 治療比Axi cel 所產生CRS 的機率低",
+   "C": "如果患者出現發燒、血壓下降、需要使用升壓劑，則定義為CRS grade 2",
+   "D": "CAR-T 治療後的發燒一定是CRS 造成，不需要使用抗生素治療"
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "CRS",
+   "CAR-T",
+   "DLBCL 二線",
+   "嗜中性球低下發燒"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "113-020",
+  "number": 20,
+  "stem": "以下關於CAR-T(Chimeric antigen receptor T-cells) 細胞治療後的感染率增加較無關？",
+  "options": {
+   "A": "Severe hypogammaglobulinaemia",
+   "B": "Prolonged neutropenia",
+   "C": "Long-term CD8 T cell lymphopenia",
+   "D": "B cell aplasia"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "CAR-T",
+   "低免疫球蛋白",
+   "免疫重建"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch36 Bacterial Infections (PDF p328–336)"
+  ]
+ }
+]

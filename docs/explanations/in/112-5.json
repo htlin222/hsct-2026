@@ -1,0 +1,238 @@
+[
+ {
+  "id": "112-041",
+  "number": 41,
+  "stem": "Which of the following statements regarding the hemorrhagic cystitis is correct?\n(1) Cidofovir can be used in the treatment of HC\n(2) Early‐onset HC occurs typically during or within 48 h after the end of conditioning regimen, and it is the result of BK polyomavirus infection\n(3) Late‐onset HC usually starts around the time of the period of neutrophil engraftment (weeks 2–4) or in second‐third month after HSCT\n(4) The unmanipulated haplo‐HSCT with PT‐CY as prophylaxis of GVHD has resulted in a decrease incidence of hemorrhagic cystitis",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "出血性膀胱炎",
+   "Cyclophosphamide",
+   "PTCy",
+   "Haplo"
+  ],
+  "ebmt_chapters": [
+   "Ch51 Haemorrhagic Cystitis and Renal Dysfunction (PDF p473–477)",
+   "Ch38 Viral Infections (PDF p346–358)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ },
+ {
+  "id": "112-042",
+  "number": 42,
+  "stem": "Currently available treatment modality for prevention of post-allo-HSCT relapse in an AML CR2 patient with high allele burden of FLT-3/ITD mutation including:\n(1) Administration of 2nd generation of FLT3 inhibitors immediately after engraftment\n(2) Administration of hypomethylation agent immediately after engraftment\n(3) Taper immunosuppressants as soon as possible\n(4) Donor leukocyte infusion in a fixed schedule",
+  "options": {
+   "A": "(1)(3)",
+   "B": "(2)(4)",
+   "C": "(1)(2)(3)",
+   "D": "(1)(2)(3)(4)"
+  },
+  "answer": "D",
+  "tags": "複選",
+  "keyword_tags": [
+   "維持治療",
+   "FLT3 抑制劑",
+   "HMA 維持",
+   "免疫抑制劑減量",
+   "DLI",
+   "FLT3-ITD"
+  ],
+  "ebmt_chapters": [
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)",
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)"
+  ]
+ },
+ {
+  "id": "112-043",
+  "number": 43,
+  "stem": "Regarding the current management of CMV infection in allo-HSCT recipients, which followings were true?\n(1) Patients with CMV pneumonitis can be treated with ganciclovir plus intravenous immunoglobulin or CMV specific immunoglobulin.\n(2) Letermovir can be used for post HSCT CMV disease prophylaxis\n(3) Standardized Real‐time PCR assay for CMV DNA is available and routinely used for CMV viremia monitoring in post transplant patients\n(4) CMV viremia can a treatment guide in HSCT recipient who developed CMV gastroenteritis.",
+  "options": {
+   "A": "(1)(3)",
+   "B": "(2)(4)",
+   "C": "(1)(2)(3)",
+   "D": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "CMV",
+   "Ganciclovir",
+   "IVIG",
+   "Letermovir"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "112-044",
+  "number": 44,
+  "stem": "Regarding minimal residual disease (MRD) monitoring for acute myeloid leukemia (AML), which statement(s) is(are) true ?\n(1) MRD after consolidation chemotherapy may has a better prognosis prediction than MRD after induction chemotherapy.\n(2) Multiparameter flow cytometry is often used for MRD measurement.\n(3) Patients with negative MRD before transplantation had lower relapse rate comparing to those with positive MRD.\n(4) As a MRD marker, TET2 offers better predicting value comparing to RUNX1‐RUNX1T1 rearrangement",
+  "options": {
+   "A": "(1)(3)",
+   "B": "(2)(4)",
+   "C": "(1)(2)(3)",
+   "D": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "MRD",
+   "AML",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)",
+   "Ch70 AML in Adults (PDF p611–625)"
+  ]
+ },
+ {
+  "id": "112-045",
+  "number": 45,
+  "stem": "Which of the following statements regarding to the autologous HSCT for follicular lymphoma is (are) correct?\n(1) Autologous HSCT could be employed in first response.\n(2) Autologous HSCT should be considered in patients with relapsed disease responding to induction therapy.\n(3) Autologous HCT achieves a 5‐year PFS of approximately 80% and may be curative in a significant portion of patients.\n(4) There is no proven role for purging strategies prior to autologous HSCT",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "FL",
+   "DLBCL 一線鞏固",
+   "復發",
+   "自體移植"
+  ],
+  "ebmt_chapters": [
+   "Ch84 Indolent Lymphoma (PDF p746–752)"
+  ]
+ },
+ {
+  "id": "112-046",
+  "number": 46,
+  "stem": "Which of the following statements of severe aplastic anemia (SAA) is (are) correct?\n(1) There is a close relationship between paroxysmal nocturnal hemoglobinuria (PNH) and acquired SAA with a concomitant diagnosis in 40% of cases.\n(2) Because SAA is generally thought to be a disease of immune dysfunction, cytogenetic abnormalities are found in less than 2% of patients with SAA.\n(3) After immunosuppressant therapy, responders still experience relapse in 20‐30%, cyclosporine dependence in 20‐30%, and clonal evolution.\n(4) The EBMT data (Bacigalupo, 2015) suggests peripheral blood (PB) stem cells a better source than bone marrow for overall survival rate after matched unrelated donor for SAA.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "SAA",
+   "PNH",
+   "IST",
+   "骨髓 vs 周邊血",
+   "MUD",
+   "次發腫瘤"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)",
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)"
+  ]
+ },
+ {
+  "id": "112-047",
+  "number": 47,
+  "stem": "有關 CAR-T (Chimeric antigen receptor T-cells) 治療後的神經學併發症 ICANS (immune effector cell-associated neurotoxicity syndrome)，下列敘述何者正確\n(1) ICE (immune effector cell encephalopathy) score 可適用於可進行溝通的成人與兒童病患的嚴重度\n(2) 若發生ICANS 病患的 ICE score為2分，病患僅曾出現短暫單側上肢的seizure，MRI 未發現cerebral edema，則依 ASTCT consensus 的 grading system為 grade 2 ICANS。\n(3) 發生時間的高峰約在CAR-T 給予後的 6-8 天，發生高峰時間略晚於CRS (cytokine releasing syndrome)\n(4) 若發生 grade 2-3 的 ICANS，首選治療為tocilizumab；治療無效時須盡速加上 dexamethasone/methylprednisolone。",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(2)",
+   "C": "(1)(3)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "ICANS",
+   "CAR-T",
+   "CRS"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)"
+  ]
+ },
+ {
+  "id": "112-048",
+  "number": 48,
+  "stem": "Which of the following statements is (are) correct about engraftment syndrome?\n(1) Intensity of the conditioning is the risk of engraftment syndrome\n(2) Use of PBSC or G‐CSF is the risk of engraftment syndrome\n(3) Fever, skin rash, pulmonary edema, and sudden increase in CRP values are the classical manifestations of engraftment syndrome\n(4) Engraftment syndrome is observed more in allogeneic HSCT than autologous HSCT",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "植入症候群",
+   "G-CSF",
+   "植入",
+   "自體移植"
+  ],
+  "ebmt_chapters": [
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ },
+ {
+  "id": "112-049",
+  "number": 49,
+  "stem": "Which of the following statements regarding the management of patients with relapsed or refractory diffuse large B cell lymphoma is (are) correct?\n(1) Salvage therapy followed by auto‐HSCT is currently considered standard of care.\n(2) The objective of salvage chemotherapy is to induce a complete or partial response indicating that the disease remain chemosensitive which may have a major impact on outcome after HSCT.\n(3) Allo‐HSCT should be considered in younger patients without comorbidities especially in patients with refractory disease or early relapse.\n(4) PET negativity after salvage therapy is a surrogate marker of chemosensitivity and predicts patient outcome after auto‐HSCT",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "DLBCL 二線",
+   "DLBCL 預後因子",
+   "HCT-CI"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "112-050",
+  "number": 50,
+  "stem": "Which of the following statement(s) regarding transplantation in acquired aplastic anemia is(are) correct?\n(1) A major advantage of BMT over standard immunosuppressive therapy is a marked reduction in the risk of relapse and the outgrowth of late clonal disorders such as MDS and PNH.\n(2) Unrelated donors and mismatched transplants have almost twice the transplant‐related mortality and risk of GVHD as matched sibling donor transplants.\n(3) The response rate of first‐line treatment with horse ATG + CSA is about 60%.\n(4) The EBMT data (Bacigalupo, 2015) suggests peripheral blood (PB) stem cells a better source than bone marrow for overall survival rate after matched unrelated donor for SAA.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "SAA",
+   "IST",
+   "MUD",
+   "MSD",
+   "骨髓 vs 周邊血",
+   "次發腫瘤"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)",
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)"
+  ]
+ }
+]

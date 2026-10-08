@@ -1,0 +1,233 @@
+[
+ {
+  "id": "112-001",
+  "number": 1,
+  "stem": "Choose a wrong one.",
+  "options": {
+   "A": "The dominant toxicities of melphalan used in transplantation are hematologic, gastrointestinal and mucosal toxicities with frequent diarrhea.",
+   "B": "Myelotoxicity is the most notable side effect of busulfan. This made it an almost ideal agent for pretransplant conditioning therapy.",
+   "C": "Cyclophosphamide produces nausea, vomiting, alopecia, and gonadal failure. Other adverse effects include nephrotoxicity, neurotoxicity, infertility, hemorrhagic cystitis, myelo‐ and immunosuppression, but not a potential for leukemogenesis.",
+   "D": "Thiotepa has a broad spectrum of non‐hematologic toxicity, including hepatic toxicity and oral and gastrointestinal mucositis, and also central nervous system and cutaneous toxicity."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "Conditioning 毒性",
+   "Cyclophosphamide",
+   "Melphalan",
+   "Busulfan",
+   "Thiotepa"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "112-002",
+  "number": 2,
+  "stem": "Which of the following statements for cellular players involved in HSCT is wrong?",
+  "options": {
+   "A": "The majority of mature T cells is characterized by the expression of the αβ TCR.",
+   "B": "Naïve T cells are more alloreactive than memory T cells.",
+   "C": "Mesenchymal stromal cells are thought to have immunomodulatory properties and trophic influence on tissue repair, especially in GVHD.",
+   "D": "The invariant natural killer T cells (iNKT) have MHC‐restricted peptide recognition and extensive TCR repertoire diversity."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "T 細胞亞群",
+   "MSC",
+   "GVHD 機轉"
+  ],
+  "ebmt_chapters": [
+   "Ch8 Biological Properties of Cells Other Than HSCs (PDF p101–105)",
+   "Ch7 Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation (PDF p91–100)"
+  ]
+ },
+ {
+  "id": "112-003",
+  "number": 3,
+  "stem": "Which of the following statements on histocompatibility testing of donors for allogeneic hematopoietic stem cell transplantation is incorrect?",
+  "options": {
+   "A": "The method allowing the identification of a serologically defined HLA antigen‐equivalent is termed low resolution.",
+   "B": "The methods that generate nucleotide sequence information allowing the precise identification of an HLA allele are termed high resolutuion.",
+   "C": "High resolution molecular typing has replaced low resolution serotyping.",
+   "D": "Formal high resolution molecular typing for donor selection includes HLA‐A, HLA‐B, HLA‐C, HLA‐DRA and HLA‐DQA loci."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "HLA 分型",
+   "HLA 配對",
+   "HLA/MHC 基礎"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "112-004",
+  "number": 4,
+  "stem": "Which of the following statements regarding the comparison of donor cell sources is incorrect?",
+  "options": {
+   "A": "There is increased risk of chronic GVHD after transplantation with PBSC than with BM.",
+   "B": "There is increased risk of treatment‐related mortality (TRM) after transplantation with BM than with PBSC.",
+   "C": "There is no difference in terms of graft‐versus‐leukemia (GVL) effect between transplantation with PBSC and BM in pediatric patients.",
+   "D": "The overall survival is similar between transplantation with BM and PBSC.",
+   "E": "There is no survival benefit of transplantation with double unit cord blood than single unit cord blood in pediatric patients with malignant diseases."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "骨髓 vs 周邊血",
+   "臍帶血",
+   "兒童移植",
+   "GVHD 風險因子"
+  ],
+  "ebmt_chapters": [
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)",
+   "Ch64 Role of Umbilical Cord Blood Transplantation (PDF p568–573)"
+  ]
+ },
+ {
+  "id": "112-005",
+  "number": 5,
+  "stem": "Which of the following statements of non-HLA factors in selection of unrelated donor to hematologic malignant disease is thought to be most relevant?",
+  "options": {
+   "A": "CMV serostatus of CMV‐IgG positive donor to CMV‐IgG negative recipient",
+   "B": "Selection of younger donor (young age) is better.",
+   "C": "ABO mismatch with A+ type donor to B+ type recipient",
+   "D": "Gender mismatch with female donor to male recipient",
+   "E": "All of the above are equally weighted."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "捐贈者年齡/性別",
+   "MUD",
+   "CMV 血清狀態",
+   "ABO 不合"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ },
+ {
+  "id": "112-006",
+  "number": 6,
+  "stem": "Which of the following statement about human leukocyte antigen (HLA) and major histocompatibility complex (MHC) is incorrect?",
+  "options": {
+   "A": "The HLA gene is located on the short arm of chromosome 9.",
+   "B": "MHC class I antigens are present in all nucleated cells.",
+   "C": "MHC class II antigens are generally restricted to cells of the immune system.",
+   "D": "Transplantation with stem cells from HLA‐matched sibling donor usually with less GVHD which may translate into less rate of morbidity and mortality.",
+   "E": "The chance of HLA‐identical between both siblings is 25%."
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "HLA/MHC 基礎",
+   "MSD",
+   "HLA 配對"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "112-007",
+  "number": 7,
+  "stem": "Which of the following is the reduced intensity conditioning regimen during hematopoietic stem cell transplant?",
+  "options": {
+   "A": "Cyclophosphamide 200 mg/kg + ATG 4.5~6.0 mg/kg",
+   "B": "Fludarabine 150 mg/m2 + melphalan 180 mg/m2",
+   "C": "Cyclophosphamide 120 mg/kg + TBI 8 Gy",
+   "D": "Cyclophosphamide 120 mg/kg + Busulfex 12.8 mg/kg",
+   "E": "Fludarabine 150 mg/m2 + Busulfex 9.6 mg/kg"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "RIC",
+   "MAC",
+   "Conditioning 原理",
+   "Fludarabine",
+   "Busulfan"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "112-008",
+  "number": 8,
+  "stem": "What is the culprit (罪魁禍首) of cyclophosphamide induced cardiotoxicity and hemorrhagic cystitis?",
+  "options": {
+   "A": "Carboxymethylphosphamide mustard for the former and phosphoramide mustard for the latter",
+   "B": "Aldocyclophosphamide for the former and 4‐hydroxy‐cyclophosphamide for the latter",
+   "C": "4‐hydroxy‐cyclophosphamide for the former and aldocyclophosphamide for the latter",
+   "D": "Acrolein for both",
+   "E": "Cyclophosphamide itself for both"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "Cyclophosphamide",
+   "心臟毒性",
+   "出血性膀胱炎",
+   "Conditioning 毒性"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch51 Haemorrhagic Cystitis and Renal Dysfunction (PDF p473–477)",
+   "Ch55 Cardiovascular Diseases and Metabolic Syndrome (PDF p500–505)"
+  ]
+ },
+ {
+  "id": "112-009",
+  "number": 9,
+  "stem": "Which of the following statements regarding the purposes of conditioning therapy prior to the infusion of stem cell grafts is incorrect?",
+  "options": {
+   "A": "To eradicate the hematologic malignancy in case of malignant indication for HSCT.",
+   "B": "To provide sufficient immunosuppression to ensure engraftment and to prevent both rejection and GVHD.",
+   "C": "To provide stem cell niches in the host BM for the new stem cells.",
+   "D": "Myelo‐depletion is the prerequisite to ensure the engraftment of infused stem cells."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "Conditioning 原理",
+   "RIC",
+   "HSC 歸巢"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch7 Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation (PDF p91–100)"
+  ]
+ },
+ {
+  "id": "112-010",
+  "number": 10,
+  "stem": "Which of the following statements about risk factors for poor mobilization is incorrect ?",
+  "options": {
+   "A": "High number of prior treatment lines",
+   "B": "Age more than 50 years",
+   "C": "Advanced stage of underlying disease",
+   "D": "Low CD34+ cell count before apheresis",
+   "E": "All of the above"
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "Poor mobilizer",
+   "動員",
+   "Leukapheresis"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ }
+]

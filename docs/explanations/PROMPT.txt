@@ -1,0 +1,16 @@
+你是造血幹細胞移植專科醫師兼考試講師。幫 10 題台灣「血液及骨髓移植專科醫師筆試」考古題各寫一份結構化詳解。請用繁體中文。
+
+## 輸入(只讀)
+- 格式規格 v2(**嚴格遵守:標題階層為主,清單只在標題不夠用時;六個 `##` 區段標題一字不差**):`/private/tmp/claude-501/-Users-htlin-hema-2026/92d4e88b-0a03-45b7-8aa9-dd5a6db33ef1/scratchpad/expl/FORMAT.md` —— 先完整讀它。
+- 題目:`/private/tmp/claude-501/-Users-htlin-hema-2026/92d4e88b-0a03-45b7-8aa9-dd5a6db33ef1/scratchpad/expl/in/BATCH.json`(每題 id / number / stem / options / answer / keyword_tags / ebmt_chapters(含 PDF 頁碼範圍)/ 114 年另有 answer_note)
+- 舊版草稿(若存在):`/private/tmp/claude-501/-Users-htlin-hema-2026/92d4e88b-0a03-45b7-8aa9-dd5a6db33ef1/scratchpad/expl/out-v1/BATCH.json` —— 裡面的事實、數字與已查證的頁碼可以直接沿用,但**結構必須照 v2 規格整個重寫**(舊版是清單堆疊,新版是標題階層)。沒有這個檔就從頭寫。
+- EBMT Handbook 全文:`/private/tmp/claude-501/-Users-htlin-hema-2026/92d4e88b-0a03-45b7-8aa9-dd5a6db33ef1/scratchpad/ebmt/ebmt-pages.txt`(每頁 `===== PDF PAGE N =====`;`grep -n -i -C3` 找,`sed -n` 讀該頁)。每題至少 grep 一次手冊,第 6 段的頁碼要真的查到;數字不確定就標「文獻不一致」。
+
+## 輸出(嚴格)
+`/private/tmp/claude-501/-Users-htlin-hema-2026/92d4e88b-0a03-45b7-8aa9-dd5a6db33ef1/scratchpad/expl/out/BATCH.json`:JSON 陣列,每題 `{"number": <int>, "explanation_md": "<markdown>"}`。
+- 寫完用 python3 驗證每一份:10 筆、number 與輸入一致;恰好一個 `# ` 標題、六個 `## N.` 標題;`### ` 至少 10 個;`- ` 清單行數 ≤ 標題行數(標題才是主結構);沒有 `>` 開頭的行;中文字數 350–1000;至少 4 份有 pipe table。
+- 每寫完一題就把目前的陣列整份寫回檔案。
+- ⚠️ 同目錄有其他 agent 同時在跑:**輔助腳本與草稿一律用帶批次名的唯一檔名**(例如 `helper_BATCH.py`、`drafts/BATCH/`)。
+- 若 Write 工具因檔案太大被擋,改用 shell heredoc 分段寫。
+
+回報:每題一行(題號 / 主題 / `###` 數 / 有沒有表格 / 第 6 段引用的章與頁),以及高頻考點數字最沒把握的題。

@@ -1,0 +1,247 @@
+[
+ {
+  "id": "108-041",
+  "number": 41,
+  "stem": "Choose the correct statement(s) about donor selection and the association with outcomes following HSCT:\n(1) For patients with hematological malignancies, HSCT from fully HLA-MUD (8/8 or 10/10) is not inferior to HSCT from HLA-identical siblings in terms of EFS\n(2) For pediatric patients and patients with nonmalignant disorders, BM is the preferred stem cell source\n(3) For adult patients with hematological malignancies, survival outcome after HSCT with PBSC and BM is comparable\n(4) In URD transplantation, donor age is probably the most relevant non-HLA donor factor",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "MUD",
+   "MSD",
+   "骨髓 vs 周邊血",
+   "捐贈者年齡/性別",
+   "兒童移植",
+   "HLA 配對"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)"
+  ]
+ },
+ {
+  "id": "108-042",
+  "number": 42,
+  "stem": "Which of the following statements of diffuse large B-cell lymphoma is (are) correct?\n(1) Patients with primary involvement of testicles must receive chemotherapy penetrating into the CNS.\n(2) High dose chemotherapy followed by auto-HSCT is better than conventional chemotherapy for newly diagnosed patients with IPI (International Prognostic Index) score 5.\n(3) Randomized trials fail to show significant difference in terms of efficacy or toxicity with different salvage regimens\n(4) Rituximab maintenance after auto-HSCT can improve the outcome for DLBCL.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "CNS 淋巴瘤",
+   "DLBCL 一線鞏固",
+   "DLBCL 二線",
+   "Rituximab 維持"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "108-043",
+  "number": 43,
+  "stem": "BEAM (carmustine, etoposide, cytarabine, melphalan) is the most frequently used high-dose chemotherapy regimen for patients with lymphoma referred for auto-HSCT. Recently, a new condition protocol containing Bendamustine instead of carmustine (BeEAM) has been proposed to safely used in lymphoma undergoing auto-HSCT in some retrospective studies. Which of the following description are correct:\n(1) No differences in terms of neutrophil and platelet engraftment between these two regimens.\n(2) Pulmonary toxicity may be of concern in the context of BeEAM auto-HSCT, resulting from incorporation of bendamusine.\n(3) Slightly more frequent incidence of hypokalemia and hypertension in the BeEAM group compared to the BEAM group.\n(4) The rate of early TRM was significantly higher for patients treated with BEAM than BeEAM.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "BEAM",
+   "Conditioning 毒性",
+   "植入"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)",
+   "Ch89 Classical Hodgkin’s Lymphoma (PDF p778–787)"
+  ]
+ },
+ {
+  "id": "108-044",
+  "number": 44,
+  "stem": "If the patient had diarrhea developed 40 days after HSCT w/ absolute neutrophil counts around 1200/uL, which of the following statements is correct？\n(1) CMV colitis should be considered. The definite diagnosis require biopsy. Decoy cells is characteristic pathologic finding.\n(2) Acute graft-versus-host disease is a possible cause. Classical manifestation is acute-onset watery diarrhea with volume sometimes in excess of 2L daily in severe case\n(3) C. difficile–associated diarrhea(CDAD) is usually relative mild. Inappropriate use of proton-pump inhibitors is a risk factor for CDAD\n(4) Serum CMV viral load titer often correlate well with the severity of CMV colitis\n(5) If the intestinal biopsy showed granulomatous mucosal involvement, disseminated aspergillus infection or tuberculosis infection should be considered.",
+  "options": {
+   "A": "(1)(2)(3)(4)(5)",
+   "B": "(2)(3)(4)(5)",
+   "C": "(1)(2)(3)(5)",
+   "D": "(2)(3)(5)",
+   "E": "(2)(3)"
+  },
+  "answer": "D",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "aGVHD 診斷",
+   "CMV",
+   "嗜中性球低下發燒",
+   "黴菌感染"
+  ],
+  "ebmt_chapters": [
+   "Ch50 Gastrointestinal Complications (PDF p467–472)",
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "108-045",
+  "number": 45,
+  "stem": "Which of the following are risk factors for relapse after allogeneic transplantation for AML/MDS?\n(1) Gender donor-recipient combination other than female to male\n(2) Donors with predicted natural killer cell alloreactivity or expressing certain activating killer immunoglobulin-like receptor (KIR) genes.\n(3) Non-myeloablative or reduced intensity preparative regimens.\n(4) Double allelles of CEBPA mutation.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "復發",
+   "AML",
+   "MDS",
+   "KIR/NK",
+   "RIC",
+   "捐贈者年齡/性別"
+  ],
+  "ebmt_chapters": [
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "108-046",
+  "number": 46,
+  "stem": "In the context of reduced intensity conditioning (RIC) for AML prior to allo-HSCT, which one of the following is incorrect?\n(1) NRM incidence ranges from 40 to70%\n(2) Risk of both acute and chronic GVHD is much lower in RIC allogeneic HSCT\n(3) Relapse incidence is lower than after standard myeloablative Conditioning\n(4) Relapse after transplant is the most frequent cause of death",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "RIC",
+   "AML",
+   "復發",
+   "MAC",
+   "GVHD 風險因子"
+  ],
+  "ebmt_chapters": [
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "108-047",
+  "number": 47,
+  "stem": "Which of the following drugs could be selected to prevent graft-versus-host disease post-hematopoietic cell transplantation？\n(1) cyclosporine\n(2) ethylprednisolone\n(3) ethotreaxate\n(4) interferon-α",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "GVHD 預防",
+   "CNI",
+   "MTX"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)"
+  ]
+ },
+ {
+  "id": "108-048",
+  "number": 48,
+  "stem": "For a 45 year-old, IST-failed SAA patient with no HLA-matched sibling, what should we do to minimize the complication of salvage allogeneic HSCT with unrelated/haploidentical donor?\n(1) Consider bone marrow-sourced stem cells instead of peripheral blood stem Cells\n(2) Avoid ATG for GVHD prophylaxis\n(3) No standard conditioning regimen for older patient without matched sibling donor, but the conditioning regimen generally includes the combination of Cyclophosphamide, Fludarabine, TBI to minimize graft failure.\n(4) Upfront haploidentical HSCT is better than matched unrelated donor as Stem cell source.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "SAA",
+   "骨髓 vs 周邊血",
+   "ATG",
+   "Haplo",
+   "MUD",
+   "Graft failure"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)",
+   "Ch65 Haploidentical HCT (PDF p574–582)",
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)"
+  ]
+ },
+ {
+  "id": "108-049",
+  "number": 49,
+  "stem": "Based on currently available clinical data up. The following statements describe potential benefit from allogeneic HCT in each scenario. Please select the CORRECT answer.\n(1) In metastatic renal cell carcinoma, RIC conditioning demonstrates response in around one third of patients, including some with complete response and several cases with durable long-term remission.\n(2) For metastatic melanoma, the response rate is low (around 10-20%) and nearly all of the responses were not durable, with disease progression occurring within 1–3 months in all responders and high risk of rapid progression immediately after HCT.\n(3) In breast cancer, clear evidence of benefits in disease progression and overall survival has not been demonstrated.\n(4) For germ cell tumor, high response rate (>30%) was observed in relapsed and refractory case with durable remission in around 20% of the responder.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "實體腫瘤",
+   "RIC",
+   "GVL",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch94 Solid Tumours (PDF p827–840)"
+  ]
+ },
+ {
+  "id": "108-050",
+  "number": 50,
+  "stem": "Which of the following statements are true?\n(1) Patients with CMV infections may be asymptomatic, but those with viremia are at high risk of developing CMV pneumonitis or gastroenteritis.\n(2) Patients with CMV pneumonitis should be treated with ganciclovir plus intravenous immunoglobulin or CMV specific immunoglobulin.\n(3) Letmovir can be used for post HSCT CMV disease propylacxis\n(4) Foscarnet can be considered as alternative therapy for CMV disease when patient developed cytopenia after ganciclovir therapy.",
+  "options": {
+   "A": "(1)(2)",
+   "B": "(1)(4)",
+   "C": "(2)(4)",
+   "D": "(1)(2)(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "CMV",
+   "Ganciclovir",
+   "IVIG",
+   "Letermovir"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ }
+]

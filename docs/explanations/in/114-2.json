@@ -1,0 +1,242 @@
+[
+ {
+  "id": "114-011",
+  "number": 11,
+  "stem": "關於急性移植物抗宿主病 (aGvHD) 的致病機制，以下哪項是「效應期 (effector phase)」的特徵？",
+  "options": {
+   "A": "宿主抗原呈遞細胞(APC)的活化",
+   "B": "供者T 細胞的激活與增殖",
+   "C": "細胞毒性T 細胞導致的組織損傷",
+   "D": "初始組織損傷來自於conditioning therapy"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "GVHD 機轉",
+   "aGVHD 診斷",
+   "T 細胞亞群"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:手冊把 aGvHD 致病機制分成三期:(1) conditioning 造成初始組織損傷 → 宿主 APC 被 PAMPs/DAMPs 活化(選項 A、D 屬此期);(2) 供者 T 細胞活化與增殖(afferent phase,選項 B);(3) effector phase:細胞毒性細胞造成組織損傷並釋放 IL-1、TNF-α 導致組織壞死(efferent phase)。只有 C 是效應期的特徵。"
+ },
+ {
+  "id": "114-012",
+  "number": 12,
+  "stem": "根據急性GVHD 的當前分類，以下哪種情況符合整體臨床Grade III 急性GVHD？",
+  "options": {
+   "A": "僅有1 期皮膚疹而無其他器官受影響",
+   "B": "2 期皮膚疹合併1 期肝臟aGVHD",
+   "C": "3 期肝臟aGVHD 合併1 期上消化道aGVHD",
+   "D": "4 期皮膚aGVHD 而無其他器官受影響"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "aGVHD 分級",
+   "aGVHD 診斷",
+   "GVHD 機轉"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:依 Harris 2016 / MAGIC 整體分級:Grade I = stage 1–2 皮膚且無肝/GI;Grade II = stage 3 皮膚和/或 stage 1 肝和/或 stage 1 上/下 GI;Grade III = stage 2–3 肝和/或 stage 2–3 下 GI(皮膚 stage 0–3、上 GI stage 0–1);Grade IV = stage 4 皮膚、肝或下 GI。A 為 Grade I;B(stage 2 皮膚 + stage 1 肝)為 Grade II;C(stage 3 肝 + stage 1 上 GI)正好落在 Grade III;D(stage 4 皮膚)是 Grade IV。"
+ },
+ {
+  "id": "114-013",
+  "number": 13,
+  "stem": "以下哪項在慢性移植物抗宿主病 (cGVHD) 的支持性治療中，被證實能夠降低肝臟 GVHD 並改善生存率？",
+  "options": {
+   "A": "靜脈注射免疫球蛋白 (IVIG)",
+   "B": "Ursodeoxycholic acid",
+   "C": "定期施打活性疫苗 (Live vaccines)",
+   "D": "早期停用免疫抑制劑"
+  },
+  "answer": "B",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "cGVHD 治療",
+   "UDCA",
+   "IVIG",
+   "免疫抑制劑減量"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)",
+   "Ch49 Hepatic Complications (PDF p449–466)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:手冊 cGVHD 支持性治療段落明寫:Ursodeoxycholic acid 可降低肝臟 GVHD 並改善存活(Ruutu et al. 2014 隨機試驗長期追蹤)。IVIG 只建議用於 IgG <400 mg/dL 或反覆感染者(補充性,非改善存活);活性疫苗在 cGVHD 病人應避免;cGVHD 常需 3–6 個月以上的長期免疫抑制,早期停藥不是支持性治療。"
+ },
+ {
+  "id": "114-014",
+  "number": 14,
+  "stem": "Which of the following statements about engraftment syndrome (ES) is INCORRECT?",
+  "options": {
+   "A": "Delay in treatment can lead to multiple organ failure.",
+   "B": "Treatment of ES includes to stop G-CSF immediately.",
+   "C": "ES could be observed after auto-HCT and after allo-HCT.",
+   "D": "If ES is suspected after allo-HCT, it is advisable to use the Spitzer`s diagnostic criteria.",
+   "E": "Skin rash >25% body surface is one of the major criteria in Maiolino`s diagnostic criteria"
+  },
+  "answer": "E",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "植入症候群",
+   "植入",
+   "G-CSF",
+   "aGVHD 診斷"
+  ],
+  "ebmt_chapters": [
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:依手冊 ES 三套診斷標準比較表:Maiolino (2003) 需 1 Major + 1 minor,其 Major 只有 noninfectious fever;skin rash >25% BSA 在 Maiolino 是 **minor**(在 Spitzer 與 Grant 才是 Major),故 E 錯。其餘皆正確:治療第一步「Stop G-CSF immediately」(B);延遲治療可導致 MOF(A);ES 可見於 auto 與 allo-HCT(發生率 7–59% vs 10–25%)(C);allo-HCT 懷疑 ES 時建議用較嚴格的 Spitzer 標準以免與早期 aGVHD 混淆(D)。"
+ },
+ {
+  "id": "114-015",
+  "number": 15,
+  "stem": "The clinical diagnostic criteria for venous occlusive disease (VOD) in adult include hyperbilirubinemia and two of the following criteria EXCEPT.",
+  "options": {
+   "A": "Painful hepatomegaly",
+   "B": "Weight gain greater than 5%",
+   "C": "Ultrasound suggestive of VOD.",
+   "D": "Ascites"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "SOS/VOD",
+   "Conditioning 毒性",
+   "Defibrotide"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:成人 EBMT 標準 (Mohty 2016/2023) 的 **clinical SOS/VOD** = bilirubin ≥2 mg/dL + 以下三項中兩項:painful hepatomegaly、weight gain >5%、ascites。超音波/彈性成像只出現在新加的 **probable** 類別(五項中任兩項)與 late-onset 的佐證,不在 clinical 標準的三項裡,故 C 是例外。"
+ },
+ {
+  "id": "114-016",
+  "number": 16,
+  "stem": "Which of the following statements about the endocrine dysfunction in male after HCT is INCORRECT ?",
+  "options": {
+   "A": "Patient`s spermatogenesis is frequently impaired following chemoradiotherapy, but testosterone levels generally remain normal.",
+   "B": "Following HCT conditioned with myeloablative dose of TBI, the majority of male will be azoospermic.",
+   "C": "Following cyclophosphamide conditioning approiximately 50% will be azoospermic, while after busulfan alone recovery of spermatogenesis is more frequent.",
+   "D": "Sexual dysfunction complication affects recipients of both allogeneic and autologous transplants",
+   "E": "Sexual dysfunction is one of the most frequently reported complication"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "晚期效應",
+   "Conditioning 毒性",
+   "TBI",
+   "Cyclophosphamide",
+   "Busulfan"
+  ],
+  "ebmt_chapters": [
+   "Ch56 Endocrine Disorders, Fertility, and Sexual Health (PDF p506–515)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:手冊原文:「Following BU, approximately 50% will be azoospermic, while after CY alone recovery of spermatogenesis is more frequent」—— 選項 C 把 busulfan 與 cyclophosphamide 對調,故為 INCORRECT。A(精子生成常受損但 testosterone 因 Leydig cell 相對抗藥而多正常)、B(MAC TBI 後多數男性無精症)、D(性功能障礙 allo 與 auto 都會)、E(性功能障礙是最常被回報的併發症之一)皆為手冊原句。"
+ },
+ {
+  "id": "114-017",
+  "number": 17,
+  "stem": "What is the least sensitive monitoring of residual or relapsed disease in acute lymphoblastic leukemia or myeloid leukemia?",
+  "options": {
+   "A": "Donor chimerism for AML/ALL",
+   "B": "IG/TCR real-time PCR for ALL",
+   "C": "Immune flow cytometry",
+   "D": "Next-generation sequencing (NGS)",
+   "E": "Real-time quantitative PCR for specific chimeric fusion genes"
+  },
+  "answer": "A",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "MRD",
+   "Chimerism",
+   "復發",
+   "AML",
+   "ALL"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)",
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:STR-PCR 嵌合體分析的偵測極限約 1–5%(10⁻²),手冊明寫需改用 qPCR/dPCR/NGS 才能把敏感度推到 STR 極限以下(microchimerism);而且 chimerism 量的是供/受者細胞比例,不是白血病細胞,是最不敏感的殘留病監測。相較之下 MFC 的穩定偵測極限 1E-04、IG/TCR qPCR 約 10⁻⁴–10⁻⁵、fusion gene RT-qPCR 可達 1E-06、NGS 約 10⁻⁶。"
+ },
+ {
+  "id": "114-018",
+  "number": 18,
+  "stem": "For FLT3-ITD mutated AML, what is the role of prophylactic and maintenance treatment after allo-transplant?",
+  "options": {
+   "A": "Midostaurin, supported by a randomized trial in terms of survival benefit.",
+   "B": "Sorafenib, supported by two prospective randomized trials in terms of EFS and OS, respectively.",
+   "C": "Quizartinib, supported by a phase III study in terms of EFS.",
+   "D": "Gilteritinib, supported by a randomized trial in terms of RFS in allele-specific PCR MRD+ patients.",
+   "E": "There was no difference in the outcome of sorafenib plus DLI vs DLI alone in FLT3-ITD positive AML patients"
+  },
+  "answer": "B",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "FLT3 抑制劑",
+   "FLT3-ITD",
+   "維持治療",
+   "AML",
+   "DLI"
+  ],
+  "ebmt_chapters": [
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)",
+   "Ch70 AML in Adults (PDF p611–625)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:手冊:兩個前瞻隨機試驗(Burchert 2020 SORMAIN、Xuan 2020)比較 sorafenib 與安慰劑作為 allo-HCT 後維持治療,皆顯示 EFS/RFS 與 OS 顯著獲益,表 58 列為 Beneficial,故 B 正確。A 錯:midostaurin 只有 phase II 顯示低復發率,隨機試驗(Maziarz 2018)未能證明存活獲益。C 錯:quizartinib 在移植後維持仍在隨機試驗中(QuANTUM-First 是前線整體方案,非移植後維持的獨立證據)。D 錯:手冊表列 gilteritinib 維持「No benefit」(MORPHO 主要終點 RFS 未達標;MRD+ 次族群用的是 NGS-based assay,非 allele-specific PCR)。E 錯:回溯資料顯示 sorafenib + DLI 優於 DLI alone。"
+ },
+ {
+  "id": "114-019",
+  "number": 19,
+  "stem": "What maintenance therapy is proven by a phase 3 randomised trial after allogeneic hematopoietic stem cell transplantation?",
+  "options": {
+   "A": "Checkpoint inhibitors in AML and lymphoma.",
+   "B": "Oral azacitidine (CC-486) in AML.",
+   "C": "IMiDs to augment to stimulate the innate immune system and augment the graft-vs-tumor effect.",
+   "D": "Ixazomib in multiple myeloma after allo-transplant.",
+   "E": "Neither of the above."
+  },
+  "answer": "E",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "維持治療",
+   "HMA 維持",
+   "PD-1 抑制劑",
+   "AML"
+  ],
+  "ebmt_chapters": [
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)",
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ],
+  "answer_note": "AI 暫定答案(信心 medium),理由:逐項對照手冊:checkpoint inhibitors 在 allo 後只有 phase I/II(ipilimumab ORR <30%,PD-1 在 HL 有效但 GVHD 高),無 phase 3;oral azacitidine (CC-486) 手冊寫「currently investigated in prospective randomized trials」,且 Oran 2020 的 HMA 預防性隨機試驗 EFS/OS 無益(表列 Prophylactic: No benefit);IMiDs 在 allo 後「remains to be defined」因 GVHD 風險;ixazomib 在 MM allo 後是 phase II(Bashir 2023, BMT CTN 1302)且無顯著獲益。四者都沒有 phase 3 證據,故選 E。分歧點:題幹若廣義地問「任何」allo 後維持(例如 sorafenib)答案會不同,但選項裡沒有,因此 E。"
+ },
+ {
+  "id": "114-020",
+  "number": 20,
+  "stem": "Regarding neutropenic fever after HCT, which of the following statement is WRONG?",
+  "options": {
+   "A": "The initial management includes diagnostics (two sets of blood cultures including at least one set from the central venous catheter (CVC), if present, providing adequate blood volume) and the assessment of the risk of clinically severe infection and infection due to resistant bacteria.",
+   "B": "In patients with severe presentation and the risk of resistant bacteria, de-escalation approach should be used in order to cover the most probable resistant strain(s).",
+   "C": "In the absence of clinically or microbiologically documented infection, empirical antibiotic can be safely discontinued after 72 h of apyrexia and clinical recovery. But in patients does NOT recover from the neutrophils nadir, empirical antibiotics SHOULD NOT to be discontinued.",
+   "D": "In case of clinical worsening and persistence of fever, extensive diagnostic workup is mandatory."
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "嗜中性球低下發燒",
+   "植入",
+   "黴菌感染"
+  ],
+  "ebmt_chapters": [
+   "Ch35 Neutropenic Fever (PDF p321–327)",
+   "Ch36 Bacterial Infections (PDF p328–336)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:手冊 Key Points:在沒有臨床或微生物學證實感染時,經驗性抗生素可在退燒 72 小時且臨床恢復後安全停用,**irrespective of the neutrophil count**(ECIL 建議;Aguilar-Guisado 2017 隨機試驗 157 例證實);選項 C 後半段「嗜中性球未恢復就不應停藥」是傳統做法,已被 IDSA/ECIL 推翻,故 C 為 WRONG。A(兩套血培養含 CVC 一套、評估嚴重感染與抗藥菌風險)、B(嚴重表現且有抗藥菌風險者採 de-escalation 先廣後窄)、D(惡化或持續發燒必須廣泛檢查)皆為手冊原意。"
+ }
+]

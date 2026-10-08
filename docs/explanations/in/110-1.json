@@ -1,0 +1,232 @@
+[
+ {
+  "id": "110-001",
+  "number": 1,
+  "stem": "For unrelated donor HSCT, matching for 8/8 HLA A, B, C, and DRB1 alleles is very important. How much would it decrease in survival probabilities for each (antigenic or allelic) HLA mismatch at these 4 loci?",
+  "options": {
+   "A": "5%",
+   "B": "10%",
+   "C": "15%",
+   "D": "20%"
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "HLA 配對",
+   "HLA mismatch",
+   "MUD"
+  ],
+  "ebmt_chapters": [
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)",
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ },
+ {
+  "id": "110-002",
+  "number": 2,
+  "stem": "Immune repertoire reconstitution after HSCT depends on many factors. Which of the following statements is wrong?",
+  "options": {
+   "A": "Conditioning regimen influences both short-term and long-term immune reconstitution.",
+   "B": "The pharmacokinetics of ATG is highly dependent on receptor load represented by absolute lymphocyte count. Therefore, some studies adopt to dose ATC on lymphocyte count rather than body weight.",
+   "C": "Higher numbers of NKT and αβT cells in the graft have been reported to associate with favorable immune reconstitution, most likely due to their impact on controlling GVHD and acting on CMV and on leukemia.",
+   "D": "Measuring the production of cytokines, chemokines, and growth factors represents an integral part of immunomonitoring after HSCT."
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "免疫重建",
+   "ATG",
+   "T 細胞亞群"
+  ],
+  "ebmt_chapters": [
+   "Ch10 Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization (PDF p118–130)",
+   "Ch26 GVHD Prophylaxis (PDF p242–250)"
+  ]
+ },
+ {
+  "id": "110-003",
+  "number": 3,
+  "stem": "Which of the following statements on hematopoietic stem cells (HSC) is incorrect?",
+  "options": {
+   "A": "HSC belongs to multipotent stem cells",
+   "B": "HSC can be collected from bone marrow and peripheral blood in human adults for clinical uses",
+   "C": "The key molecules regulating homing of HSC is CXCL12 chemokine and its receptor CXCR4",
+   "D": "Commitment of HSC to one or several lineages of differentiated stages is irreversible and can't be converted"
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "HSC 歸巢",
+   "骨髓 vs 周邊血",
+   "Plerixafor"
+  ],
+  "ebmt_chapters": [
+   "Ch7 Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation (PDF p91–100)"
+  ]
+ },
+ {
+  "id": "110-004",
+  "number": 4,
+  "stem": "Which of the following statements on the selection of graft sources for HLA-matched and mismatched related donors is incorrect?",
+  "options": {
+   "A": "The probability of chronic GVHD is higher with use of PBSC compared to use of BM",
+   "B": "hematological recovery is more rapid and graft rejection less frequent after BM compared to PBSC",
+   "C": "BM is the preferred stem cell source for HLA-matched unrelated donors for non-malignant diseases especially aplastic anemia",
+   "D": "In matched related donor and unrelated donor HSCT, survival outcome has been similar for BM and PBSC"
+  },
+  "answer": "B",
+  "tags": "共同",
+  "keyword_tags": [
+   "骨髓 vs 周邊血",
+   "GVHD 風險因子",
+   "SAA",
+   "植入",
+   "Graft failure"
+  ],
+  "ebmt_chapters": [
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "110-005",
+  "number": 5,
+  "stem": "Which of the following is NOT true regarding the donor-recipient HLA histocompatibility?",
+  "options": {
+   "A": "Outcomes after MSD and fully-matched MUD HSCT are generally comparable.",
+   "B": "Disparities in HLA-DQB1 had no negative effects on outcome.",
+   "C": "Nonpermissive mismatches in DPB1 are associated with worsen outcome compared to full matches or permissive mismatches.",
+   "D": "HLA-A, B, & DR loci are already adequate in HLA typing and HLA-C locus is not important."
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "HLA 配對",
+   "DPB1 permissive",
+   "MUD",
+   "MSD"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "110-006",
+  "number": 6,
+  "stem": "Which of the following statement about Human leukocyte antigen (HLA) and Major histocompatibility complex (MHC) is wrong?",
+  "options": {
+   "A": "The HLA gene is located on the short arm of chromosome 9",
+   "B": "MHC class I antigens are present on all cells",
+   "C": "MHC class II antigens are generally restricted to cells of the immune system",
+   "D": "HLA-matched sibling donor cells usually cause less GVHD and therefore less morbidity and mortality",
+   "E": "The likelihood that a sibling pair is HLA identical would be 25%"
+  },
+  "answer": "A",
+  "tags": "共同",
+  "keyword_tags": [
+   "HLA/MHC 基礎",
+   "MSD",
+   "GVHD 風險因子"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ },
+ {
+  "id": "110-007",
+  "number": 7,
+  "stem": "Which of the following statements regarding the purposes of conditioning therapy prior to the infusion of stem cell grafts is incorrect?",
+  "options": {
+   "A": "To eradicate the hematologic malignancy in case of malignant indication for HSCT.",
+   "B": "To provide sufficient immunosuppression to ensure engraftment and to prevent both rejection and GVHD.",
+   "C": "To provide stem cell niches in the host BM for the new stem cells.",
+   "D": "Myelo-depletion is the prerequisite to ensure the engraftment of infused stem cells."
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "Conditioning 原理",
+   "RIC",
+   "植入",
+   "HSC 歸巢"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)"
+  ]
+ },
+ {
+  "id": "110-008",
+  "number": 8,
+  "stem": "Which of the following statement regarding the use of ATG in allotransplant is correct?",
+  "options": {
+   "A": "ATG has been demonstrated to decrease acute GVHD after unrelated transplant but not effective in reducing chronic GVHD.",
+   "B": "ATG is recommended for prophylaxis of GVHD in patients receiving MUD transplant only.",
+   "C": "ATG is not recommended in patients receiving MRD allotransplant who are at high risk of GVHD.",
+   "D": "CMV reactivation is frequently seen after the use of ATG in Taiwan adult patients.",
+   "E": "All of the above are correct."
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "ATG",
+   "GVHD 預防",
+   "MUD",
+   "CMV",
+   "台灣本土"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "110-009",
+  "number": 9,
+  "stem": "Which of the following statement regarding reduced intensity conditioning (RIC) or nonmyeloablative conditioning (NMA) in allotransplant is NOT true?",
+  "options": {
+   "A": "RIC significantly reduced transplant-related organ toxicity and enabling transplant in elderly patients.",
+   "B": "Fludarabine has been one of the key components of RIC/NMA regimens.",
+   "C": "RIC resulted in lower TRM but higher relapse rate compared with MAC in patients with AML and MDS.",
+   "D": "Outcomes are usually better in RIC than MAC in patients with advanced disease.",
+   "E": "All of the above are correct."
+  },
+  "answer": "D",
+  "tags": "共同",
+  "keyword_tags": [
+   "RIC",
+   "高齡移植",
+   "Fludarabine",
+   "復發",
+   "AML"
+  ],
+  "ebmt_chapters": [
+   "Ch13 Conditioning (PDF p156–165)",
+   "Ch68 HCT in Elderly Patients (PDF p596–601)"
+  ]
+ },
+ {
+  "id": "110-010",
+  "number": 10,
+  "stem": "Which of the following statement regarding the mobilization and leukaphresis is NOT true?",
+  "options": {
+   "A": "Mobilization with chemotherapy+G-CSF is the preferred method for patients who will need decrease of tumor burden or who have to collect a high number of HSC",
+   "B": "CD34 monitoring should be initiated at the latest if leukocytes increase up to 1000/μL",
+   "C": "Normal-volume apheresis means apheresis with 4.0-5.3 times the patient’s total blood volume.",
+   "D": "The preemptive use of plerixafor is considered if < 10 CD34+ cells/μL is found prior to apheresis to rescue mobilization failure.",
+   "E": "All of the above are correct."
+  },
+  "answer": "C",
+  "tags": "共同",
+  "keyword_tags": [
+   "動員",
+   "Leukapheresis",
+   "Plerixafor",
+   "Poor mobilizer",
+   "G-CSF"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ }
+]

@@ -1,0 +1,249 @@
+[
+ {
+  "id": "108-031",
+  "number": 31,
+  "stem": "Regarding the timing and indications for allogeneic hematopoietic cell transplantation (allo-HCT) in myelodysplastic syndrome, select the CORRECT answer from the following statements.",
+  "options": {
+   "A": "The lower the IPSS risk score, the more likely patients were to extend their life expectancy by HCT.",
+   "B": "Elderly patients with low-risk MDS (IPSS low or intermediate-1) are unlikely to benefit from allo-HCT in terms of quality of life or prolongation of life expectancy.",
+   "C": "For patients of high risk MDS, if the response to demethylating agents is excellent with cytogenetic response, allo-HCT should be postponed until disease progression.",
+   "D": "Even in RAEB-II, allo-HCT should never be provided to patients aged over 65 years."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "MDS",
+   "高齡移植",
+   "MDS 前處置",
+   "移植適應症"
+  ],
+  "ebmt_chapters": [
+   "Ch74 Myelodysplastic Neoplasms/Syndromes (MDS) (PDF p660–668)",
+   "Ch68 HCT in Elderly Patients (PDF p596–601)"
+  ]
+ },
+ {
+  "id": "108-032",
+  "number": 32,
+  "stem": "The value of induction chemotherapy before transplantation in advanced MDS is:",
+  "options": {
+   "A": "Based on karyotype",
+   "B": "International standard",
+   "C": "Proven only in young patients",
+   "D": "Uncertain"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "MDS 前處置",
+   "MDS",
+   "高齡移植"
+  ],
+  "ebmt_chapters": [
+   "Ch74 Myelodysplastic Neoplasms/Syndromes (MDS) (PDF p660–668)"
+  ]
+ },
+ {
+  "id": "108-033",
+  "number": 33,
+  "stem": "About severe aplastic anemia (SAA), which statement is incorrect?",
+  "options": {
+   "A": "The prognosis of allogeneic transplant is good for young patient population with matched sibling donor",
+   "B": "The most common and accepted conditioning regimen for young SAA patients (less than 20 years old) is Cyclophosphamide + anti-thymocyte globulin (ATG)",
+   "C": "If ideal donor is not available immediately, immunosuppressive therapy (IST) should be executed as soon as possible",
+   "D": "If a SAA patient doesn’t respond to IST after a period of three to four months, we could keep “watch and wait” policy, because the prognosis is as good as the responders.",
+   "E": "The major cause of treatment-related mortality of allogenic hematopoietic stem cell transplantation (HSCT) for SAA patients are engraftment failure and chronic graft versus host disease (GVHD)."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "SAA",
+   "IST",
+   "Cyclophosphamide",
+   "ATG",
+   "MSD",
+   "Graft failure"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)"
+  ]
+ },
+ {
+  "id": "108-034",
+  "number": 34,
+  "stem": "Which of the following statement regarding HSCT in newly diagnosed MM is NOT correct?",
+  "options": {
+   "A": "Trials that compared two-drug (TD: thalidomide–dexamethasone or VD: bortezomib–dexamethasone) to three-drug induction (VTD: bortezomib, thalidomide, dexamethasone) have proven supremacy of the latter combination.",
+   "B": "VTD was also proven superior to bortezomib, cyclophosphamide, and dexamethasone (VCD), thus highlighting the synergistic effect of combining an IMiD with bortezomib and dexamethasone.",
+   "C": "The final analysis of the IFM2009 prospective trial demonstrated the significance of MRD negativity, whereby patients achieving MRD negativity after induction with VRD had a similar OS irrespective of whether they received an ASCT or not.",
+   "D": "MRD negativity proved to be a more powerful predictor of outcome than cytogenetics, whereby patients with high-risk cytogenetics who achieved MRD negativity had better outcomes than patients with standard-risk cytogenetics who did not.",
+   "E": "Myeloablative allogeneic HSCT is a potentially curative treatment and is currently considered a part of frontline treatment for MM."
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "MM 誘導",
+   "MRD",
+   "MM 自體移植",
+   "MM 復發"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "108-035",
+  "number": 35,
+  "stem": "Which of the following statement regarding HSCT in MM is NOT correct?",
+  "options": {
+   "A": "According to IEMN02/HO95 trial, benefit of VRD consolidation followed by lenalidomide maintenance was shown in younger, newly diagnosed multiple myeloma patients with low-risk disease.",
+   "B": "According to IEMN02/HO95 trial, VRD consolidation also improve PFS in patients with high-risk cytogenetics ((del17p and/or t(4;14) and/or t(14;16))",
+   "C": "Lenalidomide maintenance after stem-cell transplantation for multiple myeloma has been shown to be well tolerated and improve PFS and OS.",
+   "D": "In the EMN02/HO95 trial, double frontline ASCT was superior to single ASCT in terms of PFS and OS in all patients, including poor prognosis subgroups, indicating that the latter were the most likely to benefit.",
+   "E": "Second ASCT can be considered for salvage in fit patients if the interval between the first ASCT and relapse is 18 months or more."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "MM 維持",
+   "Tandem 移植",
+   "MM 復發",
+   "二次移植",
+   "MM 自體移植"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "108-036",
+  "number": 36,
+  "stem": "Risk factors for relapse after allogeneic hematopoietic cell transplantation include the followings. Please select ALL the CORRECT answer(s)\n(1) FLT3ITD mutant AML in first complete remission before transplantation\n(2) Presence of minimal residual disease before or after transplant\n(3) Occurrence of cytomegalovirus infection after transplant\n(4) Use of donors expressing certain activating killer immunoglobulin-like receptor (KIR) genes or KIR haplotype",
+  "options": {
+   "A": "(1)(2)",
+   "B": "(2)(3)",
+   "C": "(1)(2)(3)",
+   "D": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "復發",
+   "FLT3-ITD",
+   "MRD",
+   "CMV",
+   "KIR/NK",
+   "AML"
+  ],
+  "ebmt_chapters": [
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)",
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ },
+ {
+  "id": "108-037",
+  "number": 37,
+  "stem": "Which of the following statements on CAR-T cell therapy is/are correct?\n(1) CD19-CAR-T is highly effective in treating relapsed/refractory B-lineage acute lymphoblastic leukemia\n(2) BCMA-CAR-T had been shown effective in relapsed/refractory multiple myeloma\n(3) Cytokine releasing syndrome (CRS) is one of the most important adverse events after CAR-T therapy and can be rescued by administration of anti-IL-6 (tocilizumab)\n(4) CAR-T is FDA approved therapy for treating solid cancer",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "CAR-T",
+   "BCMA CAR-T",
+   "CRS",
+   "實體腫瘤",
+   "ALL"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)",
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "108-038",
+  "number": 38,
+  "stem": "Which is the known risk factors for adult and pediatric acute GVHD resulted from allogeneic HSCT ?\n(1) The degree of HLA mismatching.\n(2) The use of haploidentical donor.\n(3) The use of total body irradiation.\n(4) Female donor to the male recipient.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "GVHD 風險因子",
+   "HLA mismatch",
+   "Haplo",
+   "TBI",
+   "捐贈者年齡/性別",
+   "兒童移植"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "108-039",
+  "number": 39,
+  "stem": "Which of the following statements about use of anti-thymocyte globulin (ATG) in the prophylaxis of GVHD would be the most appropriate?\n(1) The consensus in Taiwan now is to add ATG in all kinds of allogeneic transplants.\n(2) ATG should be routinely used in the setting of haploidentical transplants.\n(3) Reactivation of CMV (cytomegalovirus) is frequently seen after use of ATG.\n(4) Since EBV-related PTLD has high-risk of morbidity/mortality and use of ATG plays an important role to cause EBV reactivation, ATG is generally not recommended even in the setting of unrelated transplant.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "ATG",
+   "GVHD 預防",
+   "Haplo",
+   "CMV",
+   "EBV/PTLD",
+   "台灣本土"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch65 Haploidentical HCT (PDF p574–582)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "108-040",
+  "number": 40,
+  "stem": "Which of the following statements regarding to haploidentical allogeneic HSCT is(are) correct?\n(1) Patient with AML lacking an HLA-matched related or unrelated donor, but who are transplant candidates, may benefit from a family mismatched donor (haploidentical transplant)\n(2) Laboratory data showed that the antileukemic activity after haploidentical HSCT may rely on the possibility of a donor-versus-recipient NK cell alloreactivity\n(3) Due to a reduced antileukemic effect of the conditioning regimen, the procedure largely relies on the graft-versus-leukemia (GvL) effect of the alloreactive lymphocytes to eradicate residual leukemic cells.\n(4) The current main platforms to safely perform unmanipulated haploidentical HSCT to prevent GvHD include anti-thymocyte globulin (ATG) and Posttransplant Cyclophosphamide (PTCy)",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(2)(3)(4)",
+   "C": "(1)(3)(4)",
+   "D": "(2)(4)"
+  },
+  "answer": "B",
+  "tags": "共同;複選",
+  "keyword_tags": [
+   "Haplo",
+   "KIR/NK",
+   "GVL",
+   "ATG",
+   "PTCy",
+   "AML"
+  ],
+  "ebmt_chapters": [
+   "Ch65 Haploidentical HCT (PDF p574–582)",
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ }
+]

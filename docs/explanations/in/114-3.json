@@ -1,0 +1,243 @@
+[
+ {
+  "id": "114-021",
+  "number": 21,
+  "stem": "Choose the correct statement about invasive fungal infection in allo-HCT.",
+  "options": {
+   "A": "Most infections are diagnosed before engraftment in HCT.",
+   "B": "Voriconazole and is the recommended first-line option for mucormycosis.",
+   "C": "Prophylactic mold-active azoles, and probably echinocandins, are proven to be effective in preventing invasive fungal diseases in allogeneic HSCT",
+   "D": "PCP prophylaxis should be given from engraftment and should be discontinued at three months post HCT."
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "黴菌感染",
+   "抗黴菌預防",
+   "PJP 預防",
+   "植入"
+  ],
+  "ebmt_chapters": [
+   "Ch37 Invasive Fungal Diseases (PDF p337–345)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:ECIL 建議:GvHD 期 posaconazole 是 mold-active azole 預防首選(A-I);micafungin 在低黴菌發生率中心 B-I,故「mold-active azoles 有效、echinocandins probably 有效」為正確敘述。A 錯:手冊 Key Points 明言大多數 IFD 是在 engraftment **之後**、急慢性 GvHD 期間診斷。B 錯:mucormycosis 第一線是 lipid-based amphotericin B(5–10 mg/kg),voriconazole 對 Mucorales 無效。D 錯:PCP 預防(TMP-SMX)應從 engraftment 給到 ≥6 個月且免疫抑制持續時續給,不是 3 個月停。"
+ },
+ {
+  "id": "114-022",
+  "number": 22,
+  "stem": "Which of the following is WRONG for CMV infection in HCT?",
+  "options": {
+   "A": "Letermovir given for 3 months after HCT reduces the risk for clinically significant CMV infection in CMV (+) patients and longer duration of prophylaxis can be given in high-risk patients.",
+   "B": "CMV retinitis can be diagnosed by ophthalmologic findings.",
+   "C": "Maribavir is an alternative for CMV prophylaxis",
+   "D": "Ganciclovir or valganciclovir for CMV pre-emptive treatment is usually given for at least 2 weeks"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "CMV",
+   "Letermovir",
+   "Ganciclovir",
+   "CMV 血清狀態"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:Maribavir 在手冊中的定位是 **resistant/refractory CMV 感染或疾病的替代治療**(RCT 顯示較其他藥有效且毒性低),不是預防用藥,故 C 錯。A 正確:letermovir 3 個月預防降低 CMV(+) 病人 clinically significant CMV infection 與全因死亡,高風險者可延長。B 正確:CMV retinitis 是唯一可憑眼科特徵性所見診斷的 end-organ disease。D 正確:pre-emptive 治療通常至少 2 週,必要時延長。"
+ },
+ {
+  "id": "114-023",
+  "number": 23,
+  "stem": "Which of the following statements about allo-HSCT for myelofibrosis is incorrect?",
+  "options": {
+   "A": "Allogeneic HSCT could potentially cure PMF",
+   "B": "Pre-transplant ruxolitinib can improve spleen size reduction and performance status, thereby facilitating HSCT.",
+   "C": "Graft failure or poor graft function are common in PMF patients receiving HSCT, higher CD34+ cell dose is usually recommended",
+   "D": "HSCT outcomes are better when performed after response to ruxolitinib, rather than delaying until ruxolitinib failure.",
+   "E": "All of the above are correct"
+  },
+  "answer": "E",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "MF",
+   "Ruxolitinib",
+   "Graft failure",
+   "CD34 劑量",
+   "脾臟處理"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)",
+   "Ch41 Graft Failure (PDF p378–385)"
+  ],
+  "answer_note": "AI 暫定答案(信心 medium),理由:A 正確:手冊 Key Points「PMF/post-ET/PV MF **只能靠 allo-HCT 治癒**」。B 正確:ruxolitinib 可改善體質症狀、縮小脾臟,ELN/EBMT 建議移植前至少用 2 個月並逐步減量避免 rebound。D 正確:手冊引用 Kröger 2021,對 ruxolitinib 有反應時就移植的結果優於等到失敗才移植。C 手冊未直接以此句陳述,但 Ch41 Table 41.1 列出 extensive marrow fibrosis、splenomegaly 為 graft failure 危險因子,MF 的 graft failure/poor graft function 確實較常見,且臨床上偏好 PBSC、較高 CD34+ 劑量,屬一般共識。四句皆對 → E。分歧點:若出題者認為 C 的「higher CD34+ dose usually recommended」沒有明確證據支持,答案會是 C;但 A/B/D 皆為手冊原文,E 較合理。"
+ },
+ {
+  "id": "114-024",
+  "number": 24,
+  "stem": "Which of the following statements regarding to allo-HSCT in myelodysplastic syndrome is incorrect?",
+  "options": {
+   "A": "RIC regimens have extended the use of allo-HSCT to older patients entering their seventh decades.",
+   "B": "Patients with blast more than 10% in marrow should better receive HMA or cytoreductive therapy before transplantation.",
+   "C": "Poor response to HMA and/or intensive chemotherapy is associated with poor outcome after allo-HSCT",
+   "D": "For patient who had morphological relapse (blast > 30%) after allo-HSCT, HMA alone without donor lymphocyte infusion still can effectively rescue the patient."
+  },
+  "answer": "D",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "MDS",
+   "MDS 前處置",
+   "高齡移植",
+   "HMA 維持",
+   "DLI",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch74 Myelodysplastic Neoplasms/Syndromes (MDS) (PDF p660–668)",
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:D 錯:移植後復發的 MDS,手冊引 SFGM-TC 147 例資料,**只有接受 DLI 或第二次移植者能達長期存活**(32% vs 化療/HMA 單獨 6%);AZA 單用對低芽球、晚期復發者較有效,對 blast >30% 的形態學復發不足以 rescue。A 正確:RIC 把 allo-HCT 延伸到老年人(手冊 2nd ed 寫 eighth decade,說 seventh decade 仍屬正確方向)。B 正確:國際指引建議 marrow blast >10% 者移植前先做 cytoreduction(HMA 或化療),證據等級低。C 正確:對 pregraft treatment 無反應與移植後預後差相關。"
+ },
+ {
+  "id": "114-025",
+  "number": 25,
+  "stem": "Which of the following statement about conditioning regimens of allo-HSCT for AML is wrong?",
+  "options": {
+   "A": "Myeloablative conditioning (MAC) has a superior anti-leukemic activity over reduced intensity conditioning (RIC).",
+   "B": "Older patients derive the most benefit from RIC, resulting in more favorable non-relapse mortality and transplant related mortality (TRM) rates.",
+   "C": "The incidence of GVHD, late infectious complications, and CMV reactivation is higher in MAC than in RIC.",
+   "D": "The incidence of acute transplant complications (i.e., sinusoidal obstruction syndrome, idiopathic pneumonia syndrome, mucositis, and hemorrhagic cystitis) is more common in MAC than in RIC.",
+   "E": "For primary refractory AML, the recommended conditioning regimen is MAC for patients under the age of 50 years"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "AML",
+   "MAC",
+   "RIC",
+   "高齡移植",
+   "Conditioning 毒性"
+  ],
+  "ebmt_chapters": [
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch13 Conditioning (PDF p156–165)"
+  ],
+  "answer_note": "AI 暫定答案(信心 medium),理由:C 錯:MAC 增加的是**早期**器官毒性(SOS、IPS、mucositis、HC)與早期 NRM;GVHD(尤其 cGVHD)、晚期感染、CMV 再活化在 MAC 與 RIC 間並無「MAC 較高」的證據,RIC 病人因年紀大、免疫重建慢,晚期感染/CMV 反而不低。A 正確:MAC 抗白血病效果較強(BMT-CTN 0901 RIC 復發率明顯較高)。B 正確:老年人從 RIC 獲益最大,NRM/TRM 較低。D 正確:急性移植併發症 MAC 較多。E 正確:手冊原文——primary refractory AML <50 歲建議 myeloablative regimen,除非有反對理由。手冊對 C 的敘述未直接涵蓋,依一般知識判斷。"
+ },
+ {
+  "id": "114-026",
+  "number": 26,
+  "stem": "Which of the following descriptions is NOT TRUE?",
+  "options": {
+   "A": "Auto-HSCT in Burkitt lymphoma is feasible, but there is no documented advantage compared to the standard 1st-line combination chemotherapy.",
+   "B": "For lymphoblastic lymphoma, allogeneic-HSCT is associated with a higher transplant-related mortality but a lower recurrence rate than autologous-HCT.",
+   "C": "For patients with lymphoblastic lymphoma in the 1st complete remission, the use of auto-HCT as a consolidation may improve relapse-free survival but has no effect on overall survival.",
+   "D": "Allogeneic HSCT can rescue over one-third of patients with advanced-stage and refractory cutaneous T-cell lymphoma.",
+   "E": "Auto-HSCT is the standard consolidation therapy after first-line induction therapy for advanced-stage classic Hodgkin lymphoma patients in the 1st complete remission."
+  },
+  "answer": "E",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "Burkitt/LBL",
+   "T 細胞淋巴瘤",
+   "HL",
+   "淋巴瘤一線鞏固"
+  ],
+  "ebmt_chapters": [
+   "Ch88 Other B- and T-Aggressive Lymphomas and Lymphomas Associated with HIV (PDF p771–777)",
+   "Ch89 Classical Hodgkin’s Lymphoma (PDF p778–787)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:E 錯:進階期 cHL 第一次 CR 不建議 auto-HCT 鞏固(Ch89 indications 表:First complete remission → Generally not recommended);auto-HCT 是復發/難治 cHL 的標準,不是一線鞏固。A 正確:手冊原文「auto HCT in BL is feasible, but there is no documented advantage compared to standard combination chemotherapy」。B 正確:LBL 中 allo 相較 auto 有較高 TRM 但較低 relapse rate(Levine 2003)。C 正確:LBL CR1 用 auto-HCT 鞏固可能改善 RFS 但 OS 無差異(Sweetenham 2001)。D 正確:EBMT 資料 allo-HCT 可 rescue 超過三分之一 advanced/refractory CTCL。"
+ },
+ {
+  "id": "114-027",
+  "number": 27,
+  "stem": "Which of the descriptions about HSCT for patients with large B-cell lymphoma is NOT TRUE?",
+  "options": {
+   "A": "Auto-HSCT for patients with refractory disease not responding to salvage therapy is discouraged.",
+   "B": "Auto-HSCT should not be considered as part of the first-line therapy for the patients with high-grade B-cell lymphomas treated with R-CHOP like regimens.",
+   "C": "There are no data and no recommendation for consolidative therapy after auto-HCT for large B-cell lymphoma.",
+   "D": "Patients with primary large B cell lymphoma of immune privileged sites must receive chemotherapy penetrating into CNS.",
+   "E": "Allo-HCT is still considered a curative treatment for patients with large B-cell lymphoma who relapse or progress after auto-HCT or CAR-T therapy."
+  },
+  "answer": "B",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "DLBCL 二線",
+   "DLBCL 一線鞏固",
+   "CNS 淋巴瘤",
+   "Rituximab 維持",
+   "CAR-T 與移植順序"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:B 錯:手冊明言 auto-HCT 一般不建議作為 DLBCL 一線治療,**但**「could be considered in high-grade B cell lymphomas treated with R-CHOP-like regimens」及 CNS involvement 且 chemosensitive 者——B 把「可以考慮」寫成「不應考慮」。A 正確:手冊「We discourage auto-HCT for patients with refractory disease not responding to salvage therapy」。C 正確:86.7.5 原文「no data and no recommendation for consolidative therapy after auto-HCT」(CORAL 的 rituximab maintenance 無效)。D 正確:immune-privileged sites(CNS、睪丸、玻璃體視網膜)必須用能穿透 CNS 的化療。E 正確:allo-HCT 仍是 auto-HCT 或 CAR-T 後復發 LBCL 的治癒性選項。"
+ },
+ {
+  "id": "114-028",
+  "number": 28,
+  "stem": "Which is NOT the adverse prognostic factors for patients with large B-cell lymphoma before auto-HCT identified in prospective studies?",
+  "options": {
+   "A": "Early relapse (within 12 months of induction therapy)",
+   "B": "Secondary age-adjusted IPI",
+   "C": "Male gender",
+   "D": "Poor performance status",
+   "E": "Involvement of two or more extranodal sites at relapse"
+  },
+  "answer": "C",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "DLBCL 預後因子",
+   "DLBCL 二線",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:手冊 86.7.3 列出前瞻性研究確認的 auto-HCT 不良預後因子:早期復發(induction 後 12 個月內,CORAL)、secondary age-adjusted IPI、poor performance status、復發時 ≥2 個 extranodal sites。性別(male gender)不在其中,故 C 為非。A、B、D、E 皆為手冊原文所列。"
+ },
+ {
+  "id": "114-029",
+  "number": 29,
+  "stem": "Which statement about induction treatment prior autologous hematopoietic cell transplant (AHCT) of myeloma is false?",
+  "options": {
+   "A": "Induction regimens containing one or two novel agents (thalidomide or bortezomib) before and after AHCT showed superiority over the historical VAD chemotherapy regimen in increasing CR, CR plus near-complete response (n-CR), or VGPR rates.",
+   "B": "The use of 6 cycles of VTD ,instead of 3–4 cycles, was associated with deeper response before AHCs with similar side effects.",
+   "C": "The Cassiopeia phase III trial compared DARA-VTD to VTD demonstrating positive results of adding daratumumab.",
+   "D": "The final analysis of the IFM2009 prospective trial demonstrated patients achieving MRD negativity after induction with VRD had a similar OS irrespective of whether they received an AHCT or not"
+  },
+  "answer": "B",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "MM 誘導",
+   "MM 自體移植",
+   "MRD"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:B 錯:手冊說 6 cycles VTD(相較 3–4 cycles)反應較深,**但要權衡增加的副作用,特別是神經病變**——不是「similar side effects」。A 正確:含 thalidomide 或 bortezomib 的誘導在 AHCT 前後都優於 VAD(CR、CR+nCR、VGPR 率提升)。C 正確:Cassiopeia III 期比較 DARA-VTD vs VTD,加 daratumumab 結果為正。D 正確:IFM2009 最終分析顯示 VRD 誘導後 MRD 陰性者,不論有無 AHCT,OS 相似。"
+ },
+ {
+  "id": "114-030",
+  "number": 30,
+  "stem": "Which statement about treatment after autologous hematopoietic cell transplant (AHCT) of myeloma is false?",
+  "options": {
+   "A": "The EMN02/HO95 trial compared the aftermaths of receiving 2 cycles of VRD consolidation followed by lenalidomide versus lenalidomide maintenance alone, demonstrating the significant advantage VRD consolidation inferred in prolonging PFS..",
+   "B": "The benefit of PFS EMN02/HO95 was noted in most of the predefined groups including ISS I and II, low --risk cytogenetics, irrespective of whether patients received VMP (bortezomib, melphalan and prednisone) or transplantation prior to consolidation.",
+   "C": "A meta-analysis of 3 randomized trials, CALGB, IFM, and GIMEMA, that compared lenalidomide maintenance to placebo or observation, has demonstrated a significantly improved PFS in all subgroups of patients regardless of age, myeloma severity and staging, and induction regimen",
+   "D": "Bortezomib was also tested as part of maintenance, either alone or in combination with IMiDs, demonstrating improved OS, with the cost of neuropathy."
+  },
+  "answer": "D",
+  "tags": "AI暫定",
+  "keyword_tags": [
+   "MM 維持",
+   "MM 自體移植",
+   "維持治療"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:D 錯:bortezomib 單用或併 IMiD 作維持,手冊明言「demonstrating improved **PFS, but not OS**」;神經病變與皮下注射是其限制。A 正確:EMN02/HO95 第二次隨機分組顯示 2 cycles VRD 鞏固 + lenalidomide 較單用 lenalidomide 維持顯著延長 PFS。B 正確:PFS 獲益見於多數預設亞組(ISS I/II、低風險細胞遺傳學、不論先前 VMP 或移植),但高風險細胞遺傳學無益。C 正確:CALGB/IFM/GIMEMA 三試驗 meta-analysis 顯示 lenalidomide 維持在所有亞組都改善 PFS(52.8 vs 23.5 個月),OS 亦改善。"
+ }
+]

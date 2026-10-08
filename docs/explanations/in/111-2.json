@@ -1,0 +1,235 @@
+[
+ {
+  "id": "111-011",
+  "number": 11,
+  "stem": "The required hematopoietic stem cell dose for one transplantation is at least:",
+  "options": {
+   "A": "5.0 x 106 CD34+ cells/kg",
+   "B": "4.0 x 106 CD34+ cells/kg",
+   "C": "3.0 x 106 CD34+ cells/kg",
+   "D": "2.0 x 106 CD34+ cells/kg",
+   "E": "1.5 x 106 CD34+ cells/kg"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "CD34 劑量",
+   "動員",
+   "Leukapheresis"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "111-012",
+  "number": 12,
+  "stem": "Autologous CD34+ cell collection has been shown to be more effective with larger volume apheresis, which means:",
+  "options": {
+   "A": "1.5 – 2.7 times the patient’s total blood volume",
+   "B": "2.7 – 3.3 times the patient’s total blood volume",
+   "C": "3.3 – 4.0 times the patient’s total blood volume",
+   "D": "4.0 – 5.3 times the patient’s total blood volume"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "Leukapheresis",
+   "動員",
+   "CD34 劑量"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ },
+ {
+  "id": "111-013",
+  "number": 13,
+  "stem": "Which of the following statement regarding acute GVHD is NOT true?",
+  "options": {
+   "A": "Acute GVHD occurs until day 100 as classical acute GHVD and beyond day 100 as delayed acute GVHD.",
+   "B": "The grading for acute GVHD mainly focus on the clinical presentations of skin, liver, and GI system.",
+   "C": "PTCy is an option for GVHD prophylaxis besides classical immunosuppressive agents.",
+   "D": "Early systemic treatment is recommended for grade 1 acute GVHD.",
+   "E": "All of the above are correct."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "aGVHD 診斷",
+   "aGVHD 分級",
+   "PTCy",
+   "GVHD 預防"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch26 GVHD Prophylaxis (PDF p242–250)"
+  ]
+ },
+ {
+  "id": "111-014",
+  "number": 14,
+  "stem": "Which of the following is NOT diagnostic features of NIH-defined skin manifestations of chronic GVHD?",
+  "options": {
+   "A": "Poikiloderma",
+   "B": "Lichen-planus-like features",
+   "C": "Papulosquamous lesions",
+   "D": "Lichen-sclerosus-like features",
+   "E": "All of the above are correct"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "cGVHD 診斷",
+   "aGVHD 診斷",
+   "cGVHD 治療"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "111-015",
+  "number": 15,
+  "stem": "Which of the following is NOT true regarding the grading of overall severity of chronic GVHD by computation of scoring of organ systems?",
+  "options": {
+   "A": "Mild chronic GVHD : 1-2 organs involved including lung with no more than score 1.",
+   "B": "Moderate chronic GVHD : 3 or more organs involved with no more than score 1.",
+   "C": "Moderate chronic GVHD : At least 1 organ (not lung) with a score of 2.",
+   "D": "Severe chronic GVHD : Lung score of 2 or 3.",
+   "E": "All of the above are correct."
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "cGVHD 診斷",
+   "aGVHD 分級",
+   "cGVHD 治療"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "111-016",
+  "number": 16,
+  "stem": "Which of the following is not included in the criteria for severity grading of a suspected SOS/COD?",
+  "options": {
+   "A": "Bilirubin level",
+   "B": "Transaminase level",
+   "C": "Weight increase",
+   "D": "Renal function",
+   "E": "Thrombocytopenia"
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "SOS/VOD",
+   "Defibrotide",
+   "Conditioning 毒性"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ },
+ {
+  "id": "111-017",
+  "number": 17,
+  "stem": "Which of the following description of post transplant lymphoproliferative disorders (PTLDs) after HSCT is wrong?",
+  "options": {
+   "A": "Probable EBV disease is diagnosed in case of significant lymphadenopathy, hepatosplenomegaly, or other end-organ manifestations together with high EBV-DNA-emia.",
+   "B": "The median time of PTLD after HSCT is 2~4 months",
+   "C": "Patients who receive haplo-PTCy-HSCT is a high risk group of developing PTLD",
+   "D": "EBV-CTL has a good result in the preemptive treatment of PTLD",
+   "E": "Reduction of immunosuppression (RIS) alone is not promised in the treatment of PTLD after HSCT"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "EBV/PTLD",
+   "病毒專一T細胞",
+   "免疫抑制劑減量",
+   "PTCy",
+   "Haplo"
+  ],
+  "ebmt_chapters": [
+   "Ch45 Posttransplant Lymphoproliferative Syndromes (PDF p422–428)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "111-018",
+  "number": 18,
+  "stem": "Which of the following description about the monitoring minimal residual disease in ALL and AML is wrong?",
+  "options": {
+   "A": "Most frequent recurrent reciprocal translocations are in ALL t(9;22)(q34;q11) (BCR::ABL1), t(12;21)(p13;q23) (ETV6::RUNX1), and t(4;11)(q21;q22) (MLL::AFF1) with age stage associated preponderance in adults, childhood, and infant ALL, respectively.",
+   "B": "High-throughput sequencing (HTS) of immune receptor genes by next-generation sequencing (NGS) is a novel option for MRD in ALL.",
+   "C": "During the past decades, it could be clearly shown by several studies that the level of MRD immediately prior to transplant does have a clear prognostic impact on post-HSCT outcome in ALL.",
+   "D": "Apart from t(15;17) and RUNX1::RUNX1T1 and CBFB::MYH11, currently FLT3-ITD is the best-validated molecular marker for MRD assessment in AML."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "MRD",
+   "ALL",
+   "AML",
+   "FLT3-ITD",
+   "Ph+ ALL"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)",
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)",
+   "Ch70 AML in Adults (PDF p611–625)"
+  ]
+ },
+ {
+  "id": "111-019",
+  "number": 19,
+  "stem": "Which of the following statement about prevention and treatment of relapse is wrong?",
+  "options": {
+   "A": "Relapse has become the most frequent cause of treatment failure after HSCT.",
+   "B": "Beside a direct antitumor effect, TKIs are considered to induce also immunomodulating effects by inducing effect on T-cell cytolytic function, reducing T-cell PD-1 expression, and reducing myeloid-derived suppressor cells.",
+   "C": "TKIs targeting BCR/ABL such as imatinib induce more than 60% molecular remission in CML patients who relapsed after allograft.",
+   "D": "Hypomethylating agents (HMA) lead to an upregulation of HLA and tumor-associated antigen which may be targeted by donor T cells. Furthermore, CD4 and CD8 T cells were strongly suppressed by HMA while a decrease of regulatory T cells has been described."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "復發",
+   "維持治療",
+   "TKI 維持",
+   "HMA 維持",
+   "CML"
+  ],
+  "ebmt_chapters": [
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)",
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)",
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)"
+  ]
+ },
+ {
+  "id": "111-020",
+  "number": 20,
+  "stem": "Which following statements regarding monitoring minimal residual disease (MRD) after allogeneic HSCT is correct ?",
+  "options": {
+   "A": "The use of PCR-based method to detect fusion genes can be applied to detect MRD in all the AML cases but not in patients of ALL.",
+   "B": "The method of short tandem repeat (STR) used for determining the chimerism after allogeneic HSCT can sensitively detect the MRD in either AML or ALL.",
+   "C": "In t(8;21) AML, the detection of RUNX1::RUNXITI transcripts may persist after allogeneic transplant without subsequent relapse.",
+   "D": "In AML with chromosomal anomalies, conventional metaphase cytogenetics can detect residual leukemic cells with sensitivity equal to PCR method."
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "MRD",
+   "Chimerism",
+   "AML",
+   "ALL"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)",
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)"
+  ]
+ }
+]

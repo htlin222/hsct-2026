@@ -1,0 +1,237 @@
+[
+ {
+  "id": "109-031",
+  "number": 31,
+  "stem": "The following statements describe cytomegalovirus (CMV) infection in HSCT, select the CORRECT answer?",
+  "options": {
+   "A": "To reduce the risk of CMV infection, a seropositive recipient should be given stem cells from a seronegative donor.",
+   "B": "Generally speaking, preemptive anti-viral therapy should be withheld unless CMV viremia is confirmed with quantitative PCR results of more than 2000 copies/ml.",
+   "C": "Letermovir is indicated for treatment of CMV pneumonitis resistant to ganciclovir.",
+   "D": "Cytomegalovirus hyperimmune globulin (Cytotect) is effective and can be used alone to control CMV disease after allo-HSCT.",
+   "E": "Due to the possibility of DNAemia contamination, presence of CMV in BAL by DNA PCR tests is not confirmation of CMV pneumonitis."
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "CMV",
+   "CMV 血清狀態",
+   "Letermovir",
+   "IVIG",
+   "Ganciclovir"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "109-032",
+  "number": 32,
+  "stem": "Which of the following statements regarding to fungal infection after HSCT is wrong?",
+  "options": {
+   "A": "Yeasts are acquired by translocation from intestinal mucosa or through the catheter",
+   "B": "Aspergillus spp. and other molds are usually acquired by inhalation of spores present in the air, thus causing rhinosinusitis or pneumonias.",
+   "C": "Protective environment measures with isolation rooms equipped with HEPA filters are very important to prevent molds infection",
+   "D": "All of the above",
+   "E": "None of the above"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "黴菌感染",
+   "感染管制",
+   "抗黴菌預防"
+  ],
+  "ebmt_chapters": [
+   "Ch37 Invasive Fungal Diseases (PDF p337–345)",
+   "Ch27 Infection Control and Isolation Procedures (PDF p251–257)"
+  ]
+ },
+ {
+  "id": "109-033",
+  "number": 33,
+  "stem": "Which of the following statements about autologous HSCT for patients with multiple myeloma is wrong?",
+  "options": {
+   "A": "Melphalan 200 mg/m2 is currently the standard high-dose regimen for autologous HSCT.",
+   "B": "The addition of bortezomib peritransplant results in better outcome.",
+   "C": "Recent trials suggest that early auto-HSCT is superior to delayed auto-HSCT (at relapse).",
+   "D": "Patient with high-risk cytogenetics are the most likely to benefit from tandem auto-HSCT."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "MM 自體移植",
+   "Melphalan",
+   "Tandem 移植",
+   "MM 維持"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "109-034",
+  "number": 34,
+  "stem": "Autologous HSCT is most beneficial and indicated for what kind of patients with AL amyloidosis?",
+  "options": {
+   "A": "Low-risk group",
+   "B": "Intermediate-risk group",
+   "C": "High-risk group",
+   "D": "All patients with AL amyloidosis"
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "AL amyloidosis",
+   "MM 自體移植",
+   "HCT-CI"
+  ],
+  "ebmt_chapters": [
+   "Ch82 Systemic Light Chain Amyloidosis (PDF p736–740)"
+  ]
+ },
+ {
+  "id": "109-035",
+  "number": 35,
+  "stem": "About severe aplastic anemia (SAA), which statement is incorrect?",
+  "options": {
+   "A": "The prognosis of allogeneic transplant is good for young patient population with matched sibling donor",
+   "B": "The most common and accepted conditioning regimen for young SAA patients (less than 20 years old) is Cyclophosphamide + anti-thymocyte globulin (ATG)",
+   "C": "If ideal donor is not available immediately, immunosuppressive therapy (IST) should be executed as soon as possible",
+   "D": "If a SAA patient doesn’t respond to IST after a period of three to four months, we could keep “watch and wait” policy, because the prognosis is as good as the responders.",
+   "E": "The major cause of treatment-related mortality of allogenic hematopoietic stem cell transplantation (HSCT) for SAA patients are engraftment failure and chronic graft versus host disease (GVHD)."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "SAA",
+   "IST",
+   "MSD",
+   "Cyclophosphamide",
+   "ATG",
+   "Graft failure"
+  ],
+  "ebmt_chapters": [
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)"
+  ]
+ },
+ {
+  "id": "109-036",
+  "number": 36,
+  "stem": "The auto-HSCT can be considered as the consolidation therapy for young and fit patients after first complete response in which of the following diseases?\n(1) Diffuse large B cell lymphoma, stage IV.\n(2) T-cell lymphoblastic lymphoma.\n(3) Burkitt’s lymphoma.\n(4) Mantle cell lymphoma.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "D",
+  "tags": "複選",
+  "keyword_tags": [
+   "DLBCL 一線鞏固",
+   "Burkitt/LBL",
+   "MCL"
+  ],
+  "ebmt_chapters": [
+   "Ch88 Other B- and T-Aggressive Lymphomas and Lymphomas Associated with HIV (PDF p771–777)",
+   "Ch87 Mantle Cell Lymphoma (PDF p767–770)",
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "109-037",
+  "number": 37,
+  "stem": "Which of the following statements regarding the management of relapsed or refractory (R/R) DLBCL is (are) correct?\n(1) Randomized studies failed to show significant differences in terms of efficacy or toxicity with different salvage regimens.\n(2) New biopsy is highly recommended in all patients, and core biopsies are acceptable.\n(3) PET negativity after salvage therapy is a surrogate marker of chemosensitivity and predicts patient outcome after auto-HSCT\n(4) Salvage therapy followed by auto-HSCT is currently considered standard of care for patients with R/R DLBCL, with the benefit most shown in patients with early relapse (within 12 months from the end of first-line therapy).",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "DLBCL 二線",
+   "DLBCL 預後因子",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ]
+ },
+ {
+  "id": "109-038",
+  "number": 38,
+  "stem": "Which of the following statements on human MHC are correct?\n(1) HLA genes are clustered in three distinct regions, designated class I, class II and class III.\n(2) The HLA class III region is located between class II (telomeric boundary) and class I (centromeric boundary).\n(3) HLA class I molecule consists of a single polymorphic alpha (heavy) chain, which is non-covalently bound at the cell surface to a beta2-microglobulin light chain. The gene for beta2-microglobuin is located on chromosome 15.\n(4) Linkage disequilibrium occurs frequently between HLA-A and HLA-B rather than between HLA-B and HLA-C.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "HLA/MHC 基礎",
+   "HLA 配對",
+   "HLA 分型"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)"
+  ]
+ },
+ {
+  "id": "109-039",
+  "number": 39,
+  "stem": "Which of the following statements on the selection of graft sources for HLA-matched and mismatched related donors is/are correct?\n(1) The probability of chronic GVHD is higher with use of PBSC compared to use of BM\n(2) hematological recovery is more rapid and graft rejection less frequent after BM compared to PBSC\n(3) BM is the preferred stem cell source for HLA-matched unrelated donors for non-malignant diseases especially aplastic anemia\n(4) hematological recovery and graft rejection rates are the same after cord blood compared to BM or PBSC",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "骨髓 vs 周邊血",
+   "臍帶血",
+   "SAA",
+   "GVHD 風險因子",
+   "Graft failure",
+   "植入"
+  ],
+  "ebmt_chapters": [
+   "Ch14 Selection of Stem Cell Source (PDF p166–172)",
+   "Ch64 Role of Umbilical Cord Blood Transplantation (PDF p568–573)",
+   "Ch78 Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria (PDF p695–703)"
+  ]
+ },
+ {
+  "id": "109-040",
+  "number": 40,
+  "stem": "Choose the correct statement(s) for post-transplant cyclophosphamide (PTCy):\n(1) PTCy eliminates alloreactive T-cell clones of both donor and host origin in the early posttransplantation period.\n(2) PTCy also eliminates regulatory T cells.\n(3) PTCy is usually administrated on day+3 and +4 after alloHSCT.\n(4) PTCy is only indicated in haploidentical allotransplant setting but not in matched siblings or unrelated allotransplants.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "PTCy",
+   "Treg",
+   "Haplo",
+   "GVHD 預防",
+   "GVHD 機轉"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)",
+   "Ch65 Haploidentical HCT (PDF p574–582)"
+  ]
+ }
+]

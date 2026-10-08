@@ -1,0 +1,243 @@
+[
+ {
+  "id": "109-041",
+  "number": 41,
+  "stem": "Regarding minimal residual disease (MRD) monitoring for acute myeloid leukemia (AML), which statement(s) is(are) true ?\n(1) MRD after consolidation chemotherapy may has a better prognosis prediction than MRD after induction chemotherapy.\n(2) Multiparameter flow cytometry is often used for MRD measurement.\n(3) Patients with negative MRD before transplantation had lower relapse rate comparing to those with positive MRD.\n(4) As a MRD marker, TET2 offers better predicting value comparing to RUNX1-RUNX1T1 rearrangement",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "MRD",
+   "AML",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)",
+   "Ch70 AML in Adults (PDF p611–625)"
+  ]
+ },
+ {
+  "id": "109-042",
+  "number": 42,
+  "stem": "A study of 2941 recipients of allo-HSCT in Seattle confirmed the importance of several risk factors in predicting the occurrence of moderate to severe aGvHD. In contrast they also found that some previous known factors did not impact on the likelihood of aGvHD, but were associated with the occurrence of cGvHD. (Flowers et al. 2011) According to their findings, which of the following factors did not impact on the likelihood of acute GvHD?\n(1) Increasing donor age.\n(2) The use of female donors for male recipients.\n(3) Cytokine-mobilized stem cells.\n(4) The administration of high-dose TBI.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "B",
+  "tags": "複選",
+  "keyword_tags": [
+   "GVHD 風險因子",
+   "捐贈者年齡/性別",
+   "骨髓 vs 周邊血",
+   "TBI"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "109-043",
+  "number": 43,
+  "stem": "Which of the following might be the presenting symptoms/signs of sinusoidal obstruction syndrome/veno-occlusive disease？\n(1) hepatomegaly\n(2) ascites\n(3) thrombocytopenia\n(4) body weight gain",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "SOS/VOD",
+   "Conditioning 毒性",
+   "aGVHD 診斷"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ },
+ {
+  "id": "109-044",
+  "number": 44,
+  "stem": "Currently available treatment modality for prevention of post-allo-HSCT relapse in an AML CR2 patient with high alles burden of FLT-3/ITD mutation including:\n(1) Administration of 2nd generation of FLT3 inhibitors immediately after engraftment\n(2) Administration of hypomethylation agent immediately after engraftment\n(3) Taper immunosuppressants as soon as possible\n(4) Donor leukocyte infusion in a fixed schedule",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "FLT3 抑制劑",
+   "HMA 維持",
+   "免疫抑制劑減量",
+   "DLI",
+   "FLT3-ITD",
+   "維持治療"
+  ],
+  "ebmt_chapters": [
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)",
+   "Ch70 AML in Adults (PDF p611–625)",
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)"
+  ]
+ },
+ {
+  "id": "109-045",
+  "number": 45,
+  "stem": "Bacterial infections occurring during late phase of HSCT are general secondary to:\n(1) encapsulated bacteria\n(2) chronic GvHD\n(3) treatment of chronic GvHD\n(4) functional asplenia\n(5) hypogammaglobulinemia",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(2)(3)(4)(5)",
+   "C": "(1)(4)(5)",
+   "D": "(1)(2)(3)(4)",
+   "E": "(1)(2)(3)(4)(5)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "Encapsulated 細菌",
+   "低免疫球蛋白",
+   "cGVHD 治療"
+  ],
+  "ebmt_chapters": [
+   "Ch36 Bacterial Infections (PDF p328–336)",
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "109-046",
+  "number": 46,
+  "stem": "Which of the following statements in regarding to patients with primary myelofibrosis (PMF) receiving allogeneic HSCT is CORRECT?\n(1) Patients with primary myelofibrosis have relative lower rate (<15%) of engraftment failure after allo-HSCT.\n(2) In a retrospective single center experience, no achievement of molecular remission on day 180 post-allograft was associated with a significant higher incidence of a subsequent clinical relapse.\n(3) Due to a lack of graft-versus-myelofibrosis effect, donor lymphocyte infusion has not been successfully applied in patients with residual disease to induce a molecular remission\n(4) Once leukemic transformation occurs, the probability of a successful HSCT declines significantly to about half of what is achievable with earlier HSCT.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "MF",
+   "Graft failure",
+   "MRD",
+   "DLI",
+   "GVL"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)",
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)",
+   "Ch41 Graft Failure (PDF p378–385)"
+  ]
+ },
+ {
+  "id": "109-047",
+  "number": 47,
+  "stem": "Which of the following statements of treatment for multiple myeloma is (are) correct?\n(1) Induction therapy with thalidomide/dexamethasone or bortezomib/dexamethasone produces 10% complete remission (CR) in first line situation.\n(2) Induction therapy with bortezomib-based triplets like PAD or VCD is inferior to combination of bortezomib plus lenalidomide.\n(3) Autologous hematopoietic stem cell transplant (HSCT) after induction therapy will add 15-20% more CR rate.\n(4) With the available navel agents (carfilzomib or daratumumab), autologous HSCT in front line is no more a standard therapy for fit patients.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選",
+  "keyword_tags": [
+   "MM 誘導",
+   "MM 自體移植",
+   "Melphalan"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "109-048",
+  "number": 48,
+  "stem": "The following statements describe use of G-CSF in hematopoietic stem cell transplantation. Please select all the CORRECT answer(s).\n(1) G-CSF use is recommended after autologous HCT\n(2) G-CSF use is NOT routinely recommended after allogeneic HCT\n(3) G-CSF is used for PB stem cell mobilization based on its direct stimulatory effect on bone marrow stem cells.\n(4) Retrospective studies show increased risk of GVHD after G-CSF use in allogeneic HSCT\n(5) G-CSF use provides obvious survival benefit.",
+  "options": {
+   "A": "(1)(2)",
+   "B": "(1)(2)(3)",
+   "C": "(1)(2)(4)",
+   "D": "(1)(2)(3)(4)",
+   "E": "(1)(2)(3)(4)(5)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "G-CSF",
+   "動員",
+   "植入",
+   "GVHD 風險因子",
+   "HSC 歸巢"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)",
+   "Ch41 Graft Failure (PDF p378–385)",
+   "Ch26 GVHD Prophylaxis (PDF p242–250)"
+  ]
+ },
+ {
+  "id": "109-049",
+  "number": 49,
+  "stem": "The facts about respiratory syncytial virus (RSV) include:\n(1) RSV is an RNA virus\n(2) Winter season is a risk factor for acquisition of RSV in HCT recipients\n(3) About 20-50% of patients with RSV URI progress to pneumonia.\n(4) Low dose steroid appears to have significant impact on progression to pneumonia\n(5) Ribavirin often is ineffective to control the RSV disease.",
+  "options": {
+   "A": "(1)(2)",
+   "B": "(1)(2)(3)",
+   "C": "(1)(2)(4)",
+   "D": "(1)(2)(3)(4)",
+   "E": "(1)(2)(3)(4)(5)"
+  },
+  "answer": "D",
+  "tags": "複選",
+  "keyword_tags": [
+   "呼吸道病毒",
+   "感染管制",
+   "IVIG",
+   "類固醇"
+  ],
+  "ebmt_chapters": [
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "109-050",
+  "number": 50,
+  "stem": "Which of the following statements in regarding to myelodysplastic syndrome (MDS) are CORRECT?\n(1) Delayed allo-HSCT is associated with reduced chances of prolonged relapse-free survival.\n(2) Patients with less advanced MDS categories may benefit from deferred allo-HSCT after they develop poor-risk features.\n(3) Allo-HSCT outcomes have improved progressively in recent years, mainly due to a gradual reduction in posttransplant relapse.\n(4) A number of questions remain to be resolved by prospective studies, such as the choice of donor, including haplo-identical donors, the role of osttransplant treatment, and the timing of transplantation in patients with lower risk MDS.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(1)(2)(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "D",
+  "tags": "複選",
+  "keyword_tags": [
+   "MDS",
+   "復發",
+   "維持治療",
+   "Haplo"
+  ],
+  "ebmt_chapters": [
+   "Ch74 Myelodysplastic Neoplasms/Syndromes (MDS) (PDF p660–668)"
+  ]
+ }
+]

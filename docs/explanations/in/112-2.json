@@ -1,0 +1,226 @@
+[
+ {
+  "id": "112-011",
+  "number": 11,
+  "stem": "CXCR-4 antagonist is proven to help poor mobilization in autologous peripheral stem cell collection. What is its proposed mechanism?",
+  "options": {
+   "A": "To interact with G‐CSF and augment stem cells production",
+   "B": "To stimulate secretion of CFU (colony‐forming unit)",
+   "C": "To block CXCR4/SDF‐1α interaction, releasing stem cells from bone marrow into circulation",
+   "D": "To increase amount of SCF (stem cell factor)"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "Plerixafor",
+   "動員",
+   "HSC 歸巢",
+   "Poor mobilizer"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)",
+   "Ch7 Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation (PDF p91–100)"
+  ]
+ },
+ {
+  "id": "112-012",
+  "number": 12,
+  "stem": "The dose of transplanted CD34+ cells per kg body weight (BW) determines the kinetics of engraftment after auto-HSCT. The minimum number of CD34+ cells for an autologous transplant is?",
+  "options": {
+   "A": "≥ 10 x 106 CD34+ cells/kg BW",
+   "B": "≥ 5 x 106 CD34+ cells/kg BW",
+   "C": "≥ 2 x 106 CD34+ cells/kg BW",
+   "D": "≥ 1 x 106 CD34+ cells/kg BW"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "CD34 劑量",
+   "植入",
+   "動員",
+   "自體移植"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)",
+   "Ch20 Processing, Cryopreserving, and Controlling the Quality of HSC (PDF p206–209)"
+  ]
+ },
+ {
+  "id": "112-013",
+  "number": 13,
+  "stem": "Which of the following statements is untrue?",
+  "options": {
+   "A": "Skin acute GVHD is the first and most common clinical manifestation of acute GVHD in most patients.",
+   "B": "Generally, arises before white blood cell engraftment, which occurs 7–14 days after alloHCT.",
+   "C": "Typically, patients with skin acute GVHD develop a maculopapular rash that initially involves sun‐exposed areas such as the nape of the neck and the shoulders, or less frequently the palms of the hands and the soles of the feet.",
+   "D": "The rash is often pruritic (itchy) and can be painful."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "aGVHD 診斷",
+   "植入",
+   "GVHD 機轉"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)"
+  ]
+ },
+ {
+  "id": "112-014",
+  "number": 14,
+  "stem": "The results of phase III clinical trial, led to the approval of which one as a second-line treatment for steroid-refractory or steroid-dependent acute GVHD by the FDA and the EMA?",
+  "options": {
+   "A": "Anti‐IL‐2R,",
+   "B": "Alemtuzumab,",
+   "C": "Sirolimus,",
+   "D": "Ruxolitinib"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "SR-aGVHD",
+   "Ruxolitinib",
+   "Sirolimus"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)"
+  ]
+ },
+ {
+  "id": "112-015",
+  "number": 15,
+  "stem": "Which of the following agents have not been used for treatment of cGVHD?",
+  "options": {
+   "A": "Rituximab (anti‐CD20 antibody)",
+   "B": "Pembrolizumab (PD‐1 inhibitor)",
+   "C": "Ibrutinib (BTK antagonist)",
+   "D": "Mycophenolate mofetil"
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "cGVHD 治療",
+   "PD-1 抑制劑",
+   "MMF"
+  ],
+  "ebmt_chapters": [
+   "Ch44 Chronic Graft-Versus-Host Disease (PDF p406–421)"
+  ]
+ },
+ {
+  "id": "112-016",
+  "number": 16,
+  "stem": "Regarding the risk of post transplant lymphopropliferative disease (PTLD), which is wrong?",
+  "options": {
+   "A": "The median time of PTLD after HSCT is 2~4 months",
+   "B": "Patients who receive haplo‐PTCy‐HSCT is a standard risk group of developing PTLD",
+   "C": "The prophylactic use of EBV‐CTLs resulted in excellent efficacy in patients at a high‐risk group for EBV‐PTLD.",
+   "D": "Antiviral agent is recommended to be used for therapy of PTLD."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "EBV/PTLD",
+   "病毒專一T細胞",
+   "PTCy",
+   "Haplo"
+  ],
+  "ebmt_chapters": [
+   "Ch45 Posttransplant Lymphoproliferative Syndromes (PDF p422–428)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ]
+ },
+ {
+  "id": "112-017",
+  "number": 17,
+  "stem": "Which of the following description of sinusoidal obstruction syndrome (SOS), which statements is wrong?",
+  "options": {
+   "A": "Ursodeoxycholic acid is suggested in the prophylaxis of SOS",
+   "B": "SOS is a life‐threatening complication that presents usually within the first 45 days after HSCT with elevated serum bilirubin levels, painful hepatomegaly, and fluid retention.",
+   "C": "RIC conditioning regimen, preexisting liver disease, younger age, and poor performance status are associated with increased risk of SOS",
+   "D": "Defibrotide, a pro‐fibrinolytic agent, is a new agent approved for the treatment of severe SOS in both children and adults and is associated with higher rates of survival than historical controls"
+  },
+  "answer": "C",
+  "tags": "",
+  "keyword_tags": [
+   "SOS/VOD",
+   "UDCA",
+   "Defibrotide"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ },
+ {
+  "id": "112-018",
+  "number": 18,
+  "stem": "Which of the following is not included in the criteria for severity grading of a suspected SOS/COD?",
+  "options": {
+   "A": "Bilirubin level",
+   "B": "Transaminase level",
+   "C": "Weight increase",
+   "D": "Renal function",
+   "E": "Thrombocytopenia"
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "SOS/VOD",
+   "Conditioning 毒性",
+   "兒童移植"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch42 Early Complications of Endothelial Origin (PDF p386–396)"
+  ]
+ },
+ {
+  "id": "112-019",
+  "number": 19,
+  "stem": "Which of the following statements about leukemia relapse post-transplant is WRONG?",
+  "options": {
+   "A": "Tumor‐intrinsic mechanism of immune evasion is the genomic loss of the mismatched HLA haplotype",
+   "B": "instructing different components of the microenvironment to deliver in situ immunosuppression",
+   "C": "IS withdrawal would be less effective against HLA loss at relapse",
+   "D": "DLI would be more effective against HLA loss relapse"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "復發",
+   "免疫逃脫",
+   "DLI",
+   "免疫抑制劑減量",
+   "Haplo"
+  ],
+  "ebmt_chapters": [
+   "Ch61 Mechanisms of Immune Resistance (PDF p550–553)",
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)",
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)"
+  ]
+ },
+ {
+  "id": "112-020",
+  "number": 20,
+  "stem": "Which of the following description about the monitoring minimal residual disease in ALL and AML is wrong?",
+  "options": {
+   "A": "Most frequent recurrent reciprocal translocations are in ALL t(9;22)(q34;q11) (BCR‐ABL1), t(12;21)(p13;q23) (ETV6‐RUNX1), and t(4;11)(q21;q22) (MLL‐AFF1) with age stage associated preponderance in adults, childhood, and infant ALL, respectively.",
+   "B": "High‐throughput sequencing (HTS) of immune receptor genes by next‐generation sequencing (NGS) is a novel option for MRD in ALL.",
+   "C": "During the past decades, it could be clearly shown by several studies that the level of MRD immediately prior to transplant does have a clear prognostic impact on post‐HSCT outcome in ALL.",
+   "D": "Apart from t(15;17) and RUNX1–RUNX1T1 and CBFB–MYH11, currently FLT3‐ITD is the best‐validated molecular marker for MRD assessment in AML."
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "MRD",
+   "ALL",
+   "AML",
+   "FLT3-ITD"
+  ],
+  "ebmt_chapters": [
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)"
+  ]
+ }
+]

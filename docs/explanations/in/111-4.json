@@ -1,0 +1,235 @@
+[
+ {
+  "id": "111-031",
+  "number": 31,
+  "stem": "Which of the following cases can get least survival benefit after allogeneic HSCT in patient with acute myeloid leukemia (AML) except?",
+  "options": {
+   "A": "Primary induction failure after 2 cycles of standard 7+3 inductions",
+   "B": "AML, M2, in 2nd remission.",
+   "C": "Early relapse after achieving CR1",
+   "D": "Relapsed AML refractory to salvage chemotherapy"
+  },
+  "answer": "D",
+  "tags": "",
+  "keyword_tags": [
+   "AML",
+   "復發",
+   "GVL"
+  ],
+  "ebmt_chapters": [
+   "Ch70 AML in Adults (PDF p611–625)"
+  ]
+ },
+ {
+  "id": "111-032",
+  "number": 32,
+  "stem": "The indications of allo-HSCT for adult ALL include the followings EXCEPT?",
+  "options": {
+   "A": "Young adults (< 35 years) with Ph-negative ALL achieving 1st remission (CR1) with negative MRD after treatment with pediatric protocol.",
+   "B": "A generally fit 65-year-old male with Ph1-positive ALL in CR1.",
+   "C": "Young adults (< 35 years) in 2nd remission after relapse.",
+   "D": "Young adults in CR1 with persistent MRD at 3rd month of induction and consolidation therapy."
+  },
+  "answer": "A",
+  "tags": "",
+  "keyword_tags": [
+   "ALL",
+   "Ph+ ALL",
+   "MRD",
+   "高齡移植"
+  ],
+  "ebmt_chapters": [
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)",
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)"
+  ]
+ },
+ {
+  "id": "111-033",
+  "number": 33,
+  "stem": "Which of the following statements about autologous HSCT for patients with multiple myeloma is wrong?",
+  "options": {
+   "A": "Melphalan 200 mg/m2 is currently the standard high-dose regimen for autologous HSCT.",
+   "B": "The addition of bortezomib peritransplant results in better outcome.",
+   "C": "Recent trials suggest that early auto-HSCT is superior to delayed auto-HSCT (at relapse).",
+   "D": "Patient with high-risk cytogenetics are the most likely to benefit from tandem auto-HSCT."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "MM 自體移植",
+   "Melphalan",
+   "Tandem 移植",
+   "MM 維持"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "111-034",
+  "number": 34,
+  "stem": "Which of the following statement regarding HSCT in newly diagnosed MM is NOT correct?",
+  "options": {
+   "A": "Trials that compared two-drug (TD: thalidomide–dexamethasone or VD: bortezomib– dexamethasone) to three-drug induction (VTD: bortezomib, thalidomide, dexamethasone) have proven supremacy of the latter combination.",
+   "B": "VTD was also proven superior to bortezomib, cyclophosphamide, and dexamethasone (VCD), thus highlighting the synergistic effect of combining an IMiD with bortezomib and dexamethasone.",
+   "C": "The final analysis of the IFM2009 prospective trial demonstrated the significance of MRD negativity, whereby patients achieving MRD negativity after induction with VRD had a similar OS irrespective of whether they received an ASCT or not.",
+   "D": "MRD negativity proved to be a more powerful predictor of outcome than cytogenetics, whereby patients with high-risk cytogenetics who achieved MRD negativity had better outcomes than patients with standard-risk cytogenetics who did not.",
+   "E": "Myeloablative allogeneic HSCT is a potentially curative treatment and is currently considered a part of frontline treatment for MM."
+  },
+  "answer": "E",
+  "tags": "",
+  "keyword_tags": [
+   "MM 誘導",
+   "MM 自體移植",
+   "MM 復發",
+   "MRD"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "111-035",
+  "number": 35,
+  "stem": "Which of the following statement regarding HSCT in MM is NOT correct?",
+  "options": {
+   "A": "According to IEMN02/HO95 trial, benefit of VRD consolidation followed by lenalidomide maintenance was shown in younger, newly diagnosed multiple myeloma patients with low-risk disease.",
+   "B": "According to IEMN02/HO95 trial, VRD consolidation also improve PFS in patients with high-risk cytogenetics ((del17p and/or t(4;14) and/or t(14;16))",
+   "C": "Lenalidomide maintenance after stem-cell transplantation for multiple myeloma has been shown to be well tolerated and improve PFS and OS.",
+   "D": "In the EMN02/HO95 trial, double frontline ASCT was superior to single ASCT in terms of PFS and OS in all patients, including poor prognosis subgroups, indicating that the latter were the most likely to benefit.",
+   "E": "Second ASCT can be considered for salvage in fit patients if the interval between the first ASCT and relapse is 18 months or more."
+  },
+  "answer": "B",
+  "tags": "",
+  "keyword_tags": [
+   "MM 維持",
+   "Tandem 移植",
+   "MM 復發",
+   "MM 自體移植"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)"
+  ]
+ },
+ {
+  "id": "111-036",
+  "number": 36,
+  "stem": "關於minor histocompatibility antigens (mHAg)的敘述，何者正確？\n(1) mHAgs are mainly recognized by Naïve T cells.\n(2) mHAgs can be presented on the cell surface by MHC class I and II molecules.\n(3) Many are created by non-synonymous single nucleotide polymorphisms (nsSNP) in protein coding sequences that give rise to immunogenic single amino acid polymorphisms.\n(4) Male-specific mHAgs expressed broadly outside the testis and may be the targets of female T cells in HLA-matched transplantation",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "mHAg/MICA",
+   "HLA/MHC 基礎",
+   "捐贈者年齡/性別",
+   "GVL"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch8 Biological Properties of Cells Other Than HSCs (PDF p101–105)"
+  ]
+ },
+ {
+  "id": "111-037",
+  "number": 37,
+  "stem": "Choose the correct statement(s) for GVHD prophylaxis according to the EBMT recommendations :\n(1) Patients undergoing MRD or MUD transplant should receive a calcineurin inhibitor plus an antimetabolite plus postransplant cyclophosphamide.\n(2) Methotrexate is the recommended antimetabolite in patients receiving MAC.\n(3) MMF is the recommended antimetabolite in patients receiving NMA or RIC.\n(4) rATG is recommended for MUD transplant.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(3)(4)",
+   "D": "(原卷此選項空白)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選",
+  "keyword_tags": [
+   "GVHD 預防",
+   "MTX",
+   "MMF",
+   "ATG",
+   "PTCy",
+   "CNI"
+  ],
+  "ebmt_chapters": [
+   "Ch26 GVHD Prophylaxis (PDF p242–250)"
+  ]
+ },
+ {
+  "id": "111-038",
+  "number": 38,
+  "stem": "Which of the following statements about HLA matching in unrelated donors is correct?\n(1) The outcomes after MSD and fully MUD HSCT are comparable.\n(2) Increase in donor-recipient HLA disparity in HLA-A, B, C or DRB1 is associated with poorer outcome.\n(3) Nonpermissive mismatches in DPB1 are associated with poorer outcome compared to full matches.\n(4) Disparities in HLA-DQB1 have been reported to be permissive with no negative effects on outcomes.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "HLA 配對",
+   "DPB1 permissive",
+   "HLA mismatch",
+   "MUD",
+   "MSD"
+  ],
+  "ebmt_chapters": [
+   "Ch9 Histocompatibility (PDF p106–117)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ]
+ },
+ {
+  "id": "111-039",
+  "number": 39,
+  "stem": "Regarding to circulating CD34+ count prior to autologous hematopoietic stem cell apheresis, which statements are appropriate:\n(1) If a patient has > 20 CD34+ cells/uL, the collection process can start.\n(2) Between 15 - 20 CD34+ cells/uL, collection might be sufficient if not more than two transplantations are planned and the patient has no risk factor for poor mobilization.\n(3) If a patient has 10 - 15 CD34+ cells/uL, application of plerixafor should be discussed and considered.\n(4) Below 10 CD34+ cells/uL, the use of plerixafor is clearly indicated to avoid mobilization failure.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "動員",
+   "Plerixafor",
+   "Poor mobilizer",
+   "Leukapheresis"
+  ],
+  "ebmt_chapters": [
+   "Ch16 Mobilization and Collection of HSC (PDF p180–186)"
+  ]
+ },
+ {
+  "id": "111-040",
+  "number": 40,
+  "stem": "Which of the following therapeutic modality has been reported as salvage treatment for severe acute GVHD resistant to first-line therapy?\n(1) Ruxolitinib\n(2) Mesenchymal stromal cells\n(3) Anti-thymocyte globulin\n(4) Fecal microbiota transplantation",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選",
+  "keyword_tags": [
+   "SR-aGVHD",
+   "Ruxolitinib",
+   "MSC",
+   "ATG"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch66 Photopheresis in Adults and Pediatrics (PDF p583–589)"
+  ]
+ }
+]

@@ -1,0 +1,254 @@
+[
+ {
+  "id": "114-041",
+  "number": 41,
+  "stem": "在診斷急性移植物抗宿主病（aGVHD）時，以下哪些陳述正確描述了診斷的挑戰和方法？\n(1) 常常難以將aGVHD的特徵與VOD/SOS、conditioning治療毒性及感染等其他併發症區分開來。\n(2) 對一個或多個受影響器官進行biopsy，以確認診斷及特徵性組織病理學特徵是必要的。\n(3) Exploding crypts 是胃腸道aGVHD的特徵性組織病理學特徵。\n(4) Small bile duct damage是肝臟aGVHD最一致的組織學特徵。",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選;AI暫定",
+  "keyword_tags": [
+   "aGVHD 診斷",
+   "SOS/VOD",
+   "Conditioning 毒性"
+  ],
+  "ebmt_chapters": [
+   "Ch43 Acute Graft-Versus-Host Disease (PDF p397–405)",
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch50 Gastrointestinal Complications (PDF p467–472)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:四句都是手冊 Ch43 原文。(1) 真:allo-HCT 照護複雜,aGvHD 的特徵常難與 VOD/SOS、conditioning 毒性、藥物毒性與感染區分。(2) 真:手冊明言「因此必須以一個或多個受影響器官的 biopsy 建立診斷並確認特徵性組織病理」(Table 43.3)。(3) 真:GI aGvHD 的組織學特徵就是 “exploding crypts”(crypt 周邊個別上皮細胞壞死留下核/胞質碎片)。(4) 真:肝臟 aGvHD 最一致的組織學特徵是 small bile duct damage,常伴 cholestasis,在其他 HCT 併發症罕見。"
+ },
+ {
+  "id": "114-042",
+  "number": 42,
+  "stem": "Which of the following statements about venous occlusive disease (VOD) is CORRECT ?\n(1) Defibrotide must be initiated promptoly based on severity criteria as soon as the diagnosis of VOD is confirmed.\n(2) Ursodeoxycholic acid administered from initiation of conditioning until day +90 is recommended in adult as a pharmacologic measure for VOD prophylaxis\n(3) The VOD in children differs in many aspects substantially from adult patient despite a similarity in the underlyhing pathyphysiology.\n(4) For patients with mild VOD, it is recommended to initiate debifrotide treatment as early as possible to decrease the mortality rate.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "A",
+  "tags": "複選;AI暫定",
+  "keyword_tags": [
+   "SOS/VOD",
+   "Defibrotide",
+   "UDCA",
+   "兒童移植"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:(1) 真:手冊原句「defibrotide must be initiated promptly, based on severity criteria as soon as the diagnosis of SOS/VOD is confirmed, irrespective of diagnostic status (probable/clinical/proven)」。(2) 真:成人藥物性預防建議 ursodeoxycholic acid 自 conditioning 開始用到 day +90(Ruutu 2014)。(3) 真:Ch49.3 開頭原句「SOS/VOD in children differs in many aspects substantially from adult patients despite a similarity in the underlying pathophysiology」。(4) 假:mild SOS/VOD 採 supportive care + 密切監測嚴重度,惡化才啟動 defibrotide;只有 severe(及 moderate)建議早期 defibrotide。故 (1)(2)(3)。"
+ },
+ {
+  "id": "114-043",
+  "number": 43,
+  "stem": "What are the ideal and sensitive methods of detection of relapse of myelofibrosis after allogeneic hematopoietic stem cell transplantation?\n(1) Flow cytometry detection of JAK2-mutated cells.\n(2) DNA mixed chimerism by short tandem repeat.\n(3) NGS to detect JAK2 mutation.\n(4) Bone marrow fibrosis status.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(2)",
+   "C": "(2)(3)",
+   "D": "(3)(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選;AI暫定",
+  "keyword_tags": [
+   "MF",
+   "Chimerism",
+   "MRD",
+   "復發"
+  ],
+  "ebmt_chapters": [
+   "Ch77 Myeloproliferative Neoplasms (PDF p684–694)",
+   "Ch21 Documentation of Engraftment and Chimerism After HCT (PDF p210–215)",
+   "Ch57 Monitoring Measurable Residual Disease in ALL and AML (PDF p516–524)"
+  ],
+  "answer_note": "AI 暫定答案(信心 medium),理由:(1) 假:JAK2V617F 是胞內激酶點突變,flow cytometry 無法偵測突變細胞,此法不存在。(2) 真:STR-PCR 混合嵌合體是移植後追蹤復發的標準方法(手冊 Ch21 稱其為 chimerism gold standard;MF 復發常以 mixed chimerism 上升為先兆並以 DLI 介入)。(3) 真:約 90% MF 帶 JAK2/CALR/MPL driver mutation,手冊建議以高敏感度 qPCR/digital PCR 於周邊血監測分子 MRD;NGS 偵測 JAK2 亦屬分子法(雖敏感度略遜 qPCR/ddPCR)。(4) 假:骨髓纖維化消退(day+100 約 60%,day+180 約 90%)有預後意義,但纖維化本身變化慢、非敏感的復發偵測指標。分歧點:STR 敏感度僅約 1%,手冊 Ch21 說它不適合當 MRD marker,但在 MF 臨床實務仍是主要復發監測工具,故選 (2)(3)。"
+ },
+ {
+  "id": "114-044",
+  "number": 44,
+  "stem": "Which of the following statements about pre–CAR T procedures and washout requirements are most accurate?\n(1) Washout periods are usually set at five half-lives for drugs impairing T-cell function, but shorter intervals (e.g., two weeks after inotuzumab) may be accepted if urgent.\n(2) A platelet count >30,000/µL, ECOG <2, and adequate venous access are typical prerequisites for leukapheresis.\n(3) Bridging therapy aims mainly at stabilizing disease; tumour shrinkage may lower CRS risk, but consistent evidence that debulking improves long-term efficacy is lacking.\n(4) High-intensity bridging regimens can achieve rapid tumour control but often cause prolonged cytopenia and infection, complicating lymphodepletion.\n(5) Agents such as bendamustine require a recommended washout of 12 weeks before leukapheresis, while fludarabine requires 4 weeks.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(2)(3)(4)",
+   "C": "(1)(2)(4)(5)",
+   "D": "(1)(2)(3)(5)",
+   "E": "(1)(2)(3)(4)(5)"
+  },
+  "answer": "E",
+  "tags": "複選;AI暫定",
+  "keyword_tags": [
+   "CAR-T 橋接/washout",
+   "CAR-T",
+   "Leukapheresis",
+   "Inotuzumab",
+   "CRS"
+  ],
+  "ebmt_chapters": [
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)",
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)"
+  ],
+  "answer_note": "AI 暫定答案(信心 medium),理由:手冊未涵蓋(EBMT Handbook 無 CAR-T 前置 washout 章節;本題內容出自 EBMT/EHA CAR-T Cell Handbook 的 pre-CAR-T / bridging 章)。(1) 真:影響 T 細胞功能的藥物 washout 通常取 5 個半衰期,緊急時可接受較短間隔(如 inotuzumab 後 2 週)。(2) 真:白血球分離術常見前提為 platelet >30,000/µL、ECOG <2、足夠的靜脈通路。(3) 真:bridging 主要目的是穩定疾病;縮小腫瘤可能降低 CRS 風險,但「減積可改善長期療效」尚無一致證據。(4) 真:高強度 bridging 可快速控制腫瘤,但常造成長期 cytopenia 與感染,使 lymphodepletion 複雜化。(5) 真:常見 washout 建議 bendamustine 約 12 週(3 個月)、fludarabine 約 4 週。五句皆合理 → E;信心中等,主要不確定在 (5) 的具體週數各指引略有差異。"
+ },
+ {
+  "id": "114-045",
+  "number": 45,
+  "stem": "Which of the following patients is/are indicated to receive allogeneic HSCT?\n(1) AML with normal karyotype and FLT3-ITD mutation, in CR1 after induction therapy\n(2) AML with inv(16)(p13;q22), MRD-negative after induction therapy\n(3) AML with complex karyotype, in CR1\n(4) AML with NPM1 mutation, FLT3-ITD wild-type, MRD-negative in CR1",
+  "options": {
+   "A": "(1)(2)(3)(4)",
+   "B": "(1)(2)(3)",
+   "C": "(1)(3)",
+   "D": "(2)(4)",
+   "E": "(3)"
+  },
+  "answer": "C",
+  "tags": "複選;AI暫定",
+  "keyword_tags": [
+   "AML",
+   "FLT3-ITD",
+   "NPM1",
+   "MRD"
+  ],
+  "ebmt_chapters": [
+   "Ch70 AML in Adults (PDF p611–625)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:依手冊 Table 70.1(ELN 2022 風險分層的 CR1 post-remission 治療)。(1) 是:normal karyotype + FLT3-ITD 屬 intermediate risk(NPM1 不論),手冊建議 consider allo-HCT(MRD 陰性且 TRM 可接受)、MRD 陽性則 allo-HCT;一般考題共識 FLT3-ITD 在 CR1 有 allo-HCT 適應症。(2) 否:inv(16) CBF-AML 屬 favorable,MRD 陰性建議化療/auto-HCT,allo-HCT 不是適應症。(3) 是:complex karyotype 屬 adverse,不論 MRD 都建議 allo-HCT(MRD 陽性者一達 CR 即應移植)。(4) 否:NPM1 突變、FLT3-ITD 野生型、MRD 陰性屬 favorable,首選化療/auto-HCT。故 (1)(3)。"
+ },
+ {
+  "id": "114-046",
+  "number": 46,
+  "stem": "Please choose the correct statements about EBV-Posttransplant lymphoproliferative disorders (PTLD)?\n(1) Only occurred in allogeneic HCT\n(2) Most EBV reactivations are subclinical and require no therapy.\n(3) EBV-PTLD usually originates from the donor\n(4) Anti-CD20 antibodies have been used to prevent EBV reactivations in high-risk patients.",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(3)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "C",
+  "tags": "複選;AI暫定",
+  "keyword_tags": [
+   "EBV/PTLD",
+   "Pre-emptive RTX",
+   "免疫抑制劑減量"
+  ],
+  "ebmt_chapters": [
+   "Ch45 Posttransplant Lymphoproliferative Syndromes (PDF p422–428)",
+   "Ch38 Viral Infections (PDF p346–358)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:(1) 假:EBV-PTLD 也見於 auto-HCT(手冊風險表列 auto-HCT 為 low risk、無 TCD 者為 casuistic)及實體器官移植,並非只發生於 allo-HCT。(2) 真:大多數 EBV-DNA-emia 為低量、無症狀且自限,不需治療;手冊強調僅在「顯著 EBV-DNA-emia 且屬高風險」才給 preemptive rituximab,且無明確 threshold。(3) 真:手冊原句「in the HCT setting PTLD usually originates from the donor」,故 donor 血清陽性風險更高。(4) 真:手冊 §45.8.2.1 Prophylaxis:對無症狀 EBV 血清陽性高風險病人可用 rituximab(或 EBV-CTL)預防 EBV-DNA-emia,雖少用。故 (2)(3)(4)。"
+ },
+ {
+  "id": "114-047",
+  "number": 47,
+  "stem": "Which of the following numbers of arrows in the algorithm is considered as standard of care in Taiwan as of 2024?\n流程圖:https://img-hosting.hsieh-ting-lin.workers.dev/i/orwLp0O.png",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(3)",
+   "C": "(2)(4)",
+   "D": "(4)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選;AI暫定",
+  "keyword_tags": [
+   "DLBCL 二線",
+   "CAR-T",
+   "CAR-T 與移植順序",
+   "台灣本土",
+   "DLBCL 預後因子"
+  ],
+  "ebmt_chapters": [
+   "Ch86 Large B-Cell Lymphoma (PDF p758–766)",
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)"
+  ],
+  "answer_note": "AI 暫定答案(信心 low),理由:原卷題幹依賴一張流程圖(箭頭編號 (1)–(4) 對應台灣 2024 標準治療),文字版沒有 (1)–(4) 的敘述內容,無法判斷各箭頭所指療法。依指示填 E 並標低信心;此題需對照原始試卷圖片才能作答。"
+ },
+ {
+  "id": "114-048",
+  "number": 48,
+  "stem": "Which statement(s) about CART for myeloma is/are true?\n(1) Two commercial products, both tarteting the myeloma-specific antigen B cell maturation antigen (BCMA), have been approved: idecabtagene vicleucel (ide-cel) and ciltacabtagene autoleucel (cilta-cel)..\n(2) The KarMMa-3 study enrolled participants with 2–4 previous lines, randomizing ide-cel or standard-of-care chemotherapy regimens. The median PFS was 13 months in the ide-cel group versus 4 months\n(3) The CARTITUDE-4 trial included patients with lenalidomide-refractory MM and 1–3 previous lines. The median PFS was not reached for the cilta-cel group versus 12 months.\n(4) These therapies also induced deep responses in not only high-risk patients, but also patients with extra¬medullary disease",
+  "options": {
+   "A": "(1)(2)(3)",
+   "B": "(1)(2)",
+   "C": "(3)(4)",
+   "D": "(1)(3)",
+   "E": "(1)(2)(3)(4)"
+  },
+  "answer": "E",
+  "tags": "複選;AI暫定",
+  "keyword_tags": [
+   "BCMA CAR-T",
+   "CAR-T",
+   "MM 復發"
+  ],
+  "ebmt_chapters": [
+   "Ch81 Multiple Myeloma (PDF p727–735)",
+   "Ch60 Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy (PDF p541–549)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:四句皆為手冊 Ch81 §81.9 原文。(1) 真:兩個商業產品 ide-cel 與 cilta-cel 皆標靶 BCMA 且已核准。(2) 真:KarMMa-3 收 2–4 線、隨機 ide-cel vs 標準治療,median PFS 13 vs 4 個月。(3) 真:CARTITUDE-4 收 lenalidomide-refractory、1–3 線,median PFS NR vs 12 個月。(4) 真:手冊稱這些療法在高風險病人(含 extramedullary disease)亦誘導深度反應。故全選。"
+ },
+ {
+  "id": "114-049",
+  "number": 49,
+  "stem": "What are the options for the salvage treatment of relapsed Ph+ acute lymphoblastic leukemia after allogeneic hematopoietic stem cell transplantation?\n(1) TKI, e.g., dasatinib or ponatinib.\n(2) Blinatumomab\n(3) Inotuzumab\n(4) CD19-CAR-T therapy\n(5) Second allogeneic hematopoietic stem cell transplantation.",
+  "options": {
+   "A": "(1)(2)(3)(4)",
+   "B": "(1)(2)(3)",
+   "C": "(3)(4)",
+   "D": "(1)(2)(3)(4)(5)",
+   "E": "None of the above"
+  },
+  "answer": "D",
+  "tags": "複選;AI暫定",
+  "keyword_tags": [
+   "Ph+ ALL",
+   "TKI 維持",
+   "Blinatumomab",
+   "Inotuzumab",
+   "CAR-T",
+   "二次移植"
+  ],
+  "ebmt_chapters": [
+   "Ch72 Acute Lymphoblastic Leukemia in Adults (PDF p642–650)",
+   "Ch58 Prevention and Treatment of Relapse by Drugs (PDF p525–531)",
+   "Ch59 Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0 (PDF p532–540)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:Ph+ ALL 移植後復發的救援選項五項皆成立。(1) TKI(dasatinib/ponatinib,依先前 ABL 激酶突變選擇)是手冊 Ch58 表列 Ph+ ALL 復發的 treatment。(2) Blinatumomab 對 R/R 及 MRD+ ALL 有效,手冊列為移植後復發 (+DLI) beneficial。(3) Inotuzumab 已核准 R/R ALL,對 HCT 後復發亦有活性(注意 VOD 風險)。(4) CD19 CAR-T 為 R/R B-ALL 新選項,手冊亦提到 allo-HCT 後 MRD 陽性可用 antibodies/ADC/CAR-T preemptive。(5) 第二次 allo-HCT 對化療可再達緩解者仍是可治癒選項(手冊 §71.7 討論 second HCT)。故 (1)–(5) 全選。"
+ },
+ {
+  "id": "114-050",
+  "number": 50,
+  "stem": "Regarding the current management of HBV infection in HSCT donors and recipients, which followings were true?\n(1) Ani-HBV treatment is recommended in allo-HSCT recipients who had remote HBV infection before HSCT.\n(2) Long-term regularly monitoring HBV status is recommended in allo-HSCT recipients who had remote HBV infection before HSCT.\n(3) HBV reactivation is an important differential diagnosis in allo-HSCT recipients who had remote HBV infection before HSCT who developed grade 2 AST/ALT elevation in D+180 post allo-HSCT\n(4) Anti-HBV treatment is not indicated in HBsAg(+) allo-HSCT donor if the BMT recipients is also HBsAg(+).",
+  "options": {
+   "A": "(1)(2)(3)(4)",
+   "B": "(1)(2)(3)",
+   "C": "(3)(4)",
+   "D": "(4)",
+   "E": "(1)(3)"
+  },
+  "answer": "B",
+  "tags": "複選;AI暫定",
+  "keyword_tags": [
+   "HBV",
+   "捐贈者評估",
+   "晚期效應"
+  ],
+  "ebmt_chapters": [
+   "Ch49 Hepatic Complications (PDF p449–466)",
+   "Ch11 Evaluation and Counseling of Candidates (PDF p131–142)",
+   "Ch12 Donor Selection for Adults and Pediatrics (PDF p143–155)"
+  ],
+  "answer_note": "AI 暫定答案(信心 high),理由:題幹「remote HBV infection」= resolved HBV(anti-HBc+、HBsAg−)。(1) 真:手冊引 ECIL 建議所有 anti-HBc 陽性受者接受抗病毒預防(entecavir/tenofovir),EASL 於高風險(>10%,allo-HCT 屬之)亦建議預防。(2) 真:reverse seroconversion 是晚期併發症(中位 18–20 個月),停藥後仍需每 3 個月監測 HBV,故長期規律監測正確。(3) 真:D+180 出現 grade 2 AST/ALT 上升,HBV reactivation(reverse seroconversion)是重要鑑別,且典型發生於免疫重建後。(4) 假:HBsAg(+) donor 傳染率 22–44%,手冊建議「donor 抗病毒治療 + 受者抗病毒預防」;受者本身 HBsAg(+) 更需治療,無「因受者也陽性就不必治療 donor」之說。故 (1)(2)(3)。"
+ }
+]
