@@ -1,6 +1,11 @@
 # CLAUDE.md
 
-專科考試共筆題庫(hema-2026)。React + Vite 前端在 Cloudflare Pages,Hono Worker
+血液及骨髓移植專科醫師筆試共筆題庫(hsct-2026,站名「移專衝衝衝」,hsct.hsiehting.com)。
+**從 htlin222/mcq-bank(hema-2026,血液腫瘤次專科)fork 出來**:架構、腳本、設計筆記全部
+沿用,拆掉了抹片模組(本題庫全是選擇題),教科書換成 The EBMT Handbook(開放取用)。
+設計筆記裡的「1100 題」「血液腫瘤」等數字與例子多半還是 hema 的,讀的時候換算成這裡的
+規模即可:民國 108–114 年每年 50 題(單選 35 + K-type 複選 15;113 是 36/14),共 350 題,
+`group` 只有一個「內科」。React + Vite 前端在 Cloudflare Pages,Hono Worker
 在 `/api/*`,D1 / R2 / Workers AI / Durable Objects 全在免費額度內,登入交給
 Cloudflare Access(Zero Trust),**應用層沒有任何 auth 程式碼**。
 
@@ -377,7 +382,7 @@ e2e 不接真 Worker:`frontend/e2e/server.mjs` 回 `fixtures/<path 把 / 換成 
 
 ## Project Overview
 
-**National exam Q&A study system for 20 internal users.** 1000 questions (10 years × 100/year), with two study modes:
+**National exam Q&A study system for 20 internal users.** 350 questions (7 years × 50/year, 民國 108–114 血液及骨髓移植專科醫師筆試), with two study modes:
 
 1. **複習模式 (Review)** - one question at a time, immediate answer reveal, collaborative wiki-style 詳解 (explanation), threaded discussion comments
 2. **全真作答 (Mock Exam)** - sequential 100-question timed exam simulating real conditions, with score + error review
@@ -2280,6 +2285,25 @@ This is designed to fit in **free tier indefinitely** for 20 users. If a feature
 
 ## Owner Notes
 
-- Original spec from user: 1000 題, 10 年, 共筆詳解, 留言討論, @mention, 全真模擬, RWD, all Cloudflare
+- Original spec from user (hema-2026): 1000 題, 10 年, 共筆詳解, 留言討論, @mention, 全真模擬, RWD, all Cloudflare
+- hsct-2026 (2026-10-08): 直接繼承 hema-2026 全部架構,開 hsct.hsiehting.com,拆玻片模組,
+  講義與題目另外匯入,使用者沿用同一份 Google Sheet 名單(email OTP),筆試 2026/10/17
 - AI features are optional add-ons, not core
 - Future migration path to真共編 is reserved but not implemented
+
+### 題庫來源: 七份官方 PDF,答案藏法每年不同,而 114 根本沒有答案
+
+`scripts/parse-hsct-exam.py`(PyMuPDF)把 `108–114 年血液及骨髓移植專科醫師筆試試題.pdf`
+解析成 `years/hsct/hsct-<年>.csv`(gitignored,格式同 `import-questions.ts`);完整報告在
+`docs/hsct-pdf-parse-report.md`。每年 50 題:單選 1–35、K-type 複選 36–50(113 是 36/14),
+複選題的 (1)–(4) 敘述放進題幹、選項是組合文字,answer 仍是單一字母。
+
+- **答案的位置每年不同**:108/110 是題號後的紅色 `(X)` span;109 是題號後黏在同一 span 的
+  粗體字母;111–113 在最右欄(x≈537)、要依 y 對回題號;**114 的 PDF 是純題目版,文字層
+  一個答案都沒有**(沒白字、沒右欄、沒註解,只有一個紅色 span)。114 的 50 題 CSV 已備好
+  但 answer 空白,`import-questions.ts` 的 pre-flight 會整批拒絕 —— 要等官方答案來源回填,
+  不要猜。
+- 兩題題幹依賴流程圖(113-41、114-47,同一題「numbers of arrows in the algorithm」),
+  文字版已在題幹末尾註明;111-37 的 option_d 在原卷就是空白。
+- 108/110 用 `(共)` 標記共同題 → `tags` 填 `共同`;109 整卷沒有標記。跨年重複題不少,
+  刻意沒合併 —— 題號就是官方題號。
