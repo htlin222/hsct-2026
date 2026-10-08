@@ -1,0 +1,4801 @@
+{
+ "note": "第二層關鍵字 tag(受控詞彙)。vocab 由 agent 掃 350 題收斂(2026-10-08);questions 由 7 個 subagent 逐年從 vocab 挑 3–6 個。加新詞要 ≥2 題需要、≤16 字元,先進 vocab 再用。套用:python3 scripts/apply-ebmt-tags.py --remote",
+ "vocab": [
+  {
+   "tag": "HLA/MHC 基礎",
+   "aliases": [
+    "MHC",
+    "chromosome 6",
+    "class I/II",
+    "codominant",
+    "linkage disequilibrium",
+    "β2-microglobulin",
+    "sibling 25%",
+    "HLA genetics"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "HLA 分型",
+   "aliases": [
+    "HLA typing",
+    "high resolution",
+    "low resolution",
+    "serotyping",
+    "histocompatibility testing"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "HLA 配對",
+   "aliases": [
+    "HLA matching",
+    "8/8",
+    "10/10",
+    "HLA-A/B/C/DRB1",
+    "HLA-C",
+    "DQB1",
+    "each mismatch 10%"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "DPB1 permissive",
+   "aliases": [
+    "HLA-DP",
+    "DPB1",
+    "permissive mismatch",
+    "nonpermissive"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "HLA mismatch",
+   "aliases": [
+    "MMUD",
+    "mismatched unrelated",
+    "one-locus mismatch",
+    "HLA disparity"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "DSA",
+   "aliases": [
+    "donor-specific antibody",
+    "anti-HLA antibody"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "KIR/NK",
+   "aliases": [
+    "KIR",
+    "NK cell",
+    "missing self",
+    "NK alloreactivity",
+    "NKG2D"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "mHAg/MICA",
+   "aliases": [
+    "minor histocompatibility antigen",
+    "mHAg",
+    "MICA",
+    "MICB",
+    "H-Y antigen",
+    "non-HLA immunogenetics"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "ABO 不合",
+   "aliases": [
+    "ABO mismatch",
+    "major/minor ABO",
+    "isoagglutinin",
+    "plasma depletion",
+    "transfusion support",
+    "irradiated blood"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "CMV 血清狀態",
+   "aliases": [
+    "CMV serostatus",
+    "donor CMV",
+    "CMV-IgG",
+    "seronegative donor"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "捐贈者年齡/性別",
+   "aliases": [
+    "donor age",
+    "female-to-male",
+    "sex mismatch",
+    "non-HLA donor factor",
+    "donor selection algorithm"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "捐贈者評估",
+   "aliases": [
+    "donor eligibility",
+    "donor screening",
+    "infectious disease markers",
+    "donor questionnaire",
+    "HBsAg+ donor",
+    "donor COVID testing",
+    "donor adverse event",
+    "splenic rupture"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "MSD",
+   "aliases": [
+    "matched sibling donor",
+    "HLA-identical sibling",
+    "best donor",
+    "donor hierarchy"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "MUD",
+   "aliases": [
+    "matched unrelated donor",
+    "URD",
+    "MUD vs MSD",
+    "unrelated donor search"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "Haplo",
+   "aliases": [
+    "haploidentical",
+    "半相合",
+    "T-cell replete haplo",
+    "NIMA/NIPA"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "臍帶血",
+   "aliases": [
+    "cord blood",
+    "UCB",
+    "CBT",
+    "double cord",
+    "TNC dose"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "骨髓 vs 周邊血",
+   "aliases": [
+    "BM vs PBSC",
+    "graft source",
+    "stem cell source",
+    "PBSC cGVHD",
+    "BM for aplastic anemia"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "CD34 劑量",
+   "aliases": [
+    "CD34+ cell dose",
+    "cell dose",
+    "2×10^6/kg",
+    "minimum CD34",
+    "CD3 dose"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "動員",
+   "aliases": [
+    "mobilization",
+    "steady-state",
+    "chemo-mobilization",
+    "filgrastim 10 µg/kg",
+    "CD34 threshold"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "Poor mobilizer",
+   "aliases": [
+    "poor mobilizer",
+    "mobilization failure",
+    "CD34 <10/µL",
+    "risk factors for poor mobilization"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "G-CSF",
+   "aliases": [
+    "filgrastim",
+    "lenograstim",
+    "GM-CSF",
+    "post-transplant G-CSF"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "Plerixafor",
+   "aliases": [
+    "plerixafor",
+    "AMD3100",
+    "CXCR4 antagonist",
+    "SDF-1",
+    "pre-emptive plerixafor"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "Leukapheresis",
+   "aliases": [
+    "apheresis",
+    "分離術",
+    "large-volume apheresis",
+    "blood volume"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "冷凍保存",
+   "aliases": [
+    "cryopreservation",
+    "DMSO",
+    "cell concentration",
+    "freezing rate",
+    "thawing",
+    "vapour phase nitrogen"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "T-cell depletion",
+   "aliases": [
+    "graft manipulation",
+    "αβ depletion",
+    "CD34 selection",
+    "T-cell-depleted graft",
+    "ex vivo manipulation"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "HSC 歸巢",
+   "aliases": [
+    "HSC biology",
+    "CXCL12",
+    "CXCR4",
+    "homing",
+    "niche",
+    "multipotent"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "T 細胞亞群",
+   "aliases": [
+    "αβ T",
+    "γδ T",
+    "iNKT",
+    "NKT",
+    "MAIT",
+    "naive vs memory T",
+    "cellular players"
+   ],
+   "group": "捐贈者/HLA"
+  },
+  {
+   "tag": "Conditioning 原理",
+   "aliases": [
+    "purpose of conditioning",
+    "myelodepletion",
+    "lymphodepletion",
+    "intensity ladder",
+    "RTC",
+    "reduced toxicity conditioning"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "MAC",
+   "aliases": [
+    "myeloablative",
+    "BuCy",
+    "CyTBI",
+    "regimen identification"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "RIC",
+   "aliases": [
+    "reduced-intensity",
+    "NMA",
+    "non-myeloablative",
+    "FluBu",
+    "FluMel",
+    "RIC vs MAC relapse",
+    "RIC for elderly"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "TBI",
+   "aliases": [
+    "total body irradiation",
+    "fractionated TBI",
+    "low-dose TBI 2 Gy",
+    "TBI vs busulfan",
+    "sanctuary"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "Busulfan",
+   "aliases": [
+    "Bu",
+    "Busulfex",
+    "IV vs oral busulfan",
+    "busulfan PK"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "Cyclophosphamide",
+   "aliases": [
+    "Cy",
+    "CY200",
+    "Cy/ATG",
+    "acrolein",
+    "cyclophosphamide metabolites"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "Fludarabine",
+   "aliases": [
+    "Flu",
+    "fludarabine exposure",
+    "BSA-based dosing"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "Melphalan",
+   "aliases": [
+    "Mel",
+    "Mel200",
+    "Mel140",
+    "high-dose melphalan",
+    "Mel200 contraindication"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "Thiotepa",
+   "aliases": [
+    "thiotepa",
+    "TEAM",
+    "thiotepa toxicity"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "BEAM",
+   "aliases": [
+    "BEAM",
+    "BeEAM",
+    "BEAC",
+    "CBV",
+    "lymphoma conditioning"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "ATG",
+   "aliases": [
+    "anti-thymocyte globulin",
+    "thymoglobulin",
+    "rATG",
+    "hATG",
+    "ATG ALC dosing",
+    "ATG CMV/EBV reactivation",
+    "ATG in MUD"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "HCT-CI",
+   "aliases": [
+    "comorbidity index",
+    "EBMT risk score",
+    "transplant risk assessment"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "高齡移植",
+   "aliases": [
+    "elderly",
+    "older patients",
+    "age limit",
+    "age >70",
+    "RIC in elderly"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "Conditioning 毒性",
+   "aliases": [
+    "regimen-related toxicity",
+    "drug toxicity profile",
+    "gonadal failure",
+    "leukemogenesis",
+    "pulmonary toxicity"
+   ],
+   "group": "Conditioning"
+  },
+  {
+   "tag": "GVHD 機轉",
+   "aliases": [
+    "pathophysiology",
+    "three-phase",
+    "effector phase",
+    "APC activation",
+    "alloreactive T cell",
+    "Treg/iNKT/MDSC suppression"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "GVHD 風險因子",
+   "aliases": [
+    "risk factors",
+    "HLA disparity",
+    "female-to-male",
+    "TBI",
+    "Flowers 2011",
+    "aGVHD vs cGVHD risk"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "GVHD 預防",
+   "aliases": [
+    "GVHD prophylaxis",
+    "EBMT recommendation",
+    "CNI+MTX",
+    "CNI+MMF",
+    "CSA trough",
+    "vorinostat",
+    "standard prophylaxis"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "PTCy",
+   "aliases": [
+    "post-transplant cyclophosphamide",
+    "PT-Cy",
+    "day +3/+4",
+    "Treg sparing",
+    "PTCy in MUD"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "CNI",
+   "aliases": [
+    "calcineurin inhibitor",
+    "tacrolimus",
+    "cyclosporine",
+    "CSA",
+    "TAC",
+    "CSA dose",
+    "trough level"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "MTX",
+   "aliases": [
+    "methotrexate",
+    "short-course MTX",
+    "antimetabolite"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "MMF",
+   "aliases": [
+    "mycophenolate",
+    "MMF toxicity"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "Sirolimus",
+   "aliases": [
+    "sirolimus",
+    "mTOR inhibitor",
+    "everolimus"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "aGVHD 診斷",
+   "aliases": [
+    "clinical features",
+    "skin rash",
+    "maculopapular",
+    "exploding crypts",
+    "bile duct damage",
+    "biopsy",
+    "GI GVHD vs CMV colitis",
+    "differential diagnosis"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "aGVHD 分級",
+   "aliases": [
+    "grading",
+    "Glucksberg",
+    "MAGIC",
+    "stage",
+    "grade III",
+    "overall grade",
+    "grade 1 management"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "SR-aGVHD",
+   "aliases": [
+    "steroid-refractory",
+    "second-line",
+    "salvage treatment",
+    "MSC",
+    "FMT",
+    "fecal microbiota",
+    "alpha-1 antitrypsin",
+    "REACH2"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "Ruxolitinib",
+   "aliases": [
+    "ruxolitinib",
+    "JAK inhibitor",
+    "REACH",
+    "pre-transplant ruxolitinib"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "cGVHD 診斷",
+   "aliases": [
+    "NIH criteria",
+    "diagnostic features",
+    "lichen planus-like",
+    "sclerosis",
+    "poikiloderma",
+    "most involved organ",
+    "cGVHD incidence",
+    "NIH severity",
+    "PFT monitoring"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "cGVHD 治療",
+   "aliases": [
+    "chronic GVHD treatment",
+    "first-line prednisone",
+    "ibrutinib",
+    "imatinib",
+    "rituximab in cGVHD",
+    "supportive care",
+    "UDCA liver GVHD"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "GVL",
+   "aliases": [
+    "graft-versus-leukemia",
+    "graft-versus-tumor",
+    "GvT",
+    "GVL effect",
+    "disease kinetics"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "嗜中性球低下發燒",
+   "aliases": [
+    "febrile neutropenia",
+    "empirical antibiotics",
+    "de-escalation",
+    "gram-negative",
+    "C. difficile",
+    "infection phases"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "Encapsulated 細菌",
+   "aliases": [
+    "encapsulated organisms",
+    "pneumococcus",
+    "antibacterial prophylaxis in cGVHD",
+    "functional asplenia",
+    "late bacterial infection"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "抗黴菌預防",
+   "aliases": [
+    "antifungal prophylaxis",
+    "mold-active azole",
+    "posaconazole",
+    "echinocandin"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "黴菌感染",
+   "aliases": [
+    "invasive fungal disease",
+    "aspergillus",
+    "mold",
+    "mucormycosis",
+    "candida",
+    "yeast",
+    "route of acquisition",
+    "voriconazole"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "PJP 預防",
+   "aliases": [
+    "PCP",
+    "PJP",
+    "pneumocystis",
+    "TMP-SMX",
+    "prophylaxis duration"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "CMV",
+   "aliases": [
+    "cytomegalovirus",
+    "CMV reactivation",
+    "pre-emptive therapy",
+    "CMV pneumonitis",
+    "CMV gastroenteritis",
+    "CMV PCR",
+    "pp65",
+    "CMV in auto-HSCT"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "Letermovir",
+   "aliases": [
+    "letermovir",
+    "CMV prophylaxis",
+    "100 days",
+    "high-risk extension"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "Ganciclovir",
+   "aliases": [
+    "ganciclovir",
+    "valganciclovir",
+    "foscarnet",
+    "maribavir",
+    "cidofovir",
+    "CMV treatment",
+    "myelosuppression"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "EBV/PTLD",
+   "aliases": [
+    "EBV",
+    "PTLD",
+    "EBV DNAemia",
+    "EBV viremia monitoring",
+    "PTLD risk group",
+    "reduction of immunosuppression",
+    "haplo-PTCy PTLD risk"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "Pre-emptive RTX",
+   "aliases": [
+    "pre-emptive rituximab",
+    "anti-CD20",
+    "EBV pre-emptive"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "病毒專一T細胞",
+   "aliases": [
+    "EBV-CTL",
+    "virus-specific T cells",
+    "VST",
+    "CMV-specific T cells",
+    "ELISpot"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "HSV/VZV",
+   "aliases": [
+    "herpes simplex",
+    "acyclovir",
+    "varicella zoster",
+    "HSV prophylaxis"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "呼吸道病毒",
+   "aliases": [
+    "RSV",
+    "ribavirin",
+    "viral pneumonia",
+    "COVID-19",
+    "SARS-CoV-2",
+    "influenza"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "HBV",
+   "aliases": [
+    "hepatitis B",
+    "HBV reactivation",
+    "HBsAg",
+    "anti-HBV prophylaxis",
+    "HBV donor"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "IVIG",
+   "aliases": [
+    "intravenous immunoglobulin",
+    "CMV hyperimmune globulin",
+    "immunoglobulin replacement"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "低免疫球蛋白",
+   "aliases": [
+    "hypogammaglobulinemia",
+    "B-cell aplasia",
+    "late infection risk",
+    "CAR-T infection"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "感染管制",
+   "aliases": [
+    "isolation",
+    "HEPA",
+    "protective environment",
+    "home isolation"
+   ],
+   "group": "感染"
+  },
+  {
+   "tag": "植入症候群",
+   "aliases": [
+    "engraftment syndrome",
+    "ES",
+    "Spitzer",
+    "Maiolino",
+    "peri-engraftment",
+    "CRP"
+   ],
+   "group": "併發症"
+  },
+  {
+   "tag": "Graft failure",
+   "aliases": [
+    "graft failure",
+    "poor graft function",
+    "rejection",
+    "engraftment failure",
+    "lineage-specific chimerism"
+   ],
+   "group": "併發症"
+  },
+  {
+   "tag": "SOS/VOD",
+   "aliases": [
+    "sinusoidal obstruction syndrome",
+    "veno-occlusive disease",
+    "VOD diagnostic criteria",
+    "EBMT severity grading",
+    "VOD risk factors",
+    "VOD in children",
+    "Doppler",
+    "HVPG"
+   ],
+   "group": "併發症"
+  },
+  {
+   "tag": "Defibrotide",
+   "aliases": [
+    "defibrotide",
+    "HARMONY",
+    "defibrotide prophylaxis"
+   ],
+   "group": "併發症"
+  },
+  {
+   "tag": "UDCA",
+   "aliases": [
+    "ursodeoxycholic acid",
+    "ursodiol",
+    "VOD prophylaxis"
+   ],
+   "group": "併發症"
+  },
+  {
+   "tag": "出血性膀胱炎",
+   "aliases": [
+    "hemorrhagic cystitis",
+    "BK virus",
+    "BK polyomavirus",
+    "adenovirus",
+    "JC virus",
+    "early vs late onset",
+    "cidofovir",
+    "hyperhydration"
+   ],
+   "group": "併發症"
+  },
+  {
+   "tag": "心臟毒性",
+   "aliases": [
+    "cardiotoxicity",
+    "cyclophosphamide cardiotoxicity",
+    "PTCy cardiotoxicity"
+   ],
+   "group": "併發症"
+  },
+  {
+   "tag": "Mucositis",
+   "aliases": [
+    "mucositis",
+    "oral mucositis",
+    "bland rinse",
+    "lidocaine"
+   ],
+   "group": "併發症"
+  },
+  {
+   "tag": "次發腫瘤",
+   "aliases": [
+    "secondary malignancy",
+    "therapy-related MDS/AML",
+    "clonal evolution",
+    "leukemogenesis"
+   ],
+   "group": "併發症"
+  },
+  {
+   "tag": "晚期效應",
+   "aliases": [
+    "late effects",
+    "long-term follow-up",
+    "AVN",
+    "osteonecrosis",
+    "fertility",
+    "gonadal",
+    "azoospermia",
+    "sexual dysfunction",
+    "endocrine"
+   ],
+   "group": "併發症"
+  },
+  {
+   "tag": "植入",
+   "aliases": [
+    "engraftment",
+    "neutrophil recovery",
+    "hematological recovery",
+    "engraftment kinetics"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "Chimerism",
+   "aliases": [
+    "chimerism",
+    "STR",
+    "mixed chimerism",
+    "lineage-specific chimerism",
+    "recipient chimerism"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "MRD",
+   "aliases": [
+    "measurable residual disease",
+    "minimal residual disease",
+    "flow MRD",
+    "NGS MRD",
+    "RQ-PCR",
+    "fusion transcript",
+    "pre-transplant MRD",
+    "MRD markers",
+    "IG/TCR"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "復發",
+   "aliases": [
+    "relapse",
+    "post-transplant relapse",
+    "relapse risk factors",
+    "cause of death",
+    "relapse after RIC"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "DLI",
+   "aliases": [
+    "donor lymphocyte infusion",
+    "donor leukocyte infusion",
+    "escalating dose",
+    "prophylactic DLI",
+    "pDLI",
+    "DLI GVHD"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "維持治療",
+   "aliases": [
+    "maintenance",
+    "post-transplant maintenance",
+    "prophylactic treatment",
+    "relapse prevention",
+    "phase 3 maintenance"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "FLT3 抑制劑",
+   "aliases": [
+    "sorafenib",
+    "midostaurin",
+    "gilteritinib",
+    "quizartinib",
+    "FLT3 inhibitor maintenance",
+    "SORMAIN"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "HMA 維持",
+   "aliases": [
+    "azacitidine maintenance",
+    "CC-486",
+    "hypomethylating agent",
+    "decitabine",
+    "HMA after relapse"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "TKI 維持",
+   "aliases": [
+    "TKI maintenance",
+    "post-transplant TKI",
+    "dasatinib",
+    "ponatinib",
+    "imatinib after allo"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "二次移植",
+   "aliases": [
+    "second transplant",
+    "second auto-HSCT",
+    "salvage ASCT",
+    "second allo-HSCT",
+    "auto after auto"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "免疫逃脫",
+   "aliases": [
+    "immune escape",
+    "HLA loss",
+    "antigen loss",
+    "CD19 loss",
+    "lineage switch",
+    "CAR-T resistance",
+    "sBCMA"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "免疫重建",
+   "aliases": [
+    "immune reconstitution",
+    "lymphocyte recovery",
+    "CD4 reconstitution",
+    "immunomonitoring",
+    "ATG vs PTCy reconstitution"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "免疫抑制劑減量",
+   "aliases": [
+    "IS taper",
+    "IS withdrawal",
+    "reduction of immunosuppression",
+    "RIS",
+    "early tapering"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "PD-1 抑制劑",
+   "aliases": [
+    "checkpoint inhibitor",
+    "nivolumab",
+    "pembrolizumab",
+    "PD-1 blockade",
+    "ipilimumab",
+    "post-allo PD-1 GVHD"
+   ],
+   "group": "植入/監測/復發"
+  },
+  {
+   "tag": "CAR-T",
+   "aliases": [
+    "CAR-T",
+    "CD19 CAR-T",
+    "chimeric antigen receptor",
+    "tisagenlecleucel",
+    "axicabtagene",
+    "lisocabtagene",
+    "brexucabtagene",
+    "obecabtagene",
+    "CAR-T eligibility",
+    "CAR-T efficacy"
+   ],
+   "group": "細胞治療"
+  },
+  {
+   "tag": "CRS",
+   "aliases": [
+    "cytokine release syndrome",
+    "tocilizumab",
+    "CRS grading",
+    "CRS timing"
+   ],
+   "group": "細胞治療"
+  },
+  {
+   "tag": "ICANS",
+   "aliases": [
+    "neurotoxicity",
+    "ICE score",
+    "ASTCT grading",
+    "steroid for ICANS"
+   ],
+   "group": "細胞治療"
+  },
+  {
+   "tag": "CAR-T 橋接/washout",
+   "aliases": [
+    "bridging therapy",
+    "washout",
+    "leukapheresis for CAR-T",
+    "manufacturing",
+    "lymphodepletion",
+    "apheresis prerequisites"
+   ],
+   "group": "細胞治療"
+  },
+  {
+   "tag": "BCMA CAR-T",
+   "aliases": [
+    "BCMA",
+    "idecabtagene",
+    "ide-cel",
+    "ciltacabtagene",
+    "cilta-cel",
+    "KarMMa-3",
+    "CARTITUDE-4",
+    "CAR-T for myeloma"
+   ],
+   "group": "細胞治療"
+  },
+  {
+   "tag": "Blinatumomab",
+   "aliases": [
+    "blinatumomab",
+    "bispecific antibody",
+    "BiTE"
+   ],
+   "group": "細胞治療"
+  },
+  {
+   "tag": "Inotuzumab",
+   "aliases": [
+    "inotuzumab ozogamicin",
+    "anti-CD22",
+    "SOS risk"
+   ],
+   "group": "細胞治療"
+  },
+  {
+   "tag": "MSC",
+   "aliases": [
+    "mesenchymal stromal cell",
+    "MSC for GVHD"
+   ],
+   "group": "細胞治療"
+  },
+  {
+   "tag": "Treg",
+   "aliases": [
+    "regulatory T cell",
+    "Treg recovery",
+    "Treg and PTCy"
+   ],
+   "group": "細胞治療"
+  },
+  {
+   "tag": "CAR-T 與移植順序",
+   "aliases": [
+    "CAR-T vs transplant",
+    "consolidative allo after CAR-T",
+    "CAR-T after HSCT",
+    "donor-derived CAR-T",
+    "CAR-T as bridge to HSCT"
+   ],
+   "group": "細胞治療"
+  },
+  {
+   "tag": "AML",
+   "aliases": [
+    "AML indication",
+    "ELN risk",
+    "primary refractory",
+    "CR2",
+    "early relapse",
+    "inv(16)",
+    "complex karyotype",
+    "CEBPA",
+    "RIC in AML"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "FLT3-ITD",
+   "aliases": [
+    "FLT3-ITD",
+    "allele ratio",
+    "FLT3 MRD"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "NPM1",
+   "aliases": [
+    "NPM1",
+    "favorable risk"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "TP53",
+   "aliases": [
+    "TP53",
+    "del17p",
+    "TP53-mutated MCL",
+    "TP53 MDS"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "APL",
+   "aliases": [
+    "acute promyelocytic",
+    "PML-RARA",
+    "APL auto-HSCT CR2"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "ALL",
+   "aliases": [
+    "ALL indication",
+    "adult ALL",
+    "pediatric protocol",
+    "CR1 transplant",
+    "MRD-guided ALL",
+    "TBI/Cy for ALL"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "Ph+ ALL",
+   "aliases": [
+    "Philadelphia",
+    "BCR-ABL ALL",
+    "t(9;22)",
+    "Ph+ ALL TKI",
+    "relapsed Ph+ ALL"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "MDS",
+   "aliases": [
+    "MDS indication",
+    "IPSS",
+    "timing of transplant",
+    "low-risk MDS",
+    "MDS gene mutations",
+    "RAEB"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "MDS 前處置",
+   "aliases": [
+    "pre-transplant HMA",
+    "cytoreduction",
+    "blast >10%",
+    "induction before transplant"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "CML",
+   "aliases": [
+    "CML",
+    "T315I",
+    "blast crisis",
+    "accelerated phase",
+    "TKI failure",
+    "CML DLI"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "MF",
+   "aliases": [
+    "myelofibrosis",
+    "PMF",
+    "JAK2",
+    "DIPSS",
+    "MF relapse detection",
+    "MF graft failure"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "脾臟處理",
+   "aliases": [
+    "splenectomy",
+    "spleen irradiation",
+    "splenomegaly",
+    "pre-transplant spleen"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "SAA",
+   "aliases": [
+    "severe aplastic anemia",
+    "Cy/ATG",
+    "SAA MSD vs MUD",
+    "SAA haplo",
+    "SAA BM source",
+    "SAA indication",
+    "low-dose TBI SAA"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "IST",
+   "aliases": [
+    "immunosuppressive therapy",
+    "hATG",
+    "horse ATG",
+    "CsA",
+    "IST failure",
+    "IST relapse"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "Eltrombopag",
+   "aliases": [
+    "eltrombopag",
+    "Townsley NEJM",
+    "triple therapy",
+    "TPO-RA",
+    "romiplostim"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "PNH",
+   "aliases": [
+    "PNH",
+    "eculizumab",
+    "ravulizumab",
+    "pegcetacoplan",
+    "complement inhibitor",
+    "PNH transplant"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "MM 自體移植",
+   "aliases": [
+    "myeloma auto",
+    "ASCT",
+    "Mel200",
+    "early vs delayed ASCT",
+    "ASCT eligibility",
+    "renal impairment MM"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "MM 誘導",
+   "aliases": [
+    "VTD",
+    "VRd",
+    "VCD",
+    "daratumumab",
+    "Dara-VTD",
+    "CASSIOPEIA",
+    "PERSEUS",
+    "IFM2009",
+    "MM MRD"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "MM 維持",
+   "aliases": [
+    "lenalidomide maintenance",
+    "VRD consolidation",
+    "EMN02/HO95",
+    "bortezomib maintenance",
+    "ixazomib"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "MM 復發",
+   "aliases": [
+    "relapsed myeloma",
+    "salvage ASCT",
+    "allo for myeloma",
+    "relapse <18 months"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "Tandem 移植",
+   "aliases": [
+    "tandem auto",
+    "double ASCT",
+    "high-risk cytogenetics tandem"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "AL amyloidosis",
+   "aliases": [
+    "amyloidosis",
+    "AL amyloid risk group"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "DLBCL 二線",
+   "aliases": [
+    "relapsed DLBCL",
+    "salvage chemotherapy",
+    "chemosensitive",
+    "PET negativity",
+    "CAR-T vs auto",
+    "allo for DLBCL",
+    "Taiwan 2024 algorithm"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "DLBCL 一線鞏固",
+   "aliases": [
+    "first-line auto",
+    "high IPI",
+    "high-grade B-cell",
+    "CR1 consolidation lymphoma"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "DLBCL 預後因子",
+   "aliases": [
+    "adverse prognostic factors",
+    "early relapse <12 months",
+    "sAAIPI",
+    "extranodal sites",
+    "performance status",
+    "disease status before allo"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "FL",
+   "aliases": [
+    "follicular lymphoma",
+    "FL auto-HSCT",
+    "FL RIC allo",
+    "grade 3B"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "MCL",
+   "aliases": [
+    "mantle cell",
+    "high-dose cytarabine",
+    "LyMa",
+    "MCL auto consolidation"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "HL",
+   "aliases": [
+    "Hodgkin",
+    "brentuximab vedotin",
+    "BV consolidation",
+    "HL auto-HSCT",
+    "HL allo"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "Rituximab 維持",
+   "aliases": [
+    "rituximab maintenance",
+    "maintenance after auto"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "T 細胞淋巴瘤",
+   "aliases": [
+    "PTCL",
+    "ALCL",
+    "CTCL",
+    "peripheral T-cell lymphoma"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "Burkitt/LBL",
+   "aliases": [
+    "Burkitt",
+    "lymphoblastic lymphoma",
+    "T-LBL"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "CNS 淋巴瘤",
+   "aliases": [
+    "CNS prophylaxis",
+    "testicular lymphoma",
+    "immune-privileged sites",
+    "CNS-penetrating chemotherapy"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "自體免疫疾病",
+   "aliases": [
+    "autoimmune",
+    "multiple sclerosis",
+    "systemic sclerosis",
+    "scleroderma",
+    "Crohn"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "實體腫瘤",
+   "aliases": [
+    "solid tumor",
+    "germ cell tumor",
+    "neuroblastoma",
+    "renal cell carcinoma",
+    "melanoma",
+    "breast cancer"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "兒童移植",
+   "aliases": [
+    "pediatric",
+    "children",
+    "pediatric Ph+ ALL",
+    "VOD in children"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "台灣本土",
+   "aliases": [
+    "Taiwan",
+    "健保",
+    "NHI",
+    "Taiwan consensus",
+    "standard of care in Taiwan"
+   ],
+   "group": "其他"
+  },
+  {
+   "tag": "移植適應症",
+   "aliases": [
+    "transplant indication",
+    "timing of HCT",
+    "who should be transplanted"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "類固醇",
+   "aliases": [
+    "corticosteroid",
+    "glucocorticoid",
+    "steroid"
+   ],
+   "group": "GVHD"
+  },
+  {
+   "tag": "自體移植",
+   "aliases": [
+    "autologous HSCT",
+    "auto-HSCT",
+    "ASCT"
+   ],
+   "group": "疾病"
+  },
+  {
+   "tag": "淋巴瘤一線鞏固",
+   "aliases": [
+    "CR1 consolidation lymphoma",
+    "first-line auto HL/MCL/LBL"
+   ],
+   "group": "疾病"
+  }
+ ],
+ "questions": [
+  {
+   "id": "108-001",
+   "tags": [
+    "Chimerism",
+    "Graft failure",
+    "SAA",
+    "植入"
+   ]
+  },
+  {
+   "id": "108-002",
+   "tags": [
+    "MRD",
+    "AML",
+    "ALL",
+    "Chimerism",
+    "復發"
+   ]
+  },
+  {
+   "id": "108-003",
+   "tags": [
+    "DLI",
+    "復發",
+    "GVL"
+   ]
+  },
+  {
+   "id": "108-004",
+   "tags": [
+    "HSC 歸巢",
+    "骨髓 vs 周邊血",
+    "動員"
+   ]
+  },
+  {
+   "id": "108-005",
+   "tags": [
+    "HSC 歸巢",
+    "Plerixafor",
+    "動員"
+   ]
+  },
+  {
+   "id": "108-006",
+   "tags": [
+    "T-cell depletion",
+    "T 細胞亞群",
+    "Leukapheresis",
+    "動員"
+   ]
+  },
+  {
+   "id": "108-007",
+   "tags": [
+    "cGVHD 診斷",
+    "GVHD 風險因子",
+    "晚期效應"
+   ]
+  },
+  {
+   "id": "108-008",
+   "tags": [
+    "cGVHD 診斷",
+    "aGVHD 診斷",
+    "cGVHD 治療"
+   ]
+  },
+  {
+   "id": "108-009",
+   "tags": [
+    "aGVHD 診斷",
+    "cGVHD 診斷",
+    "aGVHD 分級"
+   ]
+  },
+  {
+   "id": "108-010",
+   "tags": [
+    "GVHD 預防",
+    "CNI",
+    "MTX",
+    "ATG",
+    "MAC"
+   ]
+  },
+  {
+   "id": "108-011",
+   "tags": [
+    "Conditioning 原理",
+    "Busulfan",
+    "TBI",
+    "MAC",
+    "RIC",
+    "ALL"
+   ]
+  },
+  {
+   "id": "108-012",
+   "tags": [
+    "RIC",
+    "GVL",
+    "SAA",
+    "Cyclophosphamide",
+    "Conditioning 原理"
+   ]
+  },
+  {
+   "id": "108-013",
+   "tags": [
+    "RIC",
+    "AML",
+    "復發",
+    "MAC"
+   ]
+  },
+  {
+   "id": "108-014",
+   "tags": [
+    "MRD",
+    "AML",
+    "ALL",
+    "復發"
+   ]
+  },
+  {
+   "id": "108-015",
+   "tags": [
+    "CML",
+    "復發",
+    "TKI 維持",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "108-016",
+   "tags": [
+    "DSA",
+    "Haplo",
+    "Graft failure",
+    "捐贈者評估"
+   ]
+  },
+  {
+   "id": "108-017",
+   "tags": [
+    "HLA 配對",
+    "DPB1 permissive",
+    "HLA mismatch",
+    "MUD",
+    "MSD"
+   ]
+  },
+  {
+   "id": "108-018",
+   "tags": [
+    "MUD",
+    "HLA 配對",
+    "ABO 不合",
+    "捐贈者年齡/性別",
+    "台灣本土",
+    "GVHD 風險因子"
+   ]
+  },
+  {
+   "id": "108-019",
+   "tags": [
+    "MCL",
+    "Rituximab 維持",
+    "二次移植",
+    "維持治療"
+   ]
+  },
+  {
+   "id": "108-020",
+   "tags": [
+    "FL",
+    "MAC",
+    "RIC",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "108-021",
+   "tags": [
+    "FL",
+    "MCL",
+    "DLBCL 二線",
+    "T 細胞淋巴瘤",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "108-022",
+   "tags": [
+    "AL amyloidosis",
+    "實體腫瘤",
+    "DLBCL 二線",
+    "自體免疫疾病",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "108-023",
+   "tags": [
+    "MM 自體移植",
+    "Tandem 移植",
+    "高齡移植"
+   ]
+  },
+  {
+   "id": "108-024",
+   "tags": [
+    "植入症候群",
+    "植入",
+    "aGVHD 診斷"
+   ]
+  },
+  {
+   "id": "108-025",
+   "tags": [
+    "EBV/PTLD",
+    "Pre-emptive RTX",
+    "免疫抑制劑減量",
+    "T-cell depletion"
+   ]
+  },
+  {
+   "id": "108-026",
+   "tags": [
+    "Mucositis",
+    "Conditioning 毒性",
+    "MAC"
+   ]
+  },
+  {
+   "id": "108-027",
+   "tags": [
+    "SOS/VOD",
+    "Conditioning 毒性",
+    "Defibrotide"
+   ]
+  },
+  {
+   "id": "108-028",
+   "tags": [
+    "EBV/PTLD",
+    "Pre-emptive RTX",
+    "MUD"
+   ]
+  },
+  {
+   "id": "108-029",
+   "tags": [
+    "Encapsulated 細菌",
+    "抗黴菌預防",
+    "PJP 預防",
+    "HSV/VZV"
+   ]
+  },
+  {
+   "id": "108-030",
+   "tags": [
+    "CMV",
+    "呼吸道病毒",
+    "HSV/VZV"
+   ]
+  },
+  {
+   "id": "108-031",
+   "tags": [
+    "MDS",
+    "高齡移植",
+    "MDS 前處置",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "108-032",
+   "tags": [
+    "MDS 前處置",
+    "MDS",
+    "高齡移植"
+   ]
+  },
+  {
+   "id": "108-033",
+   "tags": [
+    "SAA",
+    "IST",
+    "Cyclophosphamide",
+    "ATG",
+    "MSD",
+    "Graft failure"
+   ]
+  },
+  {
+   "id": "108-034",
+   "tags": [
+    "MM 誘導",
+    "MRD",
+    "MM 自體移植",
+    "MM 復發"
+   ]
+  },
+  {
+   "id": "108-035",
+   "tags": [
+    "MM 維持",
+    "Tandem 移植",
+    "MM 復發",
+    "二次移植",
+    "MM 自體移植"
+   ]
+  },
+  {
+   "id": "108-036",
+   "tags": [
+    "復發",
+    "FLT3-ITD",
+    "MRD",
+    "CMV",
+    "KIR/NK",
+    "AML"
+   ]
+  },
+  {
+   "id": "108-037",
+   "tags": [
+    "CAR-T",
+    "BCMA CAR-T",
+    "CRS",
+    "實體腫瘤",
+    "ALL"
+   ]
+  },
+  {
+   "id": "108-038",
+   "tags": [
+    "GVHD 風險因子",
+    "HLA mismatch",
+    "Haplo",
+    "TBI",
+    "捐贈者年齡/性別",
+    "兒童移植"
+   ]
+  },
+  {
+   "id": "108-039",
+   "tags": [
+    "ATG",
+    "GVHD 預防",
+    "Haplo",
+    "CMV",
+    "EBV/PTLD",
+    "台灣本土"
+   ]
+  },
+  {
+   "id": "108-040",
+   "tags": [
+    "Haplo",
+    "KIR/NK",
+    "GVL",
+    "ATG",
+    "PTCy",
+    "AML"
+   ]
+  },
+  {
+   "id": "108-041",
+   "tags": [
+    "MUD",
+    "MSD",
+    "骨髓 vs 周邊血",
+    "捐贈者年齡/性別",
+    "兒童移植",
+    "HLA 配對"
+   ]
+  },
+  {
+   "id": "108-042",
+   "tags": [
+    "CNS 淋巴瘤",
+    "DLBCL 一線鞏固",
+    "DLBCL 二線",
+    "Rituximab 維持"
+   ]
+  },
+  {
+   "id": "108-043",
+   "tags": [
+    "BEAM",
+    "Conditioning 毒性",
+    "植入"
+   ]
+  },
+  {
+   "id": "108-044",
+   "tags": [
+    "aGVHD 診斷",
+    "CMV",
+    "嗜中性球低下發燒",
+    "黴菌感染"
+   ]
+  },
+  {
+   "id": "108-045",
+   "tags": [
+    "復發",
+    "AML",
+    "MDS",
+    "KIR/NK",
+    "RIC",
+    "捐贈者年齡/性別"
+   ]
+  },
+  {
+   "id": "108-046",
+   "tags": [
+    "RIC",
+    "AML",
+    "復發",
+    "MAC",
+    "GVHD 風險因子"
+   ]
+  },
+  {
+   "id": "108-047",
+   "tags": [
+    "GVHD 預防",
+    "CNI",
+    "MTX"
+   ]
+  },
+  {
+   "id": "108-048",
+   "tags": [
+    "SAA",
+    "骨髓 vs 周邊血",
+    "ATG",
+    "Haplo",
+    "MUD",
+    "Graft failure"
+   ]
+  },
+  {
+   "id": "108-049",
+   "tags": [
+    "實體腫瘤",
+    "RIC",
+    "GVL",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "108-050",
+   "tags": [
+    "CMV",
+    "Ganciclovir",
+    "IVIG",
+    "Letermovir"
+   ]
+  },
+  {
+   "id": "109-001",
+   "tags": [
+    "Chimerism",
+    "復發",
+    "MRD",
+    "Graft failure"
+   ]
+  },
+  {
+   "id": "109-002",
+   "tags": [
+    "DLI",
+    "病毒專一T細胞",
+    "CAR-T",
+    "T 細胞亞群"
+   ]
+  },
+  {
+   "id": "109-003",
+   "tags": [
+    "MRD",
+    "Chimerism",
+    "AML",
+    "ALL"
+   ]
+  },
+  {
+   "id": "109-004",
+   "tags": [
+    "出血性膀胱炎",
+    "PTCy",
+    "Cyclophosphamide"
+   ]
+  },
+  {
+   "id": "109-005",
+   "tags": [
+    "植入症候群",
+    "植入",
+    "aGVHD 診斷"
+   ]
+  },
+  {
+   "id": "109-006",
+   "tags": [
+    "晚期效應",
+    "TBI",
+    "Conditioning 毒性",
+    "類固醇"
+   ]
+  },
+  {
+   "id": "109-007",
+   "tags": [
+    "GVHD 預防",
+    "CNI",
+    "MTX",
+    "Ruxolitinib"
+   ]
+  },
+  {
+   "id": "109-008",
+   "tags": [
+    "SR-aGVHD",
+    "MSC",
+    "aGVHD 分級"
+   ]
+  },
+  {
+   "id": "109-009",
+   "tags": [
+    "cGVHD 治療",
+    "Sirolimus",
+    "PD-1 抑制劑"
+   ]
+  },
+  {
+   "id": "109-010",
+   "tags": [
+    "ALL",
+    "Ph+ ALL",
+    "兒童移植",
+    "CAR-T 與移植順序",
+    "骨髓 vs 周邊血",
+    "GVL"
+   ]
+  },
+  {
+   "id": "109-011",
+   "tags": [
+    "CML",
+    "DLI",
+    "TKI 維持",
+    "RIC",
+    "MRD"
+   ]
+  },
+  {
+   "id": "109-012",
+   "tags": [
+    "TBI",
+    "RIC",
+    "MUD",
+    "MSD",
+    "Ph+ ALL"
+   ]
+  },
+  {
+   "id": "109-013",
+   "tags": [
+    "MAC",
+    "Busulfan",
+    "TBI",
+    "AML",
+    "ALL"
+   ]
+  },
+  {
+   "id": "109-014",
+   "tags": [
+    "RIC",
+    "MAC",
+    "Fludarabine",
+    "高齡移植",
+    "復發",
+    "AML"
+   ]
+  },
+  {
+   "id": "109-015",
+   "tags": [
+    "ATG",
+    "GVHD 預防",
+    "MUD",
+    "MSD",
+    "CMV"
+   ]
+  },
+  {
+   "id": "109-016",
+   "tags": [
+    "HLA/MHC 基礎",
+    "MSD",
+    "GVHD 風險因子"
+   ]
+  },
+  {
+   "id": "109-017",
+   "tags": [
+    "捐贈者年齡/性別",
+    "MUD",
+    "DSA",
+    "CMV 血清狀態",
+    "ABO 不合"
+   ]
+  },
+  {
+   "id": "109-018",
+   "tags": [
+    "Poor mobilizer",
+    "動員",
+    "Leukapheresis"
+   ]
+  },
+  {
+   "id": "109-019",
+   "tags": [
+    "HLA 分型",
+    "HLA 配對",
+    "HLA/MHC 基礎"
+   ]
+  },
+  {
+   "id": "109-020",
+   "tags": [
+    "Haplo",
+    "KIR/NK",
+    "DSA",
+    "HLA mismatch",
+    "HLA 分型"
+   ]
+  },
+  {
+   "id": "109-021",
+   "tags": [
+    "GVHD 機轉",
+    "mHAg/MICA",
+    "HLA/MHC 基礎",
+    "PTCy",
+    "T 細胞亞群"
+   ]
+  },
+  {
+   "id": "109-022",
+   "tags": [
+    "BEAM",
+    "DLBCL 二線",
+    "Conditioning 毒性",
+    "Thiotepa",
+    "次發腫瘤"
+   ]
+  },
+  {
+   "id": "109-023",
+   "tags": [
+    "DLBCL 預後因子",
+    "DLBCL 二線",
+    "復發"
+   ]
+  },
+  {
+   "id": "109-024",
+   "tags": [
+    "FL",
+    "RIC",
+    "Rituximab 維持",
+    "二次移植"
+   ]
+  },
+  {
+   "id": "109-025",
+   "tags": [
+    "BEAM",
+    "HL",
+    "MAC"
+   ]
+  },
+  {
+   "id": "109-026",
+   "tags": [
+    "CD34 劑量",
+    "植入",
+    "動員"
+   ]
+  },
+  {
+   "id": "109-027",
+   "tags": [
+    "MDS",
+    "RIC",
+    "骨髓 vs 周邊血",
+    "高齡移植"
+   ]
+  },
+  {
+   "id": "109-028",
+   "tags": [
+    "MF",
+    "脾臟處理",
+    "MRD"
+   ]
+  },
+  {
+   "id": "109-029",
+   "tags": [
+    "實體腫瘤",
+    "GVL",
+    "兒童移植"
+   ]
+  },
+  {
+   "id": "109-030",
+   "tags": [
+    "嗜中性球低下發燒",
+    "黴菌感染",
+    "PJP 預防",
+    "CMV",
+    "HSV/VZV"
+   ]
+  },
+  {
+   "id": "109-031",
+   "tags": [
+    "CMV",
+    "CMV 血清狀態",
+    "Letermovir",
+    "IVIG",
+    "Ganciclovir"
+   ]
+  },
+  {
+   "id": "109-032",
+   "tags": [
+    "黴菌感染",
+    "感染管制",
+    "抗黴菌預防"
+   ]
+  },
+  {
+   "id": "109-033",
+   "tags": [
+    "MM 自體移植",
+    "Melphalan",
+    "Tandem 移植",
+    "MM 維持"
+   ]
+  },
+  {
+   "id": "109-034",
+   "tags": [
+    "AL amyloidosis",
+    "MM 自體移植",
+    "HCT-CI"
+   ]
+  },
+  {
+   "id": "109-035",
+   "tags": [
+    "SAA",
+    "IST",
+    "MSD",
+    "Cyclophosphamide",
+    "ATG",
+    "Graft failure"
+   ]
+  },
+  {
+   "id": "109-036",
+   "tags": [
+    "DLBCL 一線鞏固",
+    "Burkitt/LBL",
+    "MCL"
+   ]
+  },
+  {
+   "id": "109-037",
+   "tags": [
+    "DLBCL 二線",
+    "DLBCL 預後因子",
+    "復發"
+   ]
+  },
+  {
+   "id": "109-038",
+   "tags": [
+    "HLA/MHC 基礎",
+    "HLA 配對",
+    "HLA 分型"
+   ]
+  },
+  {
+   "id": "109-039",
+   "tags": [
+    "骨髓 vs 周邊血",
+    "臍帶血",
+    "SAA",
+    "GVHD 風險因子",
+    "Graft failure",
+    "植入"
+   ]
+  },
+  {
+   "id": "109-040",
+   "tags": [
+    "PTCy",
+    "Treg",
+    "Haplo",
+    "GVHD 預防",
+    "GVHD 機轉"
+   ]
+  },
+  {
+   "id": "109-041",
+   "tags": [
+    "MRD",
+    "AML",
+    "復發"
+   ]
+  },
+  {
+   "id": "109-042",
+   "tags": [
+    "GVHD 風險因子",
+    "捐贈者年齡/性別",
+    "骨髓 vs 周邊血",
+    "TBI"
+   ]
+  },
+  {
+   "id": "109-043",
+   "tags": [
+    "SOS/VOD",
+    "Conditioning 毒性",
+    "aGVHD 診斷"
+   ]
+  },
+  {
+   "id": "109-044",
+   "tags": [
+    "FLT3 抑制劑",
+    "HMA 維持",
+    "免疫抑制劑減量",
+    "DLI",
+    "FLT3-ITD",
+    "維持治療"
+   ]
+  },
+  {
+   "id": "109-045",
+   "tags": [
+    "Encapsulated 細菌",
+    "低免疫球蛋白",
+    "cGVHD 治療"
+   ]
+  },
+  {
+   "id": "109-046",
+   "tags": [
+    "MF",
+    "Graft failure",
+    "MRD",
+    "DLI",
+    "GVL"
+   ]
+  },
+  {
+   "id": "109-047",
+   "tags": [
+    "MM 誘導",
+    "MM 自體移植",
+    "Melphalan"
+   ]
+  },
+  {
+   "id": "109-048",
+   "tags": [
+    "G-CSF",
+    "動員",
+    "植入",
+    "GVHD 風險因子",
+    "HSC 歸巢"
+   ]
+  },
+  {
+   "id": "109-049",
+   "tags": [
+    "呼吸道病毒",
+    "感染管制",
+    "IVIG",
+    "類固醇"
+   ]
+  },
+  {
+   "id": "109-050",
+   "tags": [
+    "MDS",
+    "復發",
+    "維持治療",
+    "Haplo"
+   ]
+  },
+  {
+   "id": "110-001",
+   "tags": [
+    "HLA 配對",
+    "HLA mismatch",
+    "MUD"
+   ]
+  },
+  {
+   "id": "110-002",
+   "tags": [
+    "免疫重建",
+    "ATG",
+    "T 細胞亞群"
+   ]
+  },
+  {
+   "id": "110-003",
+   "tags": [
+    "HSC 歸巢",
+    "骨髓 vs 周邊血",
+    "Plerixafor"
+   ]
+  },
+  {
+   "id": "110-004",
+   "tags": [
+    "骨髓 vs 周邊血",
+    "GVHD 風險因子",
+    "SAA",
+    "植入",
+    "Graft failure"
+   ]
+  },
+  {
+   "id": "110-005",
+   "tags": [
+    "HLA 配對",
+    "DPB1 permissive",
+    "MUD",
+    "MSD"
+   ]
+  },
+  {
+   "id": "110-006",
+   "tags": [
+    "HLA/MHC 基礎",
+    "MSD",
+    "GVHD 風險因子"
+   ]
+  },
+  {
+   "id": "110-007",
+   "tags": [
+    "Conditioning 原理",
+    "RIC",
+    "植入",
+    "HSC 歸巢"
+   ]
+  },
+  {
+   "id": "110-008",
+   "tags": [
+    "ATG",
+    "GVHD 預防",
+    "MUD",
+    "CMV",
+    "台灣本土"
+   ]
+  },
+  {
+   "id": "110-009",
+   "tags": [
+    "RIC",
+    "高齡移植",
+    "Fludarabine",
+    "復發",
+    "AML"
+   ]
+  },
+  {
+   "id": "110-010",
+   "tags": [
+    "動員",
+    "Leukapheresis",
+    "Plerixafor",
+    "Poor mobilizer",
+    "G-CSF"
+   ]
+  },
+  {
+   "id": "110-011",
+   "tags": [
+    "Poor mobilizer",
+    "動員",
+    "Leukapheresis"
+   ]
+  },
+  {
+   "id": "110-012",
+   "tags": [
+    "冷凍保存",
+    "CD34 劑量",
+    "Leukapheresis"
+   ]
+  },
+  {
+   "id": "110-013",
+   "tags": [
+    "cGVHD 診斷",
+    "cGVHD 治療",
+    "Encapsulated 細菌"
+   ]
+  },
+  {
+   "id": "110-014",
+   "tags": [
+    "SR-aGVHD",
+    "Ruxolitinib",
+    "MSC"
+   ]
+  },
+  {
+   "id": "110-015",
+   "tags": [
+    "cGVHD 診斷",
+    "cGVHD 治療",
+    "晚期效應"
+   ]
+  },
+  {
+   "id": "110-016",
+   "tags": [
+    "EBV/PTLD",
+    "病毒專一T細胞",
+    "免疫抑制劑減量",
+    "Haplo",
+    "PTCy"
+   ]
+  },
+  {
+   "id": "110-017",
+   "tags": [
+    "植入症候群",
+    "植入",
+    "aGVHD 診斷"
+   ]
+  },
+  {
+   "id": "110-018",
+   "tags": [
+    "出血性膀胱炎",
+    "Cyclophosphamide",
+    "Conditioning 毒性"
+   ]
+  },
+  {
+   "id": "110-019",
+   "tags": [
+    "Chimerism",
+    "復發",
+    "Graft failure",
+    "MRD"
+   ]
+  },
+  {
+   "id": "110-020",
+   "tags": [
+    "Chimerism",
+    "Graft failure",
+    "植入"
+   ]
+  },
+  {
+   "id": "110-021",
+   "tags": [
+    "Chimerism",
+    "SAA",
+    "Graft failure",
+    "復發"
+   ]
+  },
+  {
+   "id": "110-022",
+   "tags": [
+    "AML",
+    "復發",
+    "MRD"
+   ]
+  },
+  {
+   "id": "110-023",
+   "tags": [
+    "MRD",
+    "ALL",
+    "Ph+ ALL"
+   ]
+  },
+  {
+   "id": "110-024",
+   "tags": [
+    "CML",
+    "DLI",
+    "MRD",
+    "RIC",
+    "TKI 維持",
+    "GVL"
+   ]
+  },
+  {
+   "id": "110-025",
+   "tags": [
+    "DLBCL 二線",
+    "BEAM",
+    "DLBCL 預後因子"
+   ]
+  },
+  {
+   "id": "110-026",
+   "tags": [
+    "DLBCL 預後因子",
+    "DLBCL 二線",
+    "復發"
+   ]
+  },
+  {
+   "id": "110-027",
+   "tags": [
+    "出血性膀胱炎",
+    "呼吸道病毒",
+    "CMV"
+   ]
+  },
+  {
+   "id": "110-028",
+   "tags": [
+    "EBV/PTLD",
+    "Pre-emptive RTX",
+    "MUD"
+   ]
+  },
+  {
+   "id": "110-029",
+   "tags": [
+    "Encapsulated 細菌",
+    "抗黴菌預防",
+    "PJP 預防",
+    "HSV/VZV"
+   ]
+  },
+  {
+   "id": "110-030",
+   "tags": [
+    "MDS",
+    "RIC",
+    "高齡移植",
+    "骨髓 vs 周邊血"
+   ]
+  },
+  {
+   "id": "110-031",
+   "tags": [
+    "MF",
+    "脾臟處理",
+    "MRD"
+   ]
+  },
+  {
+   "id": "110-032",
+   "tags": [
+    "MDS 前處置",
+    "MDS",
+    "復發"
+   ]
+  },
+  {
+   "id": "110-033",
+   "tags": [
+    "SAA",
+    "Eltrombopag",
+    "IST"
+   ]
+  },
+  {
+   "id": "110-034",
+   "tags": [
+    "MM 自體移植",
+    "Melphalan",
+    "MM 復發",
+    "Tandem 移植",
+    "TP53"
+   ]
+  },
+  {
+   "id": "110-035",
+   "tags": [
+    "自體免疫疾病",
+    "實體腫瘤",
+    "Conditioning 原理"
+   ]
+  },
+  {
+   "id": "110-036",
+   "tags": [
+    "HLA/MHC 基礎",
+    "GVHD 機轉",
+    "T 細胞亞群"
+   ]
+  },
+  {
+   "id": "110-037",
+   "tags": [
+    "呼吸道病毒",
+    "捐贈者評估",
+    "冷凍保存",
+    "感染管制"
+   ]
+  },
+  {
+   "id": "110-038",
+   "tags": [
+    "PTCy",
+    "Treg",
+    "GVHD 預防",
+    "Haplo"
+   ]
+  },
+  {
+   "id": "110-039",
+   "tags": [
+    "CMV",
+    "Ganciclovir",
+    "Letermovir",
+    "HSV/VZV"
+   ]
+  },
+  {
+   "id": "110-040",
+   "tags": [
+    "GVHD 預防",
+    "CNI",
+    "MTX",
+    "MMF",
+    "ATG",
+    "PTCy"
+   ]
+  },
+  {
+   "id": "110-041",
+   "tags": [
+    "ABO 不合",
+    "植入",
+    "骨髓 vs 周邊血"
+   ]
+  },
+  {
+   "id": "110-042",
+   "tags": [
+    "DLI",
+    "GVL",
+    "CML",
+    "復發"
+   ]
+  },
+  {
+   "id": "110-043",
+   "tags": [
+    "AML",
+    "FLT3-ITD",
+    "FLT3 抑制劑",
+    "維持治療",
+    "HLA 分型"
+   ]
+  },
+  {
+   "id": "110-044",
+   "tags": [
+    "HL",
+    "PD-1 抑制劑",
+    "Haplo",
+    "PTCy",
+    "SOS/VOD"
+   ]
+  },
+  {
+   "id": "110-045",
+   "tags": [
+    "CMV",
+    "Ganciclovir",
+    "IVIG",
+    "Letermovir"
+   ]
+  },
+  {
+   "id": "110-046",
+   "tags": [
+    "FL",
+    "DLBCL 二線",
+    "T-cell depletion"
+   ]
+  },
+  {
+   "id": "110-047",
+   "tags": [
+    "SAA",
+    "MUD",
+    "MSD",
+    "Fludarabine",
+    "TBI",
+    "HLA 配對"
+   ]
+  },
+  {
+   "id": "110-048",
+   "tags": [
+    "HBV",
+    "捐贈者評估",
+    "晚期效應"
+   ]
+  },
+  {
+   "id": "110-049",
+   "tags": [
+    "MAC",
+    "RIC",
+    "TBI",
+    "Busulfan",
+    "Cyclophosphamide",
+    "Fludarabine"
+   ]
+  },
+  {
+   "id": "110-050",
+   "tags": [
+    "冷凍保存",
+    "Leukapheresis",
+    "CD34 劑量"
+   ]
+  },
+  {
+   "id": "111-001",
+   "tags": [
+    "HLA/MHC 基礎",
+    "HLA 分型",
+    "HLA 配對"
+   ]
+  },
+  {
+   "id": "111-002",
+   "tags": [
+    "HSC 歸巢",
+    "T-cell depletion",
+    "次發腫瘤"
+   ]
+  },
+  {
+   "id": "111-003",
+   "tags": [
+    "免疫重建",
+    "ATG",
+    "T 細胞亞群",
+    "Conditioning 原理"
+   ]
+  },
+  {
+   "id": "111-004",
+   "tags": [
+    "Conditioning 原理",
+    "RIC",
+    "MAC",
+    "Busulfan",
+    "SOS/VOD"
+   ]
+  },
+  {
+   "id": "111-005",
+   "tags": [
+    "GVHD 預防",
+    "GVHD 風險因子",
+    "CNI",
+    "ATG",
+    "Sirolimus",
+    "Treg"
+   ]
+  },
+  {
+   "id": "111-006",
+   "tags": [
+    "GVHD 預防",
+    "MMF",
+    "CRS"
+   ]
+  },
+  {
+   "id": "111-007",
+   "tags": [
+    "CD34 劑量",
+    "臍帶血",
+    "骨髓 vs 周邊血"
+   ]
+  },
+  {
+   "id": "111-008",
+   "tags": [
+    "骨髓 vs 周邊血",
+    "臍帶血",
+    "GVL",
+    "兒童移植",
+    "GVHD 風險因子"
+   ]
+  },
+  {
+   "id": "111-009",
+   "tags": [
+    "CMV 血清狀態",
+    "捐贈者年齡/性別",
+    "ABO 不合",
+    "MUD",
+    "捐贈者評估"
+   ]
+  },
+  {
+   "id": "111-010",
+   "tags": [
+    "Plerixafor",
+    "Poor mobilizer",
+    "動員",
+    "HSC 歸巢"
+   ]
+  },
+  {
+   "id": "111-011",
+   "tags": [
+    "CD34 劑量",
+    "動員",
+    "Leukapheresis"
+   ]
+  },
+  {
+   "id": "111-012",
+   "tags": [
+    "Leukapheresis",
+    "動員",
+    "CD34 劑量"
+   ]
+  },
+  {
+   "id": "111-013",
+   "tags": [
+    "aGVHD 診斷",
+    "aGVHD 分級",
+    "PTCy",
+    "GVHD 預防"
+   ]
+  },
+  {
+   "id": "111-014",
+   "tags": [
+    "cGVHD 診斷",
+    "aGVHD 診斷",
+    "cGVHD 治療"
+   ]
+  },
+  {
+   "id": "111-015",
+   "tags": [
+    "cGVHD 診斷",
+    "aGVHD 分級",
+    "cGVHD 治療"
+   ]
+  },
+  {
+   "id": "111-016",
+   "tags": [
+    "SOS/VOD",
+    "Defibrotide",
+    "Conditioning 毒性"
+   ]
+  },
+  {
+   "id": "111-017",
+   "tags": [
+    "EBV/PTLD",
+    "病毒專一T細胞",
+    "免疫抑制劑減量",
+    "PTCy",
+    "Haplo"
+   ]
+  },
+  {
+   "id": "111-018",
+   "tags": [
+    "MRD",
+    "ALL",
+    "AML",
+    "FLT3-ITD",
+    "Ph+ ALL"
+   ]
+  },
+  {
+   "id": "111-019",
+   "tags": [
+    "復發",
+    "維持治療",
+    "TKI 維持",
+    "HMA 維持",
+    "CML"
+   ]
+  },
+  {
+   "id": "111-020",
+   "tags": [
+    "MRD",
+    "Chimerism",
+    "AML",
+    "ALL"
+   ]
+  },
+  {
+   "id": "111-021",
+   "tags": [
+    "DLBCL 二線",
+    "BEAM",
+    "DLBCL 預後因子"
+   ]
+  },
+  {
+   "id": "111-022",
+   "tags": [
+    "MCL",
+    "Rituximab 維持",
+    "二次移植"
+   ]
+  },
+  {
+   "id": "111-023",
+   "tags": [
+    "FL",
+    "RIC",
+    "MAC"
+   ]
+  },
+  {
+   "id": "111-024",
+   "tags": [
+    "CAR-T",
+    "CRS",
+    "CAR-T 橋接/washout",
+    "高齡移植"
+   ]
+  },
+  {
+   "id": "111-025",
+   "tags": [
+    "CAR-T",
+    "CRS",
+    "ICANS",
+    "低免疫球蛋白"
+   ]
+  },
+  {
+   "id": "111-026",
+   "tags": [
+    "CAR-T 與移植順序",
+    "CAR-T",
+    "復發"
+   ]
+  },
+  {
+   "id": "111-027",
+   "tags": [
+    "出血性膀胱炎",
+    "CMV",
+    "呼吸道病毒"
+   ]
+  },
+  {
+   "id": "111-028",
+   "tags": [
+    "EBV/PTLD",
+    "Pre-emptive RTX",
+    "MUD"
+   ]
+  },
+  {
+   "id": "111-029",
+   "tags": [
+    "Encapsulated 細菌",
+    "抗黴菌預防",
+    "PJP 預防",
+    "HSV/VZV"
+   ]
+  },
+  {
+   "id": "111-030",
+   "tags": [
+    "CML",
+    "MRD",
+    "TKI 維持"
+   ]
+  },
+  {
+   "id": "111-031",
+   "tags": [
+    "AML",
+    "復發",
+    "GVL"
+   ]
+  },
+  {
+   "id": "111-032",
+   "tags": [
+    "ALL",
+    "Ph+ ALL",
+    "MRD",
+    "高齡移植"
+   ]
+  },
+  {
+   "id": "111-033",
+   "tags": [
+    "MM 自體移植",
+    "Melphalan",
+    "Tandem 移植",
+    "MM 維持"
+   ]
+  },
+  {
+   "id": "111-034",
+   "tags": [
+    "MM 誘導",
+    "MM 自體移植",
+    "MM 復發",
+    "MRD"
+   ]
+  },
+  {
+   "id": "111-035",
+   "tags": [
+    "MM 維持",
+    "Tandem 移植",
+    "MM 復發",
+    "MM 自體移植"
+   ]
+  },
+  {
+   "id": "111-036",
+   "tags": [
+    "mHAg/MICA",
+    "HLA/MHC 基礎",
+    "捐贈者年齡/性別",
+    "GVL"
+   ]
+  },
+  {
+   "id": "111-037",
+   "tags": [
+    "GVHD 預防",
+    "MTX",
+    "MMF",
+    "ATG",
+    "PTCy",
+    "CNI"
+   ]
+  },
+  {
+   "id": "111-038",
+   "tags": [
+    "HLA 配對",
+    "DPB1 permissive",
+    "HLA mismatch",
+    "MUD",
+    "MSD"
+   ]
+  },
+  {
+   "id": "111-039",
+   "tags": [
+    "動員",
+    "Plerixafor",
+    "Poor mobilizer",
+    "Leukapheresis"
+   ]
+  },
+  {
+   "id": "111-040",
+   "tags": [
+    "SR-aGVHD",
+    "Ruxolitinib",
+    "MSC",
+    "ATG"
+   ]
+  },
+  {
+   "id": "111-041",
+   "tags": [
+    "植入症候群",
+    "G-CSF",
+    "植入"
+   ]
+  },
+  {
+   "id": "111-042",
+   "tags": [
+    "維持治療",
+    "FLT3 抑制劑",
+    "HMA 維持",
+    "PD-1 抑制劑",
+    "復發"
+   ]
+  },
+  {
+   "id": "111-043",
+   "tags": [
+    "HL",
+    "PD-1 抑制劑",
+    "SOS/VOD",
+    "Haplo",
+    "PTCy"
+   ]
+  },
+  {
+   "id": "111-044",
+   "tags": [
+    "CAR-T",
+    "BCMA CAR-T",
+    "ALL",
+    "DLBCL 二線"
+   ]
+  },
+  {
+   "id": "111-045",
+   "tags": [
+    "G-CSF",
+    "動員",
+    "植入",
+    "GVHD 風險因子"
+   ]
+  },
+  {
+   "id": "111-046",
+   "tags": [
+    "AML",
+    "FLT3-ITD",
+    "NPM1",
+    "APL",
+    "Ph+ ALL",
+    "TP53"
+   ]
+  },
+  {
+   "id": "111-047",
+   "tags": [
+    "SAA",
+    "IST",
+    "骨髓 vs 周邊血",
+    "Haplo",
+    "MUD",
+    "Graft failure"
+   ]
+  },
+  {
+   "id": "111-048",
+   "tags": [
+    "KIR/NK",
+    "mHAg/MICA",
+    "GVL",
+    "HLA mismatch"
+   ]
+  },
+  {
+   "id": "111-049",
+   "tags": [
+    "PTCy",
+    "Treg",
+    "GVHD 預防",
+    "Haplo"
+   ]
+  },
+  {
+   "id": "111-050",
+   "tags": [
+    "DLI",
+    "GVL",
+    "CML",
+    "復發"
+   ]
+  },
+  {
+   "id": "112-001",
+   "tags": [
+    "Conditioning 毒性",
+    "Cyclophosphamide",
+    "Melphalan",
+    "Busulfan",
+    "Thiotepa"
+   ]
+  },
+  {
+   "id": "112-002",
+   "tags": [
+    "T 細胞亞群",
+    "MSC",
+    "GVHD 機轉"
+   ]
+  },
+  {
+   "id": "112-003",
+   "tags": [
+    "HLA 分型",
+    "HLA 配對",
+    "HLA/MHC 基礎"
+   ]
+  },
+  {
+   "id": "112-004",
+   "tags": [
+    "骨髓 vs 周邊血",
+    "臍帶血",
+    "兒童移植",
+    "GVHD 風險因子"
+   ]
+  },
+  {
+   "id": "112-005",
+   "tags": [
+    "捐贈者年齡/性別",
+    "MUD",
+    "CMV 血清狀態",
+    "ABO 不合"
+   ]
+  },
+  {
+   "id": "112-006",
+   "tags": [
+    "HLA/MHC 基礎",
+    "MSD",
+    "HLA 配對"
+   ]
+  },
+  {
+   "id": "112-007",
+   "tags": [
+    "RIC",
+    "MAC",
+    "Conditioning 原理",
+    "Fludarabine",
+    "Busulfan"
+   ]
+  },
+  {
+   "id": "112-008",
+   "tags": [
+    "Cyclophosphamide",
+    "心臟毒性",
+    "出血性膀胱炎",
+    "Conditioning 毒性"
+   ]
+  },
+  {
+   "id": "112-009",
+   "tags": [
+    "Conditioning 原理",
+    "RIC",
+    "HSC 歸巢"
+   ]
+  },
+  {
+   "id": "112-010",
+   "tags": [
+    "Poor mobilizer",
+    "動員",
+    "Leukapheresis"
+   ]
+  },
+  {
+   "id": "112-011",
+   "tags": [
+    "Plerixafor",
+    "動員",
+    "HSC 歸巢",
+    "Poor mobilizer"
+   ]
+  },
+  {
+   "id": "112-012",
+   "tags": [
+    "CD34 劑量",
+    "植入",
+    "動員",
+    "自體移植"
+   ]
+  },
+  {
+   "id": "112-013",
+   "tags": [
+    "aGVHD 診斷",
+    "植入",
+    "GVHD 機轉"
+   ]
+  },
+  {
+   "id": "112-014",
+   "tags": [
+    "SR-aGVHD",
+    "Ruxolitinib",
+    "Sirolimus"
+   ]
+  },
+  {
+   "id": "112-015",
+   "tags": [
+    "cGVHD 治療",
+    "PD-1 抑制劑",
+    "MMF"
+   ]
+  },
+  {
+   "id": "112-016",
+   "tags": [
+    "EBV/PTLD",
+    "病毒專一T細胞",
+    "PTCy",
+    "Haplo"
+   ]
+  },
+  {
+   "id": "112-017",
+   "tags": [
+    "SOS/VOD",
+    "UDCA",
+    "Defibrotide"
+   ]
+  },
+  {
+   "id": "112-018",
+   "tags": [
+    "SOS/VOD",
+    "Conditioning 毒性",
+    "兒童移植"
+   ]
+  },
+  {
+   "id": "112-019",
+   "tags": [
+    "復發",
+    "免疫逃脫",
+    "DLI",
+    "免疫抑制劑減量",
+    "Haplo"
+   ]
+  },
+  {
+   "id": "112-020",
+   "tags": [
+    "MRD",
+    "ALL",
+    "AML",
+    "FLT3-ITD"
+   ]
+  },
+  {
+   "id": "112-021",
+   "tags": [
+    "Chimerism",
+    "復發",
+    "Graft failure"
+   ]
+  },
+  {
+   "id": "112-022",
+   "tags": [
+    "EBV/PTLD",
+    "Pre-emptive RTX",
+    "MUD"
+   ]
+  },
+  {
+   "id": "112-023",
+   "tags": [
+    "Encapsulated 細菌",
+    "抗黴菌預防",
+    "PJP 預防",
+    "HSV/VZV"
+   ]
+  },
+  {
+   "id": "112-024",
+   "tags": [
+    "CMV",
+    "Ganciclovir",
+    "抗黴菌預防",
+    "自體移植"
+   ]
+  },
+  {
+   "id": "112-025",
+   "tags": [
+    "AML",
+    "MRD",
+    "HCT-CI",
+    "APL",
+    "NPM1"
+   ]
+  },
+  {
+   "id": "112-026",
+   "tags": [
+    "CML",
+    "DLI",
+    "TKI 維持",
+    "復發"
+   ]
+  },
+  {
+   "id": "112-027",
+   "tags": [
+    "MRD",
+    "ALL",
+    "Ph+ ALL",
+    "Chimerism"
+   ]
+  },
+  {
+   "id": "112-028",
+   "tags": [
+    "FL",
+    "RIC",
+    "二次移植",
+    "自體移植"
+   ]
+  },
+  {
+   "id": "112-029",
+   "tags": [
+    "DLBCL 預後因子",
+    "DLBCL 二線",
+    "高齡移植",
+    "自體移植"
+   ]
+  },
+  {
+   "id": "112-030",
+   "tags": [
+    "DLBCL 預後因子",
+    "DLBCL 二線",
+    "復發"
+   ]
+  },
+  {
+   "id": "112-031",
+   "tags": [
+    "MM 復發",
+    "MM 自體移植",
+    "二次移植",
+    "MM 維持"
+   ]
+  },
+  {
+   "id": "112-032",
+   "tags": [
+    "SAA",
+    "IST",
+    "骨髓 vs 周邊血",
+    "ATG",
+    "Eltrombopag",
+    "EBV/PTLD"
+   ]
+  },
+  {
+   "id": "112-033",
+   "tags": [
+    "AL amyloidosis",
+    "MM 自體移植",
+    "HCT-CI",
+    "自體移植"
+   ]
+  },
+  {
+   "id": "112-034",
+   "tags": [
+    "CAR-T 橋接/washout",
+    "CAR-T",
+    "Leukapheresis",
+    "Blinatumomab"
+   ]
+  },
+  {
+   "id": "112-035",
+   "tags": [
+    "CAR-T",
+    "低免疫球蛋白",
+    "IVIG",
+    "G-CSF"
+   ]
+  },
+  {
+   "id": "112-036",
+   "tags": [
+    "免疫重建",
+    "T-cell depletion",
+    "GVL",
+    "次發腫瘤",
+    "CML"
+   ]
+  },
+  {
+   "id": "112-037",
+   "tags": [
+    "HLA 配對",
+    "DPB1 permissive",
+    "MUD",
+    "HLA mismatch",
+    "MSD"
+   ]
+  },
+  {
+   "id": "112-038",
+   "tags": [
+    "PTCy",
+    "Treg",
+    "GVHD 預防",
+    "Haplo"
+   ]
+  },
+  {
+   "id": "112-039",
+   "tags": [
+    "冷凍保存",
+    "Leukapheresis",
+    "動員"
+   ]
+  },
+  {
+   "id": "112-040",
+   "tags": [
+    "GVHD 風險因子",
+    "HLA mismatch",
+    "捐贈者年齡/性別",
+    "骨髓 vs 周邊血",
+    "臍帶血",
+    "Conditioning 原理"
+   ]
+  },
+  {
+   "id": "112-041",
+   "tags": [
+    "出血性膀胱炎",
+    "Cyclophosphamide",
+    "PTCy",
+    "Haplo"
+   ]
+  },
+  {
+   "id": "112-042",
+   "tags": [
+    "維持治療",
+    "FLT3 抑制劑",
+    "HMA 維持",
+    "免疫抑制劑減量",
+    "DLI",
+    "FLT3-ITD"
+   ]
+  },
+  {
+   "id": "112-043",
+   "tags": [
+    "CMV",
+    "Ganciclovir",
+    "IVIG",
+    "Letermovir"
+   ]
+  },
+  {
+   "id": "112-044",
+   "tags": [
+    "MRD",
+    "AML",
+    "復發"
+   ]
+  },
+  {
+   "id": "112-045",
+   "tags": [
+    "FL",
+    "DLBCL 一線鞏固",
+    "復發",
+    "自體移植"
+   ]
+  },
+  {
+   "id": "112-046",
+   "tags": [
+    "SAA",
+    "PNH",
+    "IST",
+    "骨髓 vs 周邊血",
+    "MUD",
+    "次發腫瘤"
+   ]
+  },
+  {
+   "id": "112-047",
+   "tags": [
+    "ICANS",
+    "CAR-T",
+    "CRS"
+   ]
+  },
+  {
+   "id": "112-048",
+   "tags": [
+    "植入症候群",
+    "G-CSF",
+    "植入",
+    "自體移植"
+   ]
+  },
+  {
+   "id": "112-049",
+   "tags": [
+    "DLBCL 二線",
+    "DLBCL 預後因子",
+    "HCT-CI"
+   ]
+  },
+  {
+   "id": "112-050",
+   "tags": [
+    "SAA",
+    "IST",
+    "MUD",
+    "MSD",
+    "骨髓 vs 周邊血",
+    "次發腫瘤"
+   ]
+  },
+  {
+   "id": "113-001",
+   "tags": [
+    "aGVHD 診斷",
+    "aGVHD 分級",
+    "GVHD 風險因子",
+    "SR-aGVHD"
+   ]
+  },
+  {
+   "id": "113-002",
+   "tags": [
+    "GVHD 機轉",
+    "Treg",
+    "T 細胞亞群"
+   ]
+  },
+  {
+   "id": "113-003",
+   "tags": [
+    "cGVHD 診斷",
+    "aGVHD 診斷",
+    "GVHD 機轉"
+   ]
+  },
+  {
+   "id": "113-004",
+   "tags": [
+    "Conditioning 原理",
+    "TBI",
+    "Busulfan",
+    "Fludarabine",
+    "Melphalan",
+    "Cyclophosphamide"
+   ]
+  },
+  {
+   "id": "113-005",
+   "tags": [
+    "Conditioning 原理",
+    "MAC",
+    "RIC",
+    "TBI"
+   ]
+  },
+  {
+   "id": "113-006",
+   "tags": [
+    "GVHD 預防",
+    "CNI",
+    "MTX",
+    "MMF",
+    "ATG",
+    "MUD"
+   ]
+  },
+  {
+   "id": "113-007",
+   "tags": [
+    "動員",
+    "G-CSF",
+    "Leukapheresis",
+    "Poor mobilizer"
+   ]
+  },
+  {
+   "id": "113-008",
+   "tags": [
+    "Plerixafor",
+    "動員",
+    "HSC 歸巢"
+   ]
+  },
+  {
+   "id": "113-009",
+   "tags": [
+    "Plerixafor",
+    "動員",
+    "Poor mobilizer",
+    "Leukapheresis"
+   ]
+  },
+  {
+   "id": "113-010",
+   "tags": [
+    "SOS/VOD",
+    "Inotuzumab",
+    "MAC"
+   ]
+  },
+  {
+   "id": "113-011",
+   "tags": [
+    "植入症候群",
+    "G-CSF",
+    "骨髓 vs 周邊血",
+    "冷凍保存"
+   ]
+  },
+  {
+   "id": "113-012",
+   "tags": [
+    "出血性膀胱炎",
+    "Haplo",
+    "MAC",
+    "Cyclophosphamide",
+    "ATG"
+   ]
+  },
+  {
+   "id": "113-013",
+   "tags": [
+    "BEAM",
+    "MAC",
+    "DLBCL 二線"
+   ]
+  },
+  {
+   "id": "113-014",
+   "tags": [
+    "FL",
+    "DLBCL 二線",
+    "次發腫瘤",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "113-015",
+   "tags": [
+    "MCL",
+    "TP53",
+    "二次移植",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "113-016",
+   "tags": [
+    "捐贈者年齡/性別",
+    "MUD",
+    "CMV 血清狀態",
+    "ABO 不合"
+   ]
+  },
+  {
+   "id": "113-017",
+   "tags": [
+    "MSD",
+    "MUD",
+    "Haplo",
+    "HLA mismatch"
+   ]
+  },
+  {
+   "id": "113-018",
+   "tags": [
+    "捐贈者評估",
+    "G-CSF",
+    "Leukapheresis"
+   ]
+  },
+  {
+   "id": "113-019",
+   "tags": [
+    "CRS",
+    "CAR-T",
+    "DLBCL 二線",
+    "嗜中性球低下發燒"
+   ]
+  },
+  {
+   "id": "113-020",
+   "tags": [
+    "CAR-T",
+    "低免疫球蛋白",
+    "免疫重建"
+   ]
+  },
+  {
+   "id": "113-021",
+   "tags": [
+    "CAR-T 橋接/washout",
+    "Leukapheresis",
+    "CAR-T",
+    "Blinatumomab"
+   ]
+  },
+  {
+   "id": "113-022",
+   "tags": [
+    "MRD",
+    "AML",
+    "ALL",
+    "FLT3-ITD"
+   ]
+  },
+  {
+   "id": "113-023",
+   "tags": [
+    "維持治療",
+    "FLT3 抑制劑",
+    "PD-1 抑制劑",
+    "HL",
+    "復發"
+   ]
+  },
+  {
+   "id": "113-024",
+   "tags": [
+    "MRD",
+    "Chimerism",
+    "AML",
+    "ALL"
+   ]
+  },
+  {
+   "id": "113-025",
+   "tags": [
+    "PTCy",
+    "Treg",
+    "免疫重建",
+    "病毒專一T細胞",
+    "aGVHD 診斷"
+   ]
+  },
+  {
+   "id": "113-026",
+   "tags": [
+    "HLA 配對",
+    "HLA mismatch",
+    "MUD"
+   ]
+  },
+  {
+   "id": "113-027",
+   "tags": [
+    "T 細胞亞群",
+    "MSC",
+    "GVHD 機轉"
+   ]
+  },
+  {
+   "id": "113-028",
+   "tags": [
+    "出血性膀胱炎",
+    "Cyclophosphamide",
+    "Haplo"
+   ]
+  },
+  {
+   "id": "113-029",
+   "tags": [
+    "CMV",
+    "Ganciclovir",
+    "抗黴菌預防"
+   ]
+  },
+  {
+   "id": "113-030",
+   "tags": [
+    "EBV/PTLD",
+    "Pre-emptive RTX",
+    "MUD"
+   ]
+  },
+  {
+   "id": "113-031",
+   "tags": [
+    "SAA",
+    "IST",
+    "MUD",
+    "Eltrombopag",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "113-032",
+   "tags": [
+    "SAA",
+    "Eltrombopag",
+    "IST",
+    "次發腫瘤"
+   ]
+  },
+  {
+   "id": "113-033",
+   "tags": [
+    "PNH",
+    "SAA",
+    "IST"
+   ]
+  },
+  {
+   "id": "113-034",
+   "tags": [
+    "MF",
+    "RIC",
+    "MAC",
+    "脾臟處理",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "113-035",
+   "tags": [
+    "CML",
+    "Ph+ ALL",
+    "TKI 維持",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "113-036",
+   "tags": [
+    "ALL",
+    "Ph+ ALL",
+    "TBI",
+    "TKI 維持",
+    "PTCy",
+    "MRD",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "113-037",
+   "tags": [
+    "cGVHD 診斷",
+    "CMV",
+    "GVHD 機轉",
+    "aGVHD 診斷"
+   ]
+  },
+  {
+   "id": "113-038",
+   "tags": [
+    "PTCy",
+    "Haplo",
+    "Treg",
+    "心臟毒性"
+   ]
+  },
+  {
+   "id": "113-039",
+   "tags": [
+    "冷凍保存",
+    "Leukapheresis",
+    "CD34 劑量"
+   ]
+  },
+  {
+   "id": "113-040",
+   "tags": [
+    "SOS/VOD",
+    "Defibrotide",
+    "UDCA"
+   ]
+  },
+  {
+   "id": "113-041",
+   "tags": [
+    "台灣本土",
+    "DLBCL 二線",
+    "CAR-T",
+    "CAR-T 與移植順序"
+   ]
+  },
+  {
+   "id": "113-042",
+   "tags": [
+    "HLA/MHC 基礎",
+    "CMV 血清狀態",
+    "MSD",
+    "HLA 配對"
+   ]
+  },
+  {
+   "id": "113-043",
+   "tags": [
+    "CAR-T 橋接/washout",
+    "ALL",
+    "CAR-T",
+    "Blinatumomab",
+    "Inotuzumab",
+    "免疫逃脫"
+   ]
+  },
+  {
+   "id": "113-044",
+   "tags": [
+    "FLT3-ITD",
+    "FLT3 抑制劑",
+    "HMA 維持",
+    "DLI",
+    "免疫抑制劑減量",
+    "維持治療"
+   ]
+  },
+  {
+   "id": "113-045",
+   "tags": [
+    "mHAg/MICA",
+    "KIR/NK",
+    "GVHD 機轉"
+   ]
+  },
+  {
+   "id": "113-046",
+   "tags": [
+    "CMV",
+    "Ganciclovir",
+    "IVIG",
+    "Letermovir"
+   ]
+  },
+  {
+   "id": "113-047",
+   "tags": [
+    "MM 誘導",
+    "MM 自體移植",
+    "MRD"
+   ]
+  },
+  {
+   "id": "113-048",
+   "tags": [
+    "MDS",
+    "復發",
+    "TP53",
+    "HCT-CI",
+    "高齡移植",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "113-049",
+   "tags": [
+    "SAA",
+    "MSD",
+    "MUD",
+    "Haplo",
+    "IST",
+    "移植適應症"
+   ]
+  },
+  {
+   "id": "113-050",
+   "tags": [
+    "SAA",
+    "MUD",
+    "ATG",
+    "Graft failure",
+    "TBI",
+    "PNH"
+   ]
+  },
+  {
+   "id": "114-001",
+   "tags": [
+    "T 細胞亞群",
+    "KIR/NK",
+    "免疫重建",
+    "GVHD 機轉"
+   ]
+  },
+  {
+   "id": "114-002",
+   "tags": [
+    "HLA 配對",
+    "HLA/MHC 基礎",
+    "DPB1 permissive",
+    "HLA mismatch",
+    "PTCy",
+    "Haplo"
+   ]
+  },
+  {
+   "id": "114-003",
+   "tags": [
+    "ATG",
+    "Fludarabine",
+    "PTCy",
+    "免疫重建",
+    "Treg"
+   ]
+  },
+  {
+   "id": "114-004",
+   "tags": [
+    "HLA 配對",
+    "HLA 分型",
+    "捐贈者年齡/性別",
+    "ABO 不合",
+    "CMV 血清狀態"
+   ]
+  },
+  {
+   "id": "114-005",
+   "tags": [
+    "骨髓 vs 周邊血",
+    "Haplo",
+    "PTCy",
+    "臍帶血",
+    "植入"
+   ]
+  },
+  {
+   "id": "114-006",
+   "tags": [
+    "MAC",
+    "RIC",
+    "Busulfan",
+    "Cyclophosphamide",
+    "TBI",
+    "Fludarabine"
+   ]
+  },
+  {
+   "id": "114-007",
+   "tags": [
+    "TBI",
+    "Conditioning 原理",
+    "MAC",
+    "Conditioning 毒性"
+   ]
+  },
+  {
+   "id": "114-008",
+   "tags": [
+    "Poor mobilizer",
+    "動員",
+    "G-CSF",
+    "CD34 劑量"
+   ]
+  },
+  {
+   "id": "114-009",
+   "tags": [
+    "冷凍保存",
+    "Leukapheresis",
+    "動員"
+   ]
+  },
+  {
+   "id": "114-010",
+   "tags": [
+    "Plerixafor",
+    "動員",
+    "HSC 歸巢"
+   ]
+  },
+  {
+   "id": "114-011",
+   "tags": [
+    "GVHD 機轉",
+    "aGVHD 診斷",
+    "T 細胞亞群"
+   ]
+  },
+  {
+   "id": "114-012",
+   "tags": [
+    "aGVHD 分級",
+    "aGVHD 診斷",
+    "GVHD 機轉"
+   ]
+  },
+  {
+   "id": "114-013",
+   "tags": [
+    "cGVHD 治療",
+    "UDCA",
+    "IVIG",
+    "免疫抑制劑減量"
+   ]
+  },
+  {
+   "id": "114-014",
+   "tags": [
+    "植入症候群",
+    "植入",
+    "G-CSF",
+    "aGVHD 診斷"
+   ]
+  },
+  {
+   "id": "114-015",
+   "tags": [
+    "SOS/VOD",
+    "Conditioning 毒性",
+    "Defibrotide"
+   ]
+  },
+  {
+   "id": "114-016",
+   "tags": [
+    "晚期效應",
+    "Conditioning 毒性",
+    "TBI",
+    "Cyclophosphamide",
+    "Busulfan"
+   ]
+  },
+  {
+   "id": "114-017",
+   "tags": [
+    "MRD",
+    "Chimerism",
+    "復發",
+    "AML",
+    "ALL"
+   ]
+  },
+  {
+   "id": "114-018",
+   "tags": [
+    "FLT3 抑制劑",
+    "FLT3-ITD",
+    "維持治療",
+    "AML",
+    "DLI"
+   ]
+  },
+  {
+   "id": "114-019",
+   "tags": [
+    "維持治療",
+    "HMA 維持",
+    "PD-1 抑制劑",
+    "AML"
+   ]
+  },
+  {
+   "id": "114-020",
+   "tags": [
+    "嗜中性球低下發燒",
+    "植入",
+    "黴菌感染"
+   ]
+  },
+  {
+   "id": "114-021",
+   "tags": [
+    "黴菌感染",
+    "抗黴菌預防",
+    "PJP 預防",
+    "植入"
+   ]
+  },
+  {
+   "id": "114-022",
+   "tags": [
+    "CMV",
+    "Letermovir",
+    "Ganciclovir",
+    "CMV 血清狀態"
+   ]
+  },
+  {
+   "id": "114-023",
+   "tags": [
+    "MF",
+    "Ruxolitinib",
+    "Graft failure",
+    "CD34 劑量",
+    "脾臟處理"
+   ]
+  },
+  {
+   "id": "114-024",
+   "tags": [
+    "MDS",
+    "MDS 前處置",
+    "高齡移植",
+    "HMA 維持",
+    "DLI",
+    "復發"
+   ]
+  },
+  {
+   "id": "114-025",
+   "tags": [
+    "AML",
+    "MAC",
+    "RIC",
+    "高齡移植",
+    "Conditioning 毒性"
+   ]
+  },
+  {
+   "id": "114-026",
+   "tags": [
+    "Burkitt/LBL",
+    "T 細胞淋巴瘤",
+    "HL",
+    "淋巴瘤一線鞏固"
+   ]
+  },
+  {
+   "id": "114-027",
+   "tags": [
+    "DLBCL 二線",
+    "DLBCL 一線鞏固",
+    "CNS 淋巴瘤",
+    "Rituximab 維持",
+    "CAR-T 與移植順序"
+   ]
+  },
+  {
+   "id": "114-028",
+   "tags": [
+    "DLBCL 預後因子",
+    "DLBCL 二線",
+    "復發"
+   ]
+  },
+  {
+   "id": "114-029",
+   "tags": [
+    "MM 誘導",
+    "MM 自體移植",
+    "MRD"
+   ]
+  },
+  {
+   "id": "114-030",
+   "tags": [
+    "MM 維持",
+    "MM 自體移植",
+    "維持治療"
+   ]
+  },
+  {
+   "id": "114-031",
+   "tags": [
+    "PNH",
+    "SAA",
+    "GVHD 預防",
+    "IST"
+   ]
+  },
+  {
+   "id": "114-032",
+   "tags": [
+    "免疫逃脫",
+    "CAR-T",
+    "BCMA CAR-T",
+    "ALL"
+   ]
+  },
+  {
+   "id": "114-033",
+   "tags": [
+    "CAR-T",
+    "ALL",
+    "CAR-T 與移植順序",
+    "CRS",
+    "ICANS"
+   ]
+  },
+  {
+   "id": "114-034",
+   "tags": [
+    "CAR-T",
+    "DLBCL 二線",
+    "CAR-T 橋接/washout",
+    "DLBCL 預後因子"
+   ]
+  },
+  {
+   "id": "114-035",
+   "tags": [
+    "MCL",
+    "TP53",
+    "二次移植",
+    "淋巴瘤一線鞏固"
+   ]
+  },
+  {
+   "id": "114-036",
+   "tags": [
+    "mHAg/MICA",
+    "KIR/NK",
+    "GVL",
+    "HLA/MHC 基礎"
+   ]
+  },
+  {
+   "id": "114-037",
+   "tags": [
+    "ALL",
+    "HLA 配對",
+    "Haplo",
+    "TBI",
+    "捐贈者評估",
+    "HBV"
+   ]
+  },
+  {
+   "id": "114-038",
+   "tags": [
+    "GVHD 機轉",
+    "GVHD 風險因子",
+    "GVHD 預防",
+    "CNI",
+    "MTX",
+    "捐贈者年齡/性別"
+   ]
+  },
+  {
+   "id": "114-039",
+   "tags": [
+    "Melphalan",
+    "MM 自體移植",
+    "高齡移植",
+    "HCT-CI"
+   ]
+  },
+  {
+   "id": "114-040",
+   "tags": [
+    "cGVHD 治療",
+    "CNI",
+    "Sirolimus",
+    "cGVHD 診斷"
+   ]
+  },
+  {
+   "id": "114-041",
+   "tags": [
+    "aGVHD 診斷",
+    "SOS/VOD",
+    "Conditioning 毒性"
+   ]
+  },
+  {
+   "id": "114-042",
+   "tags": [
+    "SOS/VOD",
+    "Defibrotide",
+    "UDCA",
+    "兒童移植"
+   ]
+  },
+  {
+   "id": "114-043",
+   "tags": [
+    "MF",
+    "Chimerism",
+    "MRD",
+    "復發"
+   ]
+  },
+  {
+   "id": "114-044",
+   "tags": [
+    "CAR-T 橋接/washout",
+    "CAR-T",
+    "Leukapheresis",
+    "Inotuzumab",
+    "CRS"
+   ]
+  },
+  {
+   "id": "114-045",
+   "tags": [
+    "AML",
+    "FLT3-ITD",
+    "NPM1",
+    "MRD"
+   ]
+  },
+  {
+   "id": "114-046",
+   "tags": [
+    "EBV/PTLD",
+    "Pre-emptive RTX",
+    "免疫抑制劑減量"
+   ]
+  },
+  {
+   "id": "114-047",
+   "tags": [
+    "DLBCL 二線",
+    "CAR-T",
+    "CAR-T 與移植順序",
+    "台灣本土",
+    "DLBCL 預後因子"
+   ]
+  },
+  {
+   "id": "114-048",
+   "tags": [
+    "BCMA CAR-T",
+    "CAR-T",
+    "MM 復發"
+   ]
+  },
+  {
+   "id": "114-049",
+   "tags": [
+    "Ph+ ALL",
+    "TKI 維持",
+    "Blinatumomab",
+    "Inotuzumab",
+    "CAR-T",
+    "二次移植"
+   ]
+  },
+  {
+   "id": "114-050",
+   "tags": [
+    "HBV",
+    "捐贈者評估",
+    "晚期效應"
+   ]
+  }
+ ]
+}

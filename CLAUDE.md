@@ -2311,7 +2311,13 @@ This is designed to fit in **free tier indefinitely** for 20 users. If a feature
 - 108/110 用 `(共)` 標記共同題 → `tags` 填 `共同`;109 整卷沒有標記。跨年重複題不少,
   刻意沒合併 —— 題號就是官方題號。
 
-### EBMT 章節 tag: 短名,而且「相似題目」靠它
+### EBMT 章節 tag + 關鍵字 tag: 兩層、短名,而且「相似題目」靠它
+
+**完整流程(加題、標 tag、驗證)在 `.claude/skills/hsct-bank/SKILL.md`,動題庫前先讀它。**
+第二層是關鍵字(`docs/hsct-keyword-tags.json`:147 個受控詞 + 每題 3–6 個),跟第一層
+章節 tag 用不同的 `created_by`,同一支 `apply-ebmt-tags.py` 一起套。兩層同名的 tag
+(「AML」「MRD」「DLI」…)會因 PK 合併成一個,是刻意的。**新詞要 ≥2 題需要才加**,
+孤兒 tag 對相似題與篩選都沒用 —— 這條是 vocab 收斂時刪掉 30 個草稿詞換來的。
 
 每題掛 1 個 primary + 0–2 個 secondary 的 EBMT Handbook 章節 tag(350 題 → 647 個 tag,
 63 章被用到)。分類在 `docs/hsct-ebmt-chapter-map.json`(章號),章號 → 短名在
