@@ -14,7 +14,7 @@
 
 **既有的離線 apkg 流程 —— `scripts/build-anki.py`(750 行)**
 
-- 用 `wrangler d1 execute --json` 逐年撈題(`scripts/build-anki.py:539-572`,`questions LEFT JOIN explanations`)。**沒有 personal_notes、沒有 highlights** —— 這正是「帶不走自己的筆記」的根因。入口是 `package.json` 的 `anki:build` / `anki:build:mine`,產物 `anki-deck/血專-1xx年.apkg`(最大 12.8 MB,gitignored),使用者無法自選範圍。
+- 用 `wrangler d1 execute --json` 逐年撈題(`scripts/build-anki.py:539-572`,`questions LEFT JOIN explanations`)。**沒有 personal_notes、沒有 highlights** —— 這正是「帶不走自己的筆記」的根因。入口是 `package.json` 的 `anki:build` / `anki:build:mine`,產物 `anki-deck/移專-1xx年.apkg`(最大 12.8 MB,gitignored),使用者無法自選範圍。
 - 卡片組法:Front = `.qid` + `.stem` + `<ul class="options">`;Back = `.answer` 正解 + `.expl` 詳解 HTML(`:648-668`)。**但這份不是樣式基準 —— 見下。**
 
 **樣式基準:`~/mcq-to-anki`(github.com/htlin222/mcq-to-anki)**
@@ -272,8 +272,8 @@ curl -OJ -X POST http://localhost:8787/api/export -H "$E" -H "$J" \
 ```
 #separator:Comma
 #html:true
-#notetype:血專
-#deck:血專::匯出
+#notetype:移專
+#deck:移專::匯出
 #columns:Front,Back,Tags
 #tags column:3
 ```
@@ -354,7 +354,7 @@ download: async (path: string, body: any): Promise<void> => {
 - [ ] `pnpm exec tsc --noEmit` 與 `cd frontend && pnpm build` 皆過
 - [ ] 五個入口(收藏資料夾 / 錯題 / 某一年 / 搜尋結果 / 測驗結果)都能匯出,範圍標籤與檔名正確
 - [ ] Markdown 檔在 Obsidian / VS Code / GitHub 三處預覽正常,中文檔名不亂碼
-- [ ] CSV 實際匯入 Anki:notetype `血專`、deck、tags 正確,HTML 有渲染
+- [ ] CSV 實際匯入 Anki:notetype `移專`、deck、tags 正確,HTML 有渲染
 - [ ] **A 帳號無法匯出 B 帳號的收藏 / 筆記 / 畫記**(Task 4.2 Step 3 已實測)
 - [ ] 匯出檔中不出現他人 email 或他人筆記內容;201 題的範圍回 413 且 UI 有可讀提示,不是白畫面
 - [ ] `wrangler tail` 觀察一次 200 題匯出,CPU time 未超標;R2 bucket 仍為私有(dashboard 確認未開公開存取)
