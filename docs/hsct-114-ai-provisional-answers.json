@@ -325,10 +325,10 @@
   },
   {
    "number": 47,
-   "answer": "E",
-   "confidence": "low",
-   "rationale_md": "原卷題幹依賴一張流程圖(箭頭編號 (1)–(4) 對應台灣 2024 標準治療),文字版沒有 (1)–(4) 的敘述內容,無法判斷各箭頭所指療法。依指示填 E 並標低信心;此題需對照原始試卷圖片才能作答。",
-   "ebmt_ref": "手冊未涵蓋(原卷依賴流程圖,文字版無法判斷)"
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "與 113-41 題幹/選項/流程圖完全相同,113 年官方答案 C (2)(4)。",
+   "ebmt_ref": "Ch86 Large B-Cell Lymphoma"
   },
   {
    "number": 48,

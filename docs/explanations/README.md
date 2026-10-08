@@ -8,4 +8,4 @@
   再 `python3 scripts/seed-explanations.py --remote --year <年>`。路徑寫死在 scratchpad,換機器要改 `S`。
 - EBMT 手冊全文(agent 用來 grep 頁碼)不在 repo:`pdftotext -layout ebmt-handbook.pdf` 後每頁以 `===== PDF PAGE N =====` 分隔。
 
-進度(2026-10-08):108–111 全年 v2 已上線;112–114 進行中(subagent 改用 sonnet);out/ 裡有哪些批就是做到哪。缺的批照 PROMPT.txt 補跑即可。
+進度(2026-10-08):108–114 全部 350 題 v2 已上線(108–110 opus、111–114 sonnet);out/ 裡有哪些批就是做到哪。缺的批照 PROMPT.txt 補跑即可。
