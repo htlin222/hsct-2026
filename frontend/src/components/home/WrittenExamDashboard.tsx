@@ -16,15 +16,12 @@ type Stats = {
 	by_year: { year: number; seen: number; correct: number }[];
 };
 
-// 首頁「筆試」分頁 —— 原本整個首頁的內容,搬過來時只拿掉了兩塊:考試倒數卡
-// (現在是分頁之上的共用區塊,見 Home.tsx)與抹片練習的 quick link(它現在有
-// 自己的分頁,不需要在這裡再佔一個位置)。其餘完全不變。
+// 首頁的主體 —— 統計卡 / 進度條 / 熱力圖 / 年份入口。考試倒數卡不在這裡
+// (它畫在 Home.tsx 的上方區塊)。
 export function WrittenExamDashboard() {
 	const [years, setYears] = useState<YearMeta[]>([]);
 	const [stats, setStats] = useState<Stats | null>(null);
-	// 跨年份到期佇列摘要 — 決定要不要顯示「今天 N 張」CTA。FSRS 排程是筆試
-	// MCQ 題庫專屬的概念(CLAUDE.md「抹片練習」那節:不做 FSRS 排程),所以
-	// 這塊留在這裡,不搬去共用區塊。
+	// 跨年份到期佇列摘要 — 決定要不要顯示「今天 N 張」CTA。
 	const [due, setDue] = useState<DueSummary | null>(null);
 
 	useEffect(() => {

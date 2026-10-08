@@ -244,8 +244,8 @@ function tsxFiles(dir) {
  *  ⚠️ **`src` 是去掉註解之後的版本。** 這幾支掃描器是逐字比對 class 名的,而
  *  一個對話框的註解裡很可能**引用到它刻意避開的那個反例**(「配 max-h-full 而
  *  不是 max-h-[calc(100dvh-2rem)]」正是這樣寫的),那會被判成真的用了它。
- *  實際踩到:SmearGalleryDetailDialog 的註解讓「高度不准跟視窗綁死」那條紅了,
- *  而它的程式碼從頭到尾都是 `max-h-full`。
+ *  實際踩到:一個對話框的註解讓「高度不准跟視窗綁死」那條紅了,而它的程式碼
+ *  從頭到尾都是 `max-h-full`。
  *
  *  註解不是程式碼,不該進掃描範圍;而反過來「因為掃描器會誤判所以不准在註解裡
  *  講那個反例」是本末倒置 —— 那正是最該寫下來的東西。 */
@@ -277,25 +277,13 @@ test('對話框的安全區工具類存在,而且真的用了 env()', () => {
     STYLES,
     /\.sheet-safe-bottom\s*\{[^}]*padding-bottom:\s*env\(safe-area-inset-bottom\)/,
   );
-  // 螢幕保護型:**每個寬度都滿版**,所以不能沿用上面那兩個 sheet(它們在 ≥sm
-  // 會歸零)。而且它是唯一一個橫著看比直著看更常見的東西,橫向時瀏海在側邊
-  // —— **四邊都要讓**,少一邊那顆離開鈕就可能按不到。
-  for (const side of ['top', 'right', 'bottom', 'left']) {
-    assert.match(
-      STYLES,
-      new RegExp(
-        `\\.screensaver-safe\\s*\\{[^}]*padding-${side}:\\s*env\\(safe-area-inset-${side}\\)`,
-      ),
-      `.screensaver-safe 少讓了 ${side} 這一邊`,
-    );
-  }
 });
 
 test('每一個全螢幕對話框都讓開了安全區', () => {
   const found = overlayComponents();
   assert.ok(found.length >= 9, `只掃到 ${found.length} 個對話框,掃描器壞了`);
   const bad = found.filter(
-    (f) => !/dialog-scrim|dialog-sheet-(top|bottom)|screensaver-safe/.test(f.src),
+    (f) => !/dialog-scrim|dialog-sheet-(top|bottom)/.test(f.src),
   );
   assert.deepEqual(
     bad.map((f) => path.basename(f.path)),

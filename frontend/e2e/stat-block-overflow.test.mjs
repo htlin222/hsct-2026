@@ -121,11 +121,8 @@ for (const width of WIDTHS) {
     });
 
     try {
-      // 首頁主力換成抹片練習之後,這三格統計(總題數/已複習/準確率)搬進了
-      // 「筆試」分頁,不再是 `/` 的預設畫面(見 config.toml [home]
-      // primary_mode)—— 用 `?tab=exam` 直接落地到那個分頁,不然量到的是
-      // 抹片 dashboard,三格統計整個空掃。
-      await page.goto(server.origin + '/?tab=exam', {
+      // 這三格統計(總題數/已複習/準確率)就在首頁的預設畫面上。
+      await page.goto(server.origin + '/', {
         waitUntil: 'domcontentloaded',
         timeout: 30_000,
       });

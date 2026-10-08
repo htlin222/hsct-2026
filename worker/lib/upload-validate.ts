@@ -1,7 +1,7 @@
 // Shared image-upload validation — originally inline in routes/upload.ts.
-// Pulled out so worker/routes/smear-community.ts (投稿 submission image) can
-// reuse the exact same size/type rules instead of re-implementing them with
-// a subtly different limit or MIME list.
+// Pulled out so any other route that accepts an image upload can reuse the
+// exact same size/type rules instead of re-implementing them with a subtly
+// different limit or MIME list.
 export const ALLOWED_IMAGE_TYPES = new Set([
 	'image/jpeg',
 	'image/png',

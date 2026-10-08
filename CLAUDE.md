@@ -108,7 +108,7 @@ open http://localhost:5173                                        # 首頁 dashb
 | 全部 `/api/*` 401                               | `.dev.vars` 沒有或 `CF_ACCESS_TEAM_DOMAIN ≠ localhost` | 見 §1.2                                                                |
 | 全部 `/api/*` 500/404,wrangler log 一片空白     | 8787 被佔                                              | 見 §1.3                                                                |
 | `/api/me/bank-skill` 或 `/mcq` 下載到舊版 skill | `worker/generated/` 沒重新產生                         | `pnpm gen:bundles`(`dev` 與 `predeploy` 會自動跑)                      |
-| 圖片 404                                        | 本機 R2 是空的                                         | 正常;`import-lectures.ts` / `smear:import` 不帶 `--remote` 會灌本機 R2 |
+| 圖片 404                                        | 本機 R2 是空的                                         | 正常;`import-lectures.ts` 不帶 `--remote` 會灌本機 R2 |
 | 改了 `config.toml` 前端沒變                     | vite 只在啟動時讀 proxy header                         | 重啟終端 B(其他值會 HMR)                                               |
 
 ---
@@ -262,7 +262,6 @@ Worker 程式碼裡的寫法固定是 `c.env.DB.prepare(sql).bind(...).first<T>(
 | 詳解(markdown)     | `python3 scripts/seed-explanations.py --local\|--remote`                                                  | `explanations.content_json`           | 讀 `years/<n>/batches/*.json` 的 `explanation_md`                                                                       |
 | 講義 PDF           | `pnpm import:lectures [--remote] [--pdf-dir ./pdf]`                                                       | R2 + `lecture_docs` / `lecture_pages` | 預設 local;PDF 在 gitignored 的 `pdf/`                                                                                  |
 | 教科書             | `node --experimental-strip-types scripts/import-textbook.ts --master <pdf> [--chapters 76,83] [--remote]` | 同上,`kind='textbook'`                | 先用 `--chapters` 小批試                                                                                                |
-| 抹片練習           | `pnpm smear:import [--remote]`                                                                            | R2 + `smear_*`                        | ⚠️ delete-then-insert **會清掉 `smear_sessions` / `smear_answers`**,對有真人資料的 remote 要先想清楚                    |
 | 向量索引           | `pnpm vectors:backfill [--dry-run]`                                                                       | Vectorize                             | 相似題 / 弱點地圖沒資料時先查這個有沒有跑過                                                                             |
 | Access 名單        | `pnpm sync-users`                                                                                         | CF Access policy + `users`            | 冪等                                                                                                                    |
 
@@ -309,7 +308,7 @@ bucket **永遠不公開**,一律走 `/img/:key`、`/pdf/:key` 的 Worker 代理
 | -------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
 | `pnpm typecheck` + `pnpm --dir frontend typecheck` | tsc(**repo 沒有 eslint / biome,tsc 是唯一靜態檢查**)                                 | 每次改完                                                                               |
 | `pnpm test`                                        | 純函式:`worker/**/*.test.ts`、`frontend/src/lib`、`frontend/src/chat`、`scripts/lib` | 每次改完。**CI 不跑它**,本機自己負責                                                   |
-| `pnpm test:webkit`                                 | build 前端 → WebKit(iPhone)e2e **全部 47 支**(glob,不是逐檔列舉),打 `frontend/e2e/fixtures/` 的樁 | 動到 React / TipTap / 版面 / SW。約 6m50s;為什麼限併發見下面那節 |
+| `pnpm test:webkit`                                 | build 前端 → WebKit(iPhone)e2e **全部 44 支**(glob,不是逐檔列舉),打 `frontend/e2e/fixtures/` 的樁 | 動到 React / TipTap / 版面 / SW。約 6m50s;為什麼限併發見下面那節 |
 | CI(`deploy.yml`)                                   | 只跑 `smoke` + `nav-prefetch` 兩支 e2e,`E2E_REQUIRE=1`                               | push main 自動                                                                         |
 
 e2e 不接真 Worker:`frontend/e2e/server.mjs` 回 `fixtures/<path 把 / 換成 _>.json`,沒有 fixture
@@ -319,8 +318,8 @@ e2e 不接真 Worker:`frontend/e2e/server.mjs` 回 `fixtures/<path 把 / 換成 
 ### `test:webkit` 為什麼是 glob + 限併發(2026-09-17)
 
 **它原本逐檔列舉 45 支,於是「新增一支 spec 卻忘了註冊」完全無聲** —— 那跟「沒有寫
-測試」在畫面上一模一樣。實際發生過兩次:`hidden-year.test.mjs`(5 條)與
-`smear-gallery.test.mjs`(10 條)都在磁碟上、單獨跑全綠,但**從來沒有被這個關卡跑
+測試」在畫面上一模一樣。實際發生過兩次(`hidden-year.test.mjs` 的 5 條,以及另一支
+後來已移除的 spec 的 10 條)都在磁碟上、單獨跑全綠,但**從來沒有被這個關卡跑
 到**。改成 `node --test 'frontend/e2e/*.test.mjs'` 之後那個失誤不可能再發生 ——
 同「離線預載」那節的精神:不是把問題解決掉,是讓它不存在。
 
@@ -752,181 +751,6 @@ Illegal constructor —— 可用的是舊 API `document.createTouch` / `createT
 
 ⚠️ **加分頁會弄紅 `lectures-tabs.test.mjs`** —— 那支釘死「四顆分頁都在」當空掃
 防線。那是它該有的行為,改數字時要連標題那條(`new Set(titles).size`)一起改。
-
-### 抹片練習: 模組總覽在 `docs/smear-overview.md`
-
-抹片判讀的填空練習,跟 MCQ 在資料層完全分開、以「診斷」而非「題目」為組織
-單位。這個模組是 2026-09-03 到 09-06 三天內以 12 個 PR 建起來的,設計理由
-散在 `docs/plans/2026-09-0{3,5}-smear-*.md` 與各檔檔頭;**`docs/smear-overview.md`
-把它們收成一頁**:資料模型、程式地圖、端點、防洩題的四道閘、已決定過的方案、
-已知地雷、還沒做的缺口與建議順序。動到 `smear_*` / `worker/routes/smear*` /
-`components/smear/` 之前先讀它。兩條在那裡也寫著、但值得在這裡先看到的:
-
-- **`pnpm smear:import --remote` 是 delete-then-insert,會清掉
-  `smear_sessions` / `smear_answers` / `smear_term_votes`。** 正式機一有真人紀錄
-  就不能再跑,而改詳解、補詞表、修 `aml_m2` 全都要重灌 —— 下一輪的第一件事
-  是把內容表與使用者表拆開。
-- **全真模式交卷前不揭曉任何判定資訊**,所有複習限定的功能(提示、看答案、
-  看選項、答後面板)都是 render-level 條件 + 伺服器再擋一次,而 e2e 用「整頁
-  掃不到正解字串」守著。新增複習限定功能要補進那條掃描。
-
-### 抹片 × 筆試操作一致性:入口對稱與看選項提示
-
-`docs/plans/2026-09-05-smear-exam-parity-design.md`。抹片練習跟筆試 MCQ
-在**資料層**刻意完全分開(見上一節與 `docs/smear-overview.md`),但首頁改成抹片主力
-落地頁之後,**互動層**的落差開始被感受到:用慣筆試的人進到抹片會覺得
-「同樣的動作,這裡卻不一樣」。
-
-**入口對稱(`/smear/exam`)。** 底部導覽/首頁抹片卡/練習分頁的「複習」都是
-真路由,「全真」原本只是一顆按鈕直接彈 `StartDialog`,沒有網址——同一個
-位置、同一個圖示,行為卻不同。新增 `SmearExam.tsx`,跟 `SmearReview.tsx`
-同一套心智模型(路由 landing → 點按鈕開既有的 `StartDialog`),三個既有
-入口改指向這裡。`StartDialog` 本身一行沒動——這正是選它而不是把對話框整個
-搬成頁面表單的理由:跟 `/smear/review` 已經確立的慣例一致,改動面積最小。
-
-**看選項提示(複習模式提示鏈第四層)。** 現有提示鏈只有「主題分類」跟
-「直接看答案」兩層,中間空了一大段——主題分類太籠統,直接看答案又太重。
-新增 `POST /api/smear/sessions/:id/mc-options`(複習模式限定,全真回 403:
-那個模式的價值建立在交卷前不揭曉任何判定資訊上,這支端點的回應本身就會讓
-正解文字出現在畫面上,兩者直接衝突),回傳 5 個洗牌過的選項文字,不帶任何
-能推出正解位置的欄位——同 `/answer` 端點既有的對抗性審查精神。
-
-干擾項生成(`worker/lib/smear-mcq.ts` 的 `pickMcqOptions()`)沿用既有
-`topic` 分類軸(白血球混白血球、紅血球混紅血球),同 topic 不足 4 個時從
-其他 topic 回填,不靜默少於名額——同 `pickSmearSet()` 缺額回填的精神,
-兩支函式因此共用同一個 `fisherYatesShuffle()`。
-
-⚠️ **原本設想「選對了不能算進拼字正確率」,查過現有程式碼才發現這個數字
-目前根本不存在於複習模式。** 「拼字完全正確:N 題」只在全真模式交卷時算
-(`SmearResult.tsx` 讀 `finish` 回應的 `spelling_ok`),複習模式沒有交卷、
-沒有 session 完成的概念,沒有任何聚合會讀到 `hint_used='mc_choice'` 的列。
-**這個原則留著給未來**:複習模式如果哪天長出「拼字正確率」這種聚合統計,
-那支查詢要排除 `hint_used = 'mc_choice'` 的列——理由跟「直接看答案」被排除
-在外一樣(那個數字答的是「你寫不寫得出來」,用選的沒有打字這回事),但現在
-加排除邏輯只是永遠不會被執行的防禦性程式碼。
-
-前端這顆按鈕按下去,`AnswerInput.tsx` 的自由輸入框**整個換成**單選清單
-(不是並存),選了再按送出——跟輸入框共用同一顆「提交答案」按鈕。**刻意
-不重用 `QuestionCard` 的選項元件**:那個元件綁死 MCQ 題目的資料形狀
-(收藏/信心/管理員編輯),硬套會把兩個不同的資料模型綁在一起,改成視覺
-語彙一致的獨立小元件。原生 `<input type="radio">` 同 `name` 群組本身就有
-方向鍵移動 + Enter/Space 選取的鍵盤互動,**不需要接上全站的手把系統就有
-基本的鍵盤操作**——真正的手把(十字鍵/面鍵)整合是更大的一塊工程(那一套
-綁定分散在 `QuestionCard`/`Question.tsx` 兩層,且需要新的情境判斷),這裡
-刻意留給下一輪。
-
-### 首頁抹片輪播卡: 唯一一支刻意把正解講出來的抹片端點
-
-首頁倒數卡下面那張「左圖右說明」的卡,自動十秒換一張、可暫停、可展開成全螢幕
-螢幕保護。設計:`docs/plans/2026-09-08-smear-gallery-design.md`。
-
-**它跟抹片練習長得刻意相反。** 練習那邊每一支端點都在防正解外洩(`smear.ts` 的
-session 那幾支寫著「絕不把 `canonical_long` 放進這份 payload —— 那就是答案」);
-這張卡的整個用途就是把答案講出來。所以它自己開一支 `/api/smear/gallery`,而那支
-的檔頭寫明**只給首頁用,任何 session / 作答路徑都不准改用它** —— 改用它就會讓
-正解字串出現在全真模式交卷前的畫面上,而那正是 `smear-exam-noleak` 掃的東西。
-它也不寫任何作答紀錄,不進 `smear_answers`,不影響任何統計。
-
-- **一次回一批(24 筆),不是一次一張。** 十秒換一張、一張一趟的話,停在首頁十
-  分鐘就是 60 趟;而 payload 是純文字,實測一批 20 KB —— 同「離線預載一年」那節
-  的結論:文字不是成本,圖片才是。圖片仍然按需載入,而且**只預載下一張**(整批
-  預載等於一進首頁就吃十幾 MB)。
-- **隨機交給 `ORDER BY RANDOM()`**(478 列,實測 3ms)。「一批之內不重複」是它
-  免費附送的 —— client 自己抽的話得另外記已看過哪些。
-- **不進 `sw-guards.ts` 的 `CACHEABLE_API`**(有測試釘著)。快取住的症狀是「每次
-  打開首頁都是同一批」,看起來只是「怎麼老是這幾張」,不像壞掉。
-- **自動輪播有四道閘**(`lib/smearGallery.ts` 的 `shouldAutoAdvance`):e-ink(殘影
-  + 全屏刷新)、`document.hidden`(背景分頁燒流量)、指標停在卡上(正在讀說明時
-  被換走)、空批次。⚠️ **e-ink 那道閘讓暫停鈕變成按了沒反應的鍵,所以那個模式下
-  整顆不畫** —— 同手把那節。
-- ⚠️ **計時器的相依是 `state.batch` / `state.index`,不是整包 `state`。** 預抓回來
-  時只有 `next` 變、看的還是同一張圖;整包進相依的話那一張會被重新計時、停將近
-  二十秒,而使用者只會覺得「有時候換得比較慢」。
-- **播完一批而下一批還沒到就原地不動,不回頭重播。** 重播看起來像「一直循環」,
-  分不出是設計還是壞掉;停住至少只是停住,下一批一到就接上。
-
-**全螢幕螢幕保護的 overlay 是自己畫的,`requestFullscreen()` 只是順便** ——
-iOS Safari 不支援對非 `<video>` 元素全螢幕。所以 **Esc 一定要自己接**(API 沒成功
-時瀏覽器不會處理它),而反過來也要靠 `fullscreenchange` 把 overlay 一起關掉,
-否則留下一個看起來關不掉的黑畫面。
-
-⚠️ **安全區是第三種形狀,不能沿用 `.dialog-sheet-*`** —— 那兩個到 `sm` 就歸零
-(那些 sheet 在 ≥sm 變成置中卡片),而螢幕保護**每個寬度都滿版**;它又是唯一一個
-橫著看比直著看更常見的東西,橫向時瀏海在**側邊**。故 `.screensaver-safe` 四邊都讓,
-`mobileChrome.test.ts` 的掃描器與 CSS 斷言一起擴充。這裡的嚴重度比一般對話框高:
-**iOS 上那顆離開鈕是唯一的出路**,落在瀏海底下就等於出不去。
-
-**全螢幕畫的是共筆詳解全文,而全文不放進 `/gallery` 的 payload。** 全文平均
-1363 字,一批 24 筆會讓那支從 20 KB 漲到約 100 KB —— 每個開首頁的人都替「可能
-永遠不會打開的全螢幕」付這筆錢。改成進了螢幕保護才逐張取,用**既有的**
-`/api/smear/dx/:id`,結果快取在模組層。⚠️ **要的是 `content_json` 不是「更長的
-純文字」** —— 摘要是 `GROUP_CONCAT` 壓平 TipTap JSON 的結果,220 字還看得下去,
-整篇壓平之後標題會黏進內文。故走 `StaticContent`;載入中或沒有詳解時退回摘要,
-那一區永遠不會是空的。
-
-⚠️ **黑底上的文字色要單獨處理,而標題必須另外點名(`.smear-note-dark`)。**
-`.tiptap` 是 `text-ink-800 dark:text-ink-100`,亮色主題下畫在黑底整段看不見;
-而 base layer 那條全域 `h1,h2,h3,h4` **直接把顏色設在標題上**,
-**直接設定贏過繼承、跟 specificity 完全無關**,所以容器那一條管不到它。實測漏掉時
-標題是 `rgb(26,22,15)`、內文是 `rgb(237,233,226)`。**不要改用把 `.dark` 掛在子樹上**
-—— 那會讓底下每一處 `dark:` utility 連背景邊框一起翻面(同 `applyTheme()` 的不變式)。
-
-⚠️ **React 的 portal 事件沿 React 樹冒泡,而那讓自動輪播在全螢幕裡一次都沒跑。**
-卡片那顆 `<section>` 的 `onMouseEnter` 收得到 overlay 內的指標移動,於是
-`interacting` 永遠 true。**畫面上唯一的線索是倒數不見了** —— 症狀完全不指向原因。
-修法是把兩個訊號拆開(`interacting = fullscreen ? saverReading : cardHover`),而
-全螢幕那個訊號**刻意不是 hover 是說明欄的捲動位置**:螢幕保護多半架著讓它自己跑,
-滑鼠隨手停在畫面下緣就再也不動了。
-
-⚠️ **「開全螢幕卡卡的」的成因是圖片換了檔名,不是 JS 也不是 `requestFullscreen()`。**
-478 張裡有 **203 張**的 `image_key_full` 跟 `image_key_view` 是不同的檔(100–180 KB),
-而全螢幕的 `<img>` 是全新的元素 —— 量到第一幀就是 `complete: false,
-naturalWidth: 0`,**圖片區整塊空白**等新檔載完才出現。量測結果:JS 自身時間約
-60ms、`requestFullscreen()` 約 21ms(6x 節流),其餘都是 `(program)`。修法是
-`GalleryImage` 的 `previewKey`:先畫卡片已經解碼過的 view,載好 full 再換 ——
-同一個 `<img>` 換 src 時瀏覽器會繼續顯示舊的,所以全程沒有空白,也沒有多花頻寬。
-⚠️ **e2e fixture 原本三筆的 view/full 全是同一個檔,那條測試是空掃的綠燈**;改成
-第一筆帶兩個不同的檔之後停用驗證才真的紅。詳解則在 ⛶ 的 `pointerdown` 就預抓 ——
-**內容跳動比慢更難受**,眼睛已經開始讀了。
-
-**間隔是 20 秒不是 10 秒** —— 全螢幕畫的是 1363 字的詳解全文,讀到一半被換走比等
-久一點難受得多。純函式守著下限;e2e 因此是整個套件裡最慢的那幾條,**不要為了跑快
-一點把它改小**。
-
-**說明的位置:寬螢幕(≥lg)左右並排,窄螢幕與橫向手機才落到圖下面。**
-⚠️ 那個高度上限要用 `max-lg:` 只長在斷點以下,**不能先給上限再用 `lg:max-h-none`
-收回來** —— 在 1280×900 這種「同時是 lg 又是 landscape」的畫面上,勝負取決於
-Tailwind 把哪個變體排在後面(實測 `landscape:` 贏了,右欄只有四成高、底下一片黑)。
-**變體的先後順序不是可以拿來當保證的東西。** 而且「左右並排」那條 e2e 對這個 bug
-是綠的(它只比 x 座標),高度要另外驗。
-
-**卡片上點「標題 + 說明」開細節對話框(不跳頁),內容整個交給既有的
-`SmearDxPanel`** —— 那個面板只吃一個 `dxId`、自己抓資料。⚠️ **可點的範圍不含底下
-那行連結**:巢狀互動元素是無效 HTML,瀏覽器會把內層 `<a>` 拉到 `<button>` 外面,
-而且沒有任何錯誤訊息。「看完整診斷」的連結留著沒被取代 —— 對話框答「這張圖在講
-什麼」,連結答「我要停在這個診斷上」(有網址可貼,而且那一頁帶著該診斷的所有圖片)。
-對話框開著時輪播要停。
-
-⚠️ **`lib/mobileChrome.test.ts` 的對話框掃描器會被「註解裡引用到反例」誤判** ——
-在註解裡寫「配 `max-h-full` 而不是 `max-h-[calc(100dvh-2rem)]`」就會讓那條紅。
-已改成先去掉註解(同該檔 header-h 掃描器早就在做的事);註解不是程式碼,而「因為
-掃描器會誤判所以不准在註解裡講反例」是本末倒置。改守衛之後要**注入一個真的違規**
-確認它還抓得到,否則只是把它變成永遠綠的空掃。
-
-**倒數持有的是「下一次換圖的時刻」不是剩餘秒數** —— 秒數要由卡片那層每秒往下數,
-等於每秒重繪整張卡;時間戳只在換圖時變一次,每秒變的只有那一個數字。`secondsLeft()`
-用 `ceil`,`floor` 會讓十秒的倒數從 9 開始。暫停時整個不畫:停著的倒數是假的資訊。
-
-**圖與說明是卡片與螢幕保護共用的**(`SmearGalleryParts.tsx`)—— 各寫一份的話,之後
-加一個欄位一定有一邊漏掉,症狀是「全螢幕看的時候少一行」,沒有人會回報得清楚。
-但**底色不共用,由呼叫端給**:抹片是亮視野、背景近白,卡片在亮色主題下配黑底會變成
-兩條重得像排版壞掉的黑帶,而螢幕保護非黑不可。⚠️ 寫死一個再由 `className` 蓋是
-不行的 —— 同一層 utility 的勝負由打包後的檔案順序決定,不是字串裡誰寫在後面。
-
-兩個只有看畫面才會發現的:控制列原本絕對定位在右上角,**正好壓在說明的標題上**
-(離開鈕蓋住診斷名的最後幾個字),改成放進說明欄的版面流裡;以及全螢幕的說明不能
-沿用卡片的 `line-clamp-3` —— 那一欄整片空著卻把說明截掉,是把版面的限制當成內容的
-限制。
 
 ### 其他筆記: 不掛題目的私人筆記,以及那張表為什麼要重建
 

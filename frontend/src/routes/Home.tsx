@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
 import { CalendarDays, CalendarPlus } from "lucide-react";
 import { config } from "../config";
 import { loadLastPath, describePath } from "../lib/lastPath";
 import { ResumeChip } from "../components/ResumeChip";
 import { useMe } from "../hooks/useMe";
 import { StudyPlanDialog } from "../components/StudyPlanDialog";
-import { KeepAlive } from "../components/KeepAlive";
 import { WrittenExamDashboard } from "../components/home/WrittenExamDashboard";
-import { SmearDashboard } from "../components/smear/SmearDashboard";
-import { SmearGalleryCard } from "../components/home/SmearGalleryCard";
 
 // Exam start time — configured in /config.toml [exam].
 const EXAM_DATE = new Date(config.exam.date_iso);
@@ -32,48 +28,8 @@ function countdownTo(target: Date): Countdown {
 	return { days, hours, minutes, seconds, total_ms };
 }
 
-// ── 首頁分頁:「抹片」/「筆試」 ──────────────────────────────────────────
-//
-// 主力學習模式從筆試(MCQ 題庫)換成抹片練習之後,首頁分兩個分頁:原本整個
-// 首頁的內容搬進「筆試」分頁(WrittenExamDashboard,一行內容都沒變),新增
-// 「抹片」分頁當作新的主力落地頁(SmearDashboard)。
-//
-// **兩個分頁永遠都在,不因為主力換了誰就砍掉另一邊。** 下一屆考生可能還是
-// 筆試優先 —— 這正是 `config.toml [home] primary_mode` 存在的理由:它只決定
-// 「預設開哪一頁」+「手機底部導覽複習/全真/搜尋/收藏四顆指向哪邊」
-// (見 App.tsx 的 BottomNav),之後要整個換回筆試優先,改這一個值就好,不用
-// 動任何元件邏輯。
-//
-// **分頁列不分手機/桌機顯示與否 —— 兩種螢幕都看得到,且都可以自由切換。**
-// 差別只在預設打開哪一頁(`primary_mode`),不是「手機看不到另一邊」。
-//
-// **倒數卡是兩個分頁共用的東西,畫在分頁列之上,不重複畫兩次。** 它答的是
-// 「考試還剩幾天」,跟練哪個模式無關;而「今天到期複習」那個 FSRS CTA 是
-// 筆試 MCQ 題庫專屬的概念(抹片刻意不做 FSRS 排程,見 CLAUDE.md「抹片練習」
-// 那節),所以留在 WrittenExamDashboard 裡,不搬上來。
-type HomeTab = "exam" | "smear";
-const TAB_LABEL: Record<HomeTab, string> = { exam: "筆試", smear: "抹片" };
-
-function isHomeTab(v: string | null): v is HomeTab {
-	return v === "exam" || v === "smear";
-}
-
 export function Home() {
 	const { me } = useMe();
-	const [searchParams, setSearchParams] = useSearchParams();
-	const tabParam = searchParams.get("tab");
-	const tab: HomeTab = isHomeTab(tabParam) ? tabParam : config.home.primary_mode;
-
-	const setTab = (t: HomeTab) =>
-		setSearchParams(
-			(prev) => {
-				const next = new URLSearchParams(prev);
-				next.set("tab", t);
-				return next;
-			},
-			{ replace: true },
-		);
-
 	const [countdown, setCountdown] = useState<Countdown>(() =>
 		countdownTo(EXAM_DATE),
 	);
@@ -122,8 +78,7 @@ export function Home() {
 				</section>
 			)}
 
-			{/* Countdown to exam — date and label come from /config.toml [exam].
-			    共用區塊,不分分頁 —— 見上面的檔頭說明。 */}
+			{/* Countdown to exam — date and label come from /config.toml [exam]. */}
 			<section className="mb-8">
 				<div className="bg-accent/5 dark:bg-accent/15 border border-accent/30 dark:border-accent/40 rounded-lg px-5 py-3 sm:px-6 flex items-baseline gap-x-3 gap-y-1 flex-wrap">
 					<CalendarDays
@@ -180,38 +135,8 @@ export function Home() {
 				{planOpen && <StudyPlanDialog onClose={() => setPlanOpen(false)} />}
 			</section>
 
-			{/* 抹片輪播卡 —— 同倒數卡,是兩個分頁共用的東西,畫在分頁列之上。
-			    它答的是「隨手看兩眼抹片」,跟練哪個模式無關;筆試組的人也會掃,
-			    那正是把它放在共用區而不是 SmearDashboard 裡的理由。
-			    沒有抹片資料時它自己整張不畫(見 SmearGalleryCard)。 */}
-			<SmearGalleryCard />
-
-			<div className="mb-6 inline-flex rounded border border-ink-200 dark:border-ink-700 overflow-hidden" role="tablist" aria-label="首頁分頁">
-				{(["exam", "smear"] as const).map((t) => (
-					<button
-						key={t}
-						type="button"
-						role="tab"
-						aria-selected={tab === t}
-						onClick={() => setTab(t)}
-						className={
-							"px-4 py-1.5 text-sm transition " +
-							(tab === t
-								? "bg-accent text-white"
-								: "bg-white dark:bg-ink-800 text-ink-700 dark:text-ink-200 hover:bg-ink-50 dark:hover:bg-ink-700")
-						}
-					>
-						{TAB_LABEL[t]}
-					</button>
-				))}
-			</div>
-
-			<KeepAlive active={tab === "exam"}>
-				<WrittenExamDashboard />
-			</KeepAlive>
-			<KeepAlive active={tab === "smear"}>
-				<SmearDashboard />
-			</KeepAlive>
+			{/* 「今天到期複習」那個 FSRS CTA 與統計卡/進度條/熱力圖都在這裡。 */}
+			<WrittenExamDashboard />
 		</div>
 	);
 }

@@ -66,12 +66,6 @@ import { Bookmarks } from "./routes/Bookmarks";
 import { Search } from "./routes/Search";
 import { Challenges } from "./routes/Challenges";
 import Videos from "./routes/Videos";
-import { Smear } from "./routes/Smear";
-import { SmearReview } from "./routes/SmearReview";
-import { SmearExam } from "./routes/SmearExam";
-import { SmearSession } from "./routes/SmearSession";
-import { SmearResult } from "./routes/SmearResult";
-import { SmearDx } from "./routes/SmearDx";
 
 // Lazy — keeps EmbedPDF's pdfium-wasm bundle off every other route.
 const Lectures = lazy(() => import("./routes/Lectures"));
@@ -82,7 +76,7 @@ const FreeNote = lazy(() => import("./routes/FreeNote"));
 export default function App() {
 	const { me, loading } = useMe();
 	const navigate = useNavigate();
-	const { pathname, search } = useLocation();
+	const { pathname } = useLocation();
 
 	// 捲動時收起頂端/底部列(#136)。opt-out 的判準在 lib/autoHideChrome.ts ——
 	// 掛鉤本身還會再擋 md 以上與 prefers-reduced-motion。
@@ -204,12 +198,9 @@ export default function App() {
 					    品牌 + 工具列都塞不下)。底部列因此一路撐到 md,640–767 這段
 					    由它負責導覽,上面那條就只剩品牌 + 工具列。
 
-					    「抹片」是第 9 個項目,加進最寬那一階(xl,和講義/影片/答案挑戰
-					    同一批冒出來)而不是另開一個 2xl 階 —— 8 項只需要 ~936px 卻用了
-					    1280px 的斷點,留了 ~344px 餘裕,遠大於再加一個中文兩字標籤所需
-					    的寬度。frontend/e2e/overflow.test.mjs 繞著 1279/1280 兩側取樣,
-					    9 項 + 更多鈕消失後的版面在 1280 仍不溢出(該支已更新並跑過)。
-					    往後再加項目,先看這階還有沒有餘裕,餘裕吃完才需要開 2xl。 */}
+					    最寬那一階(xl)目前 8 項:只需要 ~936px 卻用了 1280px 的斷點,
+					    留了 ~344px 餘裕。frontend/e2e/overflow.test.mjs 繞著 1279/1280
+					    兩側取樣。往後再加項目,先看這階還有沒有餘裕,餘裕吃完才需要開 2xl。 */}
 					<nav className="hidden md:flex items-center gap-1 ml-6 text-sm shrink-0">
 						<NavItem to="/" end>
 							首頁
@@ -225,8 +216,6 @@ export default function App() {
 						    下拉收起來的那一階都得在列上補一顆。 */}
 						<NavItem to="/videos" className="hidden xl:block">影片</NavItem>
 						<NavItem to="/challenges" className="hidden xl:block">答案挑戰</NavItem>
-						{/* 第 9 項,理由見上面的斷點階梯註解。 */}
-						<NavItem to="/smear" className="hidden xl:block">抹片</NavItem>
 						<NavMore />
 					</nav>
 
@@ -309,15 +298,6 @@ export default function App() {
 					/>
 					<Route path="/videos" element={<Videos />} />
 					<Route path="/videos/:slug" element={<Videos />} />
-					<Route path="/smear" element={<Smear />} />
-					{/* 複習/全真的獨立落地頁 —— 都必須排在 /smear/dx/:id、/smear/s/:id
-					    之前沒有影響(路徑第二段是固定字面值,不會跟 ":id" 這種萬用參數
-					    衝突),但仍照慣例把具體路徑排在前面。 */}
-					<Route path="/smear/review" element={<SmearReview />} />
-					<Route path="/smear/exam" element={<SmearExam />} />
-					<Route path="/smear/dx/:id" element={<SmearDx />} />
-					<Route path="/smear/s/:id" element={<SmearSession />} />
-					<Route path="/smear/s/:id/result" element={<SmearResult />} />
 					<Route path="/profile" element={<Profile />} />
 					{/* 2048 休息小遊戲 —— 低調入口在個人頁,不進導覽列 */}
 					<Route path="/play" element={<Play />} />
@@ -347,39 +327,10 @@ export default function App() {
 			    差的那一塊剛好會蓋住頁尾。 */}
 			<nav className="app-chrome app-chrome-bottom md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-ink-800 border-t border-ink-200 dark:border-ink-700 grid grid-cols-5 z-20 safe-bottom">
 				<BottomItem to="/" Icon={HomeIcon} label="首頁" end />
-				{config.home.primary_mode === "smear" ? (
-					<>
-						{/* 主力是抹片時,這四顆改指向抹片對應功能 —— 見 config.toml
-						    [home] primary_mode 的說明。「複習」「全真」都是真的路徑
-						    (/smear/review、/smear/exam —— 見兩者檔頭的設計理由:
-						    同一套心智模型,路由 landing 點按鈕開既有的 StartDialog;
-						    全真沒有主題卡片,因為它照題庫實際比例抽樣、模擬真考卷,
-						    主題式挑選跟它的用途矛盾)。「搜尋」「收藏」都指向
-						    /smear 底下不同分頁,share 同一個 pathname,只能靠
-						    ?tab= 分道,所以要靠 smearTabParam() 自己算 active。 */}
-						<BottomItem to="/smear/review" Icon={BookOpen} label="複習" />
-						<BottomItem to="/smear/exam" Icon={PenLine} label="全真" />
-						<BottomItem
-							to="/smear?tab=search"
-							Icon={SearchIcon}
-							label="搜尋"
-							active={pathname === "/smear" && smearTabParam(search) === "search"}
-						/>
-						<BottomItem
-							to="/smear?tab=bookmark"
-							Icon={Bookmark}
-							label="收藏"
-							active={pathname === "/smear" && smearTabParam(search) === "bookmark"}
-						/>
-					</>
-				) : (
-					<>
-						<BottomItem to="/review" Icon={BookOpen} label="複習" />
-						<BottomItem to="/exam" Icon={PenLine} label="全真" />
-						<BottomItem to="/search" Icon={SearchIcon} label="搜尋" />
-						<BottomItem to="/bookmarks" Icon={Bookmark} label="收藏" />
-					</>
-				)}
+				<BottomItem to="/review" Icon={BookOpen} label="複習" />
+				<BottomItem to="/exam" Icon={PenLine} label="全真" />
+				<BottomItem to="/search" Icon={SearchIcon} label="搜尋" />
+				<BottomItem to="/bookmarks" Icon={Bookmark} label="收藏" />
 			</nav>
 		</div>
 		</AnnotationRegistryProvider>
@@ -474,16 +425,10 @@ function NavMore() {
 					<NavLink to="/lectures" className={itemCls}>講義</NavLink>
 					<NavLink to="/videos" className={itemCls}>影片</NavLink>
 					<NavLink to="/challenges" className={itemCls}>答案挑戰</NavLink>
-					<NavLink to="/smear" className={itemCls}>抹片</NavLink>
 				</div>
 			)}
 		</div>
 	);
-}
-
-// `?tab=` 讀取集中在這裡 —— BottomNav 的抹片分支要問好幾次「現在是哪個分頁」。
-function smearTabParam(search: string): string {
-	return new URLSearchParams(search).get("tab") ?? "practice";
 }
 
 function BottomItem({
@@ -491,18 +436,11 @@ function BottomItem({
 	Icon,
 	label,
 	end,
-	active,
 }: {
 	to: string;
 	Icon: LucideIcon;
 	label: string;
 	end?: boolean;
-	// NavLink 的 isActive 只比對 pathname,不管 query string —— 抹片分支底下
-	// 「搜尋/收藏」兩顆都指向同一個 /smear pathname,只靠 ?tab= 分道,所以
-	// 需要呼叫端自己算 active 傳進來覆蓋掉 NavLink 的預設判斷。省略時沿用
-	// NavLink 原本的 pathname 比對(筆試分支、「複習」都是各自獨立的路徑,
-	// 不需要覆蓋)。
-	active?: boolean;
 }) {
 	return (
 		<NavLink
@@ -510,7 +448,7 @@ function BottomItem({
 			end={end}
 			className={({ isActive }) =>
 				`flex flex-col items-center justify-center h-14 text-[11px] gap-0.5 ${
-					(active ?? isActive) ? "text-accent" : "text-ink-500 dark:text-ink-400"
+					isActive ? "text-accent" : "text-ink-500 dark:text-ink-400"
 				}`
 			}
 		>
