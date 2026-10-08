@@ -154,8 +154,15 @@ async function main() {
       try {
         // Cut the chapter from the master, linearised for range streaming.
         // qpdf page selection is 1-based and inclusive; local pages restart at 1.
+        //
+        // --remove-structure is load-bearing for the EBMT Handbook: it is a
+        // tagged PDF whose structure tree references every figure in the book,
+        // so a plain page split dragged all ~4000 image streams into each
+        // chapter (16 MB for a 9-page chapter). Dropping the tags takes it to
+        // ~2 MB; the text layer and reading order are untouched.
         await sh('qpdf', [
           '--linearize',
+          '--remove-structure',
           master,
           '--pages', master, `${c.start}-${c.end}`,
           '--',
