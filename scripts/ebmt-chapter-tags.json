@@ -1,0 +1,566 @@
+[
+ {
+  "n": 1,
+  "short": "HCT 歷史",
+  "tag": "HCT 歷史",
+  "chapter": "HCT: Historical Perspective"
+ },
+ {
+  "n": 2,
+  "short": "EBMT",
+  "tag": "EBMT",
+  "chapter": "The EBMT: History, Present, and Future"
+ },
+ {
+  "n": 3,
+  "short": "登錄系統",
+  "tag": "登錄系統",
+  "chapter": "Registries: A Bridge Between Donor and Recipient"
+ },
+ {
+  "n": 4,
+  "short": "移植病房",
+  "tag": "移植病房",
+  "chapter": "The HCT Unit"
+ },
+ {
+  "n": 5,
+  "short": "JACIE",
+  "tag": "JACIE",
+  "chapter": "JACIE Accreditation of HCT Programs"
+ },
+ {
+  "n": 6,
+  "short": "統計",
+  "tag": "統計",
+  "chapter": "Statistical Methods in HCT and Cellular Therapies"
+ },
+ {
+  "n": 7,
+  "short": "HSC 生物學",
+  "tag": "HSC 生物學",
+  "chapter": "Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation"
+ },
+ {
+  "n": 8,
+  "short": "免疫細胞",
+  "tag": "免疫細胞",
+  "chapter": "Biological Properties of Cells Other Than HSCs"
+ },
+ {
+  "n": 9,
+  "short": "HLA",
+  "tag": "HLA",
+  "chapter": "Histocompatibility"
+ },
+ {
+  "n": 10,
+  "short": "免疫重建",
+  "tag": "免疫重建",
+  "chapter": "Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization"
+ },
+ {
+  "n": 11,
+  "short": "移植前評估",
+  "tag": "移植前評估",
+  "chapter": "Evaluation and Counseling of Candidates"
+ },
+ {
+  "n": 12,
+  "short": "捐贈者選擇",
+  "tag": "捐贈者選擇",
+  "chapter": "Donor Selection for Adults and Pediatrics"
+ },
+ {
+  "n": 13,
+  "short": "Conditioning",
+  "tag": "Conditioning",
+  "chapter": "Conditioning"
+ },
+ {
+  "n": 14,
+  "short": "幹細胞來源",
+  "tag": "幹細胞來源",
+  "chapter": "Selection of Stem Cell Source"
+ },
+ {
+  "n": 15,
+  "short": "骨髓採集",
+  "tag": "骨髓採集",
+  "chapter": "Bone Marrow Harvesting for HCT"
+ },
+ {
+  "n": 16,
+  "short": "動員與收集",
+  "tag": "動員與收集",
+  "chapter": "Mobilization and Collection of HSC"
+ },
+ {
+  "n": 17,
+  "short": "兒童動員",
+  "tag": "兒童動員",
+  "chapter": "Mobilization and Collection of HSCs in Children"
+ },
+ {
+  "n": 18,
+  "short": "臍帶血單位",
+  "tag": "臍帶血單位",
+  "chapter": "Procurement and Management of Cord Blood Unit for Allogeneic Transplantation"
+ },
+ {
+  "n": 19,
+  "short": "Graft 處理",
+  "tag": "Graft 處理",
+  "chapter": "Graft Manipulation"
+ },
+ {
+  "n": 20,
+  "short": "冷凍保存",
+  "tag": "冷凍保存",
+  "chapter": "Processing, Cryopreserving, and Controlling the Quality of HSC"
+ },
+ {
+  "n": 21,
+  "short": "植入與嵌合",
+  "tag": "植入與嵌合",
+  "chapter": "Documentation of Engraftment and Chimerism After HCT"
+ },
+ {
+  "n": 22,
+  "short": "移植後追蹤",
+  "tag": "移植後追蹤",
+  "chapter": "Short- and Long-Term Controls After HCT"
+ },
+ {
+  "n": 23,
+  "short": "血管通路",
+  "tag": "血管通路",
+  "chapter": "Vascular Access"
+ },
+ {
+  "n": 24,
+  "short": "輸血",
+  "tag": "輸血",
+  "chapter": "Transfusion Support"
+ },
+ {
+  "n": 25,
+  "short": "營養",
+  "tag": "營養",
+  "chapter": "Nutritional Support"
+ },
+ {
+  "n": 26,
+  "short": "GVHD 預防",
+  "tag": "GVHD 預防",
+  "chapter": "GVHD Prophylaxis"
+ },
+ {
+  "n": 27,
+  "short": "感染管制",
+  "tag": "感染管制",
+  "chapter": "Infection Control and Isolation Procedures"
+ },
+ {
+  "n": 28,
+  "short": "兒童感染支持",
+  "tag": "兒童感染支持",
+  "chapter": "General Management of the Patient: Specific Aspects of Infectious Disease Supportive Care in Children"
+ },
+ {
+  "n": 29,
+  "short": "疫苗",
+  "tag": "疫苗",
+  "chapter": "Vaccinations"
+ },
+ {
+  "n": 30,
+  "short": "心理",
+  "tag": "心理",
+  "chapter": "Psychological Morbidity and Care"
+ },
+ {
+  "n": 31,
+  "short": "藥物交互作用",
+  "tag": "藥物交互作用",
+  "chapter": "Clinically Relevant Drug Interactions in HCT"
+ },
+ {
+  "n": 32,
+  "short": "護理",
+  "tag": "護理",
+  "chapter": "The Roles of the HCT Nurse"
+ },
+ {
+  "n": 33,
+  "short": "倫理",
+  "tag": "倫理",
+  "chapter": "Ethical Issues in HCT"
+ },
+ {
+  "n": 34,
+  "short": "生活品質",
+  "tag": "生活品質",
+  "chapter": "Quality of Life Assessment After HCT for Pediatric and Adults"
+ },
+ {
+  "n": 35,
+  "short": "嗜中性球低下發燒",
+  "tag": "嗜中性球低下發燒",
+  "chapter": "Neutropenic Fever"
+ },
+ {
+  "n": 36,
+  "short": "細菌感染",
+  "tag": "細菌感染",
+  "chapter": "Bacterial Infections"
+ },
+ {
+  "n": 37,
+  "short": "黴菌感染",
+  "tag": "黴菌感染",
+  "chapter": "Invasive Fungal Diseases"
+ },
+ {
+  "n": 38,
+  "short": "病毒感染",
+  "tag": "病毒感染",
+  "chapter": "Viral Infections"
+ },
+ {
+  "n": 39,
+  "short": "其他感染",
+  "tag": "其他感染",
+  "chapter": "Other Life-Threatening Infections"
+ },
+ {
+  "n": 40,
+  "short": "出血與血栓",
+  "tag": "出血與血栓",
+  "chapter": "Bleeding and Thrombotic Complications"
+ },
+ {
+  "n": 41,
+  "short": "Graft failure",
+  "tag": "Graft failure",
+  "chapter": "Graft Failure"
+ },
+ {
+  "n": 42,
+  "short": "內皮併發症",
+  "tag": "內皮併發症",
+  "chapter": "Early Complications of Endothelial Origin"
+ },
+ {
+  "n": 43,
+  "short": "急性 GVHD",
+  "tag": "急性 GVHD",
+  "chapter": "Acute Graft-Versus-Host Disease"
+ },
+ {
+  "n": 44,
+  "short": "慢性 GVHD",
+  "tag": "慢性 GVHD",
+  "chapter": "Chronic Graft-Versus-Host Disease"
+ },
+ {
+  "n": 45,
+  "short": "PTLD",
+  "tag": "PTLD",
+  "chapter": "Posttransplant Lymphoproliferative Syndromes"
+ },
+ {
+  "n": 46,
+  "short": "鐵過載",
+  "tag": "鐵過載",
+  "chapter": "Iron Overload"
+ },
+ {
+  "n": 47,
+  "short": "次發腫瘤",
+  "tag": "次發腫瘤",
+  "chapter": "Secondary Neoplasia (Other Than PTLPS)"
+ },
+ {
+  "n": 48,
+  "short": "眼口併發症",
+  "tag": "眼口併發症",
+  "chapter": "Ocular and Oral Complications"
+ },
+ {
+  "n": 49,
+  "short": "肝併發症 (SOS/VOD)",
+  "tag": "肝併發症 (SOS/VOD)",
+  "chapter": "Hepatic Complications"
+ },
+ {
+  "n": 50,
+  "short": "腸胃併發症",
+  "tag": "腸胃併發症",
+  "chapter": "Gastrointestinal Complications"
+ },
+ {
+  "n": 51,
+  "short": "出血性膀胱炎與腎",
+  "tag": "出血性膀胱炎與腎",
+  "chapter": "Haemorrhagic Cystitis and Renal Dysfunction"
+ },
+ {
+  "n": 52,
+  "short": "肺併發症",
+  "tag": "肺併發症",
+  "chapter": "Noninfectious Pulmonary Complications"
+ },
+ {
+  "n": 53,
+  "short": "神經併發症",
+  "tag": "神經併發症",
+  "chapter": "Neurological Complications"
+ },
+ {
+  "n": 54,
+  "short": "皮膚肌骨",
+  "tag": "皮膚肌骨",
+  "chapter": "Skin, Hair, and Musculoskeletal Complications"
+ },
+ {
+  "n": 55,
+  "short": "心血管代謝",
+  "tag": "心血管代謝",
+  "chapter": "Cardiovascular Diseases and Metabolic Syndrome"
+ },
+ {
+  "n": 56,
+  "short": "內分泌與生育",
+  "tag": "內分泌與生育",
+  "chapter": "Endocrine Disorders, Fertility, and Sexual Health"
+ },
+ {
+  "n": 57,
+  "short": "MRD",
+  "tag": "MRD",
+  "chapter": "Monitoring Measurable Residual Disease in ALL and AML"
+ },
+ {
+  "n": 58,
+  "short": "復發預防藥物",
+  "tag": "復發預防藥物",
+  "chapter": "Prevention and Treatment of Relapse by Drugs"
+ },
+ {
+  "n": 59,
+  "short": "DLI",
+  "tag": "DLI",
+  "chapter": "Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0"
+ },
+ {
+  "n": 60,
+  "short": "CAR-T",
+  "tag": "CAR-T",
+  "chapter": "Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy"
+ },
+ {
+  "n": 61,
+  "short": "免疫逃脫",
+  "tag": "免疫逃脫",
+  "chapter": "Mechanisms of Immune Resistance"
+ },
+ {
+  "n": 62,
+  "short": "ATMP 法規",
+  "tag": "ATMP 法規",
+  "chapter": "Regulatory Aspects of ATMP Versus Minimally Manipulated Immune Cells"
+ },
+ {
+  "n": 63,
+  "short": "居家移植",
+  "tag": "居家移植",
+  "chapter": "At-Home HCT"
+ },
+ {
+  "n": 64,
+  "short": "臍帶血移植",
+  "tag": "臍帶血移植",
+  "chapter": "Role of Umbilical Cord Blood Transplantation"
+ },
+ {
+  "n": 65,
+  "short": "Haplo",
+  "tag": "Haplo",
+  "chapter": "Haploidentical HCT"
+ },
+ {
+  "n": 66,
+  "short": "ECP",
+  "tag": "ECP",
+  "chapter": "Photopheresis in Adults and Pediatrics"
+ },
+ {
+  "n": 67,
+  "short": "肥胖",
+  "tag": "肥胖",
+  "chapter": "Overweight and Obese Patients"
+ },
+ {
+  "n": 68,
+  "short": "高齡移植",
+  "tag": "高齡移植",
+  "chapter": "HCT in Elderly Patients"
+ },
+ {
+  "n": 69,
+  "short": "資源受限",
+  "tag": "資源受限",
+  "chapter": "Feasibility and Experiences of HCT in Resource-Constrained Settings"
+ },
+ {
+  "n": 70,
+  "short": "AML",
+  "tag": "AML",
+  "chapter": "AML in Adults"
+ },
+ {
+  "n": 71,
+  "short": "兒童 AML",
+  "tag": "兒童 AML",
+  "chapter": "Acute Myeloid Leukaemia in Children"
+ },
+ {
+  "n": 72,
+  "short": "ALL",
+  "tag": "ALL",
+  "chapter": "Acute Lymphoblastic Leukemia in Adults"
+ },
+ {
+  "n": 73,
+  "short": "兒童 ALL",
+  "tag": "兒童 ALL",
+  "chapter": "Acute Lymphoblastic Leukaemia in Children and Adolescents"
+ },
+ {
+  "n": 74,
+  "short": "MDS",
+  "tag": "MDS",
+  "chapter": "Myelodysplastic Neoplasms/Syndromes (MDS)"
+ },
+ {
+  "n": 75,
+  "short": "兒童 MDS/JMML",
+  "tag": "兒童 MDS/JMML",
+  "chapter": "Allogeneic Hematopoietic Cell Transplantation in Pediatric MDS Including Refractory Cytopenia of Childhood and in Juvenile Myelomonocytic Leukemia"
+ },
+ {
+  "n": 76,
+  "short": "MDS/MPN",
+  "tag": "MDS/MPN",
+  "chapter": "Myelodysplastic/Myeloproliferative Neoplasms"
+ },
+ {
+  "n": 77,
+  "short": "MPN/CML",
+  "tag": "MPN/CML",
+  "chapter": "Myeloproliferative Neoplasms"
+ },
+ {
+  "n": 78,
+  "short": "SAA/PNH",
+  "tag": "SAA/PNH",
+  "chapter": "Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria"
+ },
+ {
+  "n": 79,
+  "short": "Fanconi/IBMF",
+  "tag": "Fanconi/IBMF",
+  "chapter": "Fanconi Anemia and Other Hereditary Bone Marrow Failure Syndromes"
+ },
+ {
+  "n": 80,
+  "short": "血紅素病變",
+  "tag": "血紅素病變",
+  "chapter": "Hemoglobinopathies (Sickle Cell Disease and Thalassemia)"
+ },
+ {
+  "n": 81,
+  "short": "MM",
+  "tag": "MM",
+  "chapter": "Multiple Myeloma"
+ },
+ {
+  "n": 82,
+  "short": "AL amyloidosis",
+  "tag": "AL amyloidosis",
+  "chapter": "Systemic Light Chain Amyloidosis"
+ },
+ {
+  "n": 83,
+  "short": "POEMS",
+  "tag": "POEMS",
+  "chapter": "Poems Syndrome and Disease Produced by Other Monoclonal IGs"
+ },
+ {
+  "n": 84,
+  "short": "Indolent lymphoma",
+  "tag": "Indolent lymphoma",
+  "chapter": "Indolent Lymphoma"
+ },
+ {
+  "n": 85,
+  "short": "CLL",
+  "tag": "CLL",
+  "chapter": "Chronic Lymphocytic Leukemia"
+ },
+ {
+  "n": 86,
+  "short": "DLBCL",
+  "tag": "DLBCL",
+  "chapter": "Large B-Cell Lymphoma"
+ },
+ {
+  "n": 87,
+  "short": "MCL",
+  "tag": "MCL",
+  "chapter": "Mantle Cell Lymphoma"
+ },
+ {
+  "n": 88,
+  "short": "其他侵襲性淋巴瘤",
+  "tag": "其他侵襲性淋巴瘤",
+  "chapter": "Other B- and T-Aggressive Lymphomas and Lymphomas Associated with HIV"
+ },
+ {
+  "n": 89,
+  "short": "HL",
+  "tag": "HL",
+  "chapter": "Classical Hodgkin’s Lymphoma"
+ },
+ {
+  "n": 90,
+  "short": "IEI",
+  "tag": "IEI",
+  "chapter": "Inborn Errors of Immunity"
+ },
+ {
+  "n": 91,
+  "short": "代謝疾病",
+  "tag": "代謝疾病",
+  "chapter": "Inborn Errors of Metabolism and Osteopetrosis"
+ },
+ {
+  "n": 92,
+  "short": "自體免疫",
+  "tag": "自體免疫",
+  "chapter": "Autoimmune Disease"
+ },
+ {
+  "n": 93,
+  "short": "自體免疫細胞治療",
+  "tag": "自體免疫細胞治療",
+  "chapter": "CART Cells and Other Cell Therapies (ie MSC, Tregs) in Autoimmune Diseases"
+ },
+ {
+  "n": 94,
+  "short": "Solid tumour",
+  "tag": "Solid tumour",
+  "chapter": "Solid Tumours"
+ }
+]

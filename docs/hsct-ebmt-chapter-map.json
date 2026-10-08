@@ -1,0 +1,2585 @@
+{
+ "note": "每題對應 The EBMT Handbook(2nd ed., 2024)章節。2026-10-08 由 7 個 subagent 逐年分類(以手冊全文 grep 佐證),114-047 手動校正。套用:python3 scripts/apply-ebmt-tags.py --remote",
+ "questions": [
+  {
+   "id": "108-001",
+   "primary": 21,
+   "secondary": [
+    41,
+    78
+   ],
+   "note": "混合嵌合體的判讀;SAA 的混合嵌合體不等於必然排斥"
+  },
+  {
+   "id": "108-002",
+   "primary": 57,
+   "secondary": [
+    21
+   ],
+   "note": "MRD 方法學(PCR 融合基因、t(8;21) 持續陽性)"
+  },
+  {
+   "id": "108-003",
+   "primary": 59,
+   "secondary": [
+    43,
+    58
+   ],
+   "note": "DLI 的風險(GVHD、骨髓再生不良)與遞增劑量策略"
+  },
+  {
+   "id": "108-004",
+   "primary": 7,
+   "secondary": [],
+   "note": "HSC 基本生物特性"
+  },
+  {
+   "id": "108-005",
+   "primary": 7,
+   "secondary": [],
+   "note": "CXCL12/CXCR4 歸巢軸;Ch61 亦提及但 Ch7 才是教學點"
+  },
+  {
+   "id": "108-006",
+   "primary": 19,
+   "secondary": [
+    65,
+    8
+   ],
+   "note": "TCRαβ/CD19 depletion 保留 γδ T 與 NK"
+  },
+  {
+   "id": "108-007",
+   "primary": 44,
+   "secondary": [],
+   "note": "cGVHD 發生率"
+  },
+  {
+   "id": "108-008",
+   "primary": 44,
+   "secondary": [],
+   "note": "cGVHD 最常侵犯器官(皮膚)"
+  },
+  {
+   "id": "108-009",
+   "primary": 43,
+   "secondary": [
+    44
+   ],
+   "note": "lichen planus 是 cGVHD 特徵,非 aGVHD"
+  },
+  {
+   "id": "108-010",
+   "primary": 26,
+   "secondary": [],
+   "note": "EBMT 2019/2020 GVHD 預防建議(CNI+MTX、ATG、CSA trough)"
+  },
+  {
+   "id": "108-011",
+   "primary": 13,
+   "secondary": [
+    70,
+    72
+   ],
+   "note": "BU vs TBI、BU/FLU vs BU/CY、MAC vs RIC 年齡選擇"
+  },
+  {
+   "id": "108-012",
+   "primary": 13,
+   "secondary": [
+    78
+   ],
+   "note": "RIC 概念;SAA 的 CY/ATG 也屬非清髓"
+  },
+  {
+   "id": "108-013",
+   "primary": 70,
+   "secondary": [
+    13,
+    68
+   ],
+   "note": "RIC allo-HSCT 於 AML:復發為主要死因"
+  },
+  {
+   "id": "108-014",
+   "primary": 57,
+   "secondary": [
+    70,
+    72
+   ],
+   "note": "MRD 作為移植前預測因子"
+  },
+  {
+   "id": "108-015",
+   "primary": 77,
+   "secondary": [],
+   "note": "手冊第 2 版把 CML 併入 Ch77 MPN;T315I、AP/BC 的移植適應症在此"
+  },
+  {
+   "id": "108-016",
+   "primary": 65,
+   "secondary": [
+    9,
+    41
+   ],
+   "note": "DSA 於 haplo:增加 graft failure 風險而非 GVHD;Ch41 亦大量討論 DSA"
+  },
+  {
+   "id": "108-017",
+   "primary": 9,
+   "secondary": [
+    12
+   ],
+   "note": "HLA-A/B/C/DRB1 配對與 DPB1 permissive/nonpermissive"
+  },
+  {
+   "id": "108-018",
+   "primary": 12,
+   "secondary": [
+    9,
+    24
+   ],
+   "note": "非親屬捐者選擇:HLA-C 重要性、ABO 主要不合、F→M"
+  },
+  {
+   "id": "108-019",
+   "primary": 87,
+   "secondary": [],
+   "note": "MCL:高劑量 cytarabine、auto 鞏固、LyMa rituximab 維持"
+  },
+  {
+   "id": "108-020",
+   "primary": 84,
+   "secondary": [],
+   "note": "FL:auto 不用於第一線緩解、5 年 PFS ~50%"
+  },
+  {
+   "id": "108-021",
+   "primary": 84,
+   "secondary": [
+    87,
+    86
+   ],
+   "note": "跨淋巴瘤亞型的 auto-HSCT 適應症;正解為 FL 一線緩解不做 auto,故 primary 取 Ch84"
+  },
+  {
+   "id": "108-022",
+   "primary": 94,
+   "secondary": [
+    82,
+    92
+   ],
+   "note": "化療難治性生殖細胞瘤無法從 auto 獲益;其餘三者(AL、DLBCL CR2、硬皮症)可"
+  },
+  {
+   "id": "108-023",
+   "primary": 81,
+   "secondary": [],
+   "note": "MM auto-HSCT 適應症、腎功能、tandem"
+  },
+  {
+   "id": "108-024",
+   "primary": 42,
+   "secondary": [
+    35
+   ],
+   "note": "Engraftment syndrome 歸在內皮來源早期併發症;auto 反而不罕見"
+  },
+  {
+   "id": "108-025",
+   "primary": 45,
+   "secondary": [
+    38
+   ],
+   "note": "PTLD:疑似時應減免疫抑制而非加重"
+  },
+  {
+   "id": "108-026",
+   "primary": 48,
+   "secondary": [
+    50
+   ],
+   "note": "口腔黏膜炎處置(bland rinse、lidocaine、opioid)"
+  },
+  {
+   "id": "108-027",
+   "primary": 49,
+   "secondary": [
+    42
+   ],
+   "note": "承前題(題幹缺前題)依選項為 VOD/SOS 的影像與 HVPG 判讀"
+  },
+  {
+   "id": "108-028",
+   "primary": 38,
+   "secondary": [
+    45
+   ],
+   "note": "EBV viremia 監測與 pre-emptive rituximab"
+  },
+  {
+   "id": "108-029",
+   "primary": 28,
+   "secondary": [
+    37,
+    38
+   ],
+   "note": "Ch28 標題雖寫兒科,實為手冊中抗菌/抗黴/PCP/HSV 預防的總論章"
+  },
+  {
+   "id": "108-030",
+   "primary": 38,
+   "secondary": [
+    52
+   ],
+   "note": "HSCT 後病毒性肺炎最常見病原(CMV)"
+  },
+  {
+   "id": "108-031",
+   "primary": 74,
+   "secondary": [
+    68
+   ],
+   "note": "MDS 移植時機:IPSS 高風險才獲益"
+  },
+  {
+   "id": "108-032",
+   "primary": 74,
+   "secondary": [],
+   "note": "advanced MDS 移植前誘導化療價值未定"
+  },
+  {
+   "id": "108-033",
+   "primary": 78,
+   "secondary": [],
+   "note": "SAA:MSD 移植、CY/ATG、IST 無效 3–4 個月後不應觀望"
+  },
+  {
+   "id": "108-034",
+   "primary": 81,
+   "secondary": [],
+   "note": "MM 新診斷:VTD、IFM2009 MRD、allo 非一線"
+  },
+  {
+   "id": "108-035",
+   "primary": 81,
+   "secondary": [],
+   "note": "EMN02/HO95、lenalidomide 維持、second ASCT 條件"
+  },
+  {
+   "id": "108-036",
+   "primary": 70,
+   "secondary": [
+    58,
+    9
+   ],
+   "note": "AML 移植後復發風險因子(FLT3-ITD、MRD、CMV、KIR);KIR 在 Ch9"
+  },
+  {
+   "id": "108-037",
+   "primary": 60,
+   "secondary": [
+    72,
+    81
+   ],
+   "note": "CAR-T:CD19 於 ALL、BCMA 於 MM、CRS/tocilizumab;尚無實體瘤核准"
+  },
+  {
+   "id": "108-038",
+   "primary": 43,
+   "secondary": [
+    12
+   ],
+   "note": "aGVHD 風險因子:HLA 不合、haplo、TBI、F→M"
+  },
+  {
+   "id": "108-039",
+   "primary": 26,
+   "secondary": [
+    65,
+    38
+   ],
+   "note": "ATG 於 GVHD 預防:CMV/EBV 再活化風險;URD 仍建議用"
+  },
+  {
+   "id": "108-040",
+   "primary": 65,
+   "secondary": [
+    70,
+    9
+   ],
+   "note": "haplo:NK alloreactivity、ATG 與 PTCy 平台"
+  },
+  {
+   "id": "108-041",
+   "primary": 12,
+   "secondary": [
+    14
+   ],
+   "note": "MUD vs MSD、BM vs PBSC、捐者年齡"
+  },
+  {
+   "id": "108-042",
+   "primary": 86,
+   "secondary": [],
+   "note": "DLBCL:睪丸原發 CNS 預防、一線 auto 無益、salvage 無差、rituximab 維持無益"
+  },
+  {
+   "id": "108-043",
+   "primary": 13,
+   "secondary": [
+    86,
+    89
+   ],
+   "note": "BEAM vs BeEAM 高劑量化療;BeEAM 在手冊僅 Ch13 提及一次,淋巴瘤章以 BEAM 為主"
+  },
+  {
+   "id": "108-044",
+   "primary": 50,
+   "secondary": [
+    43,
+    38
+   ],
+   "note": "Day+40 腹瀉鑑別:aGVHD、CMV 腸炎、CDAD"
+  },
+  {
+   "id": "108-045",
+   "primary": 70,
+   "secondary": [
+    9,
+    13
+   ],
+   "note": "AML/MDS 復發風險:KIR、RIC、CEBPA 雙突變(為低風險)"
+  },
+  {
+   "id": "108-046",
+   "primary": 70,
+   "secondary": [
+    13
+   ],
+   "note": "RIC AML:NRM 不高、GVHD 並未明顯較低、復發率較高"
+  },
+  {
+   "id": "108-047",
+   "primary": 26,
+   "secondary": [],
+   "note": "GVHD 預防藥物(CSA、MP、MTX;IFN-α 非)"
+  },
+  {
+   "id": "108-048",
+   "primary": 78,
+   "secondary": [
+    65,
+    14
+   ],
+   "note": "IST 失敗 SAA 的 URD/haplo 救援:BM 來源、ATG 保留、FLU/CY/低劑量 TBI"
+  },
+  {
+   "id": "108-049",
+   "primary": 94,
+   "secondary": [],
+   "note": "allo-HCT 於實體瘤(RCC、melanoma、breast、germ cell)"
+  },
+  {
+   "id": "108-050",
+   "primary": 38,
+   "secondary": [],
+   "note": "CMV:pneumonitis 治療加 IVIG、letermovir 預防、foscarnet 替代"
+  },
+  {
+   "id": "109-001",
+   "primary": 21,
+   "secondary": [
+    57,
+    58
+   ],
+   "note": "chimerism 監測與復發/排斥的判讀"
+  },
+  {
+   "id": "109-002",
+   "primary": 59,
+   "secondary": [
+    60,
+    8
+   ],
+   "note": "移植後過繼性細胞免疫治療的理想細胞特性(抗原專一、長期存活);手冊無專章,最接近 DLI 2.0 與工程化 T 細胞"
+  },
+  {
+   "id": "109-003",
+   "primary": 57,
+   "secondary": [
+    21
+   ],
+   "note": "MRD 方法(flow/PCR/STR)的敏感度與 t(8;21) 轉錄本持續"
+  },
+  {
+   "id": "109-004",
+   "primary": 51,
+   "secondary": [
+    38
+   ],
+   "note": "BK 病毒出血性膀胱炎"
+  },
+  {
+   "id": "109-005",
+   "primary": 42,
+   "secondary": [
+    41
+   ],
+   "note": "engraftment syndrome 診斷標準在 Ch42 內皮併發症"
+  },
+  {
+   "id": "109-006",
+   "primary": 54,
+   "secondary": [
+    22
+   ],
+   "note": "移植後骨壞死(AVN)"
+  },
+  {
+   "id": "109-007",
+   "primary": 26,
+   "secondary": [
+    43
+   ],
+   "note": "aGVHD 預防藥物"
+  },
+  {
+   "id": "109-008",
+   "primary": 43,
+   "secondary": [
+    8
+   ],
+   "note": "類固醇抗性 aGVHD 的救援治療(MSC、AAT、FMT)"
+  },
+  {
+   "id": "109-009",
+   "primary": 44,
+   "secondary": [],
+   "note": "cGVHD 治療藥物"
+  },
+  {
+   "id": "109-010",
+   "primary": 72,
+   "secondary": [
+    73,
+    60
+   ],
+   "note": "ALL 移植時機、CAR-T bridging、小兒 Ph+ ALL"
+  },
+  {
+   "id": "109-011",
+   "primary": 77,
+   "secondary": [
+    59,
+    58
+   ],
+   "note": "CML 移植後 DLI、TKI 維持、BCR-ABL 監測;CML 收在 Ch77 MPN"
+  },
+  {
+   "id": "109-012",
+   "primary": 72,
+   "secondary": [
+    13,
+    12
+   ],
+   "note": "Ph+ ALL 的 TBI、RIC、MUD vs sibling"
+  },
+  {
+   "id": "109-013",
+   "primary": 13,
+   "secondary": [
+    70,
+    72
+   ],
+   "note": "MAC 調理處方"
+  },
+  {
+   "id": "109-014",
+   "primary": 13,
+   "secondary": [
+    68
+   ],
+   "note": "RIC/NMA 調理"
+  },
+  {
+   "id": "109-015",
+   "primary": 26,
+   "secondary": [
+    38
+   ],
+   "note": "ATG 於 GVHD 預防與 CMV 風險"
+  },
+  {
+   "id": "109-016",
+   "primary": 9,
+   "secondary": [
+    12
+   ],
+   "note": "HLA/MHC 基礎;HLA 位在第 6 號染色體"
+  },
+  {
+   "id": "109-017",
+   "primary": 12,
+   "secondary": [
+    9
+   ],
+   "note": "非 HLA 捐贈者因素(年齡、DSA、CMV、性別)"
+  },
+  {
+   "id": "109-018",
+   "primary": 16,
+   "secondary": [],
+   "note": "poor mobilizer 風險因子"
+  },
+  {
+   "id": "109-019",
+   "primary": 9,
+   "secondary": [
+    12
+   ],
+   "note": "HLA 分型解析度與分型位點"
+  },
+  {
+   "id": "109-020",
+   "primary": 12,
+   "secondary": [
+    9,
+    65
+   ],
+   "note": "DSA 篩檢、KIR ligand、NIMA/NIPA 捐贈者選擇"
+  },
+  {
+   "id": "109-021",
+   "primary": 43,
+   "secondary": [
+    9,
+    26
+   ],
+   "note": "aGVHD 免疫病理(T 細胞、minor/major 抗原反應頻率、PTCy 機轉)"
+  },
+  {
+   "id": "109-022",
+   "primary": 86,
+   "secondary": [
+    13,
+    52
+   ],
+   "note": "DLBCL 自體移植 BEAM 與晚期併發症"
+  },
+  {
+   "id": "109-023",
+   "primary": 86,
+   "secondary": [],
+   "note": "DLBCL 異體移植預後因子"
+  },
+  {
+   "id": "109-024",
+   "primary": 84,
+   "secondary": [],
+   "note": "濾泡性淋巴瘤移植"
+  },
+  {
+   "id": "109-025",
+   "primary": 89,
+   "secondary": [
+    13
+   ],
+   "note": "Hodgkin 自體移植調理 BEAM"
+  },
+  {
+   "id": "109-026",
+   "primary": 16,
+   "secondary": [
+    14
+   ],
+   "note": "自體移植最低 CD34+ 劑量 2×10^6/kg"
+  },
+  {
+   "id": "109-027",
+   "primary": 74,
+   "secondary": [
+    14
+   ],
+   "note": "MDS 移植適應症與幹細胞來源"
+  },
+  {
+   "id": "109-028",
+   "primary": 77,
+   "secondary": [],
+   "note": "骨髓纖維化移植、JAK2、脾臟處理"
+  },
+  {
+   "id": "109-029",
+   "primary": 94,
+   "secondary": [],
+   "note": "固態腫瘤移植適應症"
+  },
+  {
+   "id": "109-030",
+   "primary": 36,
+   "secondary": [
+    37,
+    38
+   ],
+   "note": "移植後各時期感染風險時間表,Ch36 開頭有分期描述"
+  },
+  {
+   "id": "109-031",
+   "primary": 38,
+   "secondary": [],
+   "note": "CMV 感染、preemptive、letermovir"
+  },
+  {
+   "id": "109-032",
+   "primary": 37,
+   "secondary": [
+    27
+   ],
+   "note": "真菌感染途徑與 HEPA 隔離"
+  },
+  {
+   "id": "109-033",
+   "primary": 81,
+   "secondary": [],
+   "note": "骨髓瘤自體移植"
+  },
+  {
+   "id": "109-034",
+   "primary": 82,
+   "secondary": [],
+   "note": "AL 類澱粉沉積症自體移植適應(低風險)"
+  },
+  {
+   "id": "109-035",
+   "primary": 78,
+   "secondary": [],
+   "note": "重度再生不良性貧血"
+  },
+  {
+   "id": "109-036",
+   "primary": 88,
+   "secondary": [
+    87,
+    86
+   ],
+   "note": "CR1 自體鞏固的適應症橫跨 T-LBL/Burkitt(Ch88)、MCL(Ch87)、DLBCL(Ch86);取涵蓋最多選項的 Ch88"
+  },
+  {
+   "id": "109-037",
+   "primary": 86,
+   "secondary": [],
+   "note": "R/R DLBCL 救援與自體移植"
+  },
+  {
+   "id": "109-038",
+   "primary": 9,
+   "secondary": [],
+   "note": "MHC 基因結構、β2-microglobulin、連鎖不平衡"
+  },
+  {
+   "id": "109-039",
+   "primary": 14,
+   "secondary": [
+    64,
+    78
+   ],
+   "note": "幹細胞來源選擇(PBSC/BM/CB)"
+  },
+  {
+   "id": "109-040",
+   "primary": 26,
+   "secondary": [
+    65
+   ],
+   "note": "PTCy 機轉與給藥時程"
+  },
+  {
+   "id": "109-041",
+   "primary": 57,
+   "secondary": [
+    70
+   ],
+   "note": "AML MRD 監測"
+  },
+  {
+   "id": "109-042",
+   "primary": 43,
+   "secondary": [
+    44,
+    12
+   ],
+   "note": "aGVHD vs cGVHD 風險因子(Flowers 2011)"
+  },
+  {
+   "id": "109-043",
+   "primary": 49,
+   "secondary": [
+    42
+   ],
+   "note": "SOS/VOD 臨床表現,收在 Ch49 肝臟併發症"
+  },
+  {
+   "id": "109-044",
+   "primary": 58,
+   "secondary": [
+    70,
+    59
+   ],
+   "note": "AML FLT3-ITD 移植後復發預防(FLT3 抑制劑、HMA、DLI)"
+  },
+  {
+   "id": "109-045",
+   "primary": 36,
+   "secondary": [
+    44
+   ],
+   "note": "晚期細菌感染:莢膜菌、cGVHD、低免疫球蛋白"
+  },
+  {
+   "id": "109-046",
+   "primary": 77,
+   "secondary": [
+    59,
+    41
+   ],
+   "note": "PMF 異體移植:植入失敗率、分子緩解、DLI"
+  },
+  {
+   "id": "109-047",
+   "primary": 81,
+   "secondary": [],
+   "note": "骨髓瘤誘導治療與前線自體移植"
+  },
+  {
+   "id": "109-048",
+   "primary": 16,
+   "secondary": [
+    41,
+    26
+   ],
+   "note": "G-CSF 的動員機轉與移植後使用;手冊無移植後 G-CSF 專章,取動員章為主"
+  },
+  {
+   "id": "109-049",
+   "primary": 38,
+   "secondary": [],
+   "note": "RSV 病毒感染"
+  },
+  {
+   "id": "109-050",
+   "primary": 74,
+   "secondary": [],
+   "note": "MDS 移植時機"
+  },
+  {
+   "id": "110-001",
+   "primary": 12,
+   "secondary": [
+    9
+   ],
+   "note": "MUD 每一個 HLA mismatch 存活下降約 10%,屬 donor selection 判準"
+  },
+  {
+   "id": "110-002",
+   "primary": 10,
+   "secondary": [
+    26
+   ],
+   "note": "免疫重建與 ATG 依淋巴球計數給藥"
+  },
+  {
+   "id": "110-003",
+   "primary": 7,
+   "secondary": [],
+   "note": "HSC 生物特性、CXCL12/CXCR4 歸巢"
+  },
+  {
+   "id": "110-004",
+   "primary": 14,
+   "secondary": [
+    12
+   ],
+   "note": "BM vs PBSC 幹細胞來源選擇"
+  },
+  {
+   "id": "110-005",
+   "primary": 9,
+   "secondary": [
+    12
+   ],
+   "note": "HLA-C / DQB1 / DPB1 配對意義"
+  },
+  {
+   "id": "110-006",
+   "primary": 9,
+   "secondary": [],
+   "note": "HLA/MHC 基礎(染色體 6p、class I/II 分布)"
+  },
+  {
+   "id": "110-007",
+   "primary": 13,
+   "secondary": [],
+   "note": "conditioning 的目的"
+  },
+  {
+   "id": "110-008",
+   "primary": 26,
+   "secondary": [
+    38
+   ],
+   "note": "ATG 於 GVHD 預防與 CMV 再活化"
+  },
+  {
+   "id": "110-009",
+   "primary": 13,
+   "secondary": [
+    68
+   ],
+   "note": "RIC/NMA vs MAC"
+  },
+  {
+   "id": "110-010",
+   "primary": 16,
+   "secondary": [],
+   "note": "動員與收集、plerixafor"
+  },
+  {
+   "id": "110-011",
+   "primary": 16,
+   "secondary": [],
+   "note": "poor mobilizer 預測因子"
+  },
+  {
+   "id": "110-012",
+   "primary": 20,
+   "secondary": [
+    15
+   ],
+   "note": "冷凍保存條件、活性、解凍回輸時間"
+  },
+  {
+   "id": "110-013",
+   "primary": 44,
+   "secondary": [],
+   "note": "cGVHD 臨床特徵與 ibrutinib/imatinib"
+  },
+  {
+   "id": "110-014",
+   "primary": 43,
+   "secondary": [
+    8
+   ],
+   "note": "類固醇抗性 aGVHD 的二線治療(MSC、ruxolitinib、FMT);FMT 手冊未直接提及"
+  },
+  {
+   "id": "110-015",
+   "primary": 44,
+   "secondary": [],
+   "note": "cGVHD 最常侵犯器官(皮膚)"
+  },
+  {
+   "id": "110-016",
+   "primary": 45,
+   "secondary": [
+    38
+   ],
+   "note": "PTLD/EBV disease 定義與治療"
+  },
+  {
+   "id": "110-017",
+   "primary": 42,
+   "secondary": [],
+   "note": "engraftment syndrome 屬內皮併發症章"
+  },
+  {
+   "id": "110-018",
+   "primary": 51,
+   "secondary": [
+    38
+   ],
+   "note": "出血性膀胱炎(BK virus、cidofovir)"
+  },
+  {
+   "id": "110-019",
+   "primary": 21,
+   "secondary": [
+    58
+   ],
+   "note": "嵌合體監測與復發"
+  },
+  {
+   "id": "110-020",
+   "primary": 21,
+   "secondary": [
+    41
+   ],
+   "note": "lineage-specific chimerism 與 graft rejection(T/NK)"
+  },
+  {
+   "id": "110-021",
+   "primary": 21,
+   "secondary": [
+    78
+   ],
+   "note": "mixed chimerism 定義、STR 方法、SAA 情境"
+  },
+  {
+   "id": "110-022",
+   "primary": 70,
+   "secondary": [
+    11
+   ],
+   "note": "AML 移植適應症與治癒機率"
+  },
+  {
+   "id": "110-023",
+   "primary": 72,
+   "secondary": [
+    57
+   ],
+   "note": "成人 ALL MRD 與移植決策"
+  },
+  {
+   "id": "110-024",
+   "primary": 77,
+   "secondary": [
+    59,
+    58
+   ],
+   "note": "CML 移植後 TKI/DLI;CML 收在 MPN 章"
+  },
+  {
+   "id": "110-025",
+   "primary": 86,
+   "secondary": [],
+   "note": "relapsed DLBCL salvage + auto-HSCT"
+  },
+  {
+   "id": "110-026",
+   "primary": 86,
+   "secondary": [],
+   "note": "DLBCL allo-HSCT 預後因子"
+  },
+  {
+   "id": "110-027",
+   "primary": 51,
+   "secondary": [
+    38
+   ],
+   "note": "late-onset HC 的病毒成因"
+  },
+  {
+   "id": "110-028",
+   "primary": 38,
+   "secondary": [
+    45
+   ],
+   "note": "EBV viremia 監測與 pre-emptive rituximab"
+  },
+  {
+   "id": "110-029",
+   "primary": 37,
+   "secondary": [
+    36,
+    38
+   ],
+   "note": "跨章的感染預防原則(encapsulated、抗黴菌、PCP、HSV),手冊無單一總覽章"
+  },
+  {
+   "id": "110-030",
+   "primary": 74,
+   "secondary": [
+    14
+   ],
+   "note": "MDS 移植時機與幹細胞來源"
+  },
+  {
+   "id": "110-031",
+   "primary": 77,
+   "secondary": [],
+   "note": "myelofibrosis 移植(JAK2、脾切除)"
+  },
+  {
+   "id": "110-032",
+   "primary": 74,
+   "secondary": [],
+   "note": "MDS 移植前 cytoreduction"
+  },
+  {
+   "id": "110-033",
+   "primary": 78,
+   "secondary": [],
+   "note": "Townsley NEJM hATG+CsA+eltrombopag 為 SAA 的非移植 IST 試驗,手冊 Ch78 提及但考點偏藥物劑量/定義"
+  },
+  {
+   "id": "110-034",
+   "primary": 81,
+   "secondary": [],
+   "note": "MM auto-HSCT(Mel200、tandem、salvage auto)"
+  },
+  {
+   "id": "110-035",
+   "primary": 92,
+   "secondary": [],
+   "note": "自體免疫疾病 HSCT 適應症"
+  },
+  {
+   "id": "110-036",
+   "primary": 9,
+   "secondary": [],
+   "note": "HLA 基礎遺傳與 T 細胞 alloreactivity"
+  },
+  {
+   "id": "110-037",
+   "primary": 38,
+   "secondary": [
+    27,
+    20
+   ],
+   "note": "COVID-19 下的移植流程(隔離、檢測、冷凍保存);手冊僅於病毒感染章簡述"
+  },
+  {
+   "id": "110-038",
+   "primary": 26,
+   "secondary": [
+    65
+   ],
+   "note": "PTCy 機轉與給藥時程"
+  },
+  {
+   "id": "110-039",
+   "primary": 38,
+   "secondary": [],
+   "note": "CMV 治療/預防藥物"
+  },
+  {
+   "id": "110-040",
+   "primary": 26,
+   "secondary": [
+    65
+   ],
+   "note": "GVHD 預防標準組合(CNI+MTX、CNI+MMF、ATG、PTCy)"
+  },
+  {
+   "id": "110-041",
+   "primary": 24,
+   "secondary": [],
+   "note": "輸血支持(照射、閾值、ABO 不合處理)"
+  },
+  {
+   "id": "110-042",
+   "primary": 59,
+   "secondary": [],
+   "note": "DLI 的 GvT 效果與疾病動力學"
+  },
+  {
+   "id": "110-043",
+   "primary": 70,
+   "secondary": [
+    58
+   ],
+   "note": "FLT3-ITD AML 的移植與 sorafenib 維持"
+  },
+  {
+   "id": "110-044",
+   "primary": 89,
+   "secondary": [
+    65
+   ],
+   "note": "HL 的 auto/allo、BV 鞏固、PD-1 與 haplo"
+  },
+  {
+   "id": "110-045",
+   "primary": 38,
+   "secondary": [],
+   "note": "CMV 診斷與治療(letermovir、IVIG)"
+  },
+  {
+   "id": "110-046",
+   "primary": 84,
+   "secondary": [],
+   "note": "濾泡性淋巴瘤 auto-HSCT"
+  },
+  {
+   "id": "110-047",
+   "primary": 78,
+   "secondary": [
+    12
+   ],
+   "note": "Bacigalupo EBMT SAA MUD vs MSD"
+  },
+  {
+   "id": "110-048",
+   "primary": 49,
+   "secondary": [
+    38,
+    11
+   ],
+   "note": "HBV 再活化屬肝臟併發症章,移植前評估亦涉 Ch11"
+  },
+  {
+   "id": "110-049",
+   "primary": 13,
+   "secondary": [],
+   "note": "MAC vs RIC 經典處方"
+  },
+  {
+   "id": "110-050",
+   "primary": 20,
+   "secondary": [],
+   "note": "冷凍保存技術參數(DMSO、細胞濃度、降溫速率)"
+  },
+  {
+   "id": "111-001",
+   "primary": 9,
+   "secondary": [],
+   "note": "HLA 基因遺傳學與多型性"
+  },
+  {
+   "id": "111-002",
+   "primary": 60,
+   "secondary": [
+    7,
+    80
+   ],
+   "note": "HSC 基因治療載體與 CRISPR 風險;Ch7/Ch80 亦述 HSC 基因治療"
+  },
+  {
+   "id": "111-003",
+   "primary": 10,
+   "secondary": [
+    13,
+    26
+   ],
+   "note": "免疫重建影響因子(conditioning、ATG 藥動、graft 組成)"
+  },
+  {
+   "id": "111-004",
+   "primary": 13,
+   "secondary": [],
+   "note": "MAC/RIC/NMA/RTC 強度分級與 IV busulfan"
+  },
+  {
+   "id": "111-005",
+   "primary": 26,
+   "secondary": [
+    44
+   ],
+   "note": "GVHD 預防用藥;cGVHD 危險因子涉 Ch44"
+  },
+  {
+   "id": "111-006",
+   "primary": 26,
+   "secondary": [
+    43
+   ],
+   "note": "MMF / vorinostat / tocilizumab 於 GVHD 預防"
+  },
+  {
+   "id": "111-007",
+   "primary": 12,
+   "secondary": [
+    14,
+    18
+   ],
+   "note": "graft 建議細胞劑量表在 Ch12(p147);臍帶血 TNC 涉 Ch18"
+  },
+  {
+   "id": "111-008",
+   "primary": 14,
+   "secondary": [
+    64
+   ],
+   "note": "BM vs PBSC vs 單/雙臍帶血之 GVHD、TRM、OS 比較"
+  },
+  {
+   "id": "111-009",
+   "primary": 12,
+   "secondary": [
+    9
+   ],
+   "note": "非 HLA 捐者因子:CMV 血清、年齡、ABO、性別"
+  },
+  {
+   "id": "111-010",
+   "primary": 16,
+   "secondary": [],
+   "note": "plerixafor 機轉 CXCR4/SDF-1"
+  },
+  {
+   "id": "111-011",
+   "primary": 16,
+   "secondary": [
+    12
+   ],
+   "note": "最低 CD34+ 劑量 2×10^6/kg(Ch16 p182)"
+  },
+  {
+   "id": "111-012",
+   "primary": 16,
+   "secondary": [],
+   "note": "large-volume apheresis 處理血量倍數"
+  },
+  {
+   "id": "111-013",
+   "primary": 43,
+   "secondary": [
+    26
+   ],
+   "note": "aGVHD 定義、分級、grade 1 處置;PTCy 預防涉 Ch26"
+  },
+  {
+   "id": "111-014",
+   "primary": 44,
+   "secondary": [],
+   "note": "NIH cGVHD 皮膚診斷性表徵"
+  },
+  {
+   "id": "111-015",
+   "primary": 44,
+   "secondary": [],
+   "note": "NIH cGVHD 整體嚴重度分級"
+  },
+  {
+   "id": "111-016",
+   "primary": 49,
+   "secondary": [
+    42
+   ],
+   "note": "EBMT SOS/VOD 嚴重度分級(Ch49 p450);內皮併發症總論在 Ch42"
+  },
+  {
+   "id": "111-017",
+   "primary": 45,
+   "secondary": [
+    38
+   ],
+   "note": "PTLD 診斷、危險群、EBV-CTL、RIS"
+  },
+  {
+   "id": "111-018",
+   "primary": 57,
+   "secondary": [
+    72,
+    70
+   ],
+   "note": "ALL/AML MRD 方法與標記"
+  },
+  {
+   "id": "111-019",
+   "primary": 58,
+   "secondary": [
+    77,
+    59
+   ],
+   "note": "TKI / HMA 預防與治療復發;CML 復發後 TKI 涉 Ch77"
+  },
+  {
+   "id": "111-020",
+   "primary": 57,
+   "secondary": [
+    21
+   ],
+   "note": "移植後 MRD vs chimerism(STR)敏感度"
+  },
+  {
+   "id": "111-021",
+   "primary": 86,
+   "secondary": [],
+   "note": "DLBCL salvage + BEAM/auto-HSCT,PET 預後"
+  },
+  {
+   "id": "111-022",
+   "primary": 87,
+   "secondary": [],
+   "note": "MCL auto-HSCT 鞏固與 rituximab 維持"
+  },
+  {
+   "id": "111-023",
+   "primary": 84,
+   "secondary": [
+    13
+   ],
+   "note": "FL auto vs allo,RIC vs MAC"
+  },
+  {
+   "id": "111-024",
+   "primary": 60,
+   "secondary": [
+    11
+   ],
+   "note": "CAR-T 病人選擇條件;手冊無年齡上限條文,取最接近之 Ch60 + 候選者評估 Ch11"
+  },
+  {
+   "id": "111-025",
+   "primary": 60,
+   "secondary": [
+    53
+   ],
+   "note": "CRS/ICANS 時序與處置;手冊 Ch60 對 CRS/ICANS 著墨有限,神經毒性涉 Ch53"
+  },
+  {
+   "id": "111-026",
+   "primary": 60,
+   "secondary": [
+    59
+   ],
+   "note": "HSCT 後復發以(donor-derived)淋巴球製作 CAR-T"
+  },
+  {
+   "id": "111-027",
+   "primary": 51,
+   "secondary": [
+    38
+   ],
+   "note": "晚發型出血性膀胱炎之病毒病因(BK/JC、adenovirus、CMV)"
+  },
+  {
+   "id": "111-028",
+   "primary": 45,
+   "secondary": [
+    38
+   ],
+   "note": "EBV DNAemia 監測與 pre-emptive rituximab(Ch45 §45.8.2.2)"
+  },
+  {
+   "id": "111-029",
+   "primary": 37,
+   "secondary": [
+    36,
+    38
+   ],
+   "note": "四項分屬抗菌(Ch36 encapsulated)、抗黴菌/PCP(Ch37)、HSV(Ch38);以 PCP+抗黴菌兩項取 Ch37 為主"
+  },
+  {
+   "id": "111-030",
+   "primary": 77,
+   "secondary": [],
+   "note": "CML 於第 2 版併入 MPN 章(Ch77);allo 適應症為 TKI 失敗/進展期"
+  },
+  {
+   "id": "111-031",
+   "primary": 70,
+   "secondary": [],
+   "note": "AML 各疾病狀態 allo-HSCT 之存活獲益"
+  },
+  {
+   "id": "111-032",
+   "primary": 72,
+   "secondary": [
+    57
+   ],
+   "note": "成人 ALL allo-HSCT 適應症(Ph+、MRD、CR2)"
+  },
+  {
+   "id": "111-033",
+   "primary": 81,
+   "secondary": [],
+   "note": "MM auto-HSCT:Mel200、早期 vs 延遲、tandem"
+  },
+  {
+   "id": "111-034",
+   "primary": 81,
+   "secondary": [],
+   "note": "MM 誘導組合、IFM2009 MRD、allo 非一線"
+  },
+  {
+   "id": "111-035",
+   "primary": 81,
+   "secondary": [],
+   "note": "EMN02/HO95、lenalidomide 維持、二次 ASCT"
+  },
+  {
+   "id": "111-036",
+   "primary": 9,
+   "secondary": [
+    8
+   ],
+   "note": "mHAg 來源(nsSNP)、呈現、H-Y 抗原"
+  },
+  {
+   "id": "111-037",
+   "primary": 26,
+   "secondary": [],
+   "note": "EBMT GVHD 預防建議:CNI + MTX(MAC)/MMF(RIC)、rATG 於 MUD"
+  },
+  {
+   "id": "111-038",
+   "primary": 9,
+   "secondary": [
+    12
+   ],
+   "note": "非親屬捐者 HLA 配對(A/B/C/DRB1、DPB1 permissive、DQB1)"
+  },
+  {
+   "id": "111-039",
+   "primary": 16,
+   "secondary": [],
+   "note": "周邊血 CD34+ 計數閾值與 plerixafor 使用(Ch16 p183)"
+  },
+  {
+   "id": "111-040",
+   "primary": 43,
+   "secondary": [
+    66
+   ],
+   "note": "類固醇抗性 aGVHD 二線:ruxolitinib、MSC、ATG、FMT;ECP 在 Ch66"
+  },
+  {
+   "id": "111-041",
+   "primary": 42,
+   "secondary": [],
+   "note": "engraftment syndrome 危險因子與表現"
+  },
+  {
+   "id": "111-042",
+   "primary": 58,
+   "secondary": [
+    70
+   ],
+   "note": "移植後藥物預防復發:FLT3 TKI、HDACi、HMA、checkpoint"
+  },
+  {
+   "id": "111-043",
+   "primary": 89,
+   "secondary": [
+    65
+   ],
+   "note": "HL auto-HSCT、BV 鞏固、PD-1 與 allo、haplo-PTCy"
+  },
+  {
+   "id": "111-044",
+   "primary": 60,
+   "secondary": [
+    86,
+    72
+   ],
+   "note": "CAR-T 於 ALL/DLBCL/MM/CLL 療效數字"
+  },
+  {
+   "id": "111-045",
+   "primary": 16,
+   "secondary": [
+    41,
+    42
+   ],
+   "note": "G-CSF 動員機轉(Ch16)、移植後使用(Ch41 graft failure)、engraftment syndrome 風險(Ch42);手冊無「移植後 G-CSF 常規建議」專節"
+  },
+  {
+   "id": "111-046",
+   "primary": 70,
+   "secondary": [
+    72
+   ],
+   "note": "急性白血病 CR1 之 allo-HSCT 適應症(FLT3-ITD、TP53、Ph+ ALL MRD、APL 不需)"
+  },
+  {
+   "id": "111-047",
+   "primary": 78,
+   "secondary": [
+    65,
+    41
+   ],
+   "note": "IST 失敗 SAA 之 MUD/haplo 救援移植:BM 來源、ATG、Cy/Flu/TBI 減少 graft failure"
+  },
+  {
+   "id": "111-048",
+   "primary": 9,
+   "secondary": [
+    8,
+    12
+   ],
+   "note": "NK/KIR/missing-self/NKG2D;NK 生物學在 Ch8,KIR 配對在 Ch9/Ch12"
+  },
+  {
+   "id": "111-049",
+   "primary": 26,
+   "secondary": [
+    65
+   ],
+   "note": "PTCy 機轉、給藥日、適用範圍(含 MSD/MUD)"
+  },
+  {
+   "id": "111-050",
+   "primary": 59,
+   "secondary": [],
+   "note": "DLI 之 GvT 反應與疾病動力學"
+  },
+  {
+   "id": "112-001",
+   "primary": 13,
+   "secondary": [],
+   "note": "conditioning 藥物毒性(melphalan/busulfan/CY/thiotepa)"
+  },
+  {
+   "id": "112-002",
+   "primary": 8,
+   "secondary": [
+    7
+   ],
+   "note": "T 細胞/MSC/iNKT 等非 HSC 細胞的生物特性"
+  },
+  {
+   "id": "112-003",
+   "primary": 9,
+   "secondary": [
+    12
+   ],
+   "note": "HLA 分型解析度與選 donor 的分型 loci"
+  },
+  {
+   "id": "112-004",
+   "primary": 14,
+   "secondary": [
+    64
+   ],
+   "note": "PBSC vs BM vs 單/雙份臍帶血比較"
+  },
+  {
+   "id": "112-005",
+   "primary": 12,
+   "secondary": [
+    9
+   ],
+   "note": "非 HLA donor 因素(年齡/CMV/ABO/性別)"
+  },
+  {
+   "id": "112-006",
+   "primary": 9,
+   "secondary": [
+    12
+   ],
+   "note": "HLA/MHC 基礎(染色體位置、class I/II、手足相合率)"
+  },
+  {
+   "id": "112-007",
+   "primary": 13,
+   "secondary": [],
+   "note": "RIC 與 MAC regimen 辨識"
+  },
+  {
+   "id": "112-008",
+   "primary": 13,
+   "secondary": [
+    51,
+    55
+   ],
+   "note": "CY 代謝物藥理(acrolein);手冊僅在 Ch51 一句帶過,純藥理題"
+  },
+  {
+   "id": "112-009",
+   "primary": 13,
+   "secondary": [
+    7
+   ],
+   "note": "conditioning 的目的(eradicate/immunosuppress/niche)"
+  },
+  {
+   "id": "112-010",
+   "primary": 16,
+   "secondary": [],
+   "note": "poor mobilizer 危險因子"
+  },
+  {
+   "id": "112-011",
+   "primary": 16,
+   "secondary": [
+    7
+   ],
+   "note": "plerixafor(CXCR4 拮抗)機轉"
+  },
+  {
+   "id": "112-012",
+   "primary": 16,
+   "secondary": [
+    20
+   ],
+   "note": "自體移植最低 CD34+ 劑量"
+  },
+  {
+   "id": "112-013",
+   "primary": 43,
+   "secondary": [],
+   "note": "皮膚 aGVHD 臨床表現與時間"
+  },
+  {
+   "id": "112-014",
+   "primary": 43,
+   "secondary": [],
+   "note": "SR-aGVHD 二線 ruxolitinib(REACH2)"
+  },
+  {
+   "id": "112-015",
+   "primary": 44,
+   "secondary": [],
+   "note": "cGVHD 治療藥物(rituximab/ibrutinib/MMF vs PD-1 抑制劑)"
+  },
+  {
+   "id": "112-016",
+   "primary": 45,
+   "secondary": [
+    38
+   ],
+   "note": "PTLD 風險、EBV-CTL 預防、抗病毒無效"
+  },
+  {
+   "id": "112-017",
+   "primary": 49,
+   "secondary": [
+    42
+   ],
+   "note": "SOS/VOD 危險因子、UDCA 預防、defibrotide 治療"
+  },
+  {
+   "id": "112-018",
+   "primary": 49,
+   "secondary": [
+    42
+   ],
+   "note": "SOS/VOD 嚴重度分級(EBMT criteria)"
+  },
+  {
+   "id": "112-019",
+   "primary": 61,
+   "secondary": [
+    59,
+    58
+   ],
+   "note": "移植後復發的免疫逃脫(HLA loss)與 DLI/IS withdrawal 無效"
+  },
+  {
+   "id": "112-020",
+   "primary": 57,
+   "secondary": [],
+   "note": "ALL/AML MRD 標記與方法"
+  },
+  {
+   "id": "112-021",
+   "primary": 21,
+   "secondary": [
+    41
+   ],
+   "note": "chimerism 監測與復發/排斥判讀"
+  },
+  {
+   "id": "112-022",
+   "primary": 45,
+   "secondary": [
+    38
+   ],
+   "note": "EBV viremia 監測與 pre-emptive rituximab(PTLD 預防)"
+  },
+  {
+   "id": "112-023",
+   "primary": 37,
+   "secondary": [
+    36,
+    38
+   ],
+   "note": "抗感染預防混合題(encapsulated/antifungal/PJP/HSV);PJP 與抗黴菌預防在 Ch37"
+  },
+  {
+   "id": "112-024",
+   "primary": 38,
+   "secondary": [
+    37
+   ],
+   "note": "CMV 治療與抗黴菌預防"
+  },
+  {
+   "id": "112-025",
+   "primary": 70,
+   "secondary": [
+    11
+   ],
+   "note": "AML 移植適應症、HCT-CI/EBMT risk score、APL CR2 自體"
+  },
+  {
+   "id": "112-026",
+   "primary": 77,
+   "secondary": [
+    59
+   ],
+   "note": "CML 移植適應症與 DLI/TKI;手冊 CML 篇幅薄,併於 MPN 章"
+  },
+  {
+   "id": "112-027",
+   "primary": 72,
+   "secondary": [
+    57
+   ],
+   "note": "成人 ALL MRD 導向移植決策"
+  },
+  {
+   "id": "112-028",
+   "primary": 84,
+   "secondary": [],
+   "note": "濾泡性淋巴瘤自體/異體移植角色"
+  },
+  {
+   "id": "112-029",
+   "primary": 86,
+   "secondary": [],
+   "note": "DLBCL 自體移植預後因子"
+  },
+  {
+   "id": "112-030",
+   "primary": 86,
+   "secondary": [],
+   "note": "DLBCL 異體移植預後因子(移植前疾病狀態)"
+  },
+  {
+   "id": "112-031",
+   "primary": 81,
+   "secondary": [],
+   "note": "復發 MM 的 salvage auto/allo 與維持治療"
+  },
+  {
+   "id": "112-032",
+   "primary": 78,
+   "secondary": [
+    13
+   ],
+   "note": "SAA 一線治療、CY200+ATG、BM 優於 PB、EBV-PTLD 風險"
+  },
+  {
+   "id": "112-033",
+   "primary": 82,
+   "secondary": [],
+   "note": "AL amyloidosis 自體移植適應(低風險群)"
+  },
+  {
+   "id": "112-034",
+   "primary": 60,
+   "secondary": [
+    16
+   ],
+   "note": "CAR-T leukapheresis 前藥物 washout;手冊未列 washout 天數"
+  },
+  {
+   "id": "112-035",
+   "primary": 60,
+   "secondary": [],
+   "note": "CAR-T 後 G-CSF、sHLH、B-cell aplasia/IVIG"
+  },
+  {
+   "id": "112-036",
+   "primary": 10,
+   "secondary": [
+    29,
+    19
+   ],
+   "note": "移植後免疫重建與疫苗反應、T-cell depletion 與復發"
+  },
+  {
+   "id": "112-037",
+   "primary": 9,
+   "secondary": [
+    12
+   ],
+   "note": "非親屬 donor HLA 配對(DQB1 permissive、DPB1 nonpermissive)"
+  },
+  {
+   "id": "112-038",
+   "primary": 26,
+   "secondary": [
+    65
+   ],
+   "note": "PTCy 機轉、給藥時間與適用範圍"
+  },
+  {
+   "id": "112-039",
+   "primary": 20,
+   "secondary": [],
+   "note": "HSC 冷凍保存(DMSO 濃度、細胞濃度、降溫速率)"
+  },
+  {
+   "id": "112-040",
+   "primary": 43,
+   "secondary": [
+    12,
+    14
+   ],
+   "note": "aGVHD 危險因子"
+  },
+  {
+   "id": "112-041",
+   "primary": 51,
+   "secondary": [
+    38,
+    65
+   ],
+   "note": "出血性膀胱炎早發/晚發、BK 病毒、cidofovir"
+  },
+  {
+   "id": "112-042",
+   "primary": 58,
+   "secondary": [
+    70,
+    59
+   ],
+   "note": "FLT3-ITD AML 移植後復發預防(FLT3i 維持、HMA、DLI)"
+  },
+  {
+   "id": "112-043",
+   "primary": 38,
+   "secondary": [],
+   "note": "CMV 治療(ganciclovir+IVIG)、letermovir 預防、PCR 監測"
+  },
+  {
+   "id": "112-044",
+   "primary": 57,
+   "secondary": [
+    70
+   ],
+   "note": "AML MRD(MFC、移植前 MRD、標記選擇)"
+  },
+  {
+   "id": "112-045",
+   "primary": 84,
+   "secondary": [],
+   "note": "濾泡性淋巴瘤自體移植時機與療效"
+  },
+  {
+   "id": "112-046",
+   "primary": 78,
+   "secondary": [
+    14
+   ],
+   "note": "SAA 與 PNH 關係、clonal evolution、MUD 幹細胞來源"
+  },
+  {
+   "id": "112-047",
+   "primary": 60,
+   "secondary": [],
+   "note": "ICANS 分級(ICE score、ASTCT)與治療(類固醇優先)"
+  },
+  {
+   "id": "112-048",
+   "primary": 42,
+   "secondary": [],
+   "note": "engraftment syndrome 危險因子與表現"
+  },
+  {
+   "id": "112-049",
+   "primary": 86,
+   "secondary": [],
+   "note": "R/R DLBCL salvage→auto、PET 陰性、allo 適應"
+  },
+  {
+   "id": "112-050",
+   "primary": 78,
+   "secondary": [
+    14
+   ],
+   "note": "SAA BMT vs IST、MUD TRM、hATG+CSA 反應率"
+  },
+  {
+   "id": "113-001",
+   "primary": 43,
+   "secondary": [],
+   "note": "aGVHD 組織病理與皮膚分期(exploding crypts、小膽管傷害、stage 4 皮膚定義)"
+  },
+  {
+   "id": "113-002",
+   "primary": 43,
+   "secondary": [
+    8,
+    61
+   ],
+   "note": "aGVHD 病生理中的免疫抑制性細胞(Treg、iNKT、MDSC);B 細胞不在此列"
+  },
+  {
+   "id": "113-003",
+   "primary": 44,
+   "secondary": [],
+   "note": "NIH cGVHD 皮膚診斷性特徵(lichen planus-like、sclerosis、poikiloderma)"
+  },
+  {
+   "id": "113-004",
+   "primary": 13,
+   "secondary": [],
+   "note": "調理方案的 myelodepletion/lymphodepletion 組成與各藥物屬性"
+  },
+  {
+   "id": "113-005",
+   "primary": 13,
+   "secondary": [],
+   "note": "MAC/RTC/RIC/NMA 強度階梯與 TBI 的特性"
+  },
+  {
+   "id": "113-006",
+   "primary": 26,
+   "secondary": [],
+   "note": "標準 GVHD 預防(CNI+MTX / CSA±MMF、ATG)與 CSA 劑量、目標濃度"
+  },
+  {
+   "id": "113-007",
+   "primary": 16,
+   "secondary": [],
+   "note": "穩定態 G-CSF 動員:劑量、採集時機、失敗判準"
+  },
+  {
+   "id": "113-008",
+   "primary": 16,
+   "secondary": [
+    7
+   ],
+   "note": "Plerixafor 機轉:CXCR4–SDF-1 阻斷"
+  },
+  {
+   "id": "113-009",
+   "primary": 16,
+   "secondary": [],
+   "note": "Plerixafor 的劑量與 CD34+ 觸發門檻(pre-emptive / rescue)"
+  },
+  {
+   "id": "113-010",
+   "primary": 49,
+   "secondary": [
+    42
+   ],
+   "note": "SOS/VOD 成人不可改變之風險因子;2 版手冊 SOS/VOD 放在肝臟併發症章"
+  },
+  {
+   "id": "113-011",
+   "primary": 42,
+   "secondary": [],
+   "note": "Engraftment syndrome 的風險因子(細胞量、G-CSF、DMSO)"
+  },
+  {
+   "id": "113-012",
+   "primary": 51,
+   "secondary": [
+    38
+   ],
+   "note": "BK 病毒出血性膀胱炎的病人/移植相關風險因子"
+  },
+  {
+   "id": "113-013",
+   "primary": 13,
+   "secondary": [
+    86
+   ],
+   "note": "淋巴瘤自體移植的調理方案:BEAM 為最常用"
+  },
+  {
+   "id": "113-014",
+   "primary": 84,
+   "secondary": [],
+   "note": "濾泡性淋巴瘤的 auto-HCT 時機(化療敏感之復發)"
+  },
+  {
+   "id": "113-015",
+   "primary": 87,
+   "secondary": [],
+   "note": "被套細胞淋巴瘤:auto-HCT 鞏固、高劑量 cytarabine、TP53 突變"
+  },
+  {
+   "id": "113-016",
+   "primary": 12,
+   "secondary": [],
+   "note": "非 HLA 捐贈者因子中最重要者:捐贈者年齡"
+  },
+  {
+   "id": "113-017",
+   "primary": 12,
+   "secondary": [
+    9,
+    65
+   ],
+   "note": "捐贈者階層:全相合手足 > MUD > 一位點不合/haplo"
+  },
+  {
+   "id": "113-018",
+   "primary": 12,
+   "secondary": [
+    16,
+    15
+   ],
+   "note": "捐贈者評估(問卷、感染標記檢測時限、G-CSF 不良反應);手冊只零散提及,無專章"
+  },
+  {
+   "id": "113-019",
+   "primary": 60,
+   "secondary": [
+    86
+   ],
+   "note": "CAR-T 後 CRS 的分級與處置(tocilizumab 優先於類固醇、liso-cel vs axi-cel)"
+  },
+  {
+   "id": "113-020",
+   "primary": 60,
+   "secondary": [
+    36
+   ],
+   "note": "CAR-T 後感染風險:低免疫球蛋白、長期嗜中性球低下、B 細胞再生不良"
+  },
+  {
+   "id": "113-021",
+   "primary": 60,
+   "secondary": [
+    16,
+    72
+   ],
+   "note": "CAR-T 製備前 leukapheresis 的藥物 washout;手冊未列具體天數"
+  },
+  {
+   "id": "113-022",
+   "primary": 57,
+   "secondary": [],
+   "note": "ALL/AML 的 MRD 標記(RUNX1、FLT3-ITD、germline 變異、ALL 轉位)"
+  },
+  {
+   "id": "113-023",
+   "primary": 58,
+   "secondary": [
+    89,
+    81
+   ],
+   "note": "移植後藥物預防復發:FLT3i 維持、PD-1、IMiD、BV"
+  },
+  {
+   "id": "113-024",
+   "primary": 57,
+   "secondary": [
+    21
+   ],
+   "note": "移植後 MRD 監測方法(PCR 融合基因、STR 嵌合體敏感度、t(8;21) 持續轉錄本)"
+  },
+  {
+   "id": "113-025",
+   "primary": 10,
+   "secondary": [
+    43,
+    65
+   ],
+   "note": "免疫重建的量測(ELISpot、CD4 重建)、PTCy 對 Treg 的作用、GVHD 生物標記"
+  },
+  {
+   "id": "113-026",
+   "primary": 9,
+   "secondary": [
+    12
+   ],
+   "note": "MUD 每一個 HLA-A/B/C/DRB1 不合增加約 10% 死亡率"
+  },
+  {
+   "id": "113-027",
+   "primary": 8,
+   "secondary": [
+    10
+   ],
+   "note": "HSCT 相關細胞(αβ/γδ T、naïve vs memory T、MSC)"
+  },
+  {
+   "id": "113-028",
+   "primary": 51,
+   "secondary": [],
+   "note": "出血性膀胱炎早發/晚發的病因與風險(BK 病毒、haplo)"
+  },
+  {
+   "id": "113-029",
+   "primary": 38,
+   "secondary": [
+    37
+   ],
+   "note": "CMV 的 pre-emptive 治療、foscarnet 毒性、mold-active azole 預防"
+  },
+  {
+   "id": "113-030",
+   "primary": 45,
+   "secondary": [
+    38
+   ],
+   "note": "EBV 病毒血症與 PTLD 的 pre-emptive rituximab、風險族群"
+  },
+  {
+   "id": "113-031",
+   "primary": 78,
+   "secondary": [
+    12
+   ],
+   "note": "SAA 復發後 IST 失敗,有 MUD → 移植"
+  },
+  {
+   "id": "113-032",
+   "primary": 78,
+   "secondary": [],
+   "note": "SAA 的 IST + eltrombopag 療效與復發/clonal evolution"
+  },
+  {
+   "id": "113-033",
+   "primary": 78,
+   "secondary": [],
+   "note": "PNH 補體抑制劑(eculizumab、ravulizumab、pegcetacoplan)的療效比較"
+  },
+  {
+   "id": "113-034",
+   "primary": 77,
+   "secondary": [
+    13
+   ],
+   "note": "骨髓纖維化的移植適應症(DIPSS)、RIC vs MAC、脾臟放射"
+  },
+  {
+   "id": "113-035",
+   "primary": 77,
+   "secondary": [
+    11
+   ],
+   "note": "CML 的移植適應症(blast crisis、TKI 不耐、T315I);2 版手冊 CML 併入 MPN 章"
+  },
+  {
+   "id": "113-036",
+   "primary": 72,
+   "secondary": [
+    13,
+    65
+   ],
+   "note": "成人 ALL 的 HSCT:TBI/Cy 年齡限制、Ph+ TKI 維持、haplo-PTCy、auto-HCT"
+  },
+  {
+   "id": "113-037",
+   "primary": 44,
+   "secondary": [
+    43
+   ],
+   "note": "cGVHD 的評估(PFT 追蹤、皮膚切片、CMV 腸炎鑑別)與病生理"
+  },
+  {
+   "id": "113-038",
+   "primary": 65,
+   "secondary": [
+    26,
+    55
+   ],
+   "note": "haplo-HSCT 的 PTCy 機轉、給藥時程、心臟毒性"
+  },
+  {
+   "id": "113-039",
+   "primary": 20,
+   "secondary": [
+    16
+   ],
+   "note": "HSC 採集後處理與冷凍保存(DMSO 濃度、細胞濃度上限、時限)"
+  },
+  {
+   "id": "113-040",
+   "primary": 49,
+   "secondary": [
+    42
+   ],
+   "note": "SOS/VOD 的 defibrotide 治療與預防(UDCA、HARMONY 試驗)"
+  },
+  {
+   "id": "113-041",
+   "primary": 86,
+   "secondary": [
+    60
+   ],
+   "note": "原卷附流程圖已佚失;依「2024 台灣標準治療」與編號箭頭推測為 R/R LBCL 二線 CAR-T vs 救援化療+auto-HCT 的演算法,純屬猜測"
+  },
+  {
+   "id": "113-042",
+   "primary": 12,
+   "secondary": [
+    9,
+    24
+   ],
+   "note": "捐贈者選擇:GVH 方向不合定義、CMV 血清配對、家族評估、HLA 連鎖不平衡"
+  },
+  {
+   "id": "113-043",
+   "primary": 72,
+   "secondary": [
+    60
+   ],
+   "note": "ALL CAR-T 前的 bridging therapy(低強度化療、blinatumomab/inotuzumab 對 CAR-T 的影響)"
+  },
+  {
+   "id": "113-044",
+   "primary": 58,
+   "secondary": [
+    59,
+    70
+   ],
+   "note": "AML FLT3-ITD MRD 陽性之移植後復發預防(gilteritinib、HMA、早停免疫抑制、pDLI)"
+  },
+  {
+   "id": "113-045",
+   "primary": 9,
+   "secondary": [],
+   "note": "HLA 相合移植的 T 細胞異體反應標的:minor histocompatibility antigens"
+  },
+  {
+   "id": "113-046",
+   "primary": 38,
+   "secondary": [],
+   "note": "CMV 處置:肺炎加 IVIG、letermovir 預防、PCR 監測、腸炎時病毒血症的限制"
+  },
+  {
+   "id": "113-047",
+   "primary": 81,
+   "secondary": [],
+   "note": "骨髓瘤誘導治療四合一(CASSIOPEIA/PERSEUS/IMROZ)與 MRD"
+  },
+  {
+   "id": "113-048",
+   "primary": 74,
+   "secondary": [
+    11
+   ],
+   "note": "MDS 移植:復發為主要死因、基因預後因子、低風險不建議、HCT-CI 影響"
+  },
+  {
+   "id": "113-049",
+   "primary": 78,
+   "secondary": [
+    12,
+    65
+   ],
+   "note": "SAA 移植適應症:年齡、MSD/MUD/haplo 與 IST 失敗的組合"
+  },
+  {
+   "id": "113-050",
+   "primary": 78,
+   "secondary": [
+    26,
+    13
+   ],
+   "note": "SAA 移植:上線 MUD 結果、ATG 與低劑量 TBI 防排斥、PNH 移植角色"
+  },
+  {
+   "id": "114-001",
+   "primary": 8,
+   "secondary": [
+    10
+   ],
+   "note": "免疫細胞類型(NKT/NK/MAIT)在 Ch8 細述,與免疫重建相關"
+  },
+  {
+   "id": "114-002",
+   "primary": 9,
+   "secondary": [
+    12,
+    65
+   ]
+  },
+  {
+   "id": "114-003",
+   "primary": 10,
+   "secondary": [
+    13,
+    26
+   ],
+   "note": "ATG ALC 調整與 fludarabine 暴露在 Ch10 討論"
+  },
+  {
+   "id": "114-004",
+   "primary": 12,
+   "secondary": [
+    9
+   ]
+  },
+  {
+   "id": "114-005",
+   "primary": 14,
+   "secondary": [
+    65,
+    64
+   ]
+  },
+  {
+   "id": "114-006",
+   "primary": 13,
+   "secondary": []
+  },
+  {
+   "id": "114-007",
+   "primary": 13,
+   "secondary": []
+  },
+  {
+   "id": "114-008",
+   "primary": 16,
+   "secondary": []
+  },
+  {
+   "id": "114-009",
+   "primary": 20,
+   "secondary": []
+  },
+  {
+   "id": "114-010",
+   "primary": 16,
+   "secondary": [],
+   "note": "分子藥理層級(biased agonism)手冊未涵蓋,取 plerixafor 所在章"
+  },
+  {
+   "id": "114-011",
+   "primary": 43,
+   "secondary": []
+  },
+  {
+   "id": "114-012",
+   "primary": 43,
+   "secondary": []
+  },
+  {
+   "id": "114-013",
+   "primary": 44,
+   "secondary": [
+    49
+   ]
+  },
+  {
+   "id": "114-014",
+   "primary": 42,
+   "secondary": [],
+   "note": "Engraftment syndrome 與 Spitzer/Maiolino 標準在 Ch42"
+  },
+  {
+   "id": "114-015",
+   "primary": 49,
+   "secondary": [
+    42
+   ]
+  },
+  {
+   "id": "114-016",
+   "primary": 56,
+   "secondary": []
+  },
+  {
+   "id": "114-017",
+   "primary": 57,
+   "secondary": [
+    21
+   ]
+  },
+  {
+   "id": "114-018",
+   "primary": 58,
+   "secondary": [
+    70
+   ]
+  },
+  {
+   "id": "114-019",
+   "primary": 58,
+   "secondary": [
+    81
+   ]
+  },
+  {
+   "id": "114-020",
+   "primary": 35,
+   "secondary": [
+    36
+   ]
+  },
+  {
+   "id": "114-021",
+   "primary": 37,
+   "secondary": []
+  },
+  {
+   "id": "114-022",
+   "primary": 38,
+   "secondary": []
+  },
+  {
+   "id": "114-023",
+   "primary": 77,
+   "secondary": [
+    41
+   ]
+  },
+  {
+   "id": "114-024",
+   "primary": 74,
+   "secondary": [
+    58
+   ]
+  },
+  {
+   "id": "114-025",
+   "primary": 70,
+   "secondary": [
+    13
+   ]
+  },
+  {
+   "id": "114-026",
+   "primary": 88,
+   "secondary": [
+    89
+   ],
+   "note": "Burkitt/LBL/CTCL 在 Ch88,HL 選項涉 Ch89"
+  },
+  {
+   "id": "114-027",
+   "primary": 86,
+   "secondary": []
+  },
+  {
+   "id": "114-028",
+   "primary": 86,
+   "secondary": []
+  },
+  {
+   "id": "114-029",
+   "primary": 81,
+   "secondary": []
+  },
+  {
+   "id": "114-030",
+   "primary": 81,
+   "secondary": []
+  },
+  {
+   "id": "114-031",
+   "primary": 78,
+   "secondary": []
+  },
+  {
+   "id": "114-032",
+   "primary": 61,
+   "secondary": [
+    60
+   ]
+  },
+  {
+   "id": "114-033",
+   "primary": 72,
+   "secondary": [
+    60
+   ],
+   "note": "obecabtagene 為 2024 新資料,手冊未收;以成人 ALL 章為主"
+  },
+  {
+   "id": "114-034",
+   "primary": 86,
+   "secondary": [
+    60
+   ]
+  },
+  {
+   "id": "114-035",
+   "primary": 87,
+   "secondary": []
+  },
+  {
+   "id": "114-036",
+   "primary": 9,
+   "secondary": [
+    12
+   ]
+  },
+  {
+   "id": "114-037",
+   "primary": 72,
+   "secondary": [
+    12,
+    49
+   ],
+   "note": "跨捐者選擇、TBI conditioning、HBsAg+ 捐者"
+  },
+  {
+   "id": "114-038",
+   "primary": 43,
+   "secondary": [
+    26
+   ],
+   "note": "(1)-(3) 為致病/風險因子,(4)(5) 為預防處方"
+  },
+  {
+   "id": "114-039",
+   "primary": 81,
+   "secondary": [
+    11
+   ],
+   "note": "Mel200 禁忌(eGFR/年齡)手冊無明確清單,取骨髓瘤章"
+  },
+  {
+   "id": "114-040",
+   "primary": 44,
+   "secondary": []
+  },
+  {
+   "id": "114-041",
+   "primary": 43,
+   "secondary": [
+    49,
+    50
+   ]
+  },
+  {
+   "id": "114-042",
+   "primary": 49,
+   "secondary": []
+  },
+  {
+   "id": "114-043",
+   "primary": 77,
+   "secondary": [
+    21,
+    57
+   ]
+  },
+  {
+   "id": "114-044",
+   "primary": 60,
+   "secondary": [
+    86
+   ],
+   "note": "washout/bridging 細節手冊著墨少,取 CAR-T 方法章"
+  },
+  {
+   "id": "114-045",
+   "primary": 70,
+   "secondary": []
+  },
+  {
+   "id": "114-046",
+   "primary": 45,
+   "secondary": [
+    38
+   ]
+  },
+  {
+   "id": "114-047",
+   "primary": 86,
+   "secondary": [
+    60
+   ],
+   "note": "原卷流程圖(R/R LBCL 二線:CAR-T vs salvage chemo + auto-HSCT)已 host 並連結在題幹,與 113-041 同一張圖"
+  },
+  {
+   "id": "114-048",
+   "primary": 81,
+   "secondary": [
+    60
+   ]
+  },
+  {
+   "id": "114-049",
+   "primary": 72,
+   "secondary": [
+    58,
+    59
+   ]
+  },
+  {
+   "id": "114-050",
+   "primary": 49,
+   "secondary": [
+    11,
+    12
+   ],
+   "note": "HBV 於 HCT 的處置集中在 Ch49"
+  }
+ ]
+}

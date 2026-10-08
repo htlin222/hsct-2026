@@ -2310,3 +2310,17 @@ This is designed to fit in **free tier indefinitely** for 20 users. If a feature
   文字版已在題幹末尾註明;111-37 的 option_d 在原卷就是空白。
 - 108/110 用 `(共)` 標記共同題 → `tags` 填 `共同`;109 整卷沒有標記。跨年重複題不少,
   刻意沒合併 —— 題號就是官方題號。
+
+### EBMT 章節 tag: 短名,而且「相似題目」靠它
+
+每題掛 1 個 primary + 0–2 個 secondary 的 EBMT Handbook 章節 tag(350 題 → 647 個 tag,
+63 章被用到)。分類在 `docs/hsct-ebmt-chapter-map.json`(章號),章號 → 短名在
+`scripts/ebmt-chapter-tags.json`,套用用 `python3 scripts/apply-ebmt-tags.py --remote`
+(冪等,只動 `created_by = ebmt-tagger@…` 的列)。`/api/questions/:id/similar` 的
+第二路(tag overlap)就是吃這些 tag,所以**改分類要重跑 `vectors:backfill`**(metadata 帶 tags)。
+- **tag 是短名(「GVHD 預防」「急性 GVHD」「HLA」「CAR-T」「DLBCL」),不是「EBMT Ch26 …」。**
+  第一版用了帶章號的長名,使用者一句「tag 名稱要短」就改掉了:標籤是給人掃的,章號
+  沒有人記得。章號留在 JSON 裡,畫面上不出現。
+- 刪舊 tag 用 `created_by`,不用 `LIKE 'EBMT Ch%'` —— 字樣已經換過一次,靠字樣會漏。
+- 113-041 與 114-047 是同一張 R/R LBCL 流程圖(CAR-T vs salvage + auto),圖已 host 在
+  `img-hosting`、連結寫在題幹(`StemText` 會把 http(s) 網址渲染成連結,`lib/stemLinks.ts`)。
