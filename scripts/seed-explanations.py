@@ -16,8 +16,8 @@ Supported markdown subset (matches the frontend tiptap extension set):
   - images (![alt](url))  — block-level only, must be on their own line
   - fenced code blocks (``` or ~~~, optional language tag)
   - tables (GitHub-flavored pipe tables, with or without a header row)
-  - bullet lists (-, *, +)
-  - ordered lists (1., 2., ...)
+  - bullet lists (-, *, +) and ordered lists (1., 2., ...), **nested by indent**
+  - blockquotes (> …), recursively parsed
   - hard breaks (two trailing spaces or trailing backslash)
   - backslash escapes (\\* \\_ \\` \\| ... → the literal character)
 
@@ -247,6 +247,77 @@ def parse_table(lines: list[str], i: int) -> tuple[dict | None, int]:
     return {"type": "table", "content": content}, j
 
 
+def indent_of(line: str) -> int:
+    """前導空白寬度(tab 算 4)。巢狀清單靠它分層。"""
+    n = 0
+    for ch in line:
+        if ch == " ":
+            n += 1
+        elif ch == "\t":
+            n += 4
+        else:
+            break
+    return n
+
+
+def list_item_text(stripped: str) -> tuple[bool, str] | None:
+    """是清單項目就回 (ordered?, 內文),否則 None。"""
+    m = RE_ORDERED.match(stripped)
+    if m:
+        return True, m.group(2)
+    m = RE_BULLET.match(stripped)
+    if m:
+        return False, m.group(1)
+    return None
+
+
+def parse_list(lines: list[str], start: int) -> tuple[dict, int]:
+    """從 lines[start] 起解析一個(可巢狀的)清單,回 (node, 下一行索引)。
+
+    層級由縮排決定:比本層深的清單行是上一個項目的子清單;比本層深的非清單行是
+    上一個項目的續行;比本層淺就結束。同層換了種類(- ↔ 1.)也結束,讓外層再開一個。
+    空行不一定結束清單 —— 下一個非空行若仍是 ≥ 本層縮排的清單項目就接著走,否則結束。
+    詳解的「UpToDate 式巢狀重點」整個靠這裡;舊版把每一層都攤平成同一層,縮排全丟。
+    """
+    base = indent_of(lines[start])
+    ordered = list_item_text(lines[start].strip())[0]
+    items: list[dict] = []
+    i = start
+    while i < len(lines):
+        line = lines[i]
+        s = line.strip()
+        if not s:
+            j = i + 1
+            while j < len(lines) and not lines[j].strip():
+                j += 1
+            if j < len(lines) and indent_of(lines[j]) >= base and list_item_text(lines[j].strip()):
+                i = j
+                continue
+            break
+        ind = indent_of(line)
+        if ind < base:
+            break
+        if ind > base and items:
+            if list_item_text(s):
+                sub, i = parse_list(lines, i)
+                items[-1]["content"].append(sub)
+            else:
+                para = items[-1]["content"][0]
+                para["content"] = para.get("content", []) + parse_inline(" " + s)
+                i += 1
+            continue
+        it = list_item_text(s)
+        if it is None or it[0] != ordered:
+            break
+        content = parse_inline(it[1])
+        para: dict = {"type": "paragraph"}
+        if content:
+            para["content"] = content
+        items.append({"type": "listItem", "content": [para]})
+        i += 1
+    return {"type": "orderedList" if ordered else "bulletList", "content": items}, i
+
+
 def md_to_tiptap(md: str) -> dict:
     """Parse a markdown blob into a TipTap doc."""
     md = (md or "").strip()
@@ -255,6 +326,10 @@ def md_to_tiptap(md: str) -> dict:
 
     # Normalize line endings and split into raw lines.
     lines = md.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+    return {"type": "doc", "content": parse_blocks(lines)}
+
+
+def parse_blocks(lines: list[str]) -> list[dict]:
     blocks: list[dict] = []
 
     i = 0
@@ -328,42 +403,19 @@ def md_to_tiptap(md: str) -> dict:
             i += 1
             continue
 
-        # Bullet list
-        if RE_BULLET.match(stripped):
-            items = []
-            while i < len(lines):
-                bm = RE_BULLET.match(lines[i].strip())
-                if not bm:
-                    break
-                items.append(
-                    {
-                        "type": "listItem",
-                        "content": [
-                            {"type": "paragraph", "content": parse_inline(bm.group(1))}
-                        ],
-                    }
-                )
-                i += 1
-            blocks.append({"type": "bulletList", "content": items})
+        # 清單(含巢狀)—— 見 parse_list。
+        if list_item_text(stripped):
+            node, i = parse_list(lines, i)
+            blocks.append(node)
             continue
 
-        # Ordered list
-        if RE_ORDERED.match(stripped):
-            items = []
-            while i < len(lines):
-                om = RE_ORDERED.match(lines[i].strip())
-                if not om:
-                    break
-                items.append(
-                    {
-                        "type": "listItem",
-                        "content": [
-                            {"type": "paragraph", "content": parse_inline(om.group(2))}
-                        ],
-                    }
-                )
+        # 引用區塊(> …):連續的 > 行剝掉前綴後遞迴解析,所以裡面可以再有清單/粗體。
+        if stripped.startswith(">"):
+            inner: list[str] = []
+            while i < len(lines) and lines[i].strip().startswith(">"):
+                inner.append(re.sub(r"^\s*>\s?", "", lines[i]))
                 i += 1
-            blocks.append({"type": "orderedList", "content": items})
+            blocks.append({"type": "blockquote", "content": parse_blocks(inner) or [{"type": "paragraph"}]})
             continue
 
         # Regular paragraph: gather contiguous non-blank, non-list, non-heading lines
@@ -378,13 +430,14 @@ def md_to_tiptap(md: str) -> dict:
                 or RE_BULLET.match(nxt)
                 or RE_ORDERED.match(nxt)
                 or RE_IMAGE.match(nxt)
+                or nxt.startswith(">")
             ):
                 break
             para_lines.append(nxt)
             i += 1
         blocks.append(make_paragraph(para_lines))
 
-    return {"type": "doc", "content": blocks}
+    return blocks
 
 
 # ---------- D1 update --------------------------------------------------------
