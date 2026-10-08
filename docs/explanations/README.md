@@ -8,4 +8,4 @@
   再 `python3 scripts/seed-explanations.py --remote --year <年>`。路徑寫死在 scratchpad,換機器要改 `S`。
 - EBMT 手冊全文(agent 用來 grep 頁碼)不在 repo:`pdftotext -layout ebmt-handbook.pdf` 後每頁以 `===== PDF PAGE N =====` 分隔。
 
-進度(2026-10-08):108、109 全年 v2 已上線;110 缺 110-3(背景 agent 可能已寫到 scratchpad);111–114 未啟動;out/ 裡有哪些批就是做到哪。缺的批照 PROMPT.txt 補跑即可。
+進度(2026-10-08):108、109 全年 v2 已上線;110 有 1–4 批、缺 110-5(從未啟動);111–114 共 20 批未啟動;out/ 裡有哪些批就是做到哪。缺的批照 PROMPT.txt 補跑即可。
