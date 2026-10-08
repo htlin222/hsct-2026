@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- ⚠️ 只能有**一條** theme-color,而且不要帶 media。
+         `applyTheme()`(lib/theme.ts)會在切換主題時改寫它,靠的是
+         `querySelector('meta[name="theme-color"]')` —— 那只會拿到第一條。
+         #126 當初加了 light/dark 兩條 media 版本,結果 applyTheme 從此把值
+         寫進「只在系統為淺色時生效」的那一條,手動切主題再也染不到狀態列。
+         而且 media 版本對這個 app 本來就是錯的:主題是 class-based 的,使用者
+         可以在系統深色時選淺色,那時 media 版會讓狀態列跟頁面相反。 -->
+    <meta name="theme-color" content="#ffffff" />
+    <!-- PWA — manifest is generated at build time from config.toml [brand];
+         see the VitePWA block in vite.config.ts. -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- black-translucent:狀態列透明,頁面內容一路延伸到瀏海/動態島底下(#126)。
+         **它必須跟 styles.css 那條 `env(safe-area-inset-top)` 一起看** —— 少了
+         那一半,加到主畫面之後 header 會被瀏海切掉一截,而在一般瀏覽器裡完全
+         正常(inset 是 0),所以很難自己發現。viewport-fit=cover 上面已經有了,
+         沒有它 env() 一律回 0。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- %CONFIG_*% tokens are substituted at build time from /config.toml
+         by the app-config plugin in vite.config.ts. -->
+    <title>%CONFIG_TITLE%</title>
+    <meta name="description" content="%CONFIG_DESCRIPTION%" />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="%CONFIG_OG_URL%" />
+    <meta property="og:title" content="%CONFIG_TITLE%" />
+    <meta property="og:description" content="%CONFIG_DESCRIPTION%" />
+    <meta property="og:image" content="%CONFIG_OG_IMAGE%" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="zh_TW" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="%CONFIG_TITLE%" />
+    <meta name="twitter:description" content="%CONFIG_DESCRIPTION%" />
+    <meta name="twitter:image" content="%CONFIG_OG_IMAGE%" />
+  </head>
+  <!-- 背景色**不在這裡**,在 styles.css 的 :root —— iOS Safari 橡皮筋回彈時
+       露出的是 canvas 的背景,而 canvas 取的是 <html> 的(#131)。掛在 body 上
+       的靜態 `bg-ink-50` 沒有深色版本,深色模式下回彈就露出一片淺米色。 -->
+  <body class="text-ink-800 font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

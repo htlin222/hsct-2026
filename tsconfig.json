@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022"],
+    "types": ["@cloudflare/workers-types"],
+    "strict": true,
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    // Lets non-test worker modules import a sibling as "./x.ts" — needed so
+    // node --test (which resolves specifiers literally) can load a module that
+    // has cross-file imports. wrangler/esbuild resolves the explicit extension.
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["worker/*"]
+    }
+  },
+  "include": ["worker/**/*.ts"],
+  // test-d1.ts is a test-only harness that runs under node (node:sqlite, fs,
+  // path) — it has no place in the Worker bundle and can't typecheck against
+  // workers-types. It sits next to the tests it serves rather than in a
+  // separate tree, so it's excluded by name.
+  "exclude": [
+    "node_modules",
+    "frontend",
+    "worker/**/*.test.ts",
+    "worker/lib/test-d1.ts"
+  ]
+}

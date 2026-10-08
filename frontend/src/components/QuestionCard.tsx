@@ -1,0 +1,905 @@
+import { useEffect, useRef, useState } from 'react';
+import { Bookmark, BookmarkPlus, Check, X, FolderPlus, RotateCcw, Copy, ShieldCheck, Loader2 } from 'lucide-react';
+import { api, ApiError } from '../lib/api';
+import { enqueue as enqueueAttempt, remove as removeAttempt } from '../lib/attemptOutbox';
+import { flushAttempts } from '../lib/attemptFlusher';
+import type { QuestionFull } from '../hooks/useQuestion';
+import { useBookmarkSet } from '../hooks/useBookmarkSet';
+import { useGamepad } from '../hooks/useGamepad';
+import { rumble } from '../lib/gamepad';
+import { useMe } from '../hooks/useMe';
+import { ChallengePanel } from './ChallengePanel';
+import { groupBadgeClass } from '../lib/groups';
+import { startTimer, hide, show, read, type TimerState } from '../lib/questionTimer';
+import { choicePct, type StatsPayload } from '../lib/choiceStats';
+import { normalizeStemBreaks } from '../lib/stemBreaks';
+import { StemText } from "./StemText";
+
+type Props = {
+  question: QuestionFull;
+  onAnswered?: (chosen: string, correct: boolean) => void;
+  onBookmarkToggled?: (bookmarked: boolean) => void;
+  onProgressCleared?: () => void;
+  // Lets the page know whether the answer is showing. Only the gamepad needs
+  // this: the d-pad selects options while unanswered and scrolls the panel
+  // afterwards, and the scroll target is the page's business, not the card's.
+  onRevealedChange?: (revealed: boolean) => void;
+  // 讀詳解時,FACE ▲ / ▶ 要讓給詳解工具列(自動挖空 / 編輯)。同一顆鍵兩邊
+  // 都掛的話會一次觸發兩件事,所以由頁面明說「這兩顆現在歸我」。
+  yieldFaceKeys?: boolean;
+};
+
+const LETTERS = ['A', 'B', 'C', 'D', 'E'] as const;
+
+// 「74 秒」/「2 分 14 秒」— 短時間用純秒數比較好比對。
+function fmtSeconds(ms: number): string {
+  const sec = Math.round(ms / 1000);
+  if (sec < 120) return `${sec} 秒`;
+  return `${Math.floor(sec / 60)} 分 ${sec % 60} 秒`;
+}
+
+export function QuestionCard({ question, onAnswered, onBookmarkToggled, onProgressCleared, onRevealedChange, yieldFaceKeys }: Props) {
+  const bookmarkSet = useBookmarkSet();
+  const { me } = useMe();
+  const [chosen, setChosen] = useState<string | null>(
+    question.my_progress?.last_chosen ?? null,
+  );
+  const [revealed, setRevealed] = useState(!!question.my_progress?.last_chosen);
+  // Pre-answer confidence (JOL). Default 普通 (2); logged on submit so the
+  // calibration panel can surface high-confidence-but-wrong attempts.
+  const [confidence, setConfidence] = useState<1 | 2 | 3>(2);
+  const [bookmarked, setBookmarked] = useState(!!question.my_progress?.bookmarked);
+  const [folderId, setFolderId] = useState<string | null>(
+    question.my_progress?.bookmark_folder_id ?? null,
+  );
+  const [submitting, setSubmitting] = useState(false);
+  // 送出失敗(多半是離線)。揭曉是樂觀的,所以這個提示是它的另一半 —— 沒有它,
+  // 使用者會以為作答已經記進去了。
+  const [saveFailed, setSaveFailed] = useState(false);
+  const [currentAnswer, setCurrentAnswer] = useState(question.answer);
+  const [answerEditing, setAnswerEditing] = useState(false);
+  const [answerDraft, setAnswerDraft] = useState(question.answer);
+  const [answerSaving, setAnswerSaving] = useState(false);
+  const [answerError, setAnswerError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setCurrentAnswer(question.answer);
+    setAnswerDraft(question.answer);
+    setAnswerEditing(false);
+    setAnswerError(null);
+  }, [question.id, question.answer]);
+
+  // Per-question timer. Restarts on every question change; the tab being
+  // hidden (looking something up elsewhere) doesn't count toward the time.
+  const timer = useRef<TimerState>(startTimer(Date.now()));
+  // 冪等:同一次作答動作沿用同一個 key(依題號綁定,重試不重複計數);
+  // 換題或成功後重新產生。
+  const answerIdemKey = useRef<{ qid: string; key: string } | null>(null);
+  useEffect(() => {
+    timer.current = startTimer(Date.now());
+    function onVisibility() {
+      timer.current = document.hidden
+        ? hide(timer.current, Date.now())
+        : show(timer.current, Date.now());
+    }
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => document.removeEventListener('visibilitychange', onVisibility);
+  }, [question.id]);
+
+  // Aggregate (anonymous) review-mode stats. Lazy-loaded once the answer
+  // is revealed — adds one extra request per card view, not per page load.
+  //
+  // 條件不是 `revealed` 而是「這次作答已經記錄進去了」。揭曉現在是樂觀的(見
+  // submit),而 /stats 在伺服器端會對還沒作答的人回 `not_answered` —— 搶在
+  // POST 完成前問,拿到的必然是空的,長條圖就永遠不會出現。
+  //
+  // 這個「答完才給統計」是刻意的防劇透,所以也**不能**在載入時預抓(#89 問到
+  // 這點):提早拿到各選項的作答分布,等於提早看到大家選什麼。
+  const [statsReady, setStatsReady] = useState(
+    !!question.my_progress?.last_chosen,
+  );
+  const [stats, setStats] = useState<StatsPayload | null>(null);
+  useEffect(() => {
+    if (!statsReady) return;
+    let cancelled = false;
+    api.get<StatsPayload>(`/api/questions/${question.id}/stats`).then(
+      (r) => { if (!cancelled) setStats(r); },
+    ).catch(() => { /* stats are best-effort */ });
+    return () => { cancelled = true; };
+  }, [statsReady, question.id]);
+
+  async function submit() {
+    if (!chosen || submitting) return;
+
+    // 立刻揭曉,不等網路。正解(currentAnswer)本來就在這張卡片手上 —— 畫面
+    // 判對錯用的一直是它,POST 回應的 correct_answer 連讀都沒讀。舊版把
+    // setRevealed 排在 await 之後,等於為了一個「client 早就知道」的答案付一趟
+    // 到 D1 的來回,那就是回報裡的卡頓感(#89)。
+    //
+    // 送出仍然照送:它負責記錄作答歷史、更新進度、餵統計。只是它不再擋在使用者
+    // 與答案之間。
+    const correct = chosen === currentAnswer;
+    setRevealed(true);
+    // 一次震動就夠了。舊版先震 'tap' 再震對錯,是因為中間隔著一趟網路,只震
+    // 結果會像按鍵沒被收到 —— 現在結果是即時的,那個理由不成立。
+    void rumble(correct ? 'correct' : 'wrong');
+
+    setSubmitting(true);
+    setSaveFailed(false);
+    if (!answerIdemKey.current || answerIdemKey.current.qid !== question.id) {
+      answerIdemKey.current = { qid: question.id, key: crypto.randomUUID() };
+    }
+    const idem = answerIdemKey.current.key;
+    const payload = {
+      question_id: question.id,
+      chosen,
+      confidence,
+      elapsed_ms: read(timer.current, Date.now()).elapsedMs,
+    };
+
+    // **送出前先入列。** 這一步是同步的、不會失敗,所以從這裡開始這筆作答就
+    // 一定補得回來 —— 就算接下來 POST 掛掉、使用者按了下一題、或整個分頁被關掉。
+    // 2026-08-09 連續四題(113-097～100)沒進 D1 就是因為沒有這一步:失敗只設了
+    // 一個元件 state,而換題會把那個元件連同提示一起換掉。
+    enqueueAttempt({ idem, ...payload, queued_at: Date.now() });
+
+    try {
+      const r = await api.post<{ correct: boolean; correct_answer: string }>(
+        '/api/review/answer',
+        payload,
+        idem,
+      );
+      removeAttempt(idem);
+      // 這一趟成功,是「網路現在確實通了」最強的證據 —— 積壓的舊作答就趁這個
+      // 時候送。不這樣做的話,網路恢復後使用者一路答下去,先前斷網那幾題會一直
+      // 躺在佇列裡,要等下一次 online / 切回前景才有機會。而在一台會自己關 WiFi
+      // 的裝置上,那兩個事件不一定會再來。
+      void flushAttempts();
+      answerIdemKey.current = null;
+      setStatsReady(true);
+      onAnswered?.(chosen, r.correct);
+    } catch {
+      // 留在佇列裡,交給 app 層的補送(見 lib/attemptFlusher.ts):重新連線、
+      // 切回前景、下次作答時都會再試一次。這裡仍然顯示提示 —— 使用者還停在
+      // 這一頁的話，該知道它還沒送出去;但**紀錄不再依賴他有沒有看到**。
+      setSaveFailed(true);
+      void flushAttempts();
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
+  const [copied, setCopied] = useState(false);
+  async function copyAsMarkdown() {
+    const lines: string[] = [];
+    lines.push(`**民國 ${question.year} 年 · 第 ${question.number} 題**${question.group ? ` (${question.group})` : ''}`);
+    lines.push('');
+    lines.push(normalizeStemBreaks(question.stem));
+    lines.push('');
+    for (const { L, text } of options) {
+      lines.push(`- ${L}. ${text}`);
+    }
+    const md = lines.join('\n');
+    try {
+      await navigator.clipboard.writeText(md);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      alert('複製失敗,請手動選取。');
+    }
+  }
+
+  const [clearing, setClearing] = useState(false);
+  async function clearProgress() {
+    if (clearing) return;
+    if (!window.confirm('要清除本題的作答紀錄嗎?(只清你的,不影響其他人)')) return;
+    setClearing(true);
+    try {
+      await api.del(`/api/review/answer/${question.id}`);
+      setChosen(null);
+      setRevealed(false);
+      setStats(null);
+      onProgressCleared?.();
+    } catch (e) {
+      alert('清除失敗:' + String(e));
+    } finally {
+      setClearing(false);
+    }
+  }
+
+  async function toggleBookmark() {
+    const next = !bookmarked;
+    setBookmarked(next);
+    if (next) bookmarkSet.add(question.id);
+    else bookmarkSet.remove(question.id);
+    try {
+      if (next) {
+        await api.put(`/api/bookmarks/${question.id}`, { folder_id: folderId });
+      } else {
+        await api.del(`/api/bookmarks/${question.id}`);
+        setFolderId(null);
+      }
+      onBookmarkToggled?.(next);
+    } catch (e) {
+      setBookmarked(!next);
+      if (next) bookmarkSet.remove(question.id);
+      else bookmarkSet.add(question.id);
+      if (!(e instanceof ApiError)) throw e;
+    }
+  }
+
+  async function moveToFolder(newFolderId: string | null) {
+    setFolderId(newFolderId);
+    setBookmarked(true);
+    bookmarkSet.add(question.id);
+    await api.put(`/api/bookmarks/${question.id}`, { folder_id: newFolderId });
+    onBookmarkToggled?.(true);
+  }
+
+  async function saveAnswer() {
+    if (answerSaving || answerDraft === currentAnswer) {
+      setAnswerEditing(false);
+      setAnswerError(null);
+      return;
+    }
+    setAnswerSaving(true);
+    setAnswerError(null);
+    try {
+      const r = await api.put<{ ok: true; answer: string; changed: boolean }>(
+        `/api/questions/${question.id}/answer`,
+        { answer: answerDraft },
+      );
+      setCurrentAnswer(r.answer);
+      setAnswerDraft(r.answer);
+      setAnswerEditing(false);
+      setStats(null);
+    } catch (e) {
+      if (e instanceof ApiError) {
+        setAnswerError(String(e.data?.error ?? e.message));
+      } else {
+        setAnswerError(String(e));
+      }
+    } finally {
+      setAnswerSaving(false);
+    }
+  }
+
+  // `?.` 不是多餘的:少了它,一份沒有 options 的 payload 會在 render 途中丟
+  // TypeError,React 18 的反應是卸載整棵樹 —— 也就是整頁白屏。SW 會 runtime
+  // cache /api/questions/:id,所以「舊 schema 的快取回應」是真的搆得到這條路。
+  const options = LETTERS
+    .map((L) => ({ L, text: question.options?.[L] }))
+    .filter((o) => !!o.text);
+  const canEditAnswer = question.can_edit_answer === true;
+
+  // Keyboard shortcuts for review mode. A ref holds the latest handler so the
+  // single window listener always sees fresh state without re-binding.
+  //   A–E  toggle an option (while unanswered; mutually exclusive)
+  //   Enter 提交答案   Space 直接看答案 (while unanswered)
+  //   y    複製題目    b 收藏 (once answered — b is option B while answering)
+  // Skipped when typing in an input / textarea / contenteditable or holding a
+  // modifier. Prev/next, tab nav and note editing live in Question.tsx.
+  const shortcutRef = useRef<(e: KeyboardEvent) => void>(() => {});
+  shortcutRef.current = (e: KeyboardEvent) => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const t = e.target as HTMLElement | null;
+    if (
+      t &&
+      (t.tagName === 'INPUT' ||
+        t.tagName === 'TEXTAREA' ||
+        t.tagName === 'SELECT' ||
+        t.isContentEditable)
+    )
+      return;
+
+    if (e.key.toLowerCase() === 'y') {
+      e.preventDefault();
+      copyAsMarkdown();
+      return;
+    }
+
+    if (!revealed) {
+      const L = e.key.toUpperCase() as (typeof LETTERS)[number];
+      if ((LETTERS as readonly string[]).includes(L) && question.options?.[L]) {
+        setChosen((cur) => (cur === L ? null : L)); // toggle, single-select
+        return;
+      }
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        submit();
+        return;
+      }
+      if (e.key === ' ') {
+        e.preventDefault(); // Space would otherwise scroll the page
+        setRevealed(true);
+        return;
+      }
+      return;
+    }
+
+    // Answered: A–E are inactive, so b is free to toggle the bookmark.
+    if (e.key.toLowerCase() === 'b') {
+      e.preventDefault();
+      toggleBookmark();
+    }
+  };
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => shortcutRef.current(e);
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
+
+  useEffect(() => { onRevealedChange?.(revealed); }, [revealed, onRevealedChange]);
+
+  // Gamepad: 移動即選取 — the d-pad walks the option list and picks as it goes,
+  // so `chosen` doubles as the cursor and no extra highlight state is needed.
+  // Wraps around; with nothing chosen yet, ↓ lands on A and ↑ on the last one.
+  function moveCursor(dir: 1 | -1) {
+    if (revealed || options.length === 0) return;
+    const i = chosen ? options.findIndex((o) => o.L === chosen) : -1;
+    const next =
+      i < 0
+        ? dir === 1 ? 0 : options.length - 1
+        : (i + dir + options.length) % options.length;
+    setChosen(options[next].L);
+  }
+
+  // 信心度 clamps rather than wraps: it's an ordered scale, and rolling from
+  // 有把握 straight back to 猜 would log the opposite of what the user meant.
+  // The row only exists while `!revealed && chosen` (see below), so this is a
+  // no-op outside that window.
+  function moveConfidence(dir: 1 | -1) {
+    if (revealed || !chosen) return;
+    setConfidence((c) => Math.min(3, Math.max(1, c + dir)) as 1 | 2 | 3);
+  }
+
+  useGamepad((action) => {
+    switch (action) {
+      // Once revealed the d-pad belongs to the page, which scrolls the panel.
+      case 'up': moveCursor(-1); break;
+      case 'down': moveCursor(1); break;
+      case 'left': moveConfidence(-1); break;
+      case 'right': moveConfidence(1); break;
+      case 'faceDown': if (!revealed) submit(); break;
+      case 'faceLeft': if (!revealed) setRevealed(true); break;
+      // 讀詳解時這兩顆改給詳解工具列(自動挖空 / 編輯),由頁面接手 —— 兩邊
+      // 都掛的話同一下會觸發兩件事。↓ ← 不必判斷:揭曉後 QuestionCard 本來就
+      // 不吃它們。
+      case 'faceUp': if (!yieldFaceKeys) copyAsMarkdown(); break;
+      case 'faceRight': if (!yieldFaceKeys) toggleBookmark(); break;
+    }
+  });
+
+  return (
+    <div className="bg-white dark:bg-ink-800 border border-ink-200 dark:border-ink-700 rounded-lg shadow-paper p-5 sm:p-7">
+      <header className="flex items-start justify-between gap-3 mb-4">
+        <div className="text-sm text-ink-500 dark:text-ink-400 font-medium flex items-center flex-wrap gap-x-2 gap-y-1">
+          <span>民國 {question.year} 年 · 第 {question.number} 題</span>
+          {question.group && (
+            <span
+              className={
+                'inline-block px-2 py-0.5 rounded text-xs ' +
+                groupBadgeClass(question.group)
+              }
+            >
+              {question.group}
+            </span>
+          )}
+          {question.tags && question.tags.length > 0 && (
+            <span className="flex flex-wrap gap-1">
+              {question.tags.map((t) => (
+                <span
+                  key={t}
+                  className="inline-block bg-ink-100 dark:bg-ink-700 text-ink-700 dark:text-ink-200 px-2 py-0.5 rounded text-[11px]"
+                >
+                  #{t}
+                </span>
+              ))}
+            </span>
+          )}
+        </div>
+        <div className="flex items-center gap-1 shrink-0">
+          <button
+            type="button"
+            onClick={copyAsMarkdown}
+            title={copied ? '已複製' : '複製題目與選項為 Markdown'}
+            aria-label="複製為 Markdown"
+            className={
+              'p-1.5 rounded transition ' +
+              (copied
+                ? 'text-emerald-600 dark:text-emerald-400'
+                : 'text-ink-400 dark:text-ink-500 hover:text-ink-700 dark:hover:text-ink-200 hover:bg-ink-100 dark:hover:bg-ink-700')
+            }
+          >
+            {copied ? <Check size={18} /> : <Copy size={18} />}
+          </button>
+          <BookmarkButton
+            bookmarked={bookmarked}
+            onToggle={toggleBookmark}
+            onMoveToFolder={moveToFolder}
+            currentFolderId={folderId}
+          />
+        </div>
+      </header>
+
+      {/* normalizeStemBreaks:把官方 PDF 折行造成的句中硬斷行接回去,保留編號
+          項目前的真分行。做在這裡而不是改資料 —— 判斷終究是啟發式的,猜錯只是
+          這一題看起來怪,重新部署就回到原狀(#91)。 */}
+      <p className="font-serif text-lg sm:text-xl leading-relaxed text-ink-900 dark:text-ink-100 whitespace-pre-wrap">
+        {/* 否定詞標紅加粗(#149)—— 不要整題讀完才發現問的是「何者錯誤」。 */}
+        <StemText text={normalizeStemBreaks(question.stem)} />
+      </p>
+
+      <ul className="mt-6 space-y-2.5">
+        {options.map(({ L, text }) => {
+          const selected = chosen === L;
+          const isCorrect = L === currentAnswer;
+          // 全體選項分布(server 只在「你已作答且人數達門檻」時放行)。
+          const pct = choicePct(stats, L);
+          let cls =
+            'relative overflow-hidden flex gap-3 items-start p-3 rounded border cursor-pointer transition';
+          // 電子紙(1-bit)下這四種狀態原本全靠色相區分,中和成黑白後會變成
+          // 同一個樣子。改用**填充 vs 線寬**兩個正交維度重新表達:
+          //   正解      → 整列反白(eink-invert,唯一有填充的)
+          //   答錯/已選 → 白底粗框(答錯另外在文字上加刪除線)
+          //   其他      → 白底細框
+          // `eink-invert` 在非 eink 主題下沒有任何樣式,所以無條件掛著就好。
+          if (!revealed) {
+            cls += selected
+              ? ' border-accent bg-accent/5 dark:bg-accent/15 eink:border-2'
+              : ' border-ink-200 dark:border-ink-700 hover:border-ink-400 dark:hover:border-ink-500 hover:bg-ink-50 dark:hover:bg-ink-700/40';
+          } else {
+            if (isCorrect)
+              cls += ' border-emerald-500 bg-emerald-50 dark:bg-emerald-500/15 eink-invert';
+            else if (selected)
+              cls += ' border-rose-500 bg-rose-50 dark:bg-rose-500/15 eink:border-2';
+            else cls += ' border-ink-200 dark:border-ink-700 opacity-70';
+          }
+          return (
+            <li
+              key={L}
+              className={cls}
+              onClick={() => {
+                if (revealed) return;
+                // Drag-selecting option text fires a click on mouseup — don't
+                // treat that as choosing the option.
+                if (window.getSelection()?.toString()) return;
+                setChosen(L);
+              }}
+            >
+              {pct !== null && (
+                <span
+                  aria-hidden
+                  className={
+                    'absolute inset-y-0 left-0 pointer-events-none ' +
+                    (isCorrect ? 'bg-accent/15' : 'bg-ink-200/60 dark:bg-ink-600/40') +
+                    // 淡色填充在 1-bit 下會被洗白 → 整條消失。改成貼底的細黑槓:
+                    // 資訊(選了幾成)還在,但不會跟「正解=整列反白」搶同一個維度。
+                    // 正解列不加 —— 黑槓畫在黑底上看不見,而反白本身已經是最強的訊號。
+                    (isCorrect ? '' : ' eink:inset-y-auto eink:bottom-0 eink:h-px eink:bg-black')
+                  }
+                  style={{ width: `${pct}%` }}
+                />
+              )}
+              {/* 作答中「已選」的訊號集中在字母圓圈上(反白),而不是整列 ——
+                  整列反白在電子紙上要刷一大塊,而且長選項讀起來像被劃掉。 */}
+              <span
+                className={
+                  'relative inline-flex items-center justify-center w-7 h-7 rounded-full border border-current text-sm font-semibold shrink-0' +
+                  (selected && !revealed ? ' eink-invert' : '')
+                }
+              >
+                {L}
+              </span>
+              {/* min-w-0 + break-words:flex 子項的最小尺寸預設是 min-content,
+                  而選項裡的 (p23.3;q34.1)/DEK::NUP214 這種基因命名整串不可斷,
+                  手機上就把右邊的「✓ 正解」擠出 li 外、被 overflow-hidden 切掉。
+                  兩個一起才有用 —— break-words 不會改變 min-content 寬度。 */}
+              <span
+                className={
+                  'relative min-w-0 break-words leading-relaxed text-ink-800 dark:text-ink-200' +
+                  // 答錯的選項:刪除線。顏色沒了之後,這是唯一不必讀右側標籤
+                  // 就能一眼看出「這個不對」的訊號。
+                  (revealed && selected && !isCorrect ? ' eink:line-through' : '')
+                }
+              >
+                {text}
+              </span>
+              {(revealed || pct !== null) && (
+                <span className="relative ml-auto self-center inline-flex flex-col items-end gap-1 shrink-0">
+                  {revealed && isCorrect && (
+                    <span className="inline-flex items-center gap-1 text-emerald-700 text-sm font-medium">
+                      <Check size={16} /> 正解
+                    </span>
+                  )}
+                  {revealed && selected && !isCorrect && (
+                    <span className="inline-flex items-center gap-1 text-rose-700 text-sm font-medium">
+                      <X size={16} /> 你的選擇
+                    </span>
+                  )}
+                  {pct !== null && (
+                    <span className="text-xs tabular-nums text-ink-500 dark:text-ink-400">
+                      {pct}%
+                    </span>
+                  )}
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+
+      {!revealed && chosen && (
+        <div className="mt-5 flex flex-wrap items-center gap-2">
+          <span className="text-sm text-ink-500 dark:text-ink-400">作答信心:</span>
+          {([
+            [1, "猜"],
+            [2, "普通"],
+            [3, "有把握"],
+          ] as const).map(([level, label]) => (
+            <button
+              key={level}
+              type="button"
+              onClick={() => setConfidence(level)}
+              aria-pressed={confidence === level}
+              className={
+                "text-sm px-3 py-1 rounded-full border transition " +
+                (confidence === level
+                  ? "bg-accent text-white border-accent"
+                  : "border-ink-200 dark:border-ink-700 text-ink-600 dark:text-ink-300 hover:border-accent")
+              }
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {!revealed && (
+        <div className="mt-4 flex gap-3 justify-end">
+          <button
+            onClick={() => setRevealed(true)}
+            className="text-ink-500 dark:text-ink-400 px-4 py-2 text-sm hover:text-ink-700 dark:hover:text-ink-200"
+          >
+            略過 / 直接看答案
+          </button>
+          <button
+            onClick={submit}
+            disabled={!chosen || submitting}
+            className="bg-accent hover:bg-accent-dark text-white px-5 py-2 rounded font-medium disabled:opacity-40 transition"
+          >
+            提交答案
+          </button>
+        </div>
+      )}
+
+      {saveFailed && (
+        <p className="mt-3 text-sm text-amber-700 dark:text-amber-500">
+          這次作答沒有記錄成功(可能離線)。答案本身沒問題,但進度與統計不會更新。
+        </p>
+      )}
+
+      {revealed && (
+        <div className="mt-6 pt-4 border-t border-ink-100 dark:border-ink-700 text-sm text-ink-600 dark:text-ink-300 flex items-center gap-3 flex-wrap">
+          {chosen === currentAnswer ? (
+            <span className="inline-flex items-center gap-1 text-emerald-700 font-medium">
+              <Check size={16} /> 答對了
+            </span>
+          ) : chosen ? (
+            <span className="inline-flex items-center gap-1 text-rose-700 font-medium">
+              <X size={16} /> 你選 {chosen},正解 {currentAnswer}
+            </span>
+          ) : (
+            <span>正解 {currentAnswer}</span>
+          )}
+          {question.my_progress && question.my_progress.times_seen > 0 && (
+            <span className="text-ink-400 dark:text-ink-500">
+              · 已看過 {question.my_progress.times_seen} 次,答對{' '}
+              {question.my_progress.times_correct} 次
+            </span>
+          )}
+          {stats && stats.attempts > 0 && (
+            <span className="text-ink-400 dark:text-ink-500">
+              · 全體被作答 {stats.attempts} 次
+              {/* accuracy/correct come back null until you have answered — the
+                  server withholds them so the crowd can't steer your pick.
+                  `?? 0` would render a confident, wrong "答對率 0%". */}
+              {stats.accuracy !== null && stats.accuracy !== undefined && (
+                <> / 答對 {stats.correct} 次,答對率 {stats.accuracy}%</>
+              )}
+            </span>
+          )}
+          {stats?.choices_state === 'ok' && (
+            <span className="text-ink-400 dark:text-ink-500">
+              · {stats.choice_responders} 人作答的選項分布
+            </span>
+          )}
+          {stats?.choices_state === 'below_threshold' && (
+            <span className="text-ink-400 dark:text-ink-500">
+              · 作答人數不足,暫不顯示選項分布
+            </span>
+          )}
+          {/* Timing. The cohort median is withheld below the anonymity
+              threshold — then we only show the user their own seconds. */}
+          {stats && stats.my_elapsed_ms !== null && (
+            <span className="text-ink-400 dark:text-ink-500">
+              · 你 {fmtSeconds(stats.my_elapsed_ms)}
+              {stats.median_elapsed_ms !== null &&
+                ` · 全體中位數 ${fmtSeconds(stats.median_elapsed_ms)}`}
+            </span>
+          )}
+          <div className="ml-auto flex items-center justify-end gap-2 flex-wrap">
+            {canEditAnswer && (
+              <AdminAnswerEditor
+                currentAnswer={currentAnswer}
+                draft={answerDraft}
+                options={options.map((o) => o.L)}
+                editing={answerEditing}
+                saving={answerSaving}
+                error={answerError}
+                onStart={() => {
+                  setAnswerDraft(currentAnswer);
+                  setAnswerEditing(true);
+                  setAnswerError(null);
+                }}
+                onDraft={setAnswerDraft}
+                onSave={saveAnswer}
+                onCancel={() => {
+                  setAnswerDraft(currentAnswer);
+                  setAnswerEditing(false);
+                  setAnswerError(null);
+                }}
+              />
+            )}
+            <button
+              onClick={clearProgress}
+              disabled={clearing}
+              className="inline-flex items-center gap-1 text-xs text-ink-400 dark:text-ink-500 hover:text-rose-600 dark:hover:text-rose-400 disabled:opacity-40"
+              title="只清除你自己在本題的作答紀錄"
+            >
+              <RotateCcw size={12} />
+              {clearing ? '清除中…' : '清除本題作答紀錄'}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {revealed && (
+        <ChallengePanel
+          key={`${question.id}:${currentAnswer}`}
+          questionId={question.id}
+          currentAnswer={currentAnswer}
+          availableLetters={options.map((o) => o.L)}
+          meEmail={me?.email ?? null}
+        />
+      )}
+    </div>
+  );
+}
+
+function AdminAnswerEditor({
+  currentAnswer,
+  draft,
+  options,
+  editing,
+  saving,
+  error,
+  onStart,
+  onDraft,
+  onSave,
+  onCancel,
+}: {
+  currentAnswer: string;
+  draft: string;
+  options: string[];
+  editing: boolean;
+  saving: boolean;
+  error: string | null;
+  onStart: () => void;
+  onDraft: (answer: string) => void;
+  onSave: () => void;
+  onCancel: () => void;
+}) {
+  if (!editing) {
+    return (
+      <button
+        type="button"
+        onClick={onStart}
+        className="inline-flex items-center gap-1 text-xs text-amber-700 dark:text-amber-300 hover:text-amber-900 dark:hover:text-amber-100"
+        title="管理員可直接修正本題正解"
+      >
+        <ShieldCheck size={12} />
+        管理員編輯正解
+      </button>
+    );
+  }
+
+  return (
+    <div className="flex items-center gap-2 flex-wrap justify-end">
+      <div className="inline-flex items-center gap-1 rounded border border-amber-200 dark:border-amber-700 bg-amber-50 dark:bg-amber-900/20 px-2 py-1">
+        <span className="text-xs text-amber-800 dark:text-amber-200 mr-1">正解</span>
+        {options.map((L) => (
+          <button
+            key={L}
+            type="button"
+            onClick={() => onDraft(L)}
+            disabled={saving}
+            className={
+              'w-7 h-7 rounded-full border text-xs font-mono font-semibold transition disabled:opacity-50 ' +
+              (draft === L
+                ? 'bg-amber-600 border-amber-600 text-white'
+                : 'bg-white dark:bg-ink-800 border-amber-300 dark:border-amber-600 text-amber-800 dark:text-amber-200 hover:bg-amber-100 dark:hover:bg-amber-900/40')
+            }
+            aria-label={`設為 ${L}`}
+          >
+            {L}
+          </button>
+        ))}
+        <button
+          type="button"
+          onClick={onSave}
+          disabled={saving || draft === currentAnswer}
+          className="ml-1 inline-flex items-center gap-1 rounded bg-amber-700 px-2.5 py-1.5 text-xs font-medium text-white hover:bg-amber-800 disabled:opacity-40"
+        >
+          {saving ? <Loader2 size={12} className="animate-spin" /> : <Check size={12} />}
+          儲存
+        </button>
+        <button
+          type="button"
+          onClick={onCancel}
+          disabled={saving}
+          className="inline-flex items-center gap-1 rounded px-2 py-1.5 text-xs text-ink-500 hover:text-ink-800 dark:hover:text-ink-200 disabled:opacity-40"
+        >
+          <X size={12} />
+          取消
+        </button>
+      </div>
+      {error && <span className="w-full text-right text-xs text-rose-700">{error}</span>}
+    </div>
+  );
+}
+
+// ----------------------------------------------------------------
+// Bookmark button with inline folder picker
+// ----------------------------------------------------------------
+type Folder = { id: string; name: string; item_count: number };
+
+function BookmarkButton({
+  bookmarked,
+  onToggle,
+  onMoveToFolder,
+  currentFolderId,
+}: {
+  bookmarked: boolean;
+  onToggle: () => void;
+  onMoveToFolder: (id: string | null) => Promise<void>;
+  currentFolderId: string | null;
+}) {
+  const [open, setOpen] = useState(false);
+  const [folders, setFolders] = useState<Folder[] | null>(null);
+  const [creating, setCreating] = useState(false);
+  const [newName, setNewName] = useState('');
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function onDoc(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+        setCreating(false);
+        setNewName('');
+      }
+    }
+    document.addEventListener('mousedown', onDoc);
+    return () => document.removeEventListener('mousedown', onDoc);
+  }, [open]);
+
+  async function load() {
+    const r = await api.get<{ folders: Folder[]; uncategorized_count: number }>('/api/folders');
+    setFolders(r.folders);
+  }
+
+  async function createFolder() {
+    if (!newName.trim()) return;
+    const r = await api.post<{ id: string }>('/api/folders', { name: newName.trim() });
+    setNewName('');
+    setCreating(false);
+    await load();
+    await onMoveToFolder(r.id);
+  }
+
+  return (
+    <div ref={ref} className="relative shrink-0">
+      <button
+        onClick={(e) => {
+          if (e.shiftKey || e.altKey) {
+            setOpen((v) => !v);
+            if (!open && !folders) load();
+          } else {
+            onToggle();
+          }
+        }}
+        onContextMenu={(e) => {
+          e.preventDefault();
+          setOpen((v) => !v);
+          if (!open && !folders) load();
+        }}
+        className="text-2xl leading-none transition hover:scale-110 text-ink-500 dark:text-ink-400 hover:text-accent"
+        aria-label={bookmarked ? '管理收藏' : '收藏 (右鍵選資料夾)'}
+        title={bookmarked ? '管理收藏 (右鍵選資料夾)' : '收藏 (右鍵選資料夾)'}
+      >
+        {bookmarked ? (
+          <Bookmark size={22} fill="currentColor" />
+        ) : (
+          <BookmarkPlus size={22} />
+        )}
+      </button>
+
+      {open && (
+        <div className="absolute right-0 top-9 w-56 bg-white dark:bg-ink-800 border border-ink-200 dark:border-ink-700 rounded shadow-lg z-30 py-1 text-sm">
+          <div className="px-3 py-2 text-xs text-ink-500 dark:text-ink-400 uppercase tracking-wider border-b border-ink-100 dark:border-ink-700">
+            收藏到資料夾
+          </div>
+          {folders === null ? (
+            <div className="px-3 py-2 text-ink-400 dark:text-ink-500">載入中…</div>
+          ) : (
+            <>
+              <button
+                onClick={() => { onMoveToFolder(null); setOpen(false); }}
+                className={`w-full text-left px-3 py-1.5 hover:bg-ink-50 dark:hover:bg-ink-700 ${
+                  bookmarked && currentFolderId === null ? 'text-accent font-medium' : 'text-ink-700 dark:text-ink-200'
+                }`}
+              >
+                未分類
+              </button>
+              {folders.map((f) => (
+                <button
+                  key={f.id}
+                  onClick={() => { onMoveToFolder(f.id); setOpen(false); }}
+                  className={`w-full text-left px-3 py-1.5 hover:bg-ink-50 dark:hover:bg-ink-700 flex items-center justify-between ${
+                    bookmarked && currentFolderId === f.id ? 'text-accent font-medium' : 'text-ink-700 dark:text-ink-200'
+                  }`}
+                >
+                  <span>{f.name}</span>
+                  <span className="text-[11px] text-ink-400 dark:text-ink-500">{f.item_count}</span>
+                </button>
+              ))}
+              <div className="border-t border-ink-100 dark:border-ink-700 mt-1 pt-1">
+                {creating ? (
+                  <form
+                    onSubmit={(e) => { e.preventDefault(); createFolder(); }}
+                    className="px-2 py-1 flex gap-1"
+                  >
+                    <input
+                      autoFocus
+                      value={newName}
+                      onChange={(e) => setNewName(e.target.value)}
+                      placeholder="資料夾名稱"
+                      className="flex-1 px-2 py-1 border border-ink-200 dark:border-ink-600 dark:bg-ink-900 text-ink-900 dark:text-ink-100 placeholder:text-ink-400 dark:placeholder:text-ink-500 rounded text-xs focus:outline-none focus:border-accent"
+                    />
+                    <button type="submit" className="px-2 text-xs text-accent hover:text-accent-dark">建</button>
+                  </form>
+                ) : (
+                  <button
+                    onClick={() => setCreating(true)}
+                    className="w-full text-left px-3 py-1.5 hover:bg-ink-50 dark:hover:bg-ink-700 text-ink-600 dark:text-ink-300 inline-flex items-center gap-1.5"
+                  >
+                    <FolderPlus size={14} /> 新增資料夾
+                  </button>
+                )}
+              </div>
+              {bookmarked && (
+                <button
+                  onClick={() => { onToggle(); setOpen(false); }}
+                  className="w-full text-left px-3 py-1.5 hover:bg-rose-50 dark:hover:bg-rose-900/30 text-rose-700 dark:text-rose-400 border-t border-ink-100 dark:border-ink-700 mt-1 pt-1"
+                >
+                  取消收藏
+                </button>
+              )}
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}

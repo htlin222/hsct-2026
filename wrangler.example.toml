@@ -1,0 +1,140 @@
+# Fork-time wrangler template.
+#
+# Copy this file:    cp wrangler.example.toml wrangler.toml
+# Or run setup:      ./scripts/setup.sh    (also writes config.toml + .env)
+#
+# Resource names below should match config.toml [project]. setup.sh keeps
+# them in sync; if you edit by hand, update both files.
+
+name = "my-qa-bank-api"
+main = "worker/index.ts"
+compatibility_date = "2025-05-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Same-origin routes — Pages serves the SPA at the apex, Worker handles
+# /api/*, /img/*, /pdf/* and /tg/* on the same host so the browser's Access
+# cookie flows naturally and there's no CORS overhead. /tg/* 是 Telegram
+# webhook,必須在此登記進 Worker,否則會被 Pages 當 SPA 路由回 index.html
+# (POST 會拿到 405)。見 docs/plans/2026-07-22-telegram-bot-design.md。
+[[routes]]
+pattern = "qa.example.com/api/*"
+zone_name = "example.com"
+
+[[routes]]
+pattern = "qa.example.com/tg/*"
+zone_name = "example.com"
+
+[[routes]]
+pattern = "qa.example.com/img/*"
+zone_name = "example.com"
+
+# Lecture PDF proxy (複習班講義) — streams from R2 with Range support.
+[[routes]]
+pattern = "qa.example.com/pdf/*"
+zone_name = "example.com"
+
+# database_id is filled in by scripts/deploy.sh after `wrangler d1 create`.
+[[d1_databases]]
+binding = "DB"
+database_name = "my-qa-bank-db"
+database_id = "<REPLACE_ME_DB_ID>"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "my-qa-bank-uploads"
+
+# Workers AI (free tier: 10K neurons/day)
+[ai]
+binding = "AI"
+
+# 聊天大廳 — single-room chat over the WebSocket Hibernation API.
+# SQLite-backed DO (new_sqlite_classes) so it runs on the free plan.
+[[durable_objects.bindings]]
+name = "CHAT"
+class_name = "ChatRoom"
+
+# Per-user cross-device state (上次停留位置 for 複習/全真) — single "main"
+# instance, SQLite-backed so it stays on the free plan.
+[[durable_objects.bindings]]
+name = "USER_STATE"
+class_name = "UserState"
+
+# 2048 休息小遊戲的存檔(棋盤 + 歷史最高分)—— single "main" instance。
+# 獨立於 USER_STATE:遊戲是每步 debounce 寫入(秒級),續讀位置是換頁才寫
+# (分鐘級),而 DO 是單執行緒的 —— 塞在同一個 instance 會讓有人在玩時,
+# 其他人的「上次停在哪」讀取排在遊戲寫入後面。
+[[durable_objects.bindings]]
+name = "PLAY"
+class_name = "Play2048"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ChatRoom"]
+
+[[migrations]]
+tag = "v2"
+new_sqlite_classes = ["UserState"]
+
+[[migrations]]
+tag = "v3"
+new_sqlite_classes = ["Play2048"]
+
+# Cron Trigger — drives worker/index.ts `scheduled()`:
+#   1. roster → Access policy + D1 users sync (worker/lib/roster-sync.ts)
+#   2. 筆記關聯連結:重建詞表 + 依寫入預算逐則消化 needs_relink 佇列
+#      (worker/lib/note-links.ts;全確定性 SQL,零 Workers AI 神經元)
+# Each firing drains up to DRAIN_MAX_NOTES / DRAIN_MAX_WRITES then stops, so a
+# sudden pile of notes spreads over several runs. Fire it a few times overnight
+# (免費層每次 cron 上限 10ms CPU;計算已下推到 D1,故 CPU 極省) — 例如凌晨
+# 每 10 分鐘一次。UTC 記得換算:額度在 00:00 UTC 重置。
+[triggers]
+# 兩個 cron,worker/index.ts scheduled() 依 event.cron 分派:
+#   "*/10 19-21 * * *" → roster-sync + note-links(原夜間工作,≈ 台北 03–05)
+#   "0 * * * *"        → Telegram 每日推播 tick(每小時比對各人本地推播時段)
+crons = ["*/10 19-21 * * *", "0 * * * *"]
+
+# Optional KV for caching (uncomment after `wrangler kv namespace create CACHE`)
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "<REPLACE_ME_KV_ID>"
+
+[vars]
+# Set via `wrangler secret put` (see scripts/sync-access.ts) or .dev.vars locally.
+# CF_ACCESS_TEAM_DOMAIN = "yourteam.cloudflareaccess.com"
+# CF_ACCESS_AUD = "<application audience tag from Access dashboard>"
+GH_FEEDBACK_REPO = "your-github-handle/my-qa-bank"
+ADMIN_EMAILS = "you@example.com"
+# GH_FEEDBACK_TOKEN is a secret — set via:  wrangler secret put GH_FEEDBACK_TOKEN
+
+# Telegram 出題機器人。bot username(不含 @)用來組 deep link;token 與
+# webhook secret 是機密:
+#   wrangler secret put TG_BOT_TOKEN       # BotFather /newbot 給的 token
+#   wrangler secret put TG_WEBHOOK_SECRET  # 自訂一段亂數,setWebhook 會帶上
+# 三者皆未設時:webhook 靜默 200、cron 推播 no-op、/api/telegram/link-code 回 501。
+# TG_BOT_USERNAME = "my_hema_bot"
+
+# Question categories — mirrored from config.toml [groups].list by setup.sh.
+# Format: "<label>:<exam_count>,..." in display order.
+GROUPS = "Section A:50,Section B:50"
+
+# 考試開始時間 — 由 setup.sh 從 config.toml [exam].date_iso 鏡射。
+# worker 讀不到 config.toml(無 FS),讀書進度預估靠這個算「考前還剩幾天」。
+# 未設時 /api/review/readiness 回 days_left: null(不炸,只是退化成純速度)。
+EXAM_DATE_ISO = "2026-12-31T09:00:00+08:00"
+
+# AI prompt wording — mirrored from config.toml [ai] by setup.sh.
+AI_SPECIALTY_ZH = "醫學"
+AI_SPECIALTY_EN_LONG = "general medicine"
+AI_TAG_DISEASE_EXAMPLES = "DM, HTN, CKD, COPD, HF"
+AI_TAG_TOPIC_EXAMPLES = "誘導治療,術後照護,門診追蹤,鑑別診斷,藥物副作用"
+AI_QA_QUESTION_EXAMPLES = "甚麼是 X 機轉?;Y 的臨床指引建議?;Z 的鑑別診斷有哪些?"
+AI_QA_TERMINOLOGY_EXAMPLES = "正式藥名保留英文,通用名稱可譯;縮寫首次出現後括號展開"
+AI_QA_MC_BAD_EXAMPLE = "下列何者為 X 的最常見副作用?"
+AI_QA_MC_GOOD_EXAMPLE = "X 常見的副作用有哪些?"
+
+[observability]
+enabled = true
+
+[dev]
+port = 8787

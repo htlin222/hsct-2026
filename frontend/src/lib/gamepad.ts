@@ -1,0 +1,399 @@
+// Gamepad support, built on the native Gamepad API rather than a library.
+//
+// gamecontroller.js was the starting point but buys us nothing we need: its npm
+// release predates the haptics API entirely (no vibration at all), it ships UMD
+// with no types, it starts a global rAF loop the moment it is imported, and it
+// only exposes the d-pad as `button12`–`button15` — so the semantic layer below
+// would have to exist either way. See
+// docs/plans/2026-08-06-gamepad-control-design.md.
+
+// Positions, not vendor letters. An 8BitDo Pro 2 in X mode and a DualSense
+// disagree about which glyph sits on the bottom face button; they agree about
+// where it is.
+export type GamepadAction =
+	| "up"
+	| "down"
+	| "left"
+	| "right"
+	| "faceDown"
+	| "faceRight"
+	| "faceLeft"
+	| "faceUp"
+	| "l1"
+	| "r1"
+	| "l2"
+	| "r2"
+	| "select"
+	| "start";
+
+// W3C standard mapping. Only reliable when `gamepad.mapping === 'standard'` —
+// the 8BitDo's S/D/M modes report something else and shuffle the face buttons,
+// which is why GamepadFab surfaces `nonStandardMapping()` instead of letting
+// the indices silently point at the wrong keys.
+export const BUTTON_ACTIONS: Readonly<Record<number, GamepadAction>> = {
+	0: "faceDown",
+	1: "faceRight",
+	2: "faceLeft",
+	3: "faceUp",
+	4: "l1",
+	5: "r1",
+	6: "l2",
+	7: "r2",
+	8: "select",
+	9: "start",
+	12: "up",
+	13: "down",
+	14: "left",
+	15: "right",
+};
+
+// Only the d-pad auto-repeats. A held 收藏 / 送出 / 交卷 that fires ten times a
+// second is damage, but a 100-question list is unusable without a held ↓.
+const REPEATABLE: ReadonlySet<GamepadAction> = new Set<GamepadAction>([
+	"up",
+	"down",
+	"left",
+	"right",
+]);
+
+export const REPEAT_DELAY_MS = 400;
+export const REPEAT_INTERVAL_MS = 120;
+
+export type ButtonState = { down: boolean; repeatAt: number };
+export const IDLE_BUTTON: ButtonState = { down: false, repeatAt: 0 };
+
+/**
+ * Edge detection with optional auto-repeat, as a pure step function so the
+ * timing is testable without a real gamepad.
+ *
+ * Fires on the frame a button goes down, then — if repeatable — every
+ * REPEAT_INTERVAL_MS after an initial REPEAT_DELAY_MS hold.
+ */
+export function stepButton(
+	prev: ButtonState,
+	isDown: boolean,
+	now: number,
+	repeatable: boolean,
+): { next: ButtonState; fire: boolean } {
+	if (!isDown) return { next: IDLE_BUTTON, fire: false };
+	if (!prev.down)
+		return { next: { down: true, repeatAt: now + REPEAT_DELAY_MS }, fire: true };
+	if (!repeatable) return { next: prev, fire: false };
+	if (now >= prev.repeatAt)
+		return {
+			next: { down: true, repeatAt: now + REPEAT_INTERVAL_MS },
+			fire: true,
+		};
+	return { next: prev, fire: false };
+}
+
+export const DPAD_BUTTONS = [12, 13, 14, 15] as const;
+
+export const AXIS_DEADZONE = 0.25;
+const SCROLL_MAX_PX_PER_SEC = 1400;
+
+/**
+ * Analog stick displacement → pixels to scroll this frame.
+ *
+ * Squared response past the deadzone: a nudge nudges, a full push moves fast.
+ * Linear feels twitchy at the low end, which is where long-form reading lives.
+ */
+export function axisScrollDelta(value: number, dtMs: number): number {
+	const mag = Math.abs(value);
+	if (mag < AXIS_DEADZONE) return 0;
+	const t = (mag - AXIS_DEADZONE) / (1 - AXIS_DEADZONE);
+	return Math.sign(value) * t * t * SCROLL_MAX_PX_PER_SEC * (dtMs / 1000);
+}
+
+/**
+ * 這一幀該送出多少軸捲動。D-pad 按著的時候是 0。
+ *
+ * 那個例外跟語意無關,是硬體:有些手把(實測 Xbox 360,尤其接在 Android 上)的
+ * D-pad 底層是 hat switch,driver 會把它**同時**回報成 buttons 12–15 **和**
+ * 一組軸值。那樣按一下 DPAD ↓,按鈕路徑(走訪標題 / 選選項)跟軸路徑(捲動)
+ * 會一起跑 —— 畫面先跳一下、接著又自己滑一段,讀起來就是「這顆鍵在我的手把上
+ * 怪怪的」。而且軸的上限是 1400px/s,遠大於按鈕那條的 120px/次,所以蓋過去的
+ * 是軸,使用者根本看不出按鈕那半有生效。
+ *
+ * 選擇讓按鈕獨佔那幾幀,而不是把 deadzone 調高:調高 deadzone 會讓所有手把的
+ * 小幅推動一起失效 —— 拿每個人的手感去換一支手把的相容性。這裡的代價則只有
+ * 「按著 D-pad 的同時推搖桿捲動」這個沒人會做的組合。
+ *
+ * @param axes    原始軸陣列(只讀 [0]=x、[1]=y)
+ * @param pressed D-pad 四顆鍵的按下狀態,依 DPAD_BUTTONS 順序
+ */
+export function axisScrollFrame(
+	axes: readonly number[],
+	pressed: readonly boolean[],
+	dtMs: number,
+): { x: number; y: number } {
+	if (pressed.some(Boolean)) return { x: 0, y: 0 };
+	return {
+		x: axisScrollDelta(axes[0] ?? 0, dtMs),
+		y: axisScrollDelta(axes[1] ?? 0, dtMs),
+	};
+}
+
+// ---------------------------------------------------------------- rumble
+
+export type RumblePreset = "tap" | "correct" | "wrong";
+
+type Pulse = {
+	duration: number;
+	startDelay: number;
+	strongMagnitude: number;
+	weakMagnitude: number;
+};
+
+// `tap` fires the instant 送出 is pressed; `correct`/`wrong` land when the
+// server answers. Both halves exist because the round trip is long enough that
+// either one alone feels wrong — see the design doc.
+const PATTERNS: Readonly<Record<RumblePreset, readonly Pulse[]>> = {
+	tap: [{ duration: 60, startDelay: 0, strongMagnitude: 0, weakMagnitude: 0.4 }],
+	correct: [
+		{ duration: 40, startDelay: 0, strongMagnitude: 0, weakMagnitude: 0.5 },
+		{ duration: 40, startDelay: 60, strongMagnitude: 0, weakMagnitude: 0.5 },
+	],
+	wrong: [
+		{ duration: 180, startDelay: 0, strongMagnitude: 0.6, weakMagnitude: 0.3 },
+	],
+};
+
+const RUMBLE_KEY = "gamepad-rumble";
+
+export function rumbleEnabled(): boolean {
+	try {
+		return localStorage.getItem(RUMBLE_KEY) !== "off";
+	} catch {
+		return true;
+	}
+}
+
+export function setRumbleEnabled(on: boolean): void {
+	try {
+		localStorage.setItem(RUMBLE_KEY, on ? "on" : "off");
+	} catch {
+		/* ignore quota/availability errors */
+	}
+}
+
+type Actuator = {
+	playEffect: (type: string, params: Pulse) => Promise<string>;
+};
+
+function actuator(): Actuator | null {
+	const gp = activeGamepad();
+	// WebKit ships no vibrationActuator at all, so this is the normal path on
+	// iOS/iPadOS rather than an error case.
+	const a = (gp as unknown as { vibrationActuator?: Actuator } | null)
+		?.vibrationActuator;
+	return a && typeof a.playEffect === "function" ? a : null;
+}
+
+/**
+ * Best-effort haptics. Silently does nothing with no gamepad, no actuator
+ * (Safari), or rumble switched off — never throws, never blocks a caller.
+ */
+export async function rumble(preset: RumblePreset): Promise<void> {
+	if (!rumbleEnabled()) return;
+	for (const pulse of PATTERNS[preset]) {
+		// Re-read each pulse: a `playEffect` cancels whatever is playing, so the
+		// sequence has to await, and the pad may vanish mid-sequence.
+		const a = actuator();
+		if (!a) return;
+		try {
+			await a.playEffect("dual-rumble", pulse);
+		} catch {
+			return;
+		}
+	}
+}
+
+// ---------------------------------------------------------------- poller
+
+type ActionHandler = (action: GamepadAction) => void;
+type AxisHandler = (delta: { x: number; y: number }) => void;
+
+// One poller for the whole app. Review mode alone has two subscribers
+// (QuestionCard owns answering, Question owns navigation); a loop each would
+// read the same press twice and fight over edge state.
+const actionSubs = new Set<ActionHandler>();
+const axisSubs = new Set<AxisHandler>();
+const connectionSubs = new Set<() => void>();
+
+let rafId = 0;
+let lastTs = 0;
+let states = new Map<number, ButtonState>();
+
+function pads(): (Gamepad | null)[] {
+	if (typeof navigator === "undefined" || !navigator.getGamepads) return [];
+	try {
+		return Array.from(navigator.getGamepads());
+	} catch {
+		return [];
+	}
+}
+
+export function activeGamepad(): Gamepad | null {
+	for (const gp of pads()) if (gp?.connected) return gp;
+	return null;
+}
+
+export function isGamepadConnected(): boolean {
+	return activeGamepad() !== null;
+}
+
+/** Non-null when a pad is connected but not in standard mapping — the 8BitDo
+ *  mode-switch case, where the index table above points at the wrong buttons. */
+export function nonStandardMapping(): string | null {
+	const gp = activeGamepad();
+	if (!gp) return null;
+	return gp.mapping === "standard" ? null : gp.id || "unknown";
+}
+
+// 「已連線」提示歸屬於**連線這個事件**,不是歸屬於 GamepadFab 的掛載。
+//
+// FAB 掛在 Question / YearList / Exam 三條路由上,換路由就會卸載重掛;而換題
+// 時如果那一題還沒預抓到,Question 也會短暫地不渲染子樹。把「講過了沒」放在元件
+// 的 useState 裡,等於每一次重掛都重講一次 —— 手把明明從頭到尾沒斷過。
+//
+// 記的是 pad 的原始 id 而不是布林值:拔掉換一支、或同一支斷線再連,都該重新宣告
+// 一次(那時使用者確實需要知道「網頁看到它了」)。
+export type AnnounceState = string | null;
+
+/** 純函式,好測。`padId` 為 null 代表當下沒有手把。 */
+export function stepAnnounce(
+	prev: AnnounceState,
+	padId: string | null,
+): { state: AnnounceState; announce: boolean } {
+	if (!padId) return { state: null, announce: false };
+	if (prev === padId) return { state: prev, announce: false };
+	return { state: padId, announce: true };
+}
+
+let announcedPad: AnnounceState = null;
+
+/** 該不該現在跳提示。有副作用(記下已宣告),所以一次連線只會回 true 一次。 */
+export function claimConnectionAnnouncement(): boolean {
+	const { state, announce } = stepAnnounce(
+		announcedPad,
+		activeGamepad()?.id ?? null,
+	);
+	announcedPad = state;
+	return announce;
+}
+
+/** The pad's self-reported name, trimmed of the vendor/product hex the browser
+ *  appends — "8BitDo Pro 2" reads better than the 40-char raw id. */
+export function gamepadName(): string | null {
+	const raw = activeGamepad()?.id;
+	if (!raw) return null;
+	const cleaned = raw
+		.replace(/\((?:STANDARD GAMEPAD )?Vendor:.*$/i, "")
+		.replace(/\([0-9a-f]{4}-[0-9a-f]{4}-.*$/i, "")
+		.trim();
+	return cleaned || raw;
+}
+
+function tick(ts: number) {
+	rafId = requestAnimationFrame(tick);
+	const dt = lastTs ? Math.min(ts - lastTs, 100) : 16;
+	lastTs = ts;
+
+	const gp = activeGamepad();
+	if (!gp) return;
+
+	for (const [idx, action] of Object.entries(BUTTON_ACTIONS)) {
+		const i = Number(idx);
+		const btn = gp.buttons[i];
+		const { next, fire } = stepButton(
+			states.get(i) ?? IDLE_BUTTON,
+			!!btn?.pressed,
+			ts,
+			REPEATABLE.has(action),
+		);
+		states.set(i, next);
+		if (fire) for (const fn of actionSubs) fn(action);
+	}
+
+	if (axisSubs.size > 0) {
+		const { x, y } = axisScrollFrame(
+			gp.axes,
+			DPAD_BUTTONS.map((i) => !!gp.buttons[i]?.pressed),
+			dt,
+		);
+		if (x !== 0 || y !== 0) for (const fn of axisSubs) fn({ x, y });
+	}
+}
+
+// Seed the edge detector with whatever is already held, so starting the poller
+// never manufactures a press.
+//
+// This is not a nicety. Route changes unsubscribe the old page before the new
+// one subscribes, so `actionSubs` hits zero for an instant and the loop stops.
+// A real button press lasts 100ms+ and easily spans that gap — so on restart
+// the still-held button reads as a fresh edge and the *new* page acts on the
+// same physical press. Observed: START on a question page shot straight through
+// 年度列表 and landed on /review, because YearList's START fired too.
+function primeStates() {
+	states = new Map();
+	const gp = activeGamepad();
+	if (!gp) return;
+	const t = typeof performance !== "undefined" ? performance.now() : 0;
+	for (const idx of Object.keys(BUTTON_ACTIONS)) {
+		const i = Number(idx);
+		if (gp.buttons[i]?.pressed)
+			states.set(i, { down: true, repeatAt: t + REPEAT_DELAY_MS });
+	}
+}
+
+// Poll only while something is listening AND a pad is attached — on a study
+// site that is almost never, and an always-on rAF loop is pure battery burn.
+// Chrome withholds pads from getGamepads() until the first button press, but
+// `gamepadconnected` fires at exactly that moment, so nothing is missed.
+function sync() {
+	const want =
+		(actionSubs.size > 0 || axisSubs.size > 0) && isGamepadConnected();
+	if (want && !rafId) {
+		lastTs = 0;
+		primeStates();
+		rafId = requestAnimationFrame(tick);
+	} else if (!want && rafId) {
+		cancelAnimationFrame(rafId);
+		rafId = 0;
+	}
+}
+
+if (typeof window !== "undefined") {
+	const onChange = () => {
+		sync();
+		for (const fn of connectionSubs) fn();
+	};
+	window.addEventListener("gamepadconnected", onChange);
+	window.addEventListener("gamepaddisconnected", onChange);
+}
+
+export function subscribeActions(fn: ActionHandler): () => void {
+	actionSubs.add(fn);
+	sync();
+	return () => {
+		actionSubs.delete(fn);
+		sync();
+	};
+}
+
+export function subscribeAxis(fn: AxisHandler): () => void {
+	axisSubs.add(fn);
+	sync();
+	return () => {
+		axisSubs.delete(fn);
+		sync();
+	};
+}
+
+export function subscribeConnection(fn: () => void): () => void {
+	connectionSubs.add(fn);
+	return () => {
+		connectionSubs.delete(fn);
+	};
+}

@@ -1,0 +1,1102 @@
+import { useCallback, useEffect, useState, useRef } from "react";
+import { HIDDEN_YEAR_NOTE, isHiddenYear } from "../lib/years";
+import { useSecretTap } from "../hooks/useSecretTap";
+import { fetchYears } from "../lib/yearsApi";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import {
+	Pause,
+	Play,
+	ChevronLeft,
+	ChevronRight,
+	AlertTriangle,
+	Flag,
+} from "lucide-react";
+import { api } from "../lib/api";
+import { GROUPS, groupCounts } from "../lib/groups";
+import {
+	loadSectionPath,
+	clearSectionPath,
+	type LastPath,
+} from "../lib/lastPath";
+import { ResumeChip } from "../components/ResumeChip";
+import {
+	flaggedIds,
+	reconcileFlags,
+	setFlag,
+	toServerFlags,
+} from "../lib/examFlagStore";
+import { resumeIdx } from "../lib/examResume";
+import { TutorReveal } from "../components/TutorReveal";
+import { StemText } from "../components/StemText";
+import { GamepadFab, type GamepadHint } from "../components/GamepadFab";
+import {
+	SubmitExamDialog,
+	type ExamQuestionRef,
+} from "../components/SubmitExamDialog";
+import { useGamepad, useGamepadConnected } from "../hooks/useGamepad";
+import { rumble } from "../lib/gamepad";
+import {
+	startTimer,
+	hide,
+	show,
+	pause as pauseTimer,
+	resume as resumeTimer,
+	read,
+	formatElapsed,
+	type TimerState,
+} from "../lib/questionTimer";
+
+// L1/R1 keep the 上一題/下一題 meaning they have in 複習模式 — someone moving
+// between the two modes shouldn't have to relearn the shoulder buttons. The
+// bindings with no review-mode counterpart go to the buttons that have no job
+// here: 沒有信心度,所以十字左右改成在標記題之間跳。
+// 暫停中除了 FACE ◀ 以外整組還是收得到,但選項會被擋下來(見下面的 `paused`)
+// —— 那是刻意的,不是漏掉的,所以說明要寫出來:按了沒反應而說明沒提,使用者會
+// 以為手把斷線。
+const EXAM_HINTS: GamepadHint[] = [
+	{ btn: "DPAD ↑ ↓", label: "選擇選項,移動即選取(暫停中不能作答)" },
+	{ btn: "DPAD ← →", label: "上一個 / 下一個標記題(沒有標記題時無作用)" },
+	{ btn: "FACE ▼", label: "確認並前進下一題(最後一題停在原地)" },
+	{ btn: "FACE ◀", label: "暫停 / 繼續計時" },
+	{ btn: "FACE ▲", label: "跳到第一題未作答(全部答完時無作用)" },
+	{ btn: "FACE ▶", label: "標記 / 取消標記這一題" },
+	{ btn: "L1 / R1", label: "上一題 / 下一題(不連發,一下一題)" },
+	{ btn: "L2 / R2", label: "−10 題 / +10 題(到頭就停在頭尾)" },
+	{ btn: "START", label: "交卷(先跳確認,鍵位說明在對話框裡)" },
+	{ btn: "SELECT", label: "開關這份說明" },
+];
+
+type YearMeta = { year: number; count: number };
+
+type ExamQuestion = {
+	id: string;
+	/** 自訂測驗可跨年份,標題要顯示「114-007」而非只有題號。年度考忽略即可。 */
+	year?: number;
+	number: number;
+	stem: string;
+	options: Record<string, string>;
+	chosen?: string | null;
+	/** 標記待回頭檢查(migration 0028 起由 /state 帶出,跨裝置同步)。 */
+	flagged?: boolean;
+	flagged_at?: number | null;
+};
+
+type ExamState = {
+	session_id: string;
+	started_at: number;
+	elapsed_ms: number;
+	running_since: number | null; // null = paused
+	cap_ms: number; // 100 * 60 * 1000
+	/** migration 0026 起由 /state 帶出;舊 client / 舊 session 視為年度考。 */
+	kind?: "year" | "custom";
+	tutor?: 0 | 1;
+	timed?: 0 | 1;
+	questions: ExamQuestion[];
+};
+
+export function Exam() {
+	const { sid } = useParams<{ sid: string }>();
+	if (sid) return <ExamInProgress sessionId={sid} />;
+	return <ExamStart />;
+}
+
+type Group = string;
+const GROUP_COUNTS: Record<string, number> = groupCounts();
+
+function ExamStart() {
+	const [years, setYears] = useState<YearMeta[]>([]);
+	const [starting, setStarting] = useState<number | null>(null);
+	// 冪等:同一次開考動作沿用同一個 key(依年份綁定,重試不會重複建 session);
+	// 換年份或成功後重新產生。
+	const startIdemKey = useRef<{ year: number; key: string } | null>(null);
+	const [groups, setGroups] = useState<Set<Group>>(
+		() => new Set(GROUPS.map((g) => g.label)),
+	);
+	// Unfinished exam session, synced across devices; cleared on submit
+	// (the tracker in App.tsx drops it when the result page is reached).
+	const [resume, setResume] = useState<LastPath | null>(null);
+	const reloadYears = useCallback(() => {
+		fetchYears().then(setYears);
+	}, []);
+	const secret = useSecretTap(reloadYears);
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		reloadYears();
+		let cancelled = false;
+		loadSectionPath("exam").then((v) => {
+			if (!cancelled) setResume(v);
+		});
+		return () => {
+			cancelled = true;
+		};
+	}, []);
+
+	const totalCount = GROUPS.reduce(
+		(sum, g) => sum + (groups.has(g.label) ? GROUP_COUNTS[g.label] : 0),
+		0,
+	);
+
+	function toggleGroup(g: Group) {
+		setGroups((prev) => {
+			const next = new Set(prev);
+			if (next.has(g)) next.delete(g);
+			else next.add(g);
+			return next;
+		});
+	}
+
+	async function start(year: number) {
+		if (starting || groups.size === 0) return;
+		setStarting(year);
+		if (!startIdemKey.current || startIdemKey.current.year !== year) {
+			startIdemKey.current = { year, key: crypto.randomUUID() };
+		}
+		try {
+			const s = await api.post<ExamState>(
+				"/api/exam/start",
+				{
+					year,
+					groups: [...groups],
+				},
+				startIdemKey.current.key,
+			);
+			startIdemKey.current = null;
+			sessionStorage.setItem(`exam-${s.session_id}`, JSON.stringify(s));
+			navigate(`/exam/${s.session_id}`);
+		} finally {
+			setStarting(null);
+		}
+	}
+
+	const canStart = groups.size > 0;
+
+	return (
+		<div className="max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 py-8">
+			{/* 標題連點 7 下 → 顯示/隱藏不完整年份(見 hooks/useSecretTap.ts)。
+			    解鎖是全站的,在複習模式那頁點開這裡也看得到。 */}
+			<h1
+				className="font-serif text-3xl text-ink-900 dark:text-ink-100 mb-2 select-none"
+				onClick={secret.onClick}
+			>
+				全真作答
+			</h1>
+			{secret.message && (
+				<p className="text-ink-400 dark:text-ink-500 text-xs mb-2">{secret.message}</p>
+			)}
+			<p className="text-ink-500 dark:text-ink-400 text-sm mb-6">
+				{totalCount > 0 ? `${totalCount} 分鐘模擬考` : "選擇科別"} ·
+				可中途暫停離開、稍後續答 · 完賽看分數與錯題回顧
+			</p>
+
+			{resume && (
+				<div className="mb-6">
+					<ResumeChip
+						prefix="你上次停在"
+						label="進行中的模擬考"
+						to={resume.path}
+						onDismiss={() => {
+							clearSectionPath("exam");
+							setResume(null);
+						}}
+					/>
+				</div>
+			)}
+
+			{/* 自訂測驗入口 — 年度卡片之外的另一條動線 */}
+			<Link
+				to="/exam/new"
+				className="block mb-8 bg-white dark:bg-ink-800 border border-ink-200 dark:border-ink-700 rounded-lg p-4 hover:border-accent hover:shadow-paper transition"
+			>
+				<div className="font-serif text-xl text-ink-900 dark:text-ink-100">
+					自訂測驗
+				</div>
+				<div className="text-xs text-ink-500 dark:text-ink-400 mt-1">
+					挑狀態、範圍與題數,自己出一份卷 →
+				</div>
+			</Link>
+
+			{/* 科別選擇 */}
+			<div className="mb-8 flex flex-wrap gap-2 items-center">
+				<span className="text-xs uppercase tracking-wider text-ink-400 dark:text-ink-500 mr-1">
+					科別
+				</span>
+				{GROUPS.map((g) => (
+					<GroupToggle
+						key={g.label}
+						group={g.label}
+						active={groups.has(g.label)}
+						onClick={() => toggleGroup(g.label)}
+					/>
+				))}
+				{totalCount > 0 && (
+					<span className="text-xs text-ink-500 dark:text-ink-400 ml-2">
+						共 {totalCount} 題
+					</span>
+				)}
+			</div>
+
+			{!canStart && (
+				<p className="text-rose-700 dark:text-rose-300 text-sm mb-4">
+					至少選一個科別才能開始。
+				</p>
+			)}
+
+			{years.length === 0 ? (
+				<p className="text-ink-400 dark:text-ink-500">尚無題庫,請先匯入。</p>
+			) : (
+				<div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+					{years.map((y) => (
+						<button
+							key={y.year}
+							onClick={() => start(y.year)}
+							disabled={starting !== null || !canStart}
+							className="bg-white dark:bg-ink-800 border border-ink-200 dark:border-ink-700 rounded-lg p-4 hover:border-accent hover:shadow-paper transition disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-ink-200 dark:disabled:hover:border-ink-700 disabled:hover:shadow-none text-left"
+						>
+							<div className="font-serif text-2xl text-ink-900 dark:text-ink-100">
+								{y.year}
+								{y.year === 100 && (
+									<span className="ml-1 text-xs text-ink-400 dark:text-ink-500 align-middle">
+										(模擬)
+									</span>
+								)}
+							</div>
+							<div className="text-xs text-ink-500 dark:text-ink-400 mt-1">
+								{/* 不完整的年份要看它自己的題數 —— totalCount 是「勾選的科別
+								    在完整年份有幾題」,對 103 會多報一倍以上。 */}
+								{isHiddenYear(y.year) ? y.count : totalCount} 題
+							</div>
+							{isHiddenYear(y.year) && (
+								<div className="mt-1 text-[10px] text-ink-400 dark:text-ink-500 leading-snug">
+									{HIDDEN_YEAR_NOTE[y.year]}
+								</div>
+							)}
+							{starting === y.year && (
+								<div className="text-[11px] text-accent mt-2">準備中…</div>
+							)}
+						</button>
+					))}
+				</div>
+			)}
+
+			<div className="mt-10">
+				<Link
+					to="/exam-history"
+					className="text-sm text-accent hover:text-accent-dark"
+				>
+					→ 查看歷次作答紀錄
+				</Link>
+			</div>
+		</div>
+	);
+}
+
+function GroupToggle({
+	group,
+	active,
+	onClick,
+}: {
+	group: Group;
+	active: boolean;
+	onClick: () => void;
+}) {
+	return (
+		<button
+			type="button"
+			onClick={onClick}
+			aria-pressed={active}
+			className={
+				"inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-sm transition " +
+				(active
+					? "bg-accent/10 border-accent text-accent-dark dark:text-accent font-medium"
+					: "bg-white dark:bg-ink-800 border-ink-200 dark:border-ink-700 text-ink-500 dark:text-ink-400 hover:border-ink-400")
+			}
+		>
+			<span
+				className={
+					"inline-block w-2 h-2 rounded-full " +
+					(active ? "bg-accent" : "bg-ink-300 dark:bg-ink-600")
+				}
+			/>
+			{group} ({GROUP_COUNTS[group]})
+		</button>
+	);
+}
+
+function ExamInProgress({ sessionId }: { sessionId: string }) {
+	const navigate = useNavigate();
+	const [state, setState] = useState<ExamState | null>(null);
+	const [answers, setAnswers] = useState<Record<string, string>>({});
+	const [activeIdx, setActiveIdx] = useState(0);
+	// 續考落點:第一題**未作答**,不是第一題(見 lib/examResume.ts)。
+	//
+	// 只在載入時套用,不放進 useEffect 掛 `state` —— 暫停/繼續也會換掉 `state`,
+	// 那樣按一次暫停就會把使用者拉回未作答的地方。
+	//
+	// 快取先到、伺服器後到時允許再套用一次(另一台裝置答過的題目要算數),但
+	// **使用者已經自己換過題就不動** —— 讀到一半被跳走比落在第一題更糟。
+	const autoIdx = useRef<number | null>(null);
+	const activeIdxRef = useRef(0);
+	useEffect(() => {
+		activeIdxRef.current = activeIdx;
+	}, [activeIdx]);
+	function applyResumeIdx(
+		qs: ExamQuestion[],
+		ans: Record<string, string | undefined>,
+	) {
+		if (autoIdx.current !== null && activeIdxRef.current !== autoIdx.current)
+			return;
+		const target = resumeIdx(qs, ans);
+		autoIdx.current = target;
+		setActiveIdx(target);
+	}
+	const [now, setNow] = useState(Date.now());
+	const [submitting, setSubmitting] = useState(false);
+	// 交卷確認對話框:0 = 收起來,1 = 攤開現況,2 = 有未答題時的最終確認。
+	// **兩段的狀態放在這裡而不是對話框裡面**,因為手把的 START 也要推得動它。
+	const [confirmStage, setConfirmStage] = useState<0 | 1 | 2>(0);
+	const { connected: padConnected } = useGamepadConnected();
+	const [busy, setBusy] = useState(false);
+	// 標記題目 (待回頭檢查) — 本機(localStorage)即時生效,server 背景同步,
+	// 進入 session 時對帳(examFlagStore)。換裝置/關分頁都留得住。
+	// 教學模式:已揭曉答案的題目 id。只有送出答案之後才會加進來,
+	// TutorReveal 也只在這裡面才 mount —— 否則 /api/questions/:id 會提前
+	// 把正解送到瀏覽器。
+	const [revealed, setRevealed] = useState<Set<string>>(new Set());
+	const [marked, setMarked] = useState<Set<string>>(
+		() => new Set(flaggedIds(sessionId)),
+	);
+	const flushTimers = useRef<Record<string, number>>({});
+
+	// 換題時捲回題幹。**掛在 activeIdx 上,不是掛在按鈕上** —— 上一題/下一題、
+	// 題號跳轉、手把的 L1/R1 與 ±10、以及「送出並前進」全都只是改這個 state,
+	// 一個一個補 onClick 遲早會漏掉其中一條路徑,而症狀是「有時候會捲、有時候
+	// 不會」,很難回報得清楚。
+	//
+	// 不捲的話,答完一題往下捲看完選項再按「下一題」,下一題會從**選項中段**開始
+	// 顯示 —— 題幹在畫面外,而使用者不會馬上發現自己漏讀了題目。
+	//
+	// `behavior: "auto"`(瞬間)不是 smooth:考試在計時,一段 300ms 的平滑捲動
+	// 每題都來一次是實際的損失,而且會讓連按下一題的手感變黏。
+	const lastIdxRef = useRef<number | null>(null);
+	useEffect(() => {
+		const first = lastIdxRef.current === null;
+		const changed = lastIdxRef.current !== activeIdx;
+		lastIdxRef.current = activeIdx;
+		// 第一次(含從中斷處續考)不捲:那時本來就在頂端,而且動它會跟瀏覽器自己的
+		// 捲動位置還原打架。
+		if (first || !changed) return;
+		window.scrollTo({ top: 0, behavior: "auto" });
+	}, [activeIdx]);
+	// Per-question timer: restarts on every question change, and follows both
+	// the tab's visibility and the session's own pause state.
+	const timer = useRef<TimerState>(startTimer(Date.now()));
+
+	function toggleMark(qid: string) {
+		const next = new Set(marked);
+		if (next.has(qid)) next.delete(qid);
+		else next.add(qid);
+		setMarked(next);
+		// 本機立即寫入 + 背景送 server(副作用刻意放在 updater 外)。
+		// 不在 API 失敗時回滾 UI —— 離線時標記不該從畫面上消失,
+		// 下次進入 session 由 reconcileFlags 補推。
+		setFlag(sessionId, qid, next.has(qid));
+	}
+
+	// Load: prefer fresh state from server (works after refresh / device switch)
+	useEffect(() => {
+		const cached = sessionStorage.getItem(`exam-${sessionId}`);
+		if (cached) {
+			const s = JSON.parse(cached) as ExamState;
+			setState(s);
+			const seed: Record<string, string> = {};
+			for (const q of s.questions) if (q.chosen) seed[q.id] = q.chosen;
+			setAnswers(seed);
+			applyResumeIdx(s.questions, seed);
+		}
+		api
+			.get<ExamState>(`/api/exam/${sessionId}/state`)
+			.then((s) => {
+				setState(s);
+				sessionStorage.setItem(`exam-${sessionId}`, JSON.stringify(s));
+				const seed: Record<string, string> = {};
+				for (const q of s.questions) if (q.chosen) seed[q.id] = q.chosen;
+				setAnswers((prev) => ({ ...seed, ...prev }));
+				applyResumeIdx(s.questions, seed);
+				// 教學模式續答:已作答的題目答案早就送出過,揭曉狀態要一起還原。
+				if (s.tutor === 1) setRevealed(new Set(Object.keys(seed)));
+				// 標記對帳:複用這份 /state 回應,不多打 API。本機較新的會被推上去,
+				// server 較新的直接採用 —— 重新進入 session 以合併結果為準。
+				void reconcileFlags(sessionId, toServerFlags(s.questions))
+					.then((flags) => {
+						setMarked(
+							new Set(
+								Object.entries(flags)
+									.filter(([, v]) => v.flagged)
+									.map(([qid]) => qid),
+							),
+						);
+					})
+					.catch(() => {
+						/* 對帳失敗不影響作答流程,畫面維持本機標記 */
+					});
+			})
+			.catch((e: any) => {
+				// 已經交卷的 session:/state 回 410。舊版只在「沒有快取」時才處理,而
+				// sessionStorage 的快取只有交卷成功才清 —— 於是交卷後重新整理這個網址,
+				// 畫面會拿舊快取渲染成「還在考試」,而按幾次交卷都只會被伺服器 400。
+				// 那正是「卡在交卷送不出去」看起來的樣子。
+				if (e?.status === 410) {
+					sessionStorage.removeItem(`exam-${sessionId}`);
+					navigate(`/exam/${sessionId}/result`, { replace: true });
+					return;
+				}
+				if (!cached) {
+					alert("找不到作答中的 session,可能已結束或非你本人。");
+					navigate("/exam");
+				}
+			});
+	}, [sessionId, navigate]);
+
+	// Restart the per-question timer on question change, and pause it while
+	// the tab is hidden (looking something up shouldn't count as think time).
+	useEffect(() => {
+		timer.current = startTimer(Date.now());
+		// `timer` 是 ref —— 改它不會觸發 render,而畫面上那個「本題 m:ss」是靠底下
+		// 每秒跳一次的 `now` 取樣的。少了這一行,按下一題之後**最多有一整秒**顯示
+		// 的還是上一題的時間,看起來像沒重設(e2e 抓到過)。
+		setNow(Date.now());
+		function onVisibility() {
+			timer.current = document.hidden
+				? hide(timer.current, Date.now())
+				: show(timer.current, Date.now());
+		}
+		document.addEventListener("visibilitychange", onVisibility);
+		return () => document.removeEventListener("visibilitychange", onVisibility);
+	}, [activeIdx]);
+
+	// Tick (only when running)
+	useEffect(() => {
+		if (!state || state.running_since === null) return;
+		const t = window.setInterval(() => setNow(Date.now()), 1000);
+		return () => window.clearInterval(t);
+	}, [state?.running_since, !!state]);
+
+	// Warn on close while running
+	useEffect(() => {
+		function beforeUnload(e: BeforeUnloadEvent) {
+			if (state?.running_since !== null && Object.keys(answers).length > 0) {
+				e.preventDefault();
+				e.returnValue = "";
+			}
+		}
+		window.addEventListener("beforeunload", beforeUnload);
+		return () => window.removeEventListener("beforeunload", beforeUnload);
+	}, [answers, state?.running_since]);
+
+	// Auto-force-finish at cap — must run before any early return to keep hook
+	// count stable across renders (Rules of Hooks).
+	useEffect(() => {
+		if (!state || state.running_since === null || submitting) return;
+		const liveMs = state.elapsed_ms + (now - state.running_since);
+		if (liveMs >= state.cap_ms) submit();
+	}, [now, state, submitting]);
+
+	// Gamepad. Declared above the early return to keep the hook count stable;
+	// everything it touches is read off `state` rather than the consts below,
+	// which don't exist on the loading render.
+	useGamepad((action) => {
+		if (!state) return;
+		// 對話框開著時整組作答綁定要讓開。少了這一段,十字鍵會在使用者**看不見的
+		// 地方**改掉答案(對話框正蓋著選項)—— 那是這次回報的相反面:不小心改了
+		// 答案,而且畫面上沒有任何東西在說。
+		if (confirmStage > 0) {
+			if (submitting) return;
+			// 位置而非廠商字母:FACE ▼ 是底鍵(確認)、FACE ▶ 是右鍵(取消),
+			// 兩支手把印的字母不同但位置一致。START 一併保留 —— 它本來就是交卷,
+			// 多按一次正好就是這裡要的那一次確認。
+			if (action === "start" || action === "faceDown") {
+				if (confirmStage === 1 && unansweredRefs().length > 0)
+					setConfirmStage(2);
+				else void submit();
+			} else if (action === "faceRight") {
+				setConfirmStage(confirmStage === 2 ? 1 : 0);
+			}
+			return;
+		}
+		if (submitting) return;
+		const qs = state.questions;
+		const cur = qs[activeIdx];
+		if (!cur) return;
+		const paused = state.running_since === null;
+		const go = (i: number) =>
+			setActiveIdx(Math.min(qs.length - 1, Math.max(0, i)));
+		// 在標記題之間跳,繞回頭 —— 回頭檢查的動線就是這個。
+		const jumpMarked = (dir: 1 | -1) => {
+			if (marked.size === 0) return;
+			for (let n = 1; n <= qs.length; n++) {
+				const i = (((activeIdx + dir * n) % qs.length) + qs.length) % qs.length;
+				if (marked.has(qs[i].id)) return setActiveIdx(i);
+			}
+		};
+
+		switch (action) {
+			case "up":
+			case "down": {
+				if (paused) return;
+				const letters = (["A", "B", "C", "D", "E"] as const).filter(
+					(L) => cur.options[L],
+				);
+				if (letters.length === 0) return;
+				const dir = action === "down" ? 1 : -1;
+				const i = letters.indexOf(answers[cur.id] as (typeof letters)[number]);
+				// 移動即選取,同複習模式;沒選過時 ↓ 落在 A、↑ 落在最後一個。
+				choose(
+					letters[
+						i < 0
+							? dir === 1
+								? 0
+								: letters.length - 1
+							: (i + dir + letters.length) % letters.length
+					],
+				);
+				break;
+			}
+			case "left":
+				jumpMarked(-1);
+				break;
+			case "right":
+				jumpMarked(1);
+				break;
+			case "l1":
+				go(activeIdx - 1);
+				break;
+			case "r1":
+				go(activeIdx + 1);
+				break;
+			case "l2":
+				go(activeIdx - 10);
+				break;
+			case "r2":
+				go(activeIdx + 10);
+				break;
+			case "faceDown":
+				void rumble("tap");
+				go(activeIdx + 1);
+				break;
+			case "faceLeft":
+				void (paused ? resume() : pause());
+				break;
+			case "faceUp": {
+				const i = qs.findIndex((x) => !answers[x.id]);
+				if (i >= 0) go(i);
+				break;
+			}
+			case "faceRight":
+				toggleMark(cur.id);
+				break;
+			// 不開快速通道:交卷一律先跳確認,對話框裡再按一次 START 才送出。
+			case "start":
+				askSubmit();
+				break;
+		}
+	});
+
+	if (!state) {
+		return (
+			<div className="p-8 text-center text-ink-400 dark:text-ink-500">
+				載入中…
+			</div>
+		);
+	}
+
+	const live = state.running_since
+		? state.elapsed_ms + (now - state.running_since)
+		: state.elapsed_ms;
+	const remaining = Math.max(0, state.cap_ms - live);
+	// 不計時的 session 沒有「超時」概念(cap 是 24 小時的形式值)。
+	const isCustom = state.kind === "custom";
+	const isTutor = state.tutor === 1;
+	const isTimed = state.timed !== 0;
+	const overtime = isTimed && live > state.cap_ms;
+	const isPaused = state.running_since === null;
+
+	// Format mm:ss for remaining (or live elapsed if overtime)
+	function fmt(ms: number): string {
+		const sec = Math.floor(ms / 1000);
+		const hh = Math.floor(sec / 3600);
+		const mm = Math.floor((sec % 3600) / 60);
+		const ss = sec % 60;
+		return (
+			String(hh).padStart(2, "0") +
+			":" +
+			String(mm).padStart(2, "0") +
+			":" +
+			String(ss).padStart(2, "0")
+		);
+	}
+
+	const q = state.questions[activeIdx];
+
+	function choose(letter: string) {
+		if (isPaused) return;
+		// 教學模式:答案一旦送出就鎖住,不可改答。
+		if (isTutor && revealed.has(q.id)) return;
+		setAnswers((prev) => ({ ...prev, [q.id]: letter }));
+		if (flushTimers.current[q.id])
+			window.clearTimeout(flushTimers.current[q.id]);
+		if (isTutor) {
+			// 不 debounce:答案即刻定案,且要等 POST 成功才揭曉,確保
+			// TutorReveal(會抓到正解)不會在答案送出前就 mount。
+			const qid = q.id;
+			api
+				.post(`/api/exam/${sessionId}/answer`, {
+					question_id: qid,
+					chosen: letter,
+					elapsed_ms: read(timer.current, Date.now()).elapsedMs,
+				})
+				.then(() => setRevealed((prev) => new Set(prev).add(qid)))
+				.catch(() => {
+					// 送出失敗就不揭曉,使用者可以重選。
+					setAnswers((prev) => {
+						const next = { ...prev };
+						delete next[qid];
+						return next;
+					});
+				});
+			return;
+		}
+		flushTimers.current[q.id] = window.setTimeout(() => {
+			api.post(`/api/exam/${sessionId}/answer`, {
+				question_id: q.id,
+				chosen: letter,
+				elapsed_ms: read(timer.current, Date.now()).elapsedMs,
+			});
+		}, 400);
+	}
+
+	async function pause() {
+		if (busy || isPaused) return;
+		setBusy(true);
+		try {
+			const r = await api.post<{ elapsed_ms: number; running_since: null }>(
+				`/api/exam/${sessionId}/pause`,
+			);
+			timer.current = pauseTimer(timer.current, Date.now());
+			setState(
+				(s) => s && { ...s, elapsed_ms: r.elapsed_ms, running_since: null },
+			);
+		} finally {
+			setBusy(false);
+		}
+	}
+
+	async function resume() {
+		if (busy || !isPaused) return;
+		setBusy(true);
+		try {
+			const r = await api.post<{ elapsed_ms: number; running_since: number }>(
+				`/api/exam/${sessionId}/resume`,
+			);
+			timer.current = resumeTimer(timer.current, Date.now());
+			setState(
+				(s) =>
+					s && {
+						...s,
+						elapsed_ms: r.elapsed_ms,
+						running_since: r.running_since,
+					},
+			);
+		} finally {
+			setBusy(false);
+		}
+	}
+
+	// 對話框要攤開的兩份清單。**`idx` 是卷內位置,`label` 是畫面上的題號** ——
+	// 自訂測驗跨年份時 number 會重複,兩者不是同一件事,混用的症狀是「點了題號
+	// 跳到別題」。
+	function refsOf(pick: (q: ExamQuestion) => boolean): ExamQuestionRef[] {
+		if (!state) return [];
+		const out: ExamQuestionRef[] = [];
+		state.questions.forEach((qq, i) => {
+			if (pick(qq))
+				out.push({
+					idx: i,
+					label: String(state.kind === "custom" ? i + 1 : qq.number),
+				});
+		});
+		return out;
+	}
+	function unansweredRefs() {
+		return refsOf((qq) => !answers[qq.id]);
+	}
+
+	/**
+	 * 使用者主動要交卷 —— 一律先問。
+	 *
+	 * ⚠️ **時間到的自動交卷不走這裡,直接呼叫 `submit()`。** 那條路徑沒有「要不
+	 * 要」可以問,而彈一個沒有人回答的對話框只會讓考卷卡在畫面上送不出去。
+	 */
+	function askSubmit() {
+		if (submitting || !state) return;
+		setConfirmStage(1);
+	}
+
+	async function submit() {
+		if (submitting || !state) return;
+		setSubmitting(true);
+		try {
+			Object.entries(flushTimers.current).forEach(([, id]) =>
+				window.clearTimeout(id),
+			);
+			// 全量重送當安全網 —— 但**一趟請求**,不是一題一趟。
+			//
+			// 舊版是 `for (...) await api.post('/answer')`:100 題就是 100 趟循序往返,
+			// 而 `/answer` 內部還有兩趟 D1。正式機量到每趟 1.30 秒,於是交卷要等兩分鐘
+			// 以上 —— 使用者會以為當掉、重整再按一次,實際留下的是同一波裡跑了一輪半
+			// (144 筆 elapsed_ms 為 NULL 的 attempts 涵蓋 100 題)。
+			//
+			// 仍然送全部而不是只送「debounce 還沒觸發」的那幾題:debounce 的 POST 沒有
+			// 重試也沒有 catch,失敗是無聲的,安全網要蓋得住那種情況。改成一趟之後,
+			// 蓋滿的成本是零。哪些真的要寫、哪些要 append attempts,由伺服器比對決定。
+			const pending = Object.entries(answers).map(([question_id, chosen]) => ({
+				question_id,
+				chosen,
+			}));
+			if (pending.length > 0) {
+				await api.put(`/api/exam/${sessionId}/answers`, { answers: pending });
+			}
+			await api.post(`/api/exam/${sessionId}/finish`);
+			sessionStorage.removeItem(`exam-${sessionId}`);
+			// 標記刻意保留(server 也留著):結果頁的「標記」頁籤要用它做二輪複習。
+			navigate(`/exam/${sessionId}/result`);
+		} catch (e: any) {
+			// 舊版只有 try/finally:任何失敗都只是讓按鈕默默彈回「交卷」,使用者分不出
+			// 是網路斷了、伺服器拒絕了,還是自己沒按到 —— 而 rejection 連 console 都
+			// 只留一行 unhandled。
+			//
+			// 已經交過的 session 不算失敗:重整之後再按一次會走到這裡,該做的是帶他去
+			// 成績頁,而不是彈一個看不懂的錯誤。
+			if (/already finished/.test(String(e?.data?.error ?? ""))) {
+				sessionStorage.removeItem(`exam-${sessionId}`);
+				navigate(`/exam/${sessionId}/result`);
+				return;
+			}
+			alert(
+				"交卷失敗:" + (e?.data?.error ?? e?.message ?? "請檢查網路後再試一次"),
+			);
+		} finally {
+			setSubmitting(false);
+		}
+	}
+
+	const answered = Object.keys(answers).length;
+	const total = state.questions.length;
+	const warningSoon = isTimed && !overtime && remaining < 10 * 60_000;
+
+	return (
+		<div className="min-h-screen bg-ink-50 dark:bg-ink-900 pb-32">
+			{/* 計時列。**停靠點是 `--chrome-top`,不是 0**(#139)——
+          這一頁在 `<main>` 裡跟著 window 捲,而 app header 是 `fixed top-0` 且
+          不透明,所以 `sticky top-0` 會讓它停在 header **底下**(z-10 vs z-30)。
+          量出來:桌機捲動後整條看不見,手機只露出下緣 20px —— 也就是考試中往下捲
+          就看不到剩餘時間與交卷按鈕,而捲回頂端又會出現,像是隨機故障。
+
+          吃 `--chrome-top` 而不是 `--header-h`:那是「貼在 header 底下」這一類的
+          統一契約(見 styles.css)。`/exam*` 目前不自動收合,兩者等值;哪天改了
+          opt-out 清單,這裡會自己跟上。 */}
+			<header className="chrome-follow sticky top-[var(--chrome-top)] z-10 bg-white dark:bg-ink-800 border-b border-ink-200 dark:border-ink-700 px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+				<div className="text-sm flex items-center gap-3 flex-wrap">
+					{isCustom && (
+						<>
+							<span className="text-ink-700 dark:text-ink-200">自訂測驗</span>
+							<span className="text-ink-400 dark:text-ink-500">·</span>
+						</>
+					)}
+					{/* 不計時:碼表往上跑,不做紅色告警。 */}
+					<span
+						className={
+							"font-mono " +
+							(overtime
+								? "text-rose-700"
+								: warningSoon
+									? "text-amber-700"
+									: "text-ink-900 dark:text-ink-100")
+						}
+						title={isPaused ? "已暫停" : isTimed ? "倒數中" : "計時中(不倒數)"}
+					>
+						{!isTimed
+							? fmt(live)
+							: overtime
+								? "超時 " + fmt(live - state.cap_ms)
+								: fmt(remaining)}
+					</span>
+					{!isTimed && (
+						<span className="text-xs text-ink-500 dark:text-ink-400">
+							不計時
+						</span>
+					)}
+					<span className="text-ink-400 dark:text-ink-500">·</span>
+					<span className="text-ink-600 dark:text-ink-300">
+						{answered}/{total} 題已答
+					</span>
+					{/* ⚠️ 這裡曾經有一個「暫停中」badge,已移除。暫停時主畫面**整個**換成
+					    「已暫停作答」面板(底下的 `{isPaused && ...}`,只要暫停就一定在),
+					    工具列也已經變成「繼續」鈕,計時器的 title 還寫著「已暫停」——
+					    同一個狀態講四次。要加回來之前,先想清楚它比那個面板多說了什麼。 */}
+				</div>
+				<div className="flex items-center gap-2">
+					{isPaused ? (
+						<button
+							onClick={resume}
+							disabled={busy}
+							className="inline-flex items-center gap-1 text-accent hover:text-accent-dark px-3 py-1.5 rounded text-sm disabled:opacity-40"
+						>
+							<Play size={14} /> 繼續
+						</button>
+					) : (
+						<button
+							onClick={pause}
+							disabled={busy}
+							className="inline-flex items-center gap-1 text-ink-600 dark:text-ink-300 hover:text-accent px-3 py-1.5 rounded text-sm disabled:opacity-40"
+						>
+							<Pause size={14} /> 暫停
+						</button>
+					)}
+					<button
+						onClick={askSubmit}
+						disabled={submitting}
+						className="bg-accent hover:bg-accent-dark text-white px-4 py-1.5 rounded text-sm font-medium disabled:opacity-40"
+					>
+						{submitting ? "交卷中…" : "交卷"}
+					</button>
+				</div>
+			</header>
+
+			{warningSoon && !isPaused && (
+				<div className="bg-amber-50 dark:bg-amber-900/30 border-b border-amber-200 dark:border-amber-700 px-4 py-2 text-sm text-amber-800 dark:text-amber-200 inline-flex items-center gap-2 w-full">
+					<AlertTriangle size={14} /> 剩下不到 10 分鐘,記得交卷。
+				</div>
+			)}
+
+			{isPaused && (
+				<div className="bg-ink-50 dark:bg-ink-900 border-b border-ink-200 dark:border-ink-700">
+					<div className="max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 py-8 text-center">
+						<Pause
+							className="mx-auto text-ink-400 dark:text-ink-500"
+							size={48}
+							strokeWidth={1.5}
+						/>
+						<h2 className="font-serif text-xl text-ink-800 dark:text-ink-200 mt-3">
+							已暫停作答
+						</h2>
+						<p className="text-sm text-ink-500 dark:text-ink-400 mt-1">
+							{isTimed ? "倒數計時已停止。" : "計時已暫停。"}
+							隨時點「繼續」恢復。
+						</p>
+						<button
+							onClick={resume}
+							disabled={busy}
+							className="mt-4 inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-5 py-2 rounded font-medium disabled:opacity-40"
+						>
+							<Play size={16} /> 繼續作答
+						</button>
+					</div>
+				</div>
+			)}
+
+			{/* Current question */}
+			{!isPaused && (
+				<main className="max-w-3xl mx-auto px-4 sm:px-6 py-6">
+					<div className="bg-white dark:bg-ink-800 border border-ink-200 dark:border-ink-700 rounded-lg p-5 sm:p-7 shadow-paper">
+						<div className="flex items-center justify-between mb-3 gap-3">
+							<div className="text-sm text-ink-500 dark:text-ink-400">
+								{isCustom ? (
+									<>
+										第 {activeIdx + 1} / {total} 題
+										<span className="font-mono ml-2 text-ink-400 dark:text-ink-500">
+											{q.year}-{String(q.number).padStart(3, "0")}
+										</span>
+									</>
+								) : (
+									<>
+										第 {q.number} 題 / {total}
+									</>
+								)}
+							</div>
+							<button
+								onClick={() => toggleMark(q.id)}
+								className={
+									"inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-medium border transition " +
+									(marked.has(q.id)
+										? "bg-amber-100 dark:bg-amber-900/30 border-amber-400 text-amber-800 dark:text-amber-200"
+										: "border-ink-200 dark:border-ink-700 text-ink-500 dark:text-ink-400 hover:border-amber-400 hover:text-amber-700")
+								}
+								aria-pressed={marked.has(q.id)}
+								title={marked.has(q.id) ? "取消標記" : "標記待回頭檢查"}
+							>
+								<Flag
+									size={13}
+									className={marked.has(q.id) ? "fill-amber-500" : ""}
+								/>
+								{marked.has(q.id) ? "已標記" : "標記"}
+							</button>
+						</div>
+						<p className="font-serif text-lg sm:text-xl leading-relaxed text-ink-900 dark:text-ink-100 whitespace-pre-wrap">
+							{/* 否定詞標紅加粗(#149)。模擬考尤其需要 —— 一題一分鐘,
+                  最容易發生的誤答就是把「何者錯誤」讀成「何者正確」。 */}
+							<StemText text={q.stem} />
+						</p>
+						<ul className="mt-6 space-y-2.5">
+							{(["A", "B", "C", "D", "E"] as const)
+								.filter((L) => q.options[L])
+								.map((L) => {
+									const selected = answers[q.id] === L;
+									const locked = isTutor && revealed.has(q.id);
+									return (
+										<li
+											key={L}
+											onClick={() => choose(L)}
+											className={`flex gap-3 items-start p-3 rounded border transition ${
+												locked ? "cursor-default" : "cursor-pointer"
+											} ${
+												selected
+													? "border-accent bg-accent/5"
+													: locked
+														? "border-ink-200 dark:border-ink-700 opacity-60"
+														: "border-ink-200 dark:border-ink-700 hover:border-ink-400 hover:bg-ink-50 dark:hover:bg-ink-700/50"
+											}`}
+										>
+											<span className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-current text-sm font-semibold shrink-0">
+												{L}
+											</span>
+											{/* min-w-0 + break-words:同 QuestionCard —— 長基因命名
+                          不斷行時會撐破選項的框。 */}
+											<span className="min-w-0 break-words leading-relaxed text-ink-800 dark:text-ink-200">
+												{q.options[L]}
+											</span>
+										</li>
+									);
+								})}
+						</ul>
+
+						{/* 教學模式:只有在答案送出後才 mount(元件內會抓含正解的
+                /api/questions/:id,提前 mount 等於提前洩題)。 */}
+						{isTutor && revealed.has(q.id) && answers[q.id] && (
+							<TutorReveal questionId={q.id} chosen={answers[q.id]} />
+						)}
+					</div>
+
+					<div className="mt-5 flex gap-2 justify-between items-center">
+						<button
+							onClick={() => setActiveIdx((i) => Math.max(0, i - 1))}
+							disabled={activeIdx === 0}
+							className="inline-flex items-center gap-1 px-4 py-2 text-sm text-ink-600 dark:text-ink-300 disabled:opacity-30"
+						>
+							<ChevronLeft size={14} /> 上一題
+						</button>
+						{/* 本題已用時間。**跟送進 attempts 的 elapsed_ms 是同一個來源**
+						    (timer.current + read()),不是另外算一份 —— 分開算的話,畫面上
+						    的數字會跟成績頁的「用時」對不起來,而那種不一致沒有人會想到要
+						    回報。
+						    取樣靠上面那個每秒跳一次的 `now` state;暫停時 tick 會停,分頁
+						    隱藏時 timer 自己會停,所以數字跟著凍住 —— 那正是要的(切出去查
+						    資料不該算進思考時間)。 */}
+						<span
+							data-testid="question-timer"
+							title="本題已用時間。切到別的分頁或暫停時不累計,換題歸零。僅供參考,不影響計分。"
+							className="tabular-nums text-xs text-ink-400 dark:text-ink-500 select-none"
+						>
+							本題 {(() => {
+								const r = read(timer.current, now);
+								return formatElapsed(r.elapsedMs, r.outlier);
+							})()}
+						</span>
+						<button
+							onClick={() => setActiveIdx((i) => Math.min(total - 1, i + 1))}
+							disabled={activeIdx === total - 1}
+							className="inline-flex items-center gap-1 px-4 py-2 text-sm text-ink-600 dark:text-ink-300 disabled:opacity-30"
+						>
+							下一題 <ChevronRight size={14} />
+						</button>
+					</div>
+
+					{/* Question navigator grid */}
+					<details className="mt-8 bg-white dark:bg-ink-800 border border-ink-200 dark:border-ink-700 rounded-lg">
+						<summary className="cursor-pointer px-4 py-3 text-sm font-medium text-ink-700 dark:text-ink-300 flex items-center gap-3 flex-wrap">
+							<span>
+								題號跳轉 ({answered}/{total})
+							</span>
+							{marked.size > 0 && (
+								<span className="inline-flex items-center gap-1 text-xs text-amber-700 dark:text-amber-300">
+									<Flag size={12} className="fill-amber-500" /> {marked.size}{" "}
+									題已標記
+								</span>
+							)}
+						</summary>
+						<div className="grid grid-cols-10 gap-1.5 p-3">
+							{state.questions.map((qq, i) => {
+								const a = answers[qq.id];
+								const m = marked.has(qq.id);
+								return (
+									<button
+										key={qq.id}
+										onClick={() => setActiveIdx(i)}
+										// 電子紙:四種狀態原本全靠色相,1-bit 下會塌成兩種。拆成三個
+										// **正交**維度就不會互相蓋掉 ——
+										//   填充(黑/白)  = 答了沒
+										//   外框 outline = 是不是當前這題(畫在框外,黑白填充都疊得上)
+										//   虛線邊       = 有沒有標記(再加上原本就有的 Flag 圖示)
+										className={`relative aspect-square text-xs font-mono rounded border transition ${
+											i === activeIdx
+												? "border-accent bg-accent text-white eink:outline eink:outline-2 eink:outline-offset-2 eink:outline-black"
+												: m
+													? a
+														? "border-amber-500 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-200 eink-invert eink:border-2 eink:border-dashed"
+														: "border-amber-500 bg-amber-50 dark:bg-amber-900/30 text-amber-900 dark:text-amber-200 eink:border-2 eink:border-dashed eink:border-black"
+													: a
+														? "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-200 eink-invert"
+														: "border-ink-200 dark:border-ink-700 text-ink-500 dark:text-ink-400 hover:border-ink-400"
+										}`}
+									>
+										{/* 自訂測驗跨年份時 number 會重複,格子用卷內序號。 */}
+										{isCustom ? i + 1 : qq.number}
+										{m && (
+											<Flag
+												size={9}
+												className={
+													"absolute top-0.5 right-0.5 fill-amber-500 " +
+													(i === activeIdx ? "text-white" : "text-amber-600")
+												}
+											/>
+										)}
+									</button>
+								);
+							})}
+						</div>
+					</details>
+				</main>
+			)}
+			{confirmStage !== 0 && (
+				<SubmitExamDialog
+					stage={confirmStage}
+					answered={answered}
+					total={total}
+					unanswered={unansweredRefs()}
+					marked={refsOf((qq) => marked.has(qq.id))}
+					submitting={submitting}
+					onJump={(i) => {
+						setConfirmStage(0);
+						setActiveIdx(i);
+					}}
+					onAdvance={() => setConfirmStage(2)}
+					onBack={() => setConfirmStage(1)}
+					onConfirm={() => void submit()}
+					onCancel={() => setConfirmStage(0)}
+					gamepad={padConnected}
+				/>
+			)}
+			<GamepadFab hints={EXAM_HINTS} />
+		</div>
+	);
+}
