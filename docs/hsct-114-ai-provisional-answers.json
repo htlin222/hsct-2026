@@ -1,0 +1,355 @@
+{
+ "note": "114 年官方 PDF 無答案欄;這些答案由 AI subagent 依 The EBMT Handbook 2024 推定(2026-10-08),已匯入 questions.answer 並種成共筆詳解,標籤 AI暫定。人工核對後請用站上「挑戰答案」流程更正,會留 answer_history。",
+ "answers": [
+  {
+   "number": 1,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "NK 細胞屬於**先天性（innate）**免疫系統，不是 adaptive —— 手冊原文「Natural killer (NK) cells belong to the innate immune system」，而其細胞毒性確實由 KIR 等 germ-line encoded 抑制/活化受體平衡決定（後半句對，前半句錯）。A（CD8 認細胞內胜肽、CD4 認細胞外病原胜肽）、B（Type I iNKT 認 CD1d 呈現的脂質；早期 iNKT 重建與較低 GVHD 相關）、D（MAIT 富含於黏膜，重建與腸道菌相多樣性正相關）三者皆與手冊逐字相符。",
+   "ebmt_ref": "Ch8 Biological Properties of Cells Other Than HSCs, PDF p101–103（NK 段在 p103）"
+  },
+  {
+   "number": 2,
+   "answer": "D",
+   "confidence": "high",
+   "rationale_md": "手冊明確寫 haploidentical donor 一般在 12 個 HLA alleles 中有 6 個不合，但「偶然在 unshared haplotype 上多相合 1 個以上 alleles」的這種 less-than-haploidentical donor **至今找不到任何臨床優勢**（Lorentino 2017），故 D 後半句為非。A 正確（DRB1–DQB1 強 LD，8/8 通常即 10/10）；B 正確（permissive DPB1 mismatch 與較低復發率相關，Ruggeri 2023 大型回溯研究已證實）；C 正確（PTCy 使 UD 單一或多重 HLA mismatch 的臨床風險大幅下降）。",
+   "ebmt_ref": "Ch9 Histocompatibility, PDF p111–113；Ch12 Donor Selection, PDF p144–145"
+  },
+  {
+   "number": 3,
+   "answer": "A",
+   "confidence": "high",
+   "rationale_md": "Table 10.1 的成人 non-myeloablative 設定是以 ALC 調整 ATG（Thymoglobuline），目標移植後 AUC 為 **60–90 AU/mL**（週邊血動員幹細胞），不是 20–30；AUC <20 是兒童臍帶血與 ex vivo T-cell depletion 的目標值，故 A 把族群與數字對錯了。B 正確（BSA-based fludarabine 暴露量 10–66 mg*h/L 高度變異，>25 mg*h/L 者免疫重建延遲、病毒再活化與 NRM 上升）；C 正確（PT-Cy 抑制 alloreactive CD4+ effector T 增生並優先回復 Treg）；D 正確（Massoud 2022：ATG 組 CD8+、NK、NKT、γδT 較快，PT-Cy 組 CD4+ T 與 B 細胞較快）。",
+   "ebmt_ref": "Ch10 Mastering Immune Reconstitution, Table 10.1, PDF p119–120"
+  },
+  {
+   "number": 4,
+   "answer": "A",
+   "confidence": "high",
+   "rationale_md": "捐贈者選擇的首要變項是 donor–recipient 組織相容性：手冊要求 HLA-A/B/C/DRB1（歐洲常加 DQB1）以 **high-resolution** 比對，每多一個 A/B/C/DRB1 mismatch 死亡風險約增 10%。ABO 血型不合（B）只需調整輸血與紅血球去除，不影響存活；CMV（C）、HBV（D）血清狀態與性別（E）屬 non-HLA 因素，手冊明言除「捐贈者年齡」外，捐贈者性別、血型、CMV 狀態皆未與結果有確定關聯，重要性遠低於 HLA。",
+   "ebmt_ref": "Ch12 Donor Selection, PDF p143–145；Ch9 §9.3.6, PDF p113"
+  },
+  {
+   "number": 5,
+   "answer": "D",
+   "confidence": "high",
+   "rationale_md": "最初由 Baltimore（Johns Hopkins）團隊設計的 PTCy 半相合平台用的是 **unmanipulated haplo 骨髓（BM）**（Flu/Cy/TBI 2 Gy + day +3/+4 高劑量 Cy，Luznik 2008）；改用 G-PB（Bashey 2017）是後來的變型，故 D 為非。A、B、C 皆對（SCTCG meta：嗜中性球 14 vs 21 天、血小板 14 vs 22 天；慢性 GVHD 73% vs 56%；extensive 51% vs 35%）。E 亦對 —— 手冊 Ch64 開頭即寫「UCBT activity has sharply decreased in favor of haplo-HCT using posttransplant cyclophosphamide」。",
+   "ebmt_ref": "Ch65 Haploidentical HCT, PDF p576–577（Fig 65.2 Baltimore protocol）；Ch14 Selection of Stem Cell Source, PDF p167–170；Ch64, PDF p568"
+  },
+  {
+   "number": 6,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "手冊引 Bacigalupo 2009：**單次 TBI ≥5 Gy 或分次 TBI ≥8 Gy 即算 MAC**，故 Cy 120 mg/kg + TBI 8 Gy 是 myeloablative。A（Cy 200 mg/kg + ATG）是再生不良性貧血用的非骨髓摧毀性方案；B、E（Flu 150 + iv Bu 6.4 mg/kg 或 po Bu 8 mg/kg，即 Flu/Bu2 兩天劑量）屬 RIC；D（Cy 29 mg/kg + Bu 6.4 mg/kg）劑量更低，亦非 MAC。註：B 選項單位寫成 mg/m2 應為題目誤植。",
+   "ebmt_ref": "Ch13 Conditioning §13.2, PDF p158"
+  },
+  {
+   "number": 7,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "手冊：TBI 在 HCT 有**雙重目的** —— 殺滅惡性細胞（並可達 CNS、睪丸等化療難及之 sanctuary）以及提供免疫抑制以利 engraftment，正是 C。A 錯：TBI 仍是 MAC 的主要成分、成人 ALL 多數中心的首選。B 錯：它提供的是全身均勻劑量，並非「選擇性」針對 CNS 白血病細胞。D 錯：移植後仍需 CNI 等免疫抑制劑。E 錯：經典搭配是 Cy/TBI（兒童 ALL 為 TBI/VP16），不是 fludarabine + etoposide。",
+   "ebmt_ref": "Ch13 Conditioning §13.2, PDF p158"
+  },
+  {
+   "number": 8,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "手冊定義：poor mobilizer 為「採集到 <2 × 10⁶ CD34+/kg」或「週邊血 CD34+ 動員 **<20 cells/µL**」；且 leukapheresis 的啟動門檻正是 PB CD34+ >20/µL（Mohty 2014），<20/µL 即應考慮 plerixafor。故 C 最符合。A、B 的 10/µL 與 15/µL 搭配固定天數並非手冊定義（<10/µL 是「明確該用 plerixafor」的更低門檻，10–20/µL 為灰色地帶）；D 的總白血球數不是動員品質指標。",
+   "ebmt_ref": "Ch16 Mobilization and Collection of HSC §16.5–16.6, PDF p183–184；採集啟動門檻見 p182"
+  },
+  {
+   "number": 9,
+   "answer": "C",
+   "confidence": "medium",
+   "rationale_md": "冷凍保存的經典標準是最終 **10% (v/v) DMSO**（控制降溫 1–2 °C/min、氣相液態氮 ≤−140 °C 保存），也是 auto-HSCT 產品最常用的濃度。分歧點要誠實講：手冊的敘述其實是區間「The final product includes **5–10%** DMSO as a cryoprotectant」，部分中心為降低 DMSO 毒性採 5%；但單選題下 10% 是唯一能代表「standard」的選項，2.5% 與 20% 皆不被使用（20% 細胞毒性過高）。",
+   "ebmt_ref": "Ch20 Processing, Cryopreserving, and Controlling the Quality of HSC, PDF p207–208（Key Points）"
+  },
+  {
+   "number": 10,
+   "answer": "B",
+   "confidence": "low",
+   "rationale_md": "手冊未涵蓋分子層級藥理，只寫 plerixafor（AMD3100，bicyclam）可逆阻斷 CXCR4、抑制 SDF-1/CXCL12 結合。依受體藥理學文獻，AMD3100 並非「乾淨」的中性拮抗劑：它阻斷 G-protein（Gαi/鈣流、趨化）訊號，卻仍能部分徵召 β-arrestin，屬 weak partial / biased agonist（Zhang 2002 已證其為 weak partial agonist；對 ACKR3/CXCR7 更呈 allosteric agonist），故 A「unbiased、兩條路徑全阻斷」為非、B 最貼近。C 明確錯誤：皮下給藥後 CD34+ 高峰在約 6–11 小時（臨床上在採集前 11 小時給藥），不是 2–4 小時。**分歧點**：D 是教科書式說法，若出題者採「競爭性抑制 CXCL12 結合」的簡化定義，答案會是 D；但嚴格說 AMD3100 結合在 TM 口袋的 Asp171/Asp262 次口袋，與 CXCL12 的主要辨識位（N 端／ECL2）僅部分重疊，並非「same binding site」，故我選 B。",
+   "ebmt_ref": "手冊未涵蓋（Ch16, PDF p183 僅述「reversibly blocks CXCR-4, thereby inhibiting binding with its ligand SDF-1」）"
+  },
+  {
+   "number": 11,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "手冊把 aGvHD 致病機制分成三期:(1) conditioning 造成初始組織損傷 → 宿主 APC 被 PAMPs/DAMPs 活化(選項 A、D 屬此期);(2) 供者 T 細胞活化與增殖(afferent phase,選項 B);(3) effector phase:細胞毒性細胞造成組織損傷並釋放 IL-1、TNF-α 導致組織壞死(efferent phase)。只有 C 是效應期的特徵。",
+   "ebmt_ref": "Ch43 Acute GVHD §43.2 Definition, PDF p398"
+  },
+  {
+   "number": 12,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "依 Harris 2016 / MAGIC 整體分級:Grade I = stage 1–2 皮膚且無肝/GI;Grade II = stage 3 皮膚和/或 stage 1 肝和/或 stage 1 上/下 GI;Grade III = stage 2–3 肝和/或 stage 2–3 下 GI(皮膚 stage 0–3、上 GI stage 0–1);Grade IV = stage 4 皮膚、肝或下 GI。A 為 Grade I;B(stage 2 皮膚 + stage 1 肝)為 Grade II;C(stage 3 肝 + stage 1 上 GI)正好落在 Grade III;D(stage 4 皮膚)是 Grade IV。",
+   "ebmt_ref": "Ch43 Acute GVHD §43.4 Table 43.4 與 overall clinical grade, PDF p400"
+  },
+  {
+   "number": 13,
+   "answer": "B",
+   "confidence": "high",
+   "rationale_md": "手冊 cGVHD 支持性治療段落明寫:Ursodeoxycholic acid 可降低肝臟 GVHD 並改善存活(Ruutu et al. 2014 隨機試驗長期追蹤)。IVIG 只建議用於 IgG <400 mg/dL 或反覆感染者(補充性,非改善存活);活性疫苗在 cGVHD 病人應避免;cGVHD 常需 3–6 個月以上的長期免疫抑制,早期停藥不是支持性治療。",
+   "ebmt_ref": "Ch44 Chronic GVHD §44.6 Treatment / supportive care, PDF p411(引用 Ruutu 2014,p421)"
+  },
+  {
+   "number": 14,
+   "answer": "E",
+   "confidence": "high",
+   "rationale_md": "依手冊 ES 三套診斷標準比較表:Maiolino (2003) 需 1 Major + 1 minor,其 Major 只有 noninfectious fever;skin rash >25% BSA 在 Maiolino 是 **minor**(在 Spitzer 與 Grant 才是 Major),故 E 錯。其餘皆正確:治療第一步「Stop G-CSF immediately」(B);延遲治療可導致 MOF(A);ES 可見於 auto 與 allo-HCT(發生率 7–59% vs 10–25%)(C);allo-HCT 懷疑 ES 時建議用較嚴格的 Spitzer 標準以免與早期 aGVHD 混淆(D)。",
+   "ebmt_ref": "Ch42 Early Complications of Endothelial Origin §42.4 Engraftment Syndrome 表格, PDF p388–389"
+  },
+  {
+   "number": 15,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "成人 EBMT 標準 (Mohty 2016/2023) 的 **clinical SOS/VOD** = bilirubin ≥2 mg/dL + 以下三項中兩項:painful hepatomegaly、weight gain >5%、ascites。超音波/彈性成像只出現在新加的 **probable** 類別(五項中任兩項)與 late-onset 的佐證,不在 clinical 標準的三項裡,故 C 是例外。",
+   "ebmt_ref": "Ch49 Hepatic Complications §49.2 SOS/VOD diagnosis, Table 49.2, PDF p451"
+  },
+  {
+   "number": 16,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "手冊原文:「Following BU, approximately 50% will be azoospermic, while after CY alone recovery of spermatogenesis is more frequent」—— 選項 C 把 busulfan 與 cyclophosphamide 對調,故為 INCORRECT。A(精子生成常受損但 testosterone 因 Leydig cell 相對抗藥而多正常)、B(MAC TBI 後多數男性無精症)、D(性功能障礙 allo 與 auto 都會)、E(性功能障礙是最常被回報的併發症之一)皆為手冊原句。",
+   "ebmt_ref": "Ch56 Endocrine Disorders, Fertility, and Sexual Health §56.2.3 與 §56.3.1, PDF p508–509、p506"
+  },
+  {
+   "number": 17,
+   "answer": "A",
+   "confidence": "high",
+   "rationale_md": "STR-PCR 嵌合體分析的偵測極限約 1–5%(10⁻²),手冊明寫需改用 qPCR/dPCR/NGS 才能把敏感度推到 STR 極限以下(microchimerism);而且 chimerism 量的是供/受者細胞比例,不是白血病細胞,是最不敏感的殘留病監測。相較之下 MFC 的穩定偵測極限 1E-04、IG/TCR qPCR 約 10⁻⁴–10⁻⁵、fusion gene RT-qPCR 可達 1E-06、NGS 約 10⁻⁶。",
+   "ebmt_ref": "Ch21 Documentation of Engraftment and Chimerism §21.3, PDF p211;Ch57 MRD in ALL and AML §57.1.4–57.1.6, PDF p517"
+  },
+  {
+   "number": 18,
+   "answer": "B",
+   "confidence": "high",
+   "rationale_md": "手冊:兩個前瞻隨機試驗(Burchert 2020 SORMAIN、Xuan 2020)比較 sorafenib 與安慰劑作為 allo-HCT 後維持治療,皆顯示 EFS/RFS 與 OS 顯著獲益,表 58 列為 Beneficial,故 B 正確。A 錯:midostaurin 只有 phase II 顯示低復發率,隨機試驗(Maziarz 2018)未能證明存活獲益。C 錯:quizartinib 在移植後維持仍在隨機試驗中(QuANTUM-First 是前線整體方案,非移植後維持的獨立證據)。D 錯:手冊表列 gilteritinib 維持「No benefit」(MORPHO 主要終點 RFS 未達標;MRD+ 次族群用的是 NGS-based assay,非 allele-specific PCR)。E 錯:回溯資料顯示 sorafenib + DLI 優於 DLI alone。",
+   "ebmt_ref": "Ch58 Prevention and Treatment of Relapse by Drugs §58.3 TKI 與 Table 58.1, PDF p526、p528"
+  },
+  {
+   "number": 19,
+   "answer": "E",
+   "confidence": "medium",
+   "rationale_md": "逐項對照手冊:checkpoint inhibitors 在 allo 後只有 phase I/II(ipilimumab ORR <30%,PD-1 在 HL 有效但 GVHD 高),無 phase 3;oral azacitidine (CC-486) 手冊寫「currently investigated in prospective randomized trials」,且 Oran 2020 的 HMA 預防性隨機試驗 EFS/OS 無益(表列 Prophylactic: No benefit);IMiDs 在 allo 後「remains to be defined」因 GVHD 風險;ixazomib 在 MM allo 後是 phase II(Bashir 2023, BMT CTN 1302)且無顯著獲益。四者都沒有 phase 3 證據,故選 E。分歧點:題幹若廣義地問「任何」allo 後維持(例如 sorafenib)答案會不同,但選項裡沒有,因此 E。",
+   "ebmt_ref": "Ch58 §58.4–58.7 與 Table 58.1, PDF p526–528"
+  },
+  {
+   "number": 20,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "手冊 Key Points:在沒有臨床或微生物學證實感染時,經驗性抗生素可在退燒 72 小時且臨床恢復後安全停用,**irrespective of the neutrophil count**(ECIL 建議;Aguilar-Guisado 2017 隨機試驗 157 例證實);選項 C 後半段「嗜中性球未恢復就不應停藥」是傳統做法,已被 IDSA/ECIL 推翻,故 C 為 WRONG。A(兩套血培養含 CVC 一套、評估嚴重感染與抗藥菌風險)、B(嚴重表現且有抗藥菌風險者採 de-escalation 先廣後窄)、D(惡化或持續發燒必須廣泛檢查)皆為手冊原意。",
+   "ebmt_ref": "Ch35 Neutropenic Fever §35.3.1–35.3.2 與 Key Points, PDF p323–325"
+  },
+  {
+   "number": 21,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "ECIL 建議:GvHD 期 posaconazole 是 mold-active azole 預防首選(A-I);micafungin 在低黴菌發生率中心 B-I,故「mold-active azoles 有效、echinocandins probably 有效」為正確敘述。A 錯:手冊 Key Points 明言大多數 IFD 是在 engraftment **之後**、急慢性 GvHD 期間診斷。B 錯:mucormycosis 第一線是 lipid-based amphotericin B(5–10 mg/kg),voriconazole 對 Mucorales 無效。D 錯:PCP 預防(TMP-SMX)應從 engraftment 給到 ≥6 個月且免疫抑制持續時續給,不是 3 個月停。",
+   "ebmt_ref": "Ch37 Invasive Fungal Diseases, PDF p337(epidemiology)、p340–341(prophylaxis/PCP)、p342–343(mucormycosis treatment, Key Points)"
+  },
+  {
+   "number": 22,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "Maribavir 在手冊中的定位是 **resistant/refractory CMV 感染或疾病的替代治療**(RCT 顯示較其他藥有效且毒性低),不是預防用藥,故 C 錯。A 正確:letermovir 3 個月預防降低 CMV(+) 病人 clinically significant CMV infection 與全因死亡,高風險者可延長。B 正確:CMV retinitis 是唯一可憑眼科特徵性所見診斷的 end-organ disease。D 正確:pre-emptive 治療通常至少 2 週,必要時延長。",
+   "ebmt_ref": "Ch38 Viral Infections, PDF p346–347(38.1.1.3 Prophylaxis、38.1.1.4 Treatment)"
+  },
+  {
+   "number": 23,
+   "answer": "E",
+   "confidence": "medium",
+   "rationale_md": "A 正確:手冊 Key Points「PMF/post-ET/PV MF **只能靠 allo-HCT 治癒**」。B 正確:ruxolitinib 可改善體質症狀、縮小脾臟,ELN/EBMT 建議移植前至少用 2 個月並逐步減量避免 rebound。D 正確:手冊引用 Kröger 2021,對 ruxolitinib 有反應時就移植的結果優於等到失敗才移植。C 手冊未直接以此句陳述,但 Ch41 Table 41.1 列出 extensive marrow fibrosis、splenomegaly 為 graft failure 危險因子,MF 的 graft failure/poor graft function 確實較常見,且臨床上偏好 PBSC、較高 CD34+ 劑量,屬一般共識。四句皆對 → E。分歧點:若出題者認為 C 的「higher CD34+ dose usually recommended」沒有明確證據支持,答案會是 C;但 A/B/D 皆為手冊原文,E 較合理。",
+   "ebmt_ref": "Ch77 Myeloproliferative Neoplasms, PDF p686–687(77.1.6 JAK inhibition、Key Points);Ch41 Graft Failure, PDF p379 Table 41.1"
+  },
+  {
+   "number": 24,
+   "answer": "D",
+   "confidence": "high",
+   "rationale_md": "D 錯:移植後復發的 MDS,手冊引 SFGM-TC 147 例資料,**只有接受 DLI 或第二次移植者能達長期存活**(32% vs 化療/HMA 單獨 6%);AZA 單用對低芽球、晚期復發者較有效,對 blast >30% 的形態學復發不足以 rescue。A 正確:RIC 把 allo-HCT 延伸到老年人(手冊 2nd ed 寫 eighth decade,說 seventh decade 仍屬正確方向)。B 正確:國際指引建議 marrow blast >10% 者移植前先做 cytoreduction(HMA 或化療),證據等級低。C 正確:對 pregraft treatment 無反應與移植後預後差相關。",
+   "ebmt_ref": "Ch74 MDS, PDF p663–665(74.3 Treatment prior to HCT、74.4 Preparative regimen、74.7 Post-HCT treatment、Key Points)"
+  },
+  {
+   "number": 25,
+   "answer": "C",
+   "confidence": "medium",
+   "rationale_md": "C 錯:MAC 增加的是**早期**器官毒性(SOS、IPS、mucositis、HC)與早期 NRM;GVHD(尤其 cGVHD)、晚期感染、CMV 再活化在 MAC 與 RIC 間並無「MAC 較高」的證據,RIC 病人因年紀大、免疫重建慢,晚期感染/CMV 反而不低。A 正確:MAC 抗白血病效果較強(BMT-CTN 0901 RIC 復發率明顯較高)。B 正確:老年人從 RIC 獲益最大,NRM/TRM 較低。D 正確:急性移植併發症 MAC 較多。E 正確:手冊原文——primary refractory AML <50 歲建議 myeloablative regimen,除非有反對理由。手冊對 C 的敘述未直接涵蓋,依一般知識判斷。",
+   "ebmt_ref": "Ch70 AML in Adults, PDF p616(70.2.2 Primary refractory AML, conditioning);Ch13 Conditioning, PDF p160–161(RIC vs MAC);C 項手冊未直接涵蓋"
+  },
+  {
+   "number": 26,
+   "answer": "E",
+   "confidence": "high",
+   "rationale_md": "E 錯:進階期 cHL 第一次 CR 不建議 auto-HCT 鞏固(Ch89 indications 表:First complete remission → Generally not recommended);auto-HCT 是復發/難治 cHL 的標準,不是一線鞏固。A 正確:手冊原文「auto HCT in BL is feasible, but there is no documented advantage compared to standard combination chemotherapy」。B 正確:LBL 中 allo 相較 auto 有較高 TRM 但較低 relapse rate(Levine 2003)。C 正確:LBL CR1 用 auto-HCT 鞏固可能改善 RFS 但 OS 無差異(Sweetenham 2001)。D 正確:EBMT 資料 allo-HCT 可 rescue 超過三分之一 advanced/refractory CTCL。",
+   "ebmt_ref": "Ch88 Other B/T aggressive lymphomas, PDF p772–774(88.1.5、88.2.5–88.2.6、88.4.4);Ch89 Classical Hodgkin, PDF p780–782(auto-HCT indications 表)"
+  },
+  {
+   "number": 27,
+   "answer": "B",
+   "confidence": "high",
+   "rationale_md": "B 錯:手冊明言 auto-HCT 一般不建議作為 DLBCL 一線治療,**但**「could be considered in high-grade B cell lymphomas treated with R-CHOP-like regimens」及 CNS involvement 且 chemosensitive 者——B 把「可以考慮」寫成「不應考慮」。A 正確:手冊「We discourage auto-HCT for patients with refractory disease not responding to salvage therapy」。C 正確:86.7.5 原文「no data and no recommendation for consolidative therapy after auto-HCT」(CORAL 的 rituximab maintenance 無效)。D 正確:immune-privileged sites(CNS、睪丸、玻璃體視網膜)必須用能穿透 CNS 的化療。E 正確:allo-HCT 仍是 auto-HCT 或 CAR-T 後復發 LBCL 的治癒性選項。",
+   "ebmt_ref": "Ch86 Large B-Cell Lymphoma, PDF p759–762(86.5、86.7、86.7.5、86.9)"
+  },
+  {
+   "number": 28,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "手冊 86.7.3 列出前瞻性研究確認的 auto-HCT 不良預後因子:早期復發(induction 後 12 個月內,CORAL)、secondary age-adjusted IPI、poor performance status、復發時 ≥2 個 extranodal sites。性別(male gender)不在其中,故 C 為非。A、B、D、E 皆為手冊原文所列。",
+   "ebmt_ref": "Ch86 Large B-Cell Lymphoma, PDF p761(86.7.3 Prognostic Factors)"
+  },
+  {
+   "number": 29,
+   "answer": "B",
+   "confidence": "high",
+   "rationale_md": "B 錯:手冊說 6 cycles VTD(相較 3–4 cycles)反應較深,**但要權衡增加的副作用,特別是神經病變**——不是「similar side effects」。A 正確:含 thalidomide 或 bortezomib 的誘導在 AHCT 前後都優於 VAD(CR、CR+nCR、VGPR 率提升)。C 正確:Cassiopeia III 期比較 DARA-VTD vs VTD,加 daratumumab 結果為正。D 正確:IFM2009 最終分析顯示 VRD 誘導後 MRD 陰性者,不論有無 AHCT,OS 相似。",
+   "ebmt_ref": "Ch81 Multiple Myeloma, PDF p728–730(81.2 Optimal induction)"
+  },
+  {
+   "number": 30,
+   "answer": "D",
+   "confidence": "high",
+   "rationale_md": "D 錯:bortezomib 單用或併 IMiD 作維持,手冊明言「demonstrating improved **PFS, but not OS**」;神經病變與皮下注射是其限制。A 正確:EMN02/HO95 第二次隨機分組顯示 2 cycles VRD 鞏固 + lenalidomide 較單用 lenalidomide 維持顯著延長 PFS。B 正確:PFS 獲益見於多數預設亞組(ISS I/II、低風險細胞遺傳學、不論先前 VMP 或移植),但高風險細胞遺傳學無益。C 正確:CALGB/IFM/GIMEMA 三試驗 meta-analysis 顯示 lenalidomide 維持在所有亞組都改善 PFS(52.8 vs 23.5 個月),OS 亦改善。",
+   "ebmt_ref": "Ch81 Multiple Myeloma, PDF p730–731(81.4 Consolidation、81.5 Maintenance)"
+  },
+  {
+   "number": 31,
+   "answer": "B",
+   "confidence": "high",
+   "rationale_md": "手冊 Ch78 原文:「Transplantation in PNH should **not** be performed in case of thrombosis occurrence because of the high risk of toxicity」,B 把它反過來說「可考慮移植以降低 morbidity」,故為錯誤敘述。A(PNH 的骨髓衰竭治療比照 SAA,PNH clone 不改變 SAA 演算法)、C(補體抑制劑問世後 HCT 在 PNH 的角色有限)、D(PNH 為非惡性疾病,不需 GvL,應優先避免 GVHD)三句都是手冊逐字敘述。",
+   "ebmt_ref": "Ch78 Acquired BM Failure: SAA & PNH, §78.4 Treatment of PNH, PDF p699–700"
+  },
+  {
+   "number": 32,
+   "answer": "D",
+   "confidence": "medium",
+   "rationale_md": "手冊 Ch61(Mechanisms of Immune Resistance)只談 allo-HCT 後的 HLA loss / 微環境,未涵蓋 CAR-T 抗原逃脫;此題出自 EBMT/EHA CAR-T Handbook 的 resistance 章節。A:B-ALL 接受各種 CAR19 產品後 CD19 loss 可達約 40%,正確。B:MLL(KMT2A)重排 B-ALL 在 CD19 CAR-T 後 lineage switch 成 clonally related AML(Gardner 2016),正確。C:CD19 alternative splicing(Sotillo 2015)在 B-ALL 與 LBCL 皆有報告,正確。D 方向寫反:MM 復發病人常見的是血中 **soluble BCMA 上升**(sBCMA 可作為 decoy、干擾 CAR-T 持續作用),不是下降,故 D 為錯誤敘述。",
+   "ebmt_ref": "手冊未涵蓋(Ch61 p550–553 未談 CAR-T 抗原逃脫;出處為 EBMT/EHA CAR-T Handbook)"
+  },
+  {
+   "number": 33,
+   "answer": "B",
+   "confidence": "high",
+   "rationale_md": "手冊 Ch72 明寫:「Tisagenlecleucel is approved for children and younger adults up to 25 y.o. … **Brexucabtagene autoleucel is approved for patients ≥26 years old**」(FDA 2021 核准 brexu-cel 用於成人 R/R B-ALL;2024/11 又核准 obe-cel),故 B「2024 年止無任何 CD19 CAR-T 獲 FDA 核准用於成人 R/R B-ALL」為錯。A:tisa-cel 後 CR 期鞏固性 allo-HCT 在成人與較長存活相關,手冊亦建議「subsequent allo-HCT as consolidation should be considered in patients who have not had a previous HCT」。C:obe-cel(41BB-ζ、fast off-rate CD19 binder,FELIX 試驗)反應持久且 ≥G3 CRS/ICANS 少,正確。D:分次輸注(Day 0 給部分、數日後給其餘)以減少 CRS 有 Penn/UCL 試驗資料支持,正確。",
+   "ebmt_ref": "Ch72 ALL in Adults, §72.7 Second-Line Treatment, PDF p645–646"
+  },
+  {
+   "number": 34,
+   "answer": "D",
+   "confidence": "medium",
+   "rationale_md": "手冊 Ch86 僅概述 CAR-T 在 R/R LBCL 的地位,未討論 bridging 與預後因子;依 CAR-T 文獻(EBMT/EHA CAR-T Handbook、真實世界資料)判斷。A:對最後一線化療 refractory 是不良因子,低腫瘤量者影響較小,正確。B:高腫瘤負荷(SPD 或 TMTV)與較差 PFS 一致相關,但部分 LDH 升高者仍有持久反應,正確。C:Pola-BR 為已驗證的 bridging 之一,反應率不一,高強度 bridging 與早期復發相關,正確。D 錯:bridging 並**不**一致改善預後(需要 bridging 者本身疾病較兇、預後較差),而且資料顯示放射治療 bridging 的 PFS 並不劣於、甚至優於全身化療 bridging,「化療 bridging 的 PFS 較長」與實證相反。",
+   "ebmt_ref": "手冊未涵蓋(Ch86 Large B-Cell Lymphoma p758–766 未談 bridging;出處為 CAR-T 專論)"
+  },
+  {
+   "number": 35,
+   "answer": "A",
+   "confidence": "high",
+   "rationale_md": "A 正確:手冊 Ch87 原文「the refinement of dose-intensified approaches such as auto-HCT has contributed significantly to this development(預後改善)」。B 錯:HD-ARAC 的好處「could be confirmed in a prospective clinical trial(Hermine et al. 2016, MCL Younger)」。C 錯:EBMT 登錄研究中二次移植者**大多數**做的是 allo-HCT,第二次 auto 只佔 2%,且不建議。D 錯:MIPI 低風險病人「very unlikely that a consolidating auto-HCT further improves outcome」,應被質疑而非考慮。E 錯:「It seems also unlikely that TP53-mutated MCLs benefit from high-dose chemotherapy and auto-HCT」。",
+   "ebmt_ref": "Ch87 Mantle Cell Lymphoma, §87.2 Autologous HCT / §87.4 Allogeneic HCT, PDF p767–769"
+  },
+  {
+   "number": 36,
+   "answer": "E",
+   "confidence": "high",
+   "rationale_md": "四條皆為手冊 Ch9 非 HLA 免疫遺傳段落的直述。(1) 真:mHAgs 是 HLA-identical 移植中 T 細胞 alloreactivity 的主要標的,廣泛表現的 mHAg 同時造成 GVHD 與 GVL。(2) 真:「Educated NK cells … strongly reactive against cells missing that ligand. This missing-self reactivity is at the basis for the potent GVL effect … in particular haploidentical HCT」。(3) 真:「MICA and MICB are nonclassical MHC class I genes」,Key Points 列 MIC 為與 HCT 預後相關、可納入捐者評估的非 HLA 因子。(4) 真:「The SNP Val/Met at position 129 of MICA results in isoforms with high (Met) and low (Val) affinities for NKG2D … role in HCT outcome, including GVHD, relapse, and survival」。故 (1)(2)(3)(4) 全對。",
+   "ebmt_ref": "Ch9 Histocompatibility, §9.5 Non-HLA immunogenetic factors + Key Points, PDF p115"
+  },
+  {
+   "number": 37,
+   "answer": "A",
+   "confidence": "medium",
+   "rationale_md": "19 歲 Ph(−) B-ALL CR2 擬 allo-HCT。(2) 真:手冊 Ch72 建議表 Donor 排序「MSD > (MUD = MMUD = Haplo)」,HLA 全合優先。(1) 真(相對):同表將 haplo 列為可接受捐者,親屬半相合即可作為捐者(當然仍需 DSA 等評估,敘述較絕對,是分歧點)。(3) 真:同表「<45 years: TBI/CY; TBI/VP16 … TBI probably associated with lower relapse rates, cumulative 12–13 Gy」,年輕 ALL 標準為 TBI-based MAC。(4) 假:手冊 Ch49「An HBsAg(+) donor transmits HBV to the recipient in 22–44% of cases」,須對捐者抗病毒治療並對受者預防,HBsAg(+) 捐者只在別無選擇時勉強使用,不是「適合的」捐者;HBV DNA 測不到不改變 HBsAg(+) 的傳染風險評估。故 (1)(2)(3) → A。",
+   "ebmt_ref": "Ch72 ALL in Adults, Table 72.3 建議表, PDF p649;Ch49 Hepatic Complications §49.4.2 (c) HBsAg-positive donors, PDF p459"
+  },
+  {
+   "number": 38,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "(1)(2)(3) 皆為手冊 Ch43 §43.3 原文:「As aGvHD is a result of an alloimmune effect, the major risk for occurrence is the presence of HLA disparity and increasing degrees of HLA mismatching … Other important and consistent risk factors include older patient age, the use of female donors for male recipients」。(4) 假:傳統預防是 **CSA + MTX**(Storb 1986 的 gold standard),cyclophosphamide 不在傳統組合裡(PTCy 是近年 haplo 的作法,且不與 MTX 併用)。(5) 假:手冊 Ch26 明寫「the TAC/MTX regimen is currently considered as the American gold standard」,TAC/MTX 是標準方案。故 (1)(2)(3) → C。",
+   "ebmt_ref": "Ch43 Acute GVHD §43.3 Risk Factors, PDF p398;Ch26 GVHD Prophylaxis §26.2 CNI+MTX, PDF p243–244"
+  },
+  {
+   "number": 39,
+   "answer": "A",
+   "confidence": "medium",
+   "rationale_md": "手冊 Ch81:「fit patients up to age 70, and even 75 years old, receive AHCT」,>70 歲不是絕對禁忌但屬相對謹慎、常改 Mel140,(1) 算 relative caution 為真。(2) 真:「Renal impairment, per se, is not a contraindication … with the recommendation for the use of 140 mg/m2 of Melphalan」,eGFR<30 時 Mel200 需減量,為 Mel200 的相對禁忌。(3) 真:ECOG ≥3 為 auto-HCT 的一般禁忌(手冊列 performance status 為評估因子)。(4) 假:lenalidomide >6 cycles 影響的是 **幹細胞動員/採集**(應改用 G-CSF+plerixafor 或早採),與 Mel200 conditioning 的禁忌無關。故 (1)(2)(3) → A。分歧點:題目把「>70 歲」與「ECOG≥3」混為 Mel200 專屬禁忌,其實是整體移植適應性;但四選項中只有 A 同時排除 (4) 又包含 (2)。",
+   "ebmt_ref": "Ch81 Multiple Myeloma §81.3 AHCT eligibility / Key Points (MEL 200 standard), PDF p728–729, p734"
+  },
+  {
+   "number": 40,
+   "answer": "E",
+   "confidence": "high",
+   "rationale_md": "四條都是手冊 Ch44 §44.4.1 First-Line Therapy 的原文。(1) 真:「For moderate or severe cGVHD, systemic treatment with PRD or methylPRD at an initial dose of 1 mg/kg body weight/day should be used」。(2) 真:「The combination of steroids with a CNI (CSA or TAC) is particularly worth considering for severe cGVHD」。(3) 真:「Rituximab has been explored in the first-line treatment … in combination with steroids and CNI demonstrating an increased response rate(~75%)on the expense of increased late infections and delayed B-cell recovery」(Table 44.1,但無隨機資料)。(4) 真:「sirolimus may also be combined with prednisone showing identical response rates compared to CNI (Carpenter et al. 2018, BMT CTN 0801)」。故 (1)(2)(3)(4) → E。",
+   "ebmt_ref": "Ch44 Chronic GVHD §44.4.1 First-Line Therapy + Table 44.1, PDF p410"
+  },
+  {
+   "number": 41,
+   "answer": "E",
+   "confidence": "high",
+   "rationale_md": "四句都是手冊 Ch43 原文。(1) 真:allo-HCT 照護複雜,aGvHD 的特徵常難與 VOD/SOS、conditioning 毒性、藥物毒性與感染區分。(2) 真:手冊明言「因此必須以一個或多個受影響器官的 biopsy 建立診斷並確認特徵性組織病理」(Table 43.3)。(3) 真:GI aGvHD 的組織學特徵就是 “exploding crypts”(crypt 周邊個別上皮細胞壞死留下核/胞質碎片)。(4) 真:肝臟 aGvHD 最一致的組織學特徵是 small bile duct damage,常伴 cholestasis,在其他 HCT 併發症罕見。",
+   "ebmt_ref": "Ch43 Acute GVHD, PDF p399 (Table 43.2–43.3)"
+  },
+  {
+   "number": 42,
+   "answer": "A",
+   "confidence": "high",
+   "rationale_md": "(1) 真:手冊原句「defibrotide must be initiated promptly, based on severity criteria as soon as the diagnosis of SOS/VOD is confirmed, irrespective of diagnostic status (probable/clinical/proven)」。(2) 真:成人藥物性預防建議 ursodeoxycholic acid 自 conditioning 開始用到 day +90(Ruutu 2014)。(3) 真:Ch49.3 開頭原句「SOS/VOD in children differs in many aspects substantially from adult patients despite a similarity in the underlying pathophysiology」。(4) 假:mild SOS/VOD 採 supportive care + 密切監測嚴重度,惡化才啟動 defibrotide;只有 severe(及 moderate)建議早期 defibrotide。故 (1)(2)(3)。",
+   "ebmt_ref": "Ch49 Hepatic Complications §49.2.5 / §49.3.1, PDF p453"
+  },
+  {
+   "number": 43,
+   "answer": "C",
+   "confidence": "medium",
+   "rationale_md": "(1) 假:JAK2V617F 是胞內激酶點突變,flow cytometry 無法偵測突變細胞,此法不存在。(2) 真:STR-PCR 混合嵌合體是移植後追蹤復發的標準方法(手冊 Ch21 稱其為 chimerism gold standard;MF 復發常以 mixed chimerism 上升為先兆並以 DLI 介入)。(3) 真:約 90% MF 帶 JAK2/CALR/MPL driver mutation,手冊建議以高敏感度 qPCR/digital PCR 於周邊血監測分子 MRD;NGS 偵測 JAK2 亦屬分子法(雖敏感度略遜 qPCR/ddPCR)。(4) 假:骨髓纖維化消退(day+100 約 60%,day+180 約 90%)有預後意義,但纖維化本身變化慢、非敏感的復發偵測指標。分歧點:STR 敏感度僅約 1%,手冊 Ch21 說它不適合當 MRD marker,但在 MF 臨床實務仍是主要復發監測工具,故選 (2)(3)。",
+   "ebmt_ref": "Ch77 MPN §77.1.7, PDF p686–687; Ch21 Chimerism, PDF p211–212"
+  },
+  {
+   "number": 44,
+   "answer": "E",
+   "confidence": "medium",
+   "rationale_md": "手冊未涵蓋(EBMT Handbook 無 CAR-T 前置 washout 章節;本題內容出自 EBMT/EHA CAR-T Cell Handbook 的 pre-CAR-T / bridging 章)。(1) 真:影響 T 細胞功能的藥物 washout 通常取 5 個半衰期,緊急時可接受較短間隔(如 inotuzumab 後 2 週)。(2) 真:白血球分離術常見前提為 platelet >30,000/µL、ECOG <2、足夠的靜脈通路。(3) 真:bridging 主要目的是穩定疾病;縮小腫瘤可能降低 CRS 風險,但「減積可改善長期療效」尚無一致證據。(4) 真:高強度 bridging 可快速控制腫瘤,但常造成長期 cytopenia 與感染,使 lymphodepletion 複雜化。(5) 真:常見 washout 建議 bendamustine 約 12 週(3 個月)、fludarabine 約 4 週。五句皆合理 → E;信心中等,主要不確定在 (5) 的具體週數各指引略有差異。",
+   "ebmt_ref": "手冊未涵蓋(依 EBMT/EHA CAR-T Cell Handbook 2022 pre-CAR-T procedures / bridging therapy 章節)"
+  },
+  {
+   "number": 45,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "依手冊 Table 70.1(ELN 2022 風險分層的 CR1 post-remission 治療)。(1) 是:normal karyotype + FLT3-ITD 屬 intermediate risk(NPM1 不論),手冊建議 consider allo-HCT(MRD 陰性且 TRM 可接受)、MRD 陽性則 allo-HCT;一般考題共識 FLT3-ITD 在 CR1 有 allo-HCT 適應症。(2) 否:inv(16) CBF-AML 屬 favorable,MRD 陰性建議化療/auto-HCT,allo-HCT 不是適應症。(3) 是:complex karyotype 屬 adverse,不論 MRD 都建議 allo-HCT(MRD 陽性者一達 CR 即應移植)。(4) 否:NPM1 突變、FLT3-ITD 野生型、MRD 陰性屬 favorable,首選化療/auto-HCT。故 (1)(3)。",
+   "ebmt_ref": "Ch70 AML in Adults §70.1.4.1 Table 70.1 及 §70.2, PDF p614–618"
+  },
+  {
+   "number": 46,
+   "answer": "C",
+   "confidence": "high",
+   "rationale_md": "(1) 假:EBV-PTLD 也見於 auto-HCT(手冊風險表列 auto-HCT 為 low risk、無 TCD 者為 casuistic)及實體器官移植,並非只發生於 allo-HCT。(2) 真:大多數 EBV-DNA-emia 為低量、無症狀且自限,不需治療;手冊強調僅在「顯著 EBV-DNA-emia 且屬高風險」才給 preemptive rituximab,且無明確 threshold。(3) 真:手冊原句「in the HCT setting PTLD usually originates from the donor」,故 donor 血清陽性風險更高。(4) 真:手冊 §45.8.2.1 Prophylaxis:對無症狀 EBV 血清陽性高風險病人可用 rituximab(或 EBV-CTL)預防 EBV-DNA-emia,雖少用。故 (2)(3)(4)。",
+   "ebmt_ref": "Ch45 PTLD §45.5–45.8, PDF p424–426"
+  },
+  {
+   "number": 47,
+   "answer": "E",
+   "confidence": "low",
+   "rationale_md": "原卷題幹依賴一張流程圖(箭頭編號 (1)–(4) 對應台灣 2024 標準治療),文字版沒有 (1)–(4) 的敘述內容,無法判斷各箭頭所指療法。依指示填 E 並標低信心;此題需對照原始試卷圖片才能作答。",
+   "ebmt_ref": "手冊未涵蓋(原卷依賴流程圖,文字版無法判斷)"
+  },
+  {
+   "number": 48,
+   "answer": "E",
+   "confidence": "high",
+   "rationale_md": "四句皆為手冊 Ch81 §81.9 原文。(1) 真:兩個商業產品 ide-cel 與 cilta-cel 皆標靶 BCMA 且已核准。(2) 真:KarMMa-3 收 2–4 線、隨機 ide-cel vs 標準治療,median PFS 13 vs 4 個月。(3) 真:CARTITUDE-4 收 lenalidomide-refractory、1–3 線,median PFS NR vs 12 個月。(4) 真:手冊稱這些療法在高風險病人(含 extramedullary disease)亦誘導深度反應。故全選。",
+   "ebmt_ref": "Ch81 Multiple Myeloma §81.9 Table 81.3, PDF p733"
+  },
+  {
+   "number": 49,
+   "answer": "D",
+   "confidence": "high",
+   "rationale_md": "Ph+ ALL 移植後復發的救援選項五項皆成立。(1) TKI(dasatinib/ponatinib,依先前 ABL 激酶突變選擇)是手冊 Ch58 表列 Ph+ ALL 復發的 treatment。(2) Blinatumomab 對 R/R 及 MRD+ ALL 有效,手冊列為移植後復發 (+DLI) beneficial。(3) Inotuzumab 已核准 R/R ALL,對 HCT 後復發亦有活性(注意 VOD 風險)。(4) CD19 CAR-T 為 R/R B-ALL 新選項,手冊亦提到 allo-HCT 後 MRD 陽性可用 antibodies/ADC/CAR-T preemptive。(5) 第二次 allo-HCT 對化療可再達緩解者仍是可治癒選項(手冊 §71.7 討論 second HCT)。故 (1)–(5) 全選。",
+   "ebmt_ref": "Ch58 Relapse by Drugs, PDF p527–528; Ch72 ALL in Adults, PDF p645 & p649; Ch71 §71.7"
+  },
+  {
+   "number": 50,
+   "answer": "B",
+   "confidence": "high",
+   "rationale_md": "題幹「remote HBV infection」= resolved HBV(anti-HBc+、HBsAg−)。(1) 真:手冊引 ECIL 建議所有 anti-HBc 陽性受者接受抗病毒預防(entecavir/tenofovir),EASL 於高風險(>10%,allo-HCT 屬之)亦建議預防。(2) 真:reverse seroconversion 是晚期併發症(中位 18–20 個月),停藥後仍需每 3 個月監測 HBV,故長期規律監測正確。(3) 真:D+180 出現 grade 2 AST/ALT 上升,HBV reactivation(reverse seroconversion)是重要鑑別,且典型發生於免疫重建後。(4) 假:HBsAg(+) donor 傳染率 22–44%,手冊建議「donor 抗病毒治療 + 受者抗病毒預防」;受者本身 HBsAg(+) 更需治療,無「因受者也陽性就不必治療 donor」之說。故 (1)(2)(3)。",
+   "ebmt_ref": "Ch49 Hepatic Complications §49.4.2, PDF p458–459"
+  }
+ ]
+}

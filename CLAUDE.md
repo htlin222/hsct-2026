@@ -2300,9 +2300,12 @@ This is designed to fit in **free tier indefinitely** for 20 users. If a feature
 
 - **答案的位置每年不同**:108/110 是題號後的紅色 `(X)` span;109 是題號後黏在同一 span 的
   粗體字母;111–113 在最右欄(x≈537)、要依 y 對回題號;**114 的 PDF 是純題目版,文字層
-  一個答案都沒有**(沒白字、沒右欄、沒註解,只有一個紅色 span)。114 的 50 題 CSV 已備好
-  但 answer 空白,`import-questions.ts` 的 pre-flight 會整批拒絕 —— 要等官方答案來源回填,
-  不要猜。
+  一個答案都沒有**(沒白字、沒右欄、沒註解,只有一個紅色 span)。**114 年現在站上的 50 個
+  答案是 AI 暫定的**(2026-10-08,5 個 subagent 各解 10 題、以 EBMT Handbook 2024 全文為
+  依據;信心 high 38 / medium 10 / low 2):`docs/hsct-114-ai-provisional-answers.json` 留著
+  每題的理由與頁碼,同一份理由種成了該題的共筆詳解(開頭有 ⚠️ 暫定警語),tag `AI暫定`、
+  `source` 欄也註明。拿到官方答案後走「挑戰答案」流程更正,會留 `answer_history`;
+  **不要重跑 import 蓋掉**(見 hema 的 import-clobbers-promoted-answer 教訓)。
 - 兩題題幹依賴流程圖(113-41、114-47,同一題「numbers of arrows in the algorithm」),
   文字版已在題幹末尾註明;111-37 的 option_d 在原卷就是空白。
 - 108/110 用 `(共)` 標記共同題 → `tags` 填 `共同`;109 整卷沒有標記。跨年重複題不少,
