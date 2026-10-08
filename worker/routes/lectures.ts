@@ -9,7 +9,7 @@ export const lectureRoutes = new Hono<AppContext>();
 // List lecture docs, ordered by sort_order, joined with the caller's own
 // annotation/note counts. Defaults to kind='lecture' (複習班講義) so the
 // textbook chapters (kind='textbook', migration 0033) don't flood the grid.
-// Pass ?kind=textbook to browse the Wintrobe chapters directly — the grid on
+// Pass ?kind=textbook to browse the EBMT Handbook chapters directly — the grid on
 // /lectures exposes this as a second tab; the全站選字 popup →
 // /api/textbook/lookup remains the other way in.
 lectureRoutes.get("/", async (c) => {

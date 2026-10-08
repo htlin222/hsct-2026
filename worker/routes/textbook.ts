@@ -4,7 +4,7 @@ import { TEXT_MODEL } from '../lib/ai-models';
 
 // ── 教科書引用 lookup ────────────────────────────────────────────────
 //
-// 「選字問 Wintrobe」:App 任何地方選取一段文字 → 這個端點在教科書逐頁
+// 「選字問 EBMT Handbook」:App 任何地方選取一段文字 → 這個端點在教科書逐頁
 // 全文索引(lecture_pages_fts,WHERE kind='textbook',migration 0033)裡
 // 找最相關的頁,回 (slug, page) + snippet,前端據此跳到 /lectures/:slug?page=N。
 //
@@ -93,7 +93,7 @@ textbookRoutes.post('/lookup', async (c) => {
 
   // ── 1) Rule pass (always) — two independent FTS passes, one per kind, so each
   // corpus is ranked on its own bm25 scale (the terse Chinese 複習講義 slides and
-  // the dense English Wintrobe pages aren't comparable on one shared score).
+  // the dense English EBMT Handbook pages aren't comparable on one shared score).
   // Both share lecture_pages_fts; only the kind filter differs. The 複習講義 side
   // is the same corpus the lecture reader's own search hits.
   let [textbook, lecture] = await Promise.all([

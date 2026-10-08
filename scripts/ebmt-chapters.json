@@ -1,0 +1,853 @@
+{
+  "source": "The EBMT Handbook (Sureda et al., 2nd ed., Springer 2024, open access, DOI 10.1007/978-3-031-44080-9)",
+  "note": "Page ranges are 1-based PDF page indices in the open-access master PDF. Front matter (p1-40) and index excluded. Generated from the PDF outline by scripts/gen-ebmt-manifest.py.",
+  "index_page": 841,
+  "chapters": [
+    {
+      "n": 1,
+      "slug": "ebmt-ch1",
+      "title": "EBMT Ch1 · HCT: Historical Perspective",
+      "chapter": "HCT: Historical Perspective",
+      "start": 42,
+      "end": 48,
+      "pages": 7
+    },
+    {
+      "n": 2,
+      "slug": "ebmt-ch2",
+      "title": "EBMT Ch2 · The EBMT: History, Present, and Future",
+      "chapter": "The EBMT: History, Present, and Future",
+      "start": 49,
+      "end": 57,
+      "pages": 9
+    },
+    {
+      "n": 3,
+      "slug": "ebmt-ch3",
+      "title": "EBMT Ch3 · Registries: A Bridge Between Donor and Recipient",
+      "chapter": "Registries: A Bridge Between Donor and Recipient",
+      "start": 58,
+      "end": 67,
+      "pages": 10
+    },
+    {
+      "n": 4,
+      "slug": "ebmt-ch4",
+      "title": "EBMT Ch4 · The HCT Unit",
+      "chapter": "The HCT Unit",
+      "start": 68,
+      "end": 76,
+      "pages": 9
+    },
+    {
+      "n": 5,
+      "slug": "ebmt-ch5",
+      "title": "EBMT Ch5 · JACIE Accreditation of HCT Programs",
+      "chapter": "JACIE Accreditation of HCT Programs",
+      "start": 77,
+      "end": 83,
+      "pages": 7
+    },
+    {
+      "n": 6,
+      "slug": "ebmt-ch6",
+      "title": "EBMT Ch6 · Statistical Methods in HCT and Cellular Therapies",
+      "chapter": "Statistical Methods in HCT and Cellular Therapies",
+      "start": 84,
+      "end": 90,
+      "pages": 7
+    },
+    {
+      "n": 7,
+      "slug": "ebmt-ch7",
+      "title": "EBMT Ch7 · Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation",
+      "chapter": "Biological Properties of Hematopoietic Stem Cells: Scientific Basis for Hematopoietic Cell Transplantation",
+      "start": 91,
+      "end": 100,
+      "pages": 10
+    },
+    {
+      "n": 8,
+      "slug": "ebmt-ch8",
+      "title": "EBMT Ch8 · Biological Properties of Cells Other Than HSCs",
+      "chapter": "Biological Properties of Cells Other Than HSCs",
+      "start": 101,
+      "end": 105,
+      "pages": 5
+    },
+    {
+      "n": 9,
+      "slug": "ebmt-ch9",
+      "title": "EBMT Ch9 · Histocompatibility",
+      "chapter": "Histocompatibility",
+      "start": 106,
+      "end": 117,
+      "pages": 12
+    },
+    {
+      "n": 10,
+      "slug": "ebmt-ch10",
+      "title": "EBMT Ch10 · Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization",
+      "chapter": "Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization",
+      "start": 118,
+      "end": 130,
+      "pages": 13
+    },
+    {
+      "n": 11,
+      "slug": "ebmt-ch11",
+      "title": "EBMT Ch11 · Evaluation and Counseling of Candidates",
+      "chapter": "Evaluation and Counseling of Candidates",
+      "start": 131,
+      "end": 142,
+      "pages": 12
+    },
+    {
+      "n": 12,
+      "slug": "ebmt-ch12",
+      "title": "EBMT Ch12 · Donor Selection for Adults and Pediatrics",
+      "chapter": "Donor Selection for Adults and Pediatrics",
+      "start": 143,
+      "end": 155,
+      "pages": 13
+    },
+    {
+      "n": 13,
+      "slug": "ebmt-ch13",
+      "title": "EBMT Ch13 · Conditioning",
+      "chapter": "Conditioning",
+      "start": 156,
+      "end": 165,
+      "pages": 10
+    },
+    {
+      "n": 14,
+      "slug": "ebmt-ch14",
+      "title": "EBMT Ch14 · Selection of Stem Cell Source",
+      "chapter": "Selection of Stem Cell Source",
+      "start": 166,
+      "end": 172,
+      "pages": 7
+    },
+    {
+      "n": 15,
+      "slug": "ebmt-ch15",
+      "title": "EBMT Ch15 · Bone Marrow Harvesting for HCT",
+      "chapter": "Bone Marrow Harvesting for HCT",
+      "start": 173,
+      "end": 179,
+      "pages": 7
+    },
+    {
+      "n": 16,
+      "slug": "ebmt-ch16",
+      "title": "EBMT Ch16 · Mobilization and Collection of HSC",
+      "chapter": "Mobilization and Collection of HSC",
+      "start": 180,
+      "end": 186,
+      "pages": 7
+    },
+    {
+      "n": 17,
+      "slug": "ebmt-ch17",
+      "title": "EBMT Ch17 · Mobilization and Collection of HSCs in Children",
+      "chapter": "Mobilization and Collection of HSCs in Children",
+      "start": 187,
+      "end": 192,
+      "pages": 6
+    },
+    {
+      "n": 18,
+      "slug": "ebmt-ch18",
+      "title": "EBMT Ch18 · Procurement and Management of Cord Blood Unit for Allogeneic Transplantation",
+      "chapter": "Procurement and Management of Cord Blood Unit for Allogeneic Transplantation",
+      "start": 193,
+      "end": 198,
+      "pages": 6
+    },
+    {
+      "n": 19,
+      "slug": "ebmt-ch19",
+      "title": "EBMT Ch19 · Graft Manipulation",
+      "chapter": "Graft Manipulation",
+      "start": 199,
+      "end": 205,
+      "pages": 7
+    },
+    {
+      "n": 20,
+      "slug": "ebmt-ch20",
+      "title": "EBMT Ch20 · Processing, Cryopreserving, and Controlling the Quality of HSC",
+      "chapter": "Processing, Cryopreserving, and Controlling the Quality of HSC",
+      "start": 206,
+      "end": 209,
+      "pages": 4
+    },
+    {
+      "n": 21,
+      "slug": "ebmt-ch21",
+      "title": "EBMT Ch21 · Documentation of Engraftment and Chimerism After HCT",
+      "chapter": "Documentation of Engraftment and Chimerism After HCT",
+      "start": 210,
+      "end": 215,
+      "pages": 6
+    },
+    {
+      "n": 22,
+      "slug": "ebmt-ch22",
+      "title": "EBMT Ch22 · Short- and Long-Term Controls After HCT",
+      "chapter": "Short- and Long-Term Controls After HCT",
+      "start": 216,
+      "end": 221,
+      "pages": 6
+    },
+    {
+      "n": 23,
+      "slug": "ebmt-ch23",
+      "title": "EBMT Ch23 · Vascular Access",
+      "chapter": "Vascular Access",
+      "start": 222,
+      "end": 226,
+      "pages": 5
+    },
+    {
+      "n": 24,
+      "slug": "ebmt-ch24",
+      "title": "EBMT Ch24 · Transfusion Support",
+      "chapter": "Transfusion Support",
+      "start": 227,
+      "end": 234,
+      "pages": 8
+    },
+    {
+      "n": 25,
+      "slug": "ebmt-ch25",
+      "title": "EBMT Ch25 · Nutritional Support",
+      "chapter": "Nutritional Support",
+      "start": 235,
+      "end": 241,
+      "pages": 7
+    },
+    {
+      "n": 26,
+      "slug": "ebmt-ch26",
+      "title": "EBMT Ch26 · GVHD Prophylaxis",
+      "chapter": "GVHD Prophylaxis",
+      "start": 242,
+      "end": 250,
+      "pages": 9
+    },
+    {
+      "n": 27,
+      "slug": "ebmt-ch27",
+      "title": "EBMT Ch27 · Infection Control and Isolation Procedures",
+      "chapter": "Infection Control and Isolation Procedures",
+      "start": 251,
+      "end": 257,
+      "pages": 7
+    },
+    {
+      "n": 28,
+      "slug": "ebmt-ch28",
+      "title": "EBMT Ch28 · General Management of the Patient: Specific Aspects of Infectious Disease Supportive Care in Children",
+      "chapter": "General Management of the Patient: Specific Aspects of Infectious Disease Supportive Care in Children",
+      "start": 258,
+      "end": 269,
+      "pages": 12
+    },
+    {
+      "n": 29,
+      "slug": "ebmt-ch29",
+      "title": "EBMT Ch29 · Vaccinations",
+      "chapter": "Vaccinations",
+      "start": 270,
+      "end": 285,
+      "pages": 16
+    },
+    {
+      "n": 30,
+      "slug": "ebmt-ch30",
+      "title": "EBMT Ch30 · Psychological Morbidity and Care",
+      "chapter": "Psychological Morbidity and Care",
+      "start": 286,
+      "end": 292,
+      "pages": 7
+    },
+    {
+      "n": 31,
+      "slug": "ebmt-ch31",
+      "title": "EBMT Ch31 · Clinically Relevant Drug Interactions in HCT",
+      "chapter": "Clinically Relevant Drug Interactions in HCT",
+      "start": 293,
+      "end": 300,
+      "pages": 8
+    },
+    {
+      "n": 32,
+      "slug": "ebmt-ch32",
+      "title": "EBMT Ch32 · The Roles of the HCT Nurse",
+      "chapter": "The Roles of the HCT Nurse",
+      "start": 301,
+      "end": 308,
+      "pages": 8
+    },
+    {
+      "n": 33,
+      "slug": "ebmt-ch33",
+      "title": "EBMT Ch33 · Ethical Issues in HCT",
+      "chapter": "Ethical Issues in HCT",
+      "start": 309,
+      "end": 313,
+      "pages": 5
+    },
+    {
+      "n": 34,
+      "slug": "ebmt-ch34",
+      "title": "EBMT Ch34 · Quality of Life Assessment After HCT for Pediatric and Adults",
+      "chapter": "Quality of Life Assessment After HCT for Pediatric and Adults",
+      "start": 314,
+      "end": 320,
+      "pages": 7
+    },
+    {
+      "n": 35,
+      "slug": "ebmt-ch35",
+      "title": "EBMT Ch35 · Neutropenic Fever",
+      "chapter": "Neutropenic Fever",
+      "start": 321,
+      "end": 327,
+      "pages": 7
+    },
+    {
+      "n": 36,
+      "slug": "ebmt-ch36",
+      "title": "EBMT Ch36 · Bacterial Infections",
+      "chapter": "Bacterial Infections",
+      "start": 328,
+      "end": 336,
+      "pages": 9
+    },
+    {
+      "n": 37,
+      "slug": "ebmt-ch37",
+      "title": "EBMT Ch37 · Invasive Fungal Diseases",
+      "chapter": "Invasive Fungal Diseases",
+      "start": 337,
+      "end": 345,
+      "pages": 9
+    },
+    {
+      "n": 38,
+      "slug": "ebmt-ch38",
+      "title": "EBMT Ch38 · Viral Infections",
+      "chapter": "Viral Infections",
+      "start": 346,
+      "end": 358,
+      "pages": 13
+    },
+    {
+      "n": 39,
+      "slug": "ebmt-ch39",
+      "title": "EBMT Ch39 · Other Life-Threatening Infections",
+      "chapter": "Other Life-Threatening Infections",
+      "start": 359,
+      "end": 368,
+      "pages": 10
+    },
+    {
+      "n": 40,
+      "slug": "ebmt-ch40",
+      "title": "EBMT Ch40 · Bleeding and Thrombotic Complications",
+      "chapter": "Bleeding and Thrombotic Complications",
+      "start": 369,
+      "end": 377,
+      "pages": 9
+    },
+    {
+      "n": 41,
+      "slug": "ebmt-ch41",
+      "title": "EBMT Ch41 · Graft Failure",
+      "chapter": "Graft Failure",
+      "start": 378,
+      "end": 385,
+      "pages": 8
+    },
+    {
+      "n": 42,
+      "slug": "ebmt-ch42",
+      "title": "EBMT Ch42 · Early Complications of Endothelial Origin",
+      "chapter": "Early Complications of Endothelial Origin",
+      "start": 386,
+      "end": 396,
+      "pages": 11
+    },
+    {
+      "n": 43,
+      "slug": "ebmt-ch43",
+      "title": "EBMT Ch43 · Acute Graft-Versus-Host Disease",
+      "chapter": "Acute Graft-Versus-Host Disease",
+      "start": 397,
+      "end": 405,
+      "pages": 9
+    },
+    {
+      "n": 44,
+      "slug": "ebmt-ch44",
+      "title": "EBMT Ch44 · Chronic Graft-Versus-Host Disease",
+      "chapter": "Chronic Graft-Versus-Host Disease",
+      "start": 406,
+      "end": 421,
+      "pages": 16
+    },
+    {
+      "n": 45,
+      "slug": "ebmt-ch45",
+      "title": "EBMT Ch45 · Posttransplant Lymphoproliferative Syndromes",
+      "chapter": "Posttransplant Lymphoproliferative Syndromes",
+      "start": 422,
+      "end": 428,
+      "pages": 7
+    },
+    {
+      "n": 46,
+      "slug": "ebmt-ch46",
+      "title": "EBMT Ch46 · Iron Overload",
+      "chapter": "Iron Overload",
+      "start": 429,
+      "end": 433,
+      "pages": 5
+    },
+    {
+      "n": 47,
+      "slug": "ebmt-ch47",
+      "title": "EBMT Ch47 · Secondary Neoplasia (Other Than PTLPS)",
+      "chapter": "Secondary Neoplasia (Other Than PTLPS)",
+      "start": 434,
+      "end": 442,
+      "pages": 9
+    },
+    {
+      "n": 48,
+      "slug": "ebmt-ch48",
+      "title": "EBMT Ch48 · Ocular and Oral Complications",
+      "chapter": "Ocular and Oral Complications",
+      "start": 443,
+      "end": 448,
+      "pages": 6
+    },
+    {
+      "n": 49,
+      "slug": "ebmt-ch49",
+      "title": "EBMT Ch49 · Hepatic Complications",
+      "chapter": "Hepatic Complications",
+      "start": 449,
+      "end": 466,
+      "pages": 18
+    },
+    {
+      "n": 50,
+      "slug": "ebmt-ch50",
+      "title": "EBMT Ch50 · Gastrointestinal Complications",
+      "chapter": "Gastrointestinal Complications",
+      "start": 467,
+      "end": 472,
+      "pages": 6
+    },
+    {
+      "n": 51,
+      "slug": "ebmt-ch51",
+      "title": "EBMT Ch51 · Haemorrhagic Cystitis and Renal Dysfunction",
+      "chapter": "Haemorrhagic Cystitis and Renal Dysfunction",
+      "start": 473,
+      "end": 477,
+      "pages": 5
+    },
+    {
+      "n": 52,
+      "slug": "ebmt-ch52",
+      "title": "EBMT Ch52 · Noninfectious Pulmonary Complications",
+      "chapter": "Noninfectious Pulmonary Complications",
+      "start": 478,
+      "end": 487,
+      "pages": 10
+    },
+    {
+      "n": 53,
+      "slug": "ebmt-ch53",
+      "title": "EBMT Ch53 · Neurological Complications",
+      "chapter": "Neurological Complications",
+      "start": 488,
+      "end": 494,
+      "pages": 7
+    },
+    {
+      "n": 54,
+      "slug": "ebmt-ch54",
+      "title": "EBMT Ch54 · Skin, Hair, and Musculoskeletal Complications",
+      "chapter": "Skin, Hair, and Musculoskeletal Complications",
+      "start": 495,
+      "end": 499,
+      "pages": 5
+    },
+    {
+      "n": 55,
+      "slug": "ebmt-ch55",
+      "title": "EBMT Ch55 · Cardiovascular Diseases and Metabolic Syndrome",
+      "chapter": "Cardiovascular Diseases and Metabolic Syndrome",
+      "start": 500,
+      "end": 505,
+      "pages": 6
+    },
+    {
+      "n": 56,
+      "slug": "ebmt-ch56",
+      "title": "EBMT Ch56 · Endocrine Disorders, Fertility, and Sexual Health",
+      "chapter": "Endocrine Disorders, Fertility, and Sexual Health",
+      "start": 506,
+      "end": 515,
+      "pages": 10
+    },
+    {
+      "n": 57,
+      "slug": "ebmt-ch57",
+      "title": "EBMT Ch57 · Monitoring Measurable Residual Disease in ALL and AML",
+      "chapter": "Monitoring Measurable Residual Disease in ALL and AML",
+      "start": 516,
+      "end": 524,
+      "pages": 9
+    },
+    {
+      "n": 58,
+      "slug": "ebmt-ch58",
+      "title": "EBMT Ch58 · Prevention and Treatment of Relapse by Drugs",
+      "chapter": "Prevention and Treatment of Relapse by Drugs",
+      "start": 525,
+      "end": 531,
+      "pages": 7
+    },
+    {
+      "n": 59,
+      "slug": "ebmt-ch59",
+      "title": "EBMT Ch59 · Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0",
+      "chapter": "Delayed Transfer of Immune Cells or the Art of Donor Lymphocyte Infusion (DLI) 2.0",
+      "start": 532,
+      "end": 540,
+      "pages": 9
+    },
+    {
+      "n": 60,
+      "slug": "ebmt-ch60",
+      "title": "EBMT Ch60 · Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy",
+      "chapter": "Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy",
+      "start": 541,
+      "end": 549,
+      "pages": 9
+    },
+    {
+      "n": 61,
+      "slug": "ebmt-ch61",
+      "title": "EBMT Ch61 · Mechanisms of Immune Resistance",
+      "chapter": "Mechanisms of Immune Resistance",
+      "start": 550,
+      "end": 553,
+      "pages": 4
+    },
+    {
+      "n": 62,
+      "slug": "ebmt-ch62",
+      "title": "EBMT Ch62 · Regulatory Aspects of ATMP Versus Minimally Manipulated Immune Cells",
+      "chapter": "Regulatory Aspects of ATMP Versus Minimally Manipulated Immune Cells",
+      "start": 554,
+      "end": 562,
+      "pages": 9
+    },
+    {
+      "n": 63,
+      "slug": "ebmt-ch63",
+      "title": "EBMT Ch63 · At-Home HCT",
+      "chapter": "At-Home HCT",
+      "start": 563,
+      "end": 567,
+      "pages": 5
+    },
+    {
+      "n": 64,
+      "slug": "ebmt-ch64",
+      "title": "EBMT Ch64 · Role of Umbilical Cord Blood Transplantation",
+      "chapter": "Role of Umbilical Cord Blood Transplantation",
+      "start": 568,
+      "end": 573,
+      "pages": 6
+    },
+    {
+      "n": 65,
+      "slug": "ebmt-ch65",
+      "title": "EBMT Ch65 · Haploidentical HCT",
+      "chapter": "Haploidentical HCT",
+      "start": 574,
+      "end": 582,
+      "pages": 9
+    },
+    {
+      "n": 66,
+      "slug": "ebmt-ch66",
+      "title": "EBMT Ch66 · Photopheresis in Adults and Pediatrics",
+      "chapter": "Photopheresis in Adults and Pediatrics",
+      "start": 583,
+      "end": 589,
+      "pages": 7
+    },
+    {
+      "n": 67,
+      "slug": "ebmt-ch67",
+      "title": "EBMT Ch67 · Overweight and Obese Patients",
+      "chapter": "Overweight and Obese Patients",
+      "start": 590,
+      "end": 595,
+      "pages": 6
+    },
+    {
+      "n": 68,
+      "slug": "ebmt-ch68",
+      "title": "EBMT Ch68 · HCT in Elderly Patients",
+      "chapter": "HCT in Elderly Patients",
+      "start": 596,
+      "end": 601,
+      "pages": 6
+    },
+    {
+      "n": 69,
+      "slug": "ebmt-ch69",
+      "title": "EBMT Ch69 · Feasibility and Experiences of HCT in Resource-Constrained Settings",
+      "chapter": "Feasibility and Experiences of HCT in Resource-Constrained Settings",
+      "start": 602,
+      "end": 610,
+      "pages": 9
+    },
+    {
+      "n": 70,
+      "slug": "ebmt-ch70",
+      "title": "EBMT Ch70 · AML in Adults",
+      "chapter": "AML in Adults",
+      "start": 611,
+      "end": 625,
+      "pages": 15
+    },
+    {
+      "n": 71,
+      "slug": "ebmt-ch71",
+      "title": "EBMT Ch71 · Acute Myeloid Leukaemia in Children",
+      "chapter": "Acute Myeloid Leukaemia in Children",
+      "start": 626,
+      "end": 641,
+      "pages": 16
+    },
+    {
+      "n": 72,
+      "slug": "ebmt-ch72",
+      "title": "EBMT Ch72 · Acute Lymphoblastic Leukemia in Adults",
+      "chapter": "Acute Lymphoblastic Leukemia in Adults",
+      "start": 642,
+      "end": 650,
+      "pages": 9
+    },
+    {
+      "n": 73,
+      "slug": "ebmt-ch73",
+      "title": "EBMT Ch73 · Acute Lymphoblastic Leukaemia in Children and Adolescents",
+      "chapter": "Acute Lymphoblastic Leukaemia in Children and Adolescents",
+      "start": 651,
+      "end": 659,
+      "pages": 9
+    },
+    {
+      "n": 74,
+      "slug": "ebmt-ch74",
+      "title": "EBMT Ch74 · Myelodysplastic Neoplasms/Syndromes (MDS)",
+      "chapter": "Myelodysplastic Neoplasms/Syndromes (MDS)",
+      "start": 660,
+      "end": 668,
+      "pages": 9
+    },
+    {
+      "n": 75,
+      "slug": "ebmt-ch75",
+      "title": "EBMT Ch75 · Allogeneic Hematopoietic Cell Transplantation in Pediatric MDS Including Refractory Cytopenia of Childhood and in Juvenile Myelomonocytic Leukemia",
+      "chapter": "Allogeneic Hematopoietic Cell Transplantation in Pediatric MDS Including Refractory Cytopenia of Childhood and in Juvenile Myelomonocytic Leukemia",
+      "start": 669,
+      "end": 673,
+      "pages": 5
+    },
+    {
+      "n": 76,
+      "slug": "ebmt-ch76",
+      "title": "EBMT Ch76 · Myelodysplastic/Myeloproliferative Neoplasms",
+      "chapter": "Myelodysplastic/Myeloproliferative Neoplasms",
+      "start": 674,
+      "end": 683,
+      "pages": 10
+    },
+    {
+      "n": 77,
+      "slug": "ebmt-ch77",
+      "title": "EBMT Ch77 · Myeloproliferative Neoplasms",
+      "chapter": "Myeloproliferative Neoplasms",
+      "start": 684,
+      "end": 694,
+      "pages": 11
+    },
+    {
+      "n": 78,
+      "slug": "ebmt-ch78",
+      "title": "EBMT Ch78 · Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria",
+      "chapter": "Acquired Bone Marrow Failure: Severe Aplastic Anemia and Paroxysmal Nocturnal Hemoglobinuria",
+      "start": 695,
+      "end": 703,
+      "pages": 9
+    },
+    {
+      "n": 79,
+      "slug": "ebmt-ch79",
+      "title": "EBMT Ch79 · Fanconi Anemia and Other Hereditary Bone Marrow Failure Syndromes",
+      "chapter": "Fanconi Anemia and Other Hereditary Bone Marrow Failure Syndromes",
+      "start": 704,
+      "end": 711,
+      "pages": 8
+    },
+    {
+      "n": 80,
+      "slug": "ebmt-ch80",
+      "title": "EBMT Ch80 · Hemoglobinopathies (Sickle Cell Disease and Thalassemia)",
+      "chapter": "Hemoglobinopathies (Sickle Cell Disease and Thalassemia)",
+      "start": 712,
+      "end": 726,
+      "pages": 15
+    },
+    {
+      "n": 81,
+      "slug": "ebmt-ch81",
+      "title": "EBMT Ch81 · Multiple Myeloma",
+      "chapter": "Multiple Myeloma",
+      "start": 727,
+      "end": 735,
+      "pages": 9
+    },
+    {
+      "n": 82,
+      "slug": "ebmt-ch82",
+      "title": "EBMT Ch82 · Systemic Light Chain Amyloidosis",
+      "chapter": "Systemic Light Chain Amyloidosis",
+      "start": 736,
+      "end": 740,
+      "pages": 5
+    },
+    {
+      "n": 83,
+      "slug": "ebmt-ch83",
+      "title": "EBMT Ch83 · Poems Syndrome and Disease Produced by Other Monoclonal IGs",
+      "chapter": "Poems Syndrome and Disease Produced by Other Monoclonal IGs",
+      "start": 741,
+      "end": 745,
+      "pages": 5
+    },
+    {
+      "n": 84,
+      "slug": "ebmt-ch84",
+      "title": "EBMT Ch84 · Indolent Lymphoma",
+      "chapter": "Indolent Lymphoma",
+      "start": 746,
+      "end": 752,
+      "pages": 7
+    },
+    {
+      "n": 85,
+      "slug": "ebmt-ch85",
+      "title": "EBMT Ch85 · Chronic Lymphocytic Leukemia",
+      "chapter": "Chronic Lymphocytic Leukemia",
+      "start": 753,
+      "end": 757,
+      "pages": 5
+    },
+    {
+      "n": 86,
+      "slug": "ebmt-ch86",
+      "title": "EBMT Ch86 · Large B-Cell Lymphoma",
+      "chapter": "Large B-Cell Lymphoma",
+      "start": 758,
+      "end": 766,
+      "pages": 9
+    },
+    {
+      "n": 87,
+      "slug": "ebmt-ch87",
+      "title": "EBMT Ch87 · Mantle Cell Lymphoma",
+      "chapter": "Mantle Cell Lymphoma",
+      "start": 767,
+      "end": 770,
+      "pages": 4
+    },
+    {
+      "n": 88,
+      "slug": "ebmt-ch88",
+      "title": "EBMT Ch88 · Other B- and T-Aggressive Lymphomas and Lymphomas Associated with HIV",
+      "chapter": "Other B- and T-Aggressive Lymphomas and Lymphomas Associated with HIV",
+      "start": 771,
+      "end": 777,
+      "pages": 7
+    },
+    {
+      "n": 89,
+      "slug": "ebmt-ch89",
+      "title": "EBMT Ch89 · Classical Hodgkin’s Lymphoma",
+      "chapter": "Classical Hodgkin’s Lymphoma",
+      "start": 778,
+      "end": 787,
+      "pages": 10
+    },
+    {
+      "n": 90,
+      "slug": "ebmt-ch90",
+      "title": "EBMT Ch90 · Inborn Errors of Immunity",
+      "chapter": "Inborn Errors of Immunity",
+      "start": 788,
+      "end": 796,
+      "pages": 9
+    },
+    {
+      "n": 91,
+      "slug": "ebmt-ch91",
+      "title": "EBMT Ch91 · Inborn Errors of Metabolism and Osteopetrosis",
+      "chapter": "Inborn Errors of Metabolism and Osteopetrosis",
+      "start": 797,
+      "end": 802,
+      "pages": 6
+    },
+    {
+      "n": 92,
+      "slug": "ebmt-ch92",
+      "title": "EBMT Ch92 · Autoimmune Disease",
+      "chapter": "Autoimmune Disease",
+      "start": 803,
+      "end": 814,
+      "pages": 12
+    },
+    {
+      "n": 93,
+      "slug": "ebmt-ch93",
+      "title": "EBMT Ch93 · CART Cells and Other Cell Therapies (ie MSC, Tregs) in Autoimmune Diseases",
+      "chapter": "CART Cells and Other Cell Therapies (ie MSC, Tregs) in Autoimmune Diseases",
+      "start": 815,
+      "end": 826,
+      "pages": 12
+    },
+    {
+      "n": 94,
+      "slug": "ebmt-ch94",
+      "title": "EBMT Ch94 · Solid Tumours",
+      "chapter": "Solid Tumours",
+      "start": 827,
+      "end": 840,
+      "pages": 14
+    }
+  ]
+}

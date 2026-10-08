@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { listLectures, type LectureDoc } from "../../lib/lectureApi";
-import { chapterNumFromSlug } from "../../lib/wintrobeToc";
+import { chapterNumFromSlug, TEXTBOOK_TITLE_PREFIX } from "../../lib/textbookToc";
 import { TextbookToc } from "./TextbookToc";
 
 // Textbook reader title that doubles as a chapter switcher: click it to drop
@@ -51,8 +51,8 @@ export function TextbookChapterNav({
 		};
 	}, [open]);
 
-	// "Wintrobe Ch1 · …" → "Ch1 · …" (the drawer makes the book obvious).
-	const label = title.replace(/^Wintrobe\s+/, "");
+	// "EBMT Ch1 · …" → "Ch1 · …" (the drawer makes the book obvious).
+	const label = title.replace(TEXTBOOK_TITLE_PREFIX, "");
 
 	return (
 		<div ref={rootRef} className="relative min-w-0 shrink">

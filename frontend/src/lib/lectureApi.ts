@@ -14,7 +14,7 @@ export interface LectureDoc {
 	created_at: number;
 	anno_count: number;
 	note_count: number;
-	// 'lecture' (複習班講義) | 'textbook' (Wintrobe 唯讀參考書章節, migration 0033).
+	// 'lecture' (複習班講義) | 'textbook' (EBMT Handbook 唯讀參考書章節, migration 0033).
 	// Textbook chapters open in this same reader via /lectures/:slug?page=N but
 	// suppress all write affordances (highlight / notebook).
 	kind?: "lecture" | "textbook";
@@ -43,7 +43,7 @@ export interface LectureNote {
 
 // ── Registry ──────────────────────────────────────────────────────────
 
-// kind='lecture' (複習班講義, default) or 'textbook' (Wintrobe 章節). The grid
+// kind='lecture' (複習班講義, default) or 'textbook' (EBMT Handbook 章節). The grid
 // on /lectures switches between the two via a tab.
 export function listLectures(
 	kind: "lecture" | "textbook" = "lecture",

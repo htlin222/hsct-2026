@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import type { LectureDoc } from "../../lib/lectureApi";
 import {
-	WINTROBE_TOC,
+	TEXTBOOK_TOC,
+	TEXTBOOK_TITLE_PREFIX,
 	chapterNumFromSlug,
-	type WintrobePart,
-} from "../../lib/wintrobeToc";
+	type TextbookPart,
+} from "../../lib/textbookToc";
 
-// Browse the Wintrobe textbook by the book's own Part → Section → chapter
-// structure (see wintrobeToc.ts), as a nested accordion. Chapters missing from
+// Browse the EBMT Handbook by the book's own Part → Section → chapter
+// structure (see textbookToc.ts), as a nested accordion. Chapters missing from
 // `docs` (not imported) are simply skipped so counts reflect what's readable.
 
 export function TextbookToc({
@@ -37,7 +38,7 @@ export function TextbookToc({
 	// view isn't a wall of closed rows and the current chapter is in sight.
 	const initialOpenPart = useMemo(() => {
 		if (currentChapter != null) {
-			const p = WINTROBE_TOC.find((part) =>
+			const p = TEXTBOOK_TOC.find((part) =>
 				part.sections.some((s) => s.chapters.includes(currentChapter)),
 			);
 			if (p) return p.n;
@@ -57,7 +58,7 @@ export function TextbookToc({
 
 	return (
 		<div className="space-y-2">
-			{WINTROBE_TOC.map((part) => (
+			{TEXTBOOK_TOC.map((part) => (
 				<PartRow
 					key={part.n}
 					part={part}
@@ -72,7 +73,7 @@ export function TextbookToc({
 	);
 }
 
-function countPresent(part: WintrobePart, byNum: Map<number, LectureDoc>): number {
+function countPresent(part: TextbookPart, byNum: Map<number, LectureDoc>): number {
 	let n = 0;
 	for (const s of part.sections)
 		for (const c of s.chapters) if (byNum.has(c)) n++;
@@ -87,7 +88,7 @@ function PartRow({
 	currentChapter,
 	onNavigate,
 }: {
-	part: WintrobePart;
+	part: TextbookPart;
 	byNum: Map<number, LectureDoc>;
 	open: boolean;
 	onToggle: () => void;
@@ -188,9 +189,9 @@ function ChapterRow({
 	current?: boolean;
 	onNavigate?: () => void;
 }) {
-	// doc.title is "Wintrobe Ch76 · <chapter title>" — drop the "Wintrobe " prefix
+	// doc.title is "EBMT Ch26 · <chapter title>" — drop the "EBMT " prefix
 	// (the Part context already makes the book clear) so "Ch76 · …" leads.
-	const label = doc.title.replace(/^Wintrobe\s+/, "");
+	const label = doc.title.replace(TEXTBOOK_TITLE_PREFIX, "");
 	return (
 		<li>
 			<Link

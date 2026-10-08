@@ -8,13 +8,13 @@ import {
 } from "../../lib/textbookApi";
 import { HighlightedSnippet } from "../lecture/HighlightedSnippet";
 
-// 工具列「📖 查參考資料」展開後的內容:選取文字在 Wintrobe 教科書與複習班講義
+// 工具列「📖 查參考資料」展開後的內容:選取文字在 EBMT Handbook 與複習班講義
 // 裡最相關的段落。原本是 TextbookLookupPopup 自帶的浮層,現在只是統一工具列
 // 的一個展開區。
 
-// "Wintrobe Ch92 · Chronic Lymphocytic Leukemia" → "Ch92 · Chronic …"
+// "EBMT Ch26 · GVHD Prophylaxis" → "Ch26 · GVHD …"
 function chapterLabel(title: string): string {
-	return title.replace(/^Wintrobe\s+/, "");
+	return title.replace(/^EBMT\s+/, "");
 }
 
 export function ReferencePanel({
@@ -78,7 +78,7 @@ export function ReferencePanel({
 					{result.textbook.length > 0 && (
 						<ReferenceGroup
 							icon={<BookOpen size={13} />}
-							label="Wintrobe 教科書"
+							label="EBMT Handbook"
 							hits={result.textbook}
 							labelOf={(h) => chapterLabel(h.title)}
 							onNavigate={onNavigate}

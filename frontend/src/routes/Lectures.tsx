@@ -34,14 +34,14 @@ import {
 // Wait this long after the last keystroke before firing the search request.
 const SEARCH_DEBOUNCE_MS = 250;
 
-// Which registry the grid is showing: 複習班講義, the Wintrobe textbook,
+// Which registry the grid is showing: 複習班講義, the EBMT Handbook textbook,
 // 其他筆記 (the reader's own question-agnostic notes, migration 0040), or
 // 書籤 (page flags dropped in the lecture reader, migration 0042).
 type LectureView = "lecture" | "textbook" | "note" | "bookmark";
 
 const TAB_TITLE: Record<LectureView, string> = {
 	lecture: "複習班講義",
-	textbook: "Wintrobe 教科書",
+	textbook: "EBMT Handbook",
 	note: "其他筆記",
 	bookmark: "書籤",
 };
@@ -192,7 +192,7 @@ export default function Lectures() {
 	return (
 		<div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 py-8">
 			{/* 標題與分頁列刻意分成兩行:標題的字數隨分頁改變(「複習班講義」/
-			    「Wintrobe 教科書」/「其他筆記」),同一行的話分頁列會跟著左右漂移,
+			    「EBMT Handbook」/「其他筆記」),同一行的話分頁列會跟著左右漂移,
 			    切換時看起來像整條在跳。分頁列自己一行,x 位置就固定了。 */}
 			<div className="mb-6">
 				<div className="flex flex-wrap items-center gap-x-4 gap-y-3">

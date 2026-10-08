@@ -13,7 +13,7 @@ export type ReferenceHit = {
 
 // Grouped by source so each corpus keeps its own bm25 ranking.
 export type ReferenceResult = {
-	textbook: ReferenceHit[]; // Wintrobe 唯讀參考書
+	textbook: ReferenceHit[]; // EBMT Handbook 唯讀參考書
 	lecture: ReferenceHit[]; // 複習班講義 slides
 	// true when a long / low-confidence selection was distilled by Workers AI
 	// into canonical terms before the FTS pass (rule baseline otherwise).

@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 /**
- * Import a reference textbook (Wintrobe 15e) into R2 + D1 for the
- * 「選字問 Wintrobe」textbook-citations feature.
+ * Import a reference textbook (The EBMT Handbook, 2nd ed. 2024, open access:
+ * https://www.ebmt.org/education/ebmt-handbook) into R2 + D1 for the
+ * 「選字問 EBMT Handbook」textbook-citations feature.
  *
  * Usage:
  *   node --experimental-strip-types scripts/import-textbook.ts \
  *     --master <path-to-master.pdf> [--chapters 76,83,92] [--remote] [--force]
  *
  *   --master <p>    the full textbook PDF (git-ignored; lives on disk / R2 only)
- *   --chapters ...  comma-separated chapter numbers to import (default: ALL 108).
+ *   --chapters ...  comma-separated chapter numbers to import (default: ALL 94).
  *                   Use a small subset for a pilot before the full run.
  *   --remote        target prod R2 + D1 (default: local .wrangler/state)
  *   --force         re-upload to R2 even if the object already exists
@@ -18,10 +19,11 @@
  * text lands in lecture_pages → lecture_pages_fts via the trigger. No new FTS
  * table — this calibre PDF is ~300 words/page, already passage-grained.
  *
- * For each selected chapter (from scripts/wintrobe-chapters.json):
- *   slug        = 'wintrobe-ch' + N
+ * For each selected chapter (from scripts/ebmt-chapters.json, generated from
+ * the PDF outline — chapter N: title, page ranges in the master PDF):
+ *   slug        = 'ebmt-ch' + N
  *   sort_order  = N
- *   title       = 'Wintrobe ChN · <chapter title>'
+ *   title       = 'EBMT ChN · <chapter title>'
  *   r2_key      = 'textbooks/' + slug + '.pdf'
  *   kind        = 'textbook'
  *   page_count  — from the split PDF (must equal end-start+1)
@@ -103,7 +105,7 @@ async function main() {
       : null; // null = all
 
   // ---------- Load manifest ----------
-  const manifestPath = fileURLToPath(new URL('wintrobe-chapters.json', import.meta.url));
+  const manifestPath = fileURLToPath(new URL('ebmt-chapters.json', import.meta.url));
   const manifestRaw = await readFile(manifestPath, 'utf-8').catch((e: any) => {
     console.error(`❌ Cannot read ${manifestPath}: ${e.message}`);
     process.exit(1);
